@@ -106,13 +106,18 @@ class Run:
         found = sum(1 for c in todo if self.bstate["companies"][c["name"]]["board"])
         log(f"  found {found} of {len(todo)}")
 
-    def discover(self, key, company, origin):
+    def discover(self, key, company, origin, tags=None):
         d = self.bstate["discovered"]
-        if key in d or any(r.get("board") == key for r in self.bstate["companies"].values()):
+        if key in d:
+            for t in tags or []:
+                if t not in d[key].setdefault("tags", []):
+                    d[key]["tags"].append(t)
+            return False
+        if any(r.get("board") == key for r in self.bstate["companies"].values()):
             return False
         if len(d) >= 1500:
             return False
-        d[key] = {"company": company or ats.guess_company(key), "origin": origin, "added": TODAY, "fails": 0}
+        d[key] = {"company": company or ats.guess_company(key), "origin": origin, "added": TODAY, "fails": 0, "tags": list(tags or [])}
         return True
 
     # ---------- 2. job boards and aggregators ----------
@@ -139,6 +144,8 @@ class Run:
             for src, adapter, jobs, err in ex.map(one, active):
                 for j in jobs:
                     j["source_name"] = src["name"]
+                    if src.get("impact"):
+                        j["impact_src"] = src["name"]
                     self.raw.append((j, []))
                 self.src_health[src["id"]] = {"ok": err is None, "count": len(jobs), "error": err, "adapter": adapter}
                 log(f"  {src['id']:<20} {adapter:<12} {'ok' if not err else 'FAIL'} {len(jobs):>4} {err or ''}")
@@ -196,7 +203,8 @@ class Run:
         for j, _ in self.raw:
             for u in (j.get("apply_url"), j.get("url")):
                 key = detect.parse_ats_url(u)
-                if key and self.discover(key, j.get("company") if j.get("company") != "Unknown" else "", f"via {j.get('source_name')}"):
+                if key and self.discover(key, j.get("company") if j.get("company") != "Unknown" else "", f"via {j.get('source_name')}",
+                                         ["impact"] if j.get("impact_src") else None):
                     n += 1
         log(f"harvested {n} new company job boards from listings")
 
@@ -206,11 +214,13 @@ class Run:
             rec = self.bstate["companies"].get(c["name"]) or {}
             if rec.get("board"):
                 owners[rec["board"]] = (c["name"], c.get("tags", []))
+        impact_names = {f"via {x['name']}" for x in self.sources if x.get("impact")}
         for key, d in self.bstate["discovered"].items():
-            if key not in owners and d.get("fails", 0) < 6:
-                owners[key] = (d["company"], ["discovered"])
-            elif key not in owners and d.get("fails", 0) >= 6 and self.full:
-                owners[key] = (d["company"], ["discovered"])  # retry weekly
+            tags = ["discovered"] + list(d.get("tags", []))
+            if d.get("origin") in impact_names and "impact" not in tags:
+                tags.append("impact")
+            if key not in owners and (d.get("fails", 0) < 6 or self.full):
+                owners[key] = (d["company"], tags)  # boards failing 6 runs in a row are retried weekly
         log(f"reading {len(owners)} company job boards")
 
         def one(item):
@@ -296,6 +306,21 @@ class Run:
                     if e not in emp:
                         emp.append(e)
             lf = classify.language_flags(text_low)
+            imp = None
+            if "ftm" in tags:
+                imp = "On your Follow the Money list"
+            elif "impact" in tags:
+                imp = "Impact company"
+            else:
+                src = next((x["impact_src"] for x in items if x.get("impact_src")), None)
+                if src:
+                    imp = f"Found on {src}"
+                else:
+                    t = classify.impact_text(text_low)
+                    if t:
+                        imp = "Ad " + t
+            if imp and "impact" not in tags:
+                tags.append("impact")
             merged = dict(p, description=desc)
             sc, parts, matched, dom, flags, gaps = score.rules(merged, self.profile, p["fam"], p["sen"], lf, tags)
             jid = hashlib.sha1(key.encode()).hexdigest()[:12]
@@ -308,7 +333,7 @@ class Run:
                 "loc": " · ".join(locs[:3]), "cc": cc, "region": best["region"], "wp": best["wp"], "hu": best["hu"], "huw": best["hu_why"],
                 "emp": emp, "sen": p["sen"], "fam": p["fam"], "score": sc, "rules": sc, "parts": parts, "skills": matched, "domains": dom,
                 "flags": flags, "gaps": gaps, "posted": posted, "tags": tags, "salary": next((x["salary"] for x in items if x.get("salary")), None),
-                "snip": desc[:700], "live": "verified" if p["kind"] == "ats" else "listed", "checked": TODAY,
+                "snip": desc[:700], "live": "verified" if p["kind"] == "ats" else "listed", "checked": TODAY, "imp": imp,
                 "_desc": desc, "_locs": locs, "_board": p.get("board"),
             }
         self.cur = recs
@@ -348,7 +373,7 @@ class Run:
                     carried += 1
                 self.cur[jid] = old
             else:
-                if days_between(old.get("last"), TODAY) > 14:
+                if days_between(old.get("last"), TODAY) > 5:
                     dropped += 1
                     meta.pop(jid, None)
                     continue

@@ -101,6 +101,7 @@ class Pipeline(unittest.TestCase):
         self.assertEqual((acme["hu"], acme["wp"], acme["live"]), ("yes", "remote", "verified"))
         self.assertGreaterEqual(acme["score"], 70)
         self.assertIn("ftm", acme["tags"])
+        self.assertEqual(acme.get("imp"), "On your Follow the Money list")
 
         beta_us = by[("Beta", "Product Designer (Design Systems)")]
         self.assertEqual(beta_us["hu"], "no")

@@ -105,6 +105,16 @@ class Eligibility(unittest.TestCase):
         self.assertEqual(g["hu"], "maybe")
 
 
+class Impact(unittest.TestCase):
+    def test_signals(self):
+        f = classify.impact_text
+        self.assertTrue(f("we are a certified b corp building tools for farmers"))
+        self.assertTrue(f("our nonprofit helps refugees"))
+        self.assertTrue(f("we help brands cut carbon emissions across their supply chain"))
+        self.assertIsNone(f("work in a fast-paced environment with equity and a charity day"))
+        self.assertIsNone(f("we use django and mongodb"))
+
+
 class Employment(unittest.TestCase):
     def test_types(self):
         j = make_job(title="Freelance Product Designer", company="X", url="u", source="s", kind="ats", emp=["Contract"])

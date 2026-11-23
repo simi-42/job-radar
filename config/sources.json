@@ -1,5 +1,5 @@
 {
- "_about": "Job boards and aggregators. adapter: a named adapter, 'rss', 'generic' (any web page: feed, embedded data, structured data or links) or 'auto' (decided on the next run). search: also look this site up through the search engine. Set enabled to false to pause one. Add new ones from the site's Sources panel or here.",
+ "_about": "Job boards and aggregators. adapter: a named adapter, 'rss', 'generic' (any web page: feed, embedded data, structured data or links) or 'auto' (decided on the next run). search: also look this site up through the search engine. Set enabled to false to pause one. Add new ones from the site's Sources panel or here. impact: jobs from this board get the Impact tag.",
  "sources": [
   {
    "id": "hiddenjobs",
@@ -8,7 +8,8 @@
    "adapter": "hiddenjobs",
    "origin": "your boards",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": false
   },
   {
    "id": "climatetechlist",
@@ -17,7 +18,8 @@
    "adapter": "generic",
    "origin": "your boards",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "climatebase",
@@ -27,7 +29,8 @@
    "origin": "your boards",
    "enabled": true,
    "search": true,
-   "note": "Blocks automated reading (403); covered through search"
+   "note": "Blocks automated reading (403); covered through search",
+   "impact": true
   },
   {
    "id": "euremotejobs",
@@ -37,7 +40,8 @@
    "origin": "your boards",
    "enabled": true,
    "search": true,
-   "note": "Feed refuses automated reading (401); covered through search"
+   "note": "Feed refuses automated reading (401); covered through search",
+   "impact": false
   },
   {
    "id": "hiringcafe",
@@ -47,7 +51,8 @@
    "origin": "your boards",
    "enabled": true,
    "search": true,
-   "note": "Blocks automated reading (403); covered through search"
+   "note": "Blocks automated reading (403); covered through search",
+   "impact": false
   },
   {
    "id": "probablygood",
@@ -56,7 +61,8 @@
    "adapter": "generic",
    "origin": "your boards",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "relomote",
@@ -66,7 +72,8 @@
    "origin": "your boards",
    "enabled": true,
    "search": true,
-   "note": "Blocks automated reading (403); covered through search"
+   "note": "Blocks automated reading (403); covered through search",
+   "impact": false
   },
   {
    "id": "rwfa",
@@ -75,7 +82,8 @@
    "adapter": "generic",
    "origin": "your boards",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": false
   },
   {
    "id": "stillhiring",
@@ -84,7 +92,8 @@
    "adapter": "generic",
    "origin": "your boards",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": false
   },
   {
    "id": "wttj",
@@ -93,7 +102,8 @@
    "adapter": "generic",
    "origin": "your boards",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": false
   },
   {
    "id": "workingnomads",
@@ -102,7 +112,8 @@
    "adapter": "workingnomads",
    "origin": "your boards",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": false
   },
   {
    "id": "uxjobs",
@@ -111,7 +122,8 @@
    "adapter": "generic",
    "origin": "found via Hidden Jobs",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": false
   },
   {
    "id": "remotive",
@@ -120,7 +132,8 @@
    "adapter": "remotive",
    "origin": "aggregator API",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": false
   },
   {
    "id": "remoteok",
@@ -129,7 +142,8 @@
    "adapter": "remoteok",
    "origin": "aggregator API",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": false
   },
   {
    "id": "himalayas",
@@ -138,7 +152,8 @@
    "adapter": "himalayas",
    "origin": "aggregator API",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": false
   },
   {
    "id": "arbeitnow",
@@ -147,7 +162,8 @@
    "adapter": "arbeitnow",
    "origin": "aggregator API",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": false
   },
   {
    "id": "jobicy",
@@ -156,7 +172,8 @@
    "adapter": "jobicy",
    "origin": "aggregator API",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": false
   },
   {
    "id": "wwr",
@@ -165,7 +182,8 @@
    "adapter": "rss",
    "origin": "aggregator API",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": false
   },
   {
    "id": "jobspresso",
@@ -174,7 +192,8 @@
    "adapter": "rss",
    "origin": "aggregator API",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": false
   },
   {
    "id": "berlinstartupjobs",
@@ -183,7 +202,8 @@
    "adapter": "rss",
    "origin": "aggregator API",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": false
   },
   {
    "id": "authenticjobs",
@@ -192,7 +212,8 @@
    "adapter": "rss",
    "origin": "design boards",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": false
   },
   {
    "id": "reliefweb",
@@ -202,7 +223,8 @@
    "origin": "Grassroots & Grace",
    "enabled": false,
    "search": false,
-   "note": "API v1 retired (410); v2 needs an approved app name"
+   "note": "API v1 retired (410); v2 needs an approved app name",
+   "impact": true
   },
   {
    "id": "accel",
@@ -211,7 +233,8 @@
    "adapter": "getro",
    "origin": "VC talent boards",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": false
   },
   {
    "id": "atomico",
@@ -220,7 +243,8 @@
    "adapter": "getro",
    "origin": "VC talent boards",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": false
   },
   {
    "id": "norrsken",
@@ -229,7 +253,8 @@
    "adapter": "getro",
    "origin": "Follow the Money",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": true
   },
   {
    "id": "rubio",
@@ -238,7 +263,8 @@
    "adapter": "getro",
    "origin": "Follow the Money",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": true
   },
   {
    "id": "ffwd",
@@ -247,7 +273,8 @@
    "adapter": "getro",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": true
   },
   {
    "id": "northzone",
@@ -257,7 +284,8 @@
    "origin": "VC talent boards",
    "enabled": false,
    "search": false,
-   "note": "Board address not found"
+   "note": "Board address not found",
+   "impact": false
   },
   {
    "id": "balderton",
@@ -267,7 +295,8 @@
    "origin": "VC talent boards",
    "enabled": false,
    "search": false,
-   "note": "Board address not found"
+   "note": "Board address not found",
+   "impact": false
   },
   {
    "id": "creandum",
@@ -277,7 +306,8 @@
    "origin": "VC talent boards",
    "enabled": false,
    "search": false,
-   "note": "Board address not found"
+   "note": "Board address not found",
+   "impact": false
   },
   {
    "id": "speedinvest",
@@ -287,7 +317,8 @@
    "origin": "VC talent boards",
    "enabled": false,
    "search": false,
-   "note": "Board address not found"
+   "note": "Board address not found",
+   "impact": false
   },
   {
    "id": "seedcamp",
@@ -297,7 +328,8 @@
    "origin": "VC talent boards",
    "enabled": false,
    "search": false,
-   "note": "Board address not found"
+   "note": "Board address not found",
+   "impact": false
   },
   {
    "id": "pointnine",
@@ -306,7 +338,8 @@
    "adapter": "getro",
    "origin": "VC talent boards",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": false
   },
   {
    "id": "earlybird",
@@ -315,7 +348,8 @@
    "adapter": "getro",
    "origin": "VC talent boards",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": false
   },
   {
    "id": "climatedesigners",
@@ -325,7 +359,8 @@
    "origin": "Follow the Money",
    "enabled": true,
    "search": false,
-   "note": "On Climatebase, which blocks automated reading; covered through search"
+   "note": "On Climatebase, which blocks automated reading; covered through search",
+   "impact": true
   },
   {
    "id": "techjobsforgood",
@@ -334,7 +369,8 @@
    "adapter": "generic",
    "origin": "Follow the Money",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "jict",
@@ -343,7 +379,8 @@
    "adapter": "generic",
    "origin": "Follow the Money",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": true
   },
   {
    "id": "sff",
@@ -352,7 +389,8 @@
    "adapter": "generic",
    "origin": "Follow the Money",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "hardproblems",
@@ -361,7 +399,8 @@
    "adapter": "generic",
    "origin": "Follow the Money",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "veganjobs",
@@ -370,7 +409,8 @@
    "adapter": "generic",
    "origin": "Follow the Money",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": true
   },
   {
    "id": "4dayweek",
@@ -379,7 +419,8 @@
    "adapter": "generic",
    "origin": "Follow the Money",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "remoteclimate",
@@ -388,7 +429,8 @@
    "adapter": "generic",
    "origin": "Follow the Money",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": true
   },
   {
    "id": "goodjobs",
@@ -397,7 +439,8 @@
    "adapter": "generic",
    "origin": "Follow the Money",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "ycjobs",
@@ -406,7 +449,8 @@
    "adapter": "generic",
    "origin": "Follow the Money",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": true
   },
   {
    "id": "freelancingforgood",
@@ -415,7 +459,8 @@
    "adapter": "generic",
    "origin": "Follow the Money",
    "enabled": true,
-   "search": false
+   "search": false,
+   "impact": true
   },
   {
    "id": "idealist",
@@ -424,7 +469,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "impactroles",
@@ -433,7 +479,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "pcdn",
@@ -442,7 +489,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "impactpool",
@@ -451,7 +499,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "devex",
@@ -460,7 +509,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "developmentaid",
@@ -469,7 +519,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "unjobs",
@@ -478,7 +529,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "devnetjobs",
@@ -487,7 +539,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "humanitairejobs",
@@ -496,7 +549,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "climatejobs",
@@ -505,7 +559,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "conservationcareers",
@@ -514,7 +569,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "joshswaterjobs",
@@ -523,7 +579,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "thejobfeed",
@@ -532,7 +589,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "nextbillion",
@@ -541,7 +599,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "impactinvestingcareers",
@@ -550,7 +609,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "giin",
@@ -559,7 +619,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "80000hours",
@@ -568,7 +629,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "eaopps",
@@ -577,7 +639,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "aac",
@@ -586,7 +649,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "altprotein",
@@ -595,7 +659,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "genderjobs",
@@ -604,7 +669,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "digitalrights",
@@ -613,7 +679,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "humanrightscareers",
@@ -622,7 +689,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "globaljobs",
@@ -631,7 +699,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "peacebuilding",
@@ -640,7 +709,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": false
+   "search": false,
+   "impact": true
   },
   {
    "id": "csrjobs",
@@ -649,7 +719,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "myimpact",
@@ -658,7 +729,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "eurobrussels",
@@ -667,7 +739,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "escapethecity",
@@ -676,7 +749,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "socialenterpriseuk",
@@ -685,7 +759,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "charityjob",
@@ -694,7 +769,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "environmentjob",
@@ -703,7 +779,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "hacesfalta",
@@ -712,7 +789,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "nachhaltigejobs",
@@ -721,7 +799,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "jobverde",
@@ -730,7 +809,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "makesense",
@@ -739,7 +819,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "euaffairs",
@@ -748,7 +829,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "greenjobsnet",
@@ -757,7 +839,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "impactopportunity",
@@ -766,7 +849,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "workforgood",
@@ -775,7 +859,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": true
+   "search": true,
+   "impact": true
   },
   {
    "id": "feministjobs",
@@ -784,7 +869,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": false
+   "search": false,
+   "impact": true
   },
   {
    "id": "goodfoodjobs",
@@ -793,7 +879,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": false
+   "search": false,
+   "impact": true
   },
   {
    "id": "charityvillage",
@@ -802,7 +889,8 @@
    "adapter": "generic",
    "origin": "Grassroots & Grace",
    "enabled": false,
-   "search": false
+   "search": false,
+   "impact": true
   },
   {
    "id": "nofluffjobs",
@@ -811,7 +899,8 @@
    "adapter": "generic",
    "origin": "Hungary",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": false
   },
   {
    "id": "profession",
@@ -821,7 +910,8 @@
    "origin": "Hungary",
    "enabled": true,
    "search": true,
-   "note": "Server error for automated reading; covered through search"
+   "note": "Server error for automated reading; covered through search",
+   "impact": false
   },
   {
    "id": "linkedin",
@@ -830,7 +920,8 @@
    "adapter": "none",
    "origin": "search",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": false
   },
   {
    "id": "dribbble",
@@ -839,7 +930,8 @@
    "adapter": "generic",
    "origin": "design boards",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": false
   },
   {
    "id": "weloveproduct",
@@ -848,7 +940,8 @@
    "adapter": "generic",
    "origin": "design boards",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": false
   },
   {
    "id": "remoterocketship",
@@ -857,7 +950,8 @@
    "adapter": "generic",
    "origin": "design boards",
    "enabled": true,
-   "search": true
+   "search": true,
+   "impact": false
   },
   {
    "id": "startupjobs",
@@ -867,7 +961,8 @@
    "origin": "design boards",
    "enabled": true,
    "search": true,
-   "note": "Blocks automated reading (403); covered through search"
+   "note": "Blocks automated reading (403); covered through search",
+   "impact": false
   },
   {
    "id": "landingjobs",
@@ -877,7 +972,8 @@
    "origin": "design boards",
    "enabled": true,
    "search": true,
-   "note": "Blocks automated reading (403); covered through search"
+   "note": "Blocks automated reading (403); covered through search",
+   "impact": false
   }
  ]
 }

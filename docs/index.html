@@ -77,6 +77,7 @@ fieldset{border:0;margin:0;padding:0}legend{font-size:13px;color:var(--mute);mar
 .chip{font-size:12.5px;line-height:1;padding:6px 8px;border-radius:7px;background:var(--soft);white-space:nowrap}
 .chip.yes{background:var(--ink);color:var(--bg)}.chip.maybe{background:transparent;box-shadow:inset 0 0 0 1px var(--ink)}
 .chip.no{color:var(--mute)}.chip.new{background:var(--acc);color:var(--acc-ink)}.chip.flag{color:var(--warn);background:transparent;box-shadow:inset 0 0 0 1px currentColor}
+.chip.imp{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok);font-weight:500}
 .chip.live{background:transparent;color:var(--ok);box-shadow:inset 0 0 0 1px currentColor}
 .acts{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;align-items:center}
 .acts .btn{min-height:40px;font-size:14px;padding:0 12px}
@@ -144,6 +145,10 @@ form.add label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:v
       <div class="seg" data-key="hu">
         <button type="button" data-v="yes">Yes</button><button type="button" data-v="yesmaybe">Yes + maybe</button><button type="button" data-v="any">Any</button>
       </div>
+    </div>
+    <div class="row">
+      <span class="lbl">Work</span>
+      <div class="seg" data-key="imp"><button type="button" data-v="all">All jobs</button><button type="button" data-v="impact">Impact only</button></div>
     </div>
     <div class="row">
       <span class="lbl">Posted</span>
@@ -219,14 +224,14 @@ const LABELS = {
   emp: {"full-time":"Full-time", "part-time":"Part-time", contract:"Contract", freelance:"Freelance", none:"Not stated"},
   sen: {senior:"Senior", lead:"Lead / manager", staff:"Staff", principal:"Principal", head:"Head / director", unspecified:"Not stated", mid:"Mid"},
   fam: {core:"Product / UX / design systems", leadership:"Design leadership", adjacent:"Nearby (UI, design engineer…)"},
-  tag: {ftm:"Follow the Money", impact:"Impact", "design-forward":"Design-forward", "top-eu":"Top EU startups", hungary:"Hungarian companies", "remote-first":"Remote-first", discovered:"Found by the radar"},
+  tag: {ftm:"Follow the Money", impact:"Impact & sustainability", "design-forward":"Design-forward", "top-eu":"Top EU startups", hungary:"Hungarian companies", "remote-first":"Remote-first", discovered:"Found by the radar"},
   kind: {ats:"Company job board", board:"Job board", search:"Search engine"},
   st: {none:"Not marked", saved:"Saved", applied:"Applied", hidden:"Hidden"},
   live: {verified:"On company board today", "page live":"Page checked", listed:"Listed on a board", unverified:"Couldn't check", closed:"Closed"},
 };
 const STEM = {prototyp:"prototyping", facilitat:"facilitation", sustainab:"sustainability", traceab:"traceability", transparen:"transparency", mentor:"mentoring", "a/b test":"A/B testing", "ab test":"A/B testing", "usability test":"usability testing", "user interview":"user interviews", "design system":"design systems"};
 const nice = k => STEM[k] || k;
-const DEFAULTS = {hu:"yes", age:"0", sort:"match", min:0, q:"", loc:"", closed:false, noflags:false,
+const DEFAULTS = {imp:"all", hu:"yes", age:"0", sort:"match", min:0, q:"", loc:"", closed:false, noflags:false,
   wp:[], emp:[], sen:["senior","lead","staff","principal","head","unspecified"], fam:[], tag:[], kind:[], st:["none","saved","applied"]};
 let F = Object.assign({}, DEFAULTS, store.get("radar-filters", {}));
 let STATUS = store.get("radar-status", {});
@@ -245,6 +250,7 @@ function locMatch(j){
 }
 function pass(j, ignoreScore){
   if (!F.closed && j.live === "closed") return false;
+  if (F.imp === "impact" && !(j.tags || []).includes("impact")) return false;
   if (F.hu === "yes" && j.hu !== "yes") return false;
   if (F.hu === "yesmaybe" && j.hu === "no") return false;
   if (+F.age && ageDays(j) > +F.age) return false;
@@ -292,6 +298,7 @@ function card(j){
   const st = status(j), n = ageDays(j), isNew = j.first === TODAY || (j.first && ageDays({first:j.first}) <= 1 && !j.posted);
   const chips = [];
   if (isNew && j.live !== "closed") chips.push(`<span class="chip new">New</span>`);
+  if ((j.tags || []).includes("impact")) chips.push(`<span class="chip imp" title="${esc(j.imp || "Impact")}">Impact</span>`);
   chips.push(`<span class="chip ${j.hu}" title="Can you do it from Hungary?">${esc(j.huw || j.hu)}</span>`);
   if (j.loc) chips.push(`<span class="chip">${esc(j.loc)}</span>`);
   (j.emp || []).forEach(e => chips.push(`<span class="chip">${esc(LABELS.emp[e] || e)}</span>`));
@@ -307,6 +314,7 @@ function card(j){
       <div class="bars small">${bar("Title", p.title || 0, 30)}${bar("Seniority", p.seniority || 0, 15)}${bar("Skills", p.skills || 0, 35)}${bar("Domain", p.domain || 0, 10)}${p.penalty ? `<span>Penalty</span><span class="bar neg"><i style="width:${Math.min(100, -p.penalty * 4)}%"></i></span><span class="num r">${p.penalty}</span>` : ""}</div>
       ${j.llm ? `<p class="small mute">Rules score ${j.rules}; AI score ${j.llm.s} is shown.</p>` : ""}
       ${j.skills && j.skills.length ? `<p class="small"><b>Your skills it mentions:</b> ${esc([...new Set(j.skills.map(nice))].join(", "))}</p>` : ""}
+      ${j.imp ? `<p class="small"><b>Impact:</b> ${esc(j.imp)}</p>` : ""}
       ${j.domains && j.domains.length ? `<p class="small"><b>Domain:</b> ${esc([...new Set(j.domains.map(nice))].join(", "))}</p>` : ""}
       ${j.gaps && j.gaps.length ? `<p class="small mute">${esc(j.gaps.join("; "))}</p>` : ""}
       ${j.snip ? `<div class="snip small">${esc(j.snip)}</div>` : ""}
@@ -315,7 +323,7 @@ function card(j){
   return `<article class="job ${j.live === "closed" ? "closed" : ""} ${st === "hidden" ? "hidden" : ""}" data-id="${j.id}">
     <div class="score ${cls}" title="Match with your CV">${sc}</div>
     <h3 class="jt"><a href="${esc(j.apply || j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a></h3>
-    <div class="co">${esc(j.company || "Company not stated")}${j.tags && j.tags.length ? ` · <span class="small">${esc(j.tags.filter(t => LABELS.tag[t]).map(t => LABELS.tag[t]).slice(0, 2).join(", "))}</span>` : ""}</div>
+    <div class="co">${esc(j.company || "Company not stated")}${j.tags && j.tags.length ? ` · <span class="small">${esc(j.tags.filter(t => LABELS.tag[t] && t !== "impact").map(t => LABELS.tag[t]).slice(0, 2).join(", "))}</span>` : ""}</div>
     <div class="chips">${chips.join("")}</div>
     <div class="acts">
       <button class="btn" type="button" data-act="why" aria-expanded="${open}">${open ? "Less" : "Why this score"}</button>

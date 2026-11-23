@@ -322,3 +322,29 @@ def language_flags(text_low):
             else:
                 flags.append((f"ad written in {best}", PROFILE["language_penalty"]))
     return flags
+
+
+# ---------- impact ----------
+
+_IMP = {}
+
+
+def _imp_patterns():
+    if not _IMP:
+        sig = PROFILE.get("impact_signals", {})
+        for kind in ("strong", "weak"):
+            _IMP[kind] = [(t, re.compile(r"(?<![a-z])" + re.escape(t))) for t in sig.get(kind, [])]
+    return _IMP
+
+
+def impact_text(text_low):
+    """Return a short reason if the text shows impact work (one strong signal or two weak ones), else None."""
+    pats = _imp_patterns()
+    head = text_low[:6000]
+    for t, pat in pats.get("strong", []):
+        if pat.search(head):
+            return f"mentions {t}"
+    weak = [t for t, pat in pats.get("weak", []) if pat.search(head)]
+    if len(weak) >= 2:
+        return f"mentions {weak[0]} and {weak[1]}"
+    return None

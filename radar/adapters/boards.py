@@ -342,6 +342,8 @@ def _clean_link_title(text):
         m = _TITLE_START.search(t)
         if m and m.start() > 0:
             loc, t = t[:m.start()].strip(" ,·-"), t[m.start():]
+    t = re.sub(r"^(?:location not specified|remote job)\s*", "", t, flags=re.I)
+    t = re.split(r"\s{2,}| · | \| ", t)[0]
     t = re.sub(r"^.*?\bfor a position of\s+", "", t, flags=re.I)
     company = ""
     m = re.match(r"^(?P<company>.{2,60}?) is hiring (?:a |an )?(?:for a position of )?(?P<title>.+)$", text, re.I)
