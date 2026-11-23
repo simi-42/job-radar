@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-23T09:27:53+00:00",
- "duration_s": 86,
+ "updated": "2026-11-23T09:32:06+00:00",
+ "duration_s": 83,
  "full": true,
  "counts": {
-  "open": 1162,
-  "new_today": 1162,
+  "open": 1138,
+  "new_today": 1138,
   "hu_yes": 65,
   "alerts": 0,
-  "closed_recent": 24
+  "closed_recent": 51
  },
  "sources": [
   {
@@ -1215,7 +1215,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 25,
+   "count": 24,
    "error": null,
    "note": null
   },
@@ -1228,7 +1228,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 27,
+   "count": 28,
    "error": null,
    "note": null
   },

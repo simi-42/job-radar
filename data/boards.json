@@ -2841,7 +2841,7 @@
    "company": "Fever",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 2
+   "fails": 3
   },
   "ashby:Clerk": {
    "company": "Clerk",
@@ -2883,7 +2883,10 @@
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "tags": [
+    "impact"
+   ]
   },
   "ashby:codeway": {
    "company": "Codeway",
@@ -2897,7 +2900,10 @@
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "tags": [
+    "impact"
+   ]
   },
   "smartrecruiters:Hiflylabs": {
    "company": "Hiflylabs",
@@ -2918,7 +2924,10 @@
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "tags": [
+    "impact"
+   ]
   },
   "ashby:sitecore": {
    "company": "Sitecore",
@@ -2931,7 +2940,7 @@
    "company": "Isar Aerospace SE",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 2
+   "fails": 3
   },
   "ashby:neko-health": {
    "company": "Neko Health",
@@ -2965,7 +2974,7 @@
    "company": "Bitpanda",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 2
+   "fails": 3
   },
   "workday:db|wd3|DBWebsite": {
    "company": "Deutsche Bank",
@@ -3041,7 +3050,7 @@
    "company": "Tactile Games",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 2
+   "fails": 3
   },
   "ashby:supercell": {
    "company": "Supercell",
@@ -3103,7 +3112,7 @@
    "company": "Ebury",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 2
+   "fails": 3
   },
   "greenhouse:landor": {
    "company": "Landor",
@@ -3151,7 +3160,7 @@
    "company": "Proton",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 2
+   "fails": 3
   },
   "greenhouse:wargamingen": {
    "company": "Wargaming",
@@ -3438,42 +3447,60 @@
    "origin": "via Norrsken jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "tags": [
+    "impact"
+   ]
   },
   "greenhouse:aidocmedical": {
    "company": "Aidoc",
    "origin": "via Norrsken jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "tags": [
+    "impact"
+   ]
   },
   "greenhouse:codepath": {
    "company": "codepath-org",
    "origin": "via Fast Forward: Tech Nonprofit Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "tags": [
+    "impact"
+   ]
   },
   "greenhouse:thinkofus": {
    "company": "Think of Us",
    "origin": "via Fast Forward: Tech Nonprofit Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "tags": [
+    "impact"
+   ]
   },
   "smartrecruiters:Tidepool": {
    "company": "Tidepool.org",
    "origin": "via Fast Forward: Tech Nonprofit Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "tags": [
+    "impact"
+   ]
   },
   "ashby:Playlab": {
    "company": "Playlab",
    "origin": "via Fast Forward: Tech Nonprofit Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "tags": [
+    "impact"
+   ]
   },
   "ashby:Omnea": {
    "company": "Omnea",
