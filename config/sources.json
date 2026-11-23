@@ -1,5 +1,5 @@
 {
- "_about": "Job boards and aggregators. adapter: a named adapter, 'rss', 'generic' (any web page: feed, embedded data, structured data or links) or 'auto' (decided on the next run). search: also look this site up through the search engine. Set enabled to false to pause one. Add new ones from the site's Sources panel or here. impact: jobs from this board get the Impact tag.",
+ "_about": "Job boards and aggregators. adapter: a named adapter, 'rss', 'generic' (any web page: feed, embedded data, structured data or links) or 'auto' (decided on the next run). search: also look this site up through the search engine. Set enabled to false to pause one. Add new ones from the site's Sources panel or here. impact: jobs from this board get the Impact tag. direct: the link the site offers for checking a board by hand, with the search filled in (defaults to url).",
  "sources": [
   {
    "id": "hiddenjobs",
@@ -30,7 +30,8 @@
    "enabled": true,
    "search": true,
    "note": "Blocks automated reading (403); covered through search",
-   "impact": true
+   "impact": true,
+   "direct": "https://climatebase.org/jobs?l=&q=product+designer&remote=true"
   },
   {
    "id": "euremotejobs",
@@ -224,7 +225,8 @@
    "enabled": false,
    "search": false,
    "note": "API v1 retired (410); v2 needs an approved app name",
-   "impact": true
+   "impact": true,
+   "direct": "https://reliefweb.int/jobs?search=designer"
   },
   {
    "id": "accel",
@@ -360,7 +362,8 @@
    "enabled": true,
    "search": false,
    "note": "On Climatebase, which blocks automated reading; covered through search",
-   "impact": true
+   "impact": true,
+   "direct": "https://climatebase.org/board/climatedesigners"
   },
   {
    "id": "techjobsforgood",
@@ -470,7 +473,8 @@
    "origin": "Grassroots & Grace",
    "enabled": true,
    "search": true,
-   "impact": true
+   "impact": true,
+   "direct": "https://www.idealist.org/en/jobs?q=product%20designer&locationType=REMOTE"
   },
   {
    "id": "impactroles",
@@ -538,7 +542,7 @@
    "url": "https://www.devnetjobs.org/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": true,
    "impact": true
   },
@@ -548,7 +552,7 @@
    "url": "https://humanitairejobs.org/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": true,
    "impact": true
   },
@@ -568,7 +572,7 @@
    "url": "https://www.conservation-careers.com/conservation-jobs/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": true,
    "impact": true
   },
@@ -578,7 +582,7 @@
    "url": "https://www.joshswaterjobs.com/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": true,
    "impact": true
   },
@@ -598,7 +602,7 @@
    "url": "https://nextbillion.net/jobs/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": true,
    "impact": true
   },
@@ -608,7 +612,7 @@
    "url": "https://impactinvesting.careers/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": true,
    "impact": true
   },
@@ -618,7 +622,7 @@
    "url": "https://jobs.thegiin.org/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": true,
    "impact": true
   },
@@ -668,7 +672,7 @@
    "url": "https://genderjobs.org/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": true,
    "impact": true
   },
@@ -688,7 +692,7 @@
    "url": "https://www.humanrightscareers.com/jobs/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": true,
    "impact": true
   },
@@ -698,7 +702,7 @@
    "url": "https://www.globaljobs.org/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": true,
    "impact": true
   },
@@ -708,7 +712,7 @@
    "url": "https://www.allianceforpeacebuilding.org/peacebuilding-jobs",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": false,
    "impact": true
   },
@@ -738,7 +742,7 @@
    "url": "https://www.eurobrussels.com/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": true,
    "impact": true
   },
@@ -778,7 +782,7 @@
    "url": "https://www.environmentjob.co.uk/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": true,
    "impact": true
   },
@@ -788,7 +792,7 @@
    "url": "https://www.hacesfalta.org/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": true,
    "impact": true
   },
@@ -828,7 +832,7 @@
    "url": "https://euaffairs.jobs/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": true,
    "impact": true
   },
@@ -848,7 +852,7 @@
    "url": "https://impactopportunity.org/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": true,
    "impact": true
   },
@@ -858,7 +862,7 @@
    "url": "https://www.workforgood.org/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": true,
    "impact": true
   },
@@ -868,7 +872,7 @@
    "url": "https://jobs.feminist.org/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": false,
    "impact": true
   },
@@ -878,7 +882,7 @@
    "url": "https://www.goodfoodjobs.com/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": false,
    "impact": true
   },
@@ -888,7 +892,7 @@
    "url": "https://charityvillage.com/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": false,
+   "enabled": true,
    "search": false,
    "impact": true
   },

@@ -95,6 +95,18 @@ fieldset{border:0;margin:0;padding:0}legend{font-size:13px;color:var(--mute);mar
 .srcs{display:flex;gap:10px;flex-wrap:wrap}
 .empty{padding:40px 14px;text-align:center;color:var(--mute);background:var(--card);border-radius:14px;border:1px dashed var(--line)}
 .more-btn{margin:14px auto 0;display:block}
+/* boards to check by hand */
+details.hand{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 14px;margin-bottom:14px}
+details.hand summary{min-height:44px;display:flex;align-items:center;gap:8px;cursor:pointer;font-weight:500;font-size:15px}
+details.hand[hidden]{display:none}
+.hand-intro{margin:0 0 8px;font-size:14px}
+.hand-list{list-style:none;margin:0;padding:0 0 10px}
+.hand-list li{display:grid;grid-template-columns:22px 1fr auto;gap:2px 10px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}
+.hand-list img{width:18px;height:18px;border-radius:4px;background:#fff}
+.hand-list .nm{font-weight:500;font-size:15px}
+.hand-list .rs{grid-column:2;font-size:13px;color:var(--mute)}
+.hand-list .btn{grid-row:1/span 2;grid-column:3;min-height:40px;font-size:14px;text-decoration:none;display:inline-flex;align-items:center}
+.hand-list li.seen .nm::after{content:" ✓";color:var(--ok)}
 /* panels */
 .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:22px}
 .panel[hidden]{display:none}
@@ -188,6 +200,12 @@ form.add label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:v
     </details>
   </section>
 
+  <details class="hand" id="hand" hidden>
+    <summary><span id="hand-sum"></span></summary>
+    <p class="hand-intro mute">The radar can't read these boards, so check them yourself. Each link opens the board with the search filled in where the board allows it. Opening one marks it as checked for today.</p>
+    <ul class="hand-list" id="hand-list"></ul>
+  </details>
+
   <div class="count"><span id="count"></span><span class="mute small" id="active"></span></div>
   <div class="list" id="list"></div>
   <button class="btn more-btn" id="b-more" type="button" hidden>Show more</button>
@@ -241,6 +259,7 @@ const DEFAULTS = {imp:"all", hu:"yes", age:"0", sort:"match", min:0, q:"", loc:"
 let F = Object.assign({}, DEFAULTS, store.get("radar-filters", {}));
 let STATUS = store.get("radar-status", {});
 let JOBS = [], META = {}, SHOWN = 40, OPEN = new Set();
+let CHECKED = store.get("radar-checked", {});
 
 const ageDays = j => { const d = j.posted || j.first; if (!d) return 999; return Math.max(0, Math.round((Date.parse(TODAY) - Date.parse(d)) / 864e5)); };
 const ago = n => n >= 999 ? "" : n === 0 ? "today" : n < 14 ? `${n}d ago` : n < 60 ? `${Math.round(n / 7)}w ago` : `${Math.round(n / 30)}mo ago`;
@@ -363,6 +382,7 @@ function render(){
   $("#more-n").textContent = nMore ? `${nMore} on` : "";
   document.querySelectorAll(".seg").forEach(s => s.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(String(F[s.dataset.key]) === b.dataset.v))));
   drawScale();
+  renderHand();
 }
 
 function buildFilters(){
@@ -393,6 +413,29 @@ function headline(){
     `${open.length} open design jobs`, META.boards ? `${META.boards.ok} company boards` : "", srcOk ? `${srcOk} job boards` : ""].filter(Boolean).join(" · ");
 }
 
+/* ---------- boards to check by hand ---------- */
+const WHY = {blocked:"Blocks automated reading", needs_js:"Shows jobs only in a browser", skipped:"Not read automatically",
+  paused:"Paused", error:"Didn't load on the last run", unclear:"Couldn't find the listings", unknown:"No jobs read on the last run"};
+const needsHand = x => x.why ? !["ok", "no_match"].includes(x.why) : !x.count;
+function renderHand(){
+  const all = (META.sources || []).filter(needsHand);
+  const rows = all.filter(x => F.imp !== "impact" || x.impact)
+    .sort((a, b) => (b.impact - a.impact) || (CHECKED[a.id] || "").localeCompare(CHECKED[b.id] || "") || a.name.localeCompare(b.name));
+  $("#hand").hidden = !rows.length;
+  if (!rows.length) return;
+  const today = rows.filter(x => CHECKED[x.id] === TODAY).length;
+  $("#hand-sum").innerHTML = `${rows.length} ${F.imp === "impact" ? "impact " : ""}boards to check yourself <span class="mute small">${today ? `${today} checked today` : ""}</span>`;
+  $("#hand-list").innerHTML = rows.map(x => {
+    const host = (() => { try { return new URL(x.direct || x.url).hostname } catch(e){ return "" } })();
+    const seen = CHECKED[x.id], n = seen ? Math.round((Date.parse(TODAY) - Date.parse(seen)) / 864e5) : null;
+    const why = x.why === "paused" || x.why === "skipped" ? (x.note || WHY[x.why]) : WHY[x.why || "unknown"];
+    return `<li class="${seen === TODAY ? "seen" : ""}"><img src="https://www.google.com/s2/favicons?domain=${esc(host)}&sz=64" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+      <span class="nm">${esc(x.name)}${x.impact && F.imp !== "impact" ? ` <span class="chip imp">Impact</span>` : ""}</span>
+      <a class="btn" href="${esc(x.direct || x.url)}" target="_blank" rel="noopener" data-hand="${esc(x.id)}">Open ↗</a>
+      <span class="rs">${esc(why)}${seen ? ` · checked ${n === 0 ? "today" : n === 1 ? "yesterday" : n + " days ago"}` : ""}</span></li>`;
+  }).join("");
+}
+
 /* ---------- sources panel ---------- */
 function renderSources(){
   const S = META.sources || [];
@@ -400,7 +443,7 @@ function renderSources(){
   $("#src-sum").innerHTML = `${S.filter(x => x.enabled).length} job boards (${S.filter(x => x.ok).length} read fine last run) · ${b.ok || 0} of ${b.tracked || 0} company job boards read · ${c.with_board || 0} of ${c.total || 0} listed companies have a known board · ${b.discovered || 0} boards found by the radar · search: ${esc(s.provider || "off")}, ${s.queries || 0} queries, ${s.boards_found || 0} new boards · AI scoring: ${l.on ? `${l.scored} jobs` : "off"}`;
   $("#t-src").innerHTML = `<thead><tr><th>Board</th><th>Status</th><th>Design jobs</th><th>How</th><th>From</th></tr></thead><tbody>` +
     S.map(x => `<tr><td data-l="Board"><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name)}</a></td>
-      <td data-l="Status"><span class="dot ${x.adapter === "none" ? "" : x.ok ? "ok" : x.ok === false ? "bad" : ""}"></span>${!x.enabled ? "Paused" + (x.note ? ": " + esc(x.note) : "") : x.adapter === "none" ? (x.search ? "Search only" : "Off") + (x.note ? `<br><span class="small mute">${esc(x.note)}</span>` : "") : x.ok ? "OK" : x.ok === false ? esc((x.error || "Failed").slice(0, 80)) : "Not run yet"}</td>
+      <td data-l="Status"><span class="dot ${x.adapter === "none" || (x.ok && needsHand(x)) ? "" : x.ok ? "ok" : x.ok === false ? "bad" : ""}"></span>${!x.enabled ? "Paused" + (x.note ? ": " + esc(x.note) : "") : x.adapter === "none" ? (x.search ? "Search only" : "Off") + (x.note ? `<br><span class="small mute">${esc(x.note)}</span>` : "") : x.ok ? (x.count ? "OK" + (x.via && x.via !== "page" ? ` <span class="small mute">via ${esc(x.via)}</span>` : "") : x.why === "no_match" ? "Read fine, no design jobs today" : WHY[x.why] || "OK, nothing found") : x.ok === false ? esc((x.error || "Failed").slice(0, 80)) : "Not run yet"}</td>
       <td data-l="Design jobs" class="num">${x.count || 0}</td><td data-l="How">${esc(x.adapter || "")}${x.search ? " + search" : ""}</td><td data-l="From">${esc(x.origin || "")}</td></tr>`).join("") + `</tbody>`;
 }
 
@@ -472,6 +515,10 @@ $("#b-refresh").addEventListener("click", refresh);
 $("#b-sources").addEventListener("click", () => { const p = $("#p-sources"); if (p.hidden) openSources(); else p.hidden = true; });
 $("#f-add").addEventListener("submit", addSource);
 $("#f-token").addEventListener("submit", e => { e.preventDefault(); store.set("radar-repo", $("#t-repo").value.trim()); if ($("#t-tok").value.trim()) store.set("radar-token", $("#t-tok").value.trim()); $("#t-tok").value = ""; $("#t-msg").textContent = "Saved in this browser."; });
+$("#hand-list").addEventListener("click", e => {
+  const a = e.target.closest("[data-hand]"); if (!a) return;
+  CHECKED[a.dataset.hand] = TODAY; store.set("radar-checked", CHECKED); setTimeout(renderHand, 300);
+});
 $("#list").addEventListener("click", e => {
   const b = e.target.closest("[data-act]"); if (!b) return;
   const id = b.closest(".job").dataset.id, act = b.dataset.act;

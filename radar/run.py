@@ -137,6 +137,8 @@ class Run:
             try:
                 return src, adapter, fn(src), None
             except Exception as e:
+                code = getattr(e, "status", None)
+                boards.DIAG[src["id"]] = {"reason": "blocked" if code in (401, 403, 429, 451) else "error", "status": code}
                 return src, adapter, [], f"{type(e).__name__}: {str(e)[:160]}"
 
         active = [s for s in self.sources if s.get("enabled", True)]
@@ -148,8 +150,9 @@ class Run:
                     if src.get("impact"):
                         j["impact_src"] = src["name"]
                     self.raw.append((j, []))
-                self.src_health[src["id"]] = {"ok": err is None, "count": len(jobs), "error": err, "adapter": adapter}
-                log(f"  {src['id']:<20} {adapter:<12} {'ok' if not err else 'FAIL'} {len(jobs):>4} {err or ''}")
+                why = boards.DIAG.get(src["id"]) or {"reason": "skipped" if adapter == "none" else ("ok" if jobs else "no_match")}
+                self.src_health[src["id"]] = {"ok": err is None, "count": len(jobs), "error": err, "adapter": adapter, "why": why}
+                log(f"  {src['id']:<20} {adapter:<12} {'ok' if not err else 'FAIL'} {len(jobs):>4} {why['reason']:<9} {err or ''}")
 
     # ---------- 3. search engines ----------
     def run_search(self):
@@ -519,7 +522,10 @@ class Run:
             h = self.src_health.get(s["id"], {})
             src_rows.append({"id": s["id"], "name": s["name"], "url": s["url"], "origin": s.get("origin", ""), "enabled": s.get("enabled", True),
                              "search": s.get("search", False), "adapter": h.get("adapter") or s.get("adapter"), "ok": h.get("ok"),
-                             "count": h.get("count", 0), "error": h.get("error"), "note": s.get("note")})
+                             "count": h.get("count", 0), "error": h.get("error"), "note": s.get("note"),
+                             "impact": bool(s.get("impact")), "direct": s.get("direct") or s["url"],
+                             "why": (h.get("why") or {}).get("reason") or ("paused" if not s.get("enabled", True) else None),
+                             "via": (h.get("why") or {}).get("via")})
         comp = self.bstate["companies"]
         open_jobs = [j for j in jobs if j.get("live") != "closed"]
         meta = {

@@ -163,5 +163,50 @@ class SearchAndVerify(unittest.TestCase):
         self.assertEqual(verify.check({"url": "https://expired.test/jobs/1/x"})[0], "closed")
 
 
+
+class BoardReaders(unittest.TestCase):
+    """Fallbacks for boards whose pages are built by JavaScript, and the reason recorded when a board gives nothing."""
+    def tearDown(self):
+        http.FIXTURES = None
+        boards.DIAG.clear()
+
+    def test_algolia_board(self):
+        page = ('<html><body><div id="__next"></div><script src="/_next/static/chunks/pages/_app-abc.js"></script>'
+                '<script src="https://www.googletagmanager.com/gtag.js"></script></body></html>')
+        js = 'var c=algoliasearch("ABCDEFGH12","0123456789abcdef0123456789abcdef");'
+        hits = {"nbHits": 2, "hits": [
+            {"objectID": "1", "title": "Senior Product Designer", "company_name": "Clean Air Fund", "url_external": "https://cleanair.org/jobs/1",
+             "card_locations": ["Remote, Europe"], "date_published": 1763856000},
+            {"objectID": "2", "title": "Operations Manager", "company_name": "X", "url_external": "https://x.org/2"}]}
+        fixtures({"static/chunks/pages/_app": js, "algolia.net/1/indexes/jobs_prod/query": hits, "board.example.org": page})
+        src = {"id": "pg", "url": "https://board.example.org/?jobs_prod%5Bquery%5D=designer"}
+        jobs = boards.generic(src)
+        self.assertEqual([(j["title"], j["company"], j["url"]) for j in jobs],
+                         [("Senior Product Designer", "Clean Air Fund", "https://cleanair.org/jobs/1")])
+        self.assertEqual(boards.DIAG["pg"]["via"], "algolia")
+
+    def test_wordpress_job_feed(self):
+        page = '<html><head><link rel="stylesheet" href="/wp-content/themes/x.css"></head><body><div id="app"></div></body></html>'
+        feed = ('<?xml version="1.0"?><rss xmlns:job_listing="https://wpjobmanager.com"><channel><item><title>Product Designer</title>'
+                '<link>https://veg.example/job/pd/</link><job_listing:company>Oatly</job_listing:company>'
+                '<job_listing:location>Remote</job_listing:location><pubDate>Mon, 23 Nov 2026 10:00:00 +0000</pubDate></item></channel></rss>')
+        fixtures({"feed=job_feed": feed, "veg.example": page})
+        jobs = boards.generic({"id": "veg", "url": "https://veg.example/remote-jobs/"})
+        self.assertEqual((jobs[0]["company"], jobs[0]["url"]), ("Oatly", "https://veg.example/job/pd/"))
+        self.assertEqual(boards.DIAG["veg"]["via"], "wordpress feed")
+
+    def test_reasons(self):
+        fixtures({"blocked.example": "<html><title>Just a moment...</title><body>Checking your browser</body></html>"})
+        self.assertEqual(boards.generic({"id": "b", "url": "https://blocked.example/jobs"}), [])
+        self.assertEqual(boards.DIAG["b"]["reason"], "blocked")
+        fixtures({"spa.example": '<html><body><div id="root"></div><script src="/main.js"></script></body></html>', "main.js": "console.log(1)"})
+        boards.generic({"id": "s", "url": "https://spa.example/jobs"})
+        self.assertEqual(boards.DIAG["s"]["reason"], "needs_js")
+        rows = "".join(f'<li><a href="/jobs/role-{i}">Finance Officer {i}</a> {"text " * 60}</li>' for i in range(8))
+        fixtures({"plain.example": f"<html><body><ul>{rows}</ul></body></html>"})
+        boards.generic({"id": "p", "url": "https://plain.example/jobs"})
+        self.assertEqual(boards.DIAG["p"]["reason"], "no_match")
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -6,7 +6,7 @@ from urllib.parse import urljoin, urlparse
 from .. import http
 from ..classify import title_family
 from ..detect import parse_ats_url
-from ..model import html_to_text, make_job
+from ..model import html_to_text, make_job, registrable
 from .feeds import parse_feed, split_title_company
 
 DESC = 4000
@@ -203,10 +203,14 @@ _FEED_LINK = re.compile(r'<link[^>]+type=["\']application/(?:rss|atom)\+xml["\']
 _A = re.compile(r'<a\b[^>]*href=["\']([^"\'#]+)["\'][^>]*>(.*?)</a>', re.S | re.I)
 
 TITLE_KEYS = ("title", "jobTitle", "job_title", "name", "position", "text", "role")
-URL_KEYS = ("url", "absolute_url", "applyUrl", "apply_url", "jobUrl", "job_url", "hostedUrl", "link", "href", "permalink", "canonicalUrl", "slug", "path")
-CO_KEYS = ("company", "companyName", "company_name", "organization", "organisation", "employer", "hiringOrganization", "org", "startup")
-LOC_KEYS = ("location", "locations", "locationName", "city", "country", "jobLocation", "candidate_required_location", "office", "offices")
-DATE_KEYS = ("datePosted", "posted", "postedAt", "posted_at", "published_at", "publishedAt", "created_at", "createdAt", "date", "pubDate")
+URL_KEYS = ("url", "absolute_url", "applyUrl", "apply_url", "jobUrl", "job_url", "hostedUrl", "link", "href", "permalink", "canonicalUrl",
+            "url_external", "external_url", "externalUrl", "application_url", "applicationUrl", "apply_link", "applyLink", "slug", "path")
+CO_KEYS = ("company", "companyName", "company_name", "organization", "organisation", "organization_name", "organizationName", "orgName",
+           "org_name", "employer", "employer_name", "hiringOrganization", "org", "startup")
+LOC_KEYS = ("location", "locations", "locationName", "location_name", "city", "country", "jobLocation", "candidate_required_location",
+            "office", "offices", "card_locations", "locality")
+DATE_KEYS = ("datePosted", "posted", "postedAt", "posted_at", "published_at", "publishedAt", "date_published", "datePublished",
+             "published", "created_at", "createdAt", "date", "pubDate")
 REMOTE_KEYS = ("remote", "isRemote", "is_remote", "workplaceType", "work_mode", "remoteType", "workplace", "jobLocationType")
 
 
@@ -239,7 +243,14 @@ def _job_from_dict(d, base, src):
     title = next((d[k] for k in TITLE_KEYS if isinstance(d.get(k), str)), "")
     if not title or len(title) > 140 or not title_family(title):
         return None
-    url = next((d[k] for k in URL_KEYS if isinstance(d.get(k), str) and d.get(k)), "")
+    url = ""
+    for k in URL_KEYS:
+        v = d.get(k)
+        if isinstance(v, dict):  # per-language URLs, e.g. {"en": "/en/job/..."}
+            v = v.get("en") or next((x for x in v.values() if isinstance(x, str)), "")
+        if isinstance(v, str) and v:
+            url = v
+            break
     if not url:
         return None
     if not url.startswith("http"):
@@ -394,22 +405,166 @@ def links_jobs(page, base, src):
     return out
 
 
+# ---------- why a board gave nothing ----------
+# Filled per run: {source id: {"reason": ..., "status": ..., ...}}. Shown on the site so unreadable boards get a direct link.
+DIAG = {}
+
+_BLOCK = re.compile(r"just a moment\.\.\.|cf-chl|challenge-platform|attention required|access denied|captcha|"
+                    r"verify you are (?:a )?human|are you a robot|request unsuccessful|incapsula|datadome|perimeterx", re.I)
+_SPA = re.compile(r'id=["\'](?:root|app|__next|__nuxt|svelte)["\']|ng-version=|data-reactroot|enable javascript|requires javascript', re.I)
+_JOBLINK = re.compile(r"/(?:jobs?|positions?|vacanc|opportunit|roles?|careers?|stellen|emploi|offre|listing)[/-]?[\w-]", re.I)
+
+
+def _visible_text(page):
+    page = re.sub(r"<(script|style|noscript|svg)\b.*?</\1>", " ", page, flags=re.S | re.I)
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", page)).strip()
+
+
+def diagnose(src, status, page, found, via=None):
+    """Record why a board read gave what it gave: ok / no_match / needs_js / blocked."""
+    text = _visible_text(page or "")
+    links = [h for h, _ in _A.findall(page or "")]
+    joblinks = len({h for h in links if _JOBLINK.search(h)})
+    if found:
+        reason = "ok"
+    elif _BLOCK.search((page or "")[:20000]) and len(text) < 4000:
+        reason = "blocked"
+    elif joblinks >= 5 and len(text) > 1500:
+        reason = "no_match"   # listings are readable; none are design roles today
+    elif len(text) < 1500 or _SPA.search(page or "") or joblinks < 3:
+        reason = "needs_js"
+    else:
+        reason = "unclear"
+    DIAG[src["id"]] = {"reason": reason, "status": status, "text": len(text), "job_links": joblinks, "via": via}
+    return reason
+
+
+# ---------- WordPress job boards (WP Job Manager) ----------
+
+def wp_jobs(src, page, final):
+    """WP Job Manager boards publish a filtered RSS feed and a REST route even when the page itself is built by JavaScript."""
+    if "wp-content" not in page and "wp-json" not in page:
+        return []
+    p = urlparse(final)
+    base = f"{p.scheme}://{p.netloc}"
+    try:
+        out = rss(src, f"{base}/?feed=job_feed&search_keywords=design&posts_per_page=100")
+        if out:
+            return out
+    except Exception:  # not a feed, or no WP Job Manager
+        pass
+    try:
+        data = http.get_json(f"{base}/wp-json/wp/v2/job-listings?search=design&per_page=100")
+    except Exception:
+        return []
+    out = []
+    for d in data if isinstance(data, list) else []:
+        title = html_to_text(((d.get("title") or {}).get("rendered")) or "")
+        if not title_family(title):
+            continue
+        meta = d.get("meta") or {}
+        loc = meta.get("_job_location") or ""
+        wp = "remote" if meta.get("_remote_position") in (1, "1", True) else None
+        out.append(_j(title, meta.get("_company_name") or "", d.get("link"), src["id"], locations=[loc] if loc else [],
+                      workplace=wp, posted=d.get("date"), description=html_to_text((d.get("content") or {}).get("rendered", ""), DESC)))
+    return out
+
+
+# ---------- boards whose search runs on Algolia (80,000 Hours, Probably Good, Idealist, ...) ----------
+
+_ALG_PAIR = re.compile(r'["\']([A-Z0-9]{10})["\']\s*,\s*["\']([a-f0-9]{32})["\']')
+_ALG_APP = re.compile(r'(?:appId|applicationId|application_id|ALGOLIA_APP(?:LICATION)?_ID|algoliaAppId)\W{1,6}([A-Z0-9]{10})\b')
+_ALG_DSN = re.compile(r'\b([a-zA-Z0-9]{10})(?:-dsn)?\.algolia(?:net)?\.(?:net|io)')
+_ALG_KEY = re.compile(r'(?:apiKey|searchApiKey|searchKey|search_key|search_api_key|searchOnlyApiKey|ALGOLIA_(?:SEARCH_)?(?:API_)?KEY|algoliaApiKey)'
+                      r'\W{1,6}([A-Za-z0-9+/=]{32,400})["\']')
+_ALG_IDX = re.compile(r'(?:indexName|index_name|ALGOLIA_INDEX(?:_NAME)?|algoliaIndex)\W{1,6}([\w.\-]{2,80})["\']')
+_ALG_ROUTE = re.compile(r'([A-Za-z][\w.\-]{1,60})(?:\[|%5B)query(?:\]|%5D)=')
+_SCRIPT_SRC = re.compile(r'<script[^>]+src=["\']([^"\']+)["\']', re.I)
+_NOT_APP_JS = re.compile(r"googletagmanager|google-analytics|gtag|hotjar|facebook|intercom|stripe|recaptcha|cookie|consent|segment|"
+                         r"clarity|hubspot|sentry|polyfill|jquery|plausible|fathom|crisp|zendesk|youtube|vimeo|maps\.google", re.I)
+
+
+def _algolia_config(page, final, src):
+    """Find Algolia app id, search key and index names in the page and its own scripts."""
+    texts = [page]
+    if "algolia" not in page.lower():
+        host = registrable(urlparse(final).netloc)
+        srcs = [urljoin(final, s) for s in _SCRIPT_SRC.findall(page) if not _NOT_APP_JS.search(s)]
+        srcs = [s for s in srcs if registrable(urlparse(s).netloc) == host or re.search(r"cloudfront|vercel|netlify|cdn\.", s)]
+        srcs.sort(key=lambda s: 0 if re.search(r"_app|main|app[.-]|index|pages/|jobs|search|board", s) else 1)
+        for s in srcs[:8]:
+            try:
+                js = http.get_text(s, timeout=20)
+            except Exception:
+                continue
+            if "algolia" in js.lower() or _ALG_PAIR.search(js):
+                texts.append(js)
+    blob = "\n".join(texts)
+    app = key = None
+    m = _ALG_PAIR.search(blob)
+    if m:
+        app, key = m.group(1), m.group(2)
+    app = app or next(iter(_ALG_APP.findall(blob)), None)
+    if not app:
+        dsn = [a.upper() for a in _ALG_DSN.findall(blob) if not a.isdigit()]
+        app = dsn[0] if dsn else None
+    key = key or next(iter(_ALG_KEY.findall(blob)), None)
+    idx = _ALG_ROUTE.findall(src.get("url", "")) + _ALG_ROUTE.findall(final) + _ALG_IDX.findall(blob)
+    idx = list(dict.fromkeys(i for i in idx if not i.lower().startswith(("http", "query"))))
+    return app, key, idx[:5]
+
+
+def algolia_jobs(src, page, final, query="design"):
+    app, key, indices = _algolia_config(page, final, src)
+    if not (app and key and indices):
+        return []
+    p = urlparse(final)
+    head = {"X-Algolia-Application-Id": app, "X-Algolia-API-Key": key, "Referer": final, "Origin": f"{p.scheme}://{p.netloc}"}
+    for idx in indices:
+        try:
+            data = http.get_json(f"https://{app.lower()}-dsn.algolia.net/1/indexes/{idx}/query", method="POST", headers=head,
+                                 data={"params": f"query={query}&hitsPerPage=300"})
+        except Exception:
+            continue
+        out = []
+        for hit in data.get("hits") or []:
+            if not any(isinstance(hit.get(k), (str, dict)) and hit.get(k) for k in URL_KEYS):
+                hit = dict(hit, url=f"{src.get('direct') or src['url']}#job-{hit.get('objectID', '')}")
+            j = _job_from_dict(hit, final, src)
+            if j:
+                out.append(j)
+        if out or data.get("nbHits"):
+            return out
+    return []
+
+
 def generic(src, url=None):
     url = url or src["url"]
     status, page, final = http.fetch(url)
     stripped = page.lstrip()[:200].lower()
     if stripped.startswith("<?xml") or "<rss" in stripped or "<feed" in stripped:
-        return rss(src, url)
+        out = rss(src, url)
+        DIAG[src["id"]] = {"reason": "ok" if out else "no_match", "status": status, "via": "feed"}
+        return out
+    via = "page"
     out = jsonld_jobs(page, final, src)
     out += _walk_page_json(page, src, final)
     if not out:
         for f in _FEED_LINK.findall(page)[:2]:
             try:
                 out += rss(src, urljoin(final, f))
+                via = "feed"
             except Exception:
                 pass
     if not out:
+        out = wp_jobs(src, page, final)
+        via = "wordpress feed" if out else via
+    if not out:
         out = links_jobs(page, final, src)
+        via = "page links" if out else via
+    if not out and (_ALG_ROUTE.search(url) or "algolia" in page.lower() or _SPA.search(page)):
+        out = algolia_jobs(src, page, final)
+        via = "algolia" if out else via
     # de-duplicate by URL
     seen, uniq = set(), []
     for j in out:
@@ -417,6 +572,7 @@ def generic(src, url=None):
             continue
         seen.add(j["url"])
         uniq.append(j)
+    diagnose(src, status, page, len(uniq), via)
     return uniq
 
 
