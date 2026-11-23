@@ -113,3 +113,40 @@ def make_job(*, title, company, url, source, kind, locations=None, remote=None, 
         "geo_hint": extra_geo or [],
         "seniority_hint": seniority_hint,
     }
+
+
+# ---------- company website domains (for logos) ----------
+_NOT_COMPANY = ("greenhouse.io", "lever.co", "ashbyhq.com", "workable.com", "recruitee.com", "personio.de", "personio.com", "smartrecruiters.com",
+                "bamboohr.com", "teamtailor.com", "breezy.hr", "pinpointhq.com", "myworkdayjobs.com", "workday.com", "rippling.com", "jazz.co",
+                "applytojob.com", "join.com", "linkedin.com", "indeed.com", "glassdoor.com", "google.com", "facebook.com", "twitter.com", "x.com",
+                "instagram.com", "youtube.com", "github.com", "medium.com", "tiktok.com", "apple.com", "onetrust.com", "cookiebot.com",
+                "remotive.com", "remoteok.com", "himalayas.app", "arbeitnow.com", "jobicy.com", "weworkremotely.com", "workingnomads.com",
+                "uxjobs.io", "hardproblems.com", "dribbble.com", "4dayweek.io", "remoterocketship.com", "getro.com", "ycombinator.com",
+                "welcometothejungle.com", "climatebase.org", "jobspresso.co", "euremotejobs.com", "berlinstartupjobs.com", "authenticjobs.com",
+                "realworkfromanywhere.com", "hiring.cafe", "relomote.com", "stillhiring.today", "probablygood.org", "climatetechlist.com",
+                "github.io", "githubusercontent.com", "gstatic.com", "googleapis.com", "cloudfront.net", "amazonaws.com", "w3.org", "schema.org",
+                "gem.com", "dover.com", "notion.site", "typeform.com", "hubspot.com", "wix.com", "squarespace.com", "webflow.io", "framer.website")
+_SUBS = re.compile(r"^(?:www\d?|careers?|jobs?|job|apply|talent|work|join|recruiting|karriere|hiring|team|about|en|de|hu)\.")
+
+
+def registrable(host):
+    host = (host or "").lower().split(":")[0].strip(".")
+    parts = host.split(".")
+    if len(parts) >= 3 and parts[-2] in ("co", "com", "org", "net", "ac", "gov", "edu") and len(parts[-1]) == 2:
+        return ".".join(parts[-3:])
+    return ".".join(parts[-2:]) if len(parts) >= 2 else host
+
+
+def company_domain(url):
+    """Company website domain from a URL, or None if the URL is on a job board, ATS or social site."""
+    from urllib.parse import urlparse
+    try:
+        host = urlparse(url if "//" in (url or "") else "https://" + (url or "")).netloc.lower()
+    except ValueError:
+        return None
+    if not host or "." not in host:
+        return None
+    reg = registrable(host)
+    if any(reg == d or host.endswith("." + d) or host == d for d in _NOT_COMPANY):
+        return None
+    return reg

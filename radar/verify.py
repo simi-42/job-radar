@@ -30,7 +30,7 @@ def check(job):
         vt = parse_date(j.get("valid_through"))
         if vt and vt < TODAY:
             return "closed", {}
-        fill = {k: j[k] for k in ("company", "locations", "description", "workplace_hint", "posted", "emp_hint") if j.get(k) and j[k] != "Unknown"}
+        fill = {k: j[k] for k in ("company", "locations", "description", "workplace_hint", "posted", "emp_hint", "org_url") if j.get(k) and j[k] != "Unknown"}
         break
     if CLOSED.search(re.sub(r"<[^>]+>", " ", head)):
         return "closed", {}

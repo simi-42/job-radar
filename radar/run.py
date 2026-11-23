@@ -18,7 +18,7 @@ from urllib.parse import urlparse
 
 from . import alert, classify, detect, http, score, verify
 from .adapters import ats, boards, search
-from .model import TODAY, job_key, norm_company
+from .model import TODAY, company_domain, job_key, norm_company
 
 ROOT = Path(__file__).resolve().parent.parent
 CFG, DATA, PUB = ROOT / "config", ROOT / "data", ROOT / "docs" / "data"
@@ -74,6 +74,7 @@ class Run:
         self.search_stats = {"provider": search.provider(), "queries": 0, "results": 0, "boards_found": 0, "jobs": 0, "errors": 0}
         self.excluded = {norm_company(c) for c in self.profile.get("exclude_companies", [])}
         self.site_url = os.environ.get("SITE_URL", "")
+        self.known_domains = {norm_company(c["name"]): company_domain(c.get("site")) for c in self.companies if c.get("site")}
 
     def time_left(self):
         return self.budget - (time.time() - self.t0)
@@ -208,12 +209,26 @@ class Run:
                     n += 1
         log(f"harvested {n} new company job boards from listings")
 
+    def find_sites(self, limit=250):
+        """Find the website (for the logo) of company boards the radar discovered."""
+        todo = [(k, d) for k, d in self.bstate["discovered"].items()
+                if not d.get("site") and days_between(d.get("site_checked"), TODAY) >= 30][:limit]
+        if not todo:
+            return
+        with cf.ThreadPoolExecutor(16) as ex:
+            for (k, d), site in zip(todo, ex.map(lambda kd: detect.find_site(kd[0], kd[1]["company"]), todo)):
+                d["site_checked"] = TODAY
+                if site:
+                    d["site"] = site
+        log(f"websites: found {sum(1 for k, d in todo if d.get('site'))} of {len(todo)} discovered companies")
+
     def run_boards(self):
-        owners = {}
+        owners, sites = {}, {}
         for c in self.companies:
             rec = self.bstate["companies"].get(c["name"]) or {}
             if rec.get("board"):
                 owners[rec["board"]] = (c["name"], c.get("tags", []))
+                sites[rec["board"]] = company_domain(c.get("site"))
         impact_names = {f"via {x['name']}" for x in self.sources if x.get("impact")}
         for key, d in self.bstate["discovered"].items():
             tags = ["discovered"] + list(d.get("tags", []))
@@ -221,6 +236,7 @@ class Run:
                 tags.append("impact")
             if key not in owners and (d.get("fails", 0) < 6 or self.full):
                 owners[key] = (d["company"], tags)  # boards failing 6 runs in a row are retried weekly
+                sites[key] = d.get("site")
         log(f"reading {len(owners)} company job boards")
 
         def one(item):
@@ -252,6 +268,7 @@ class Run:
                 for j in jobs:
                     j["board_key"] = key
                     j["source_name"] = f"{company} careers"
+                    j["company_domain"] = sites.get(key)
                     self.raw.append((j, tags))
         ok = sum(1 for h in self.board_health.values() if h["ok"])
         log(f"  {ok} boards ok, {len(self.board_health) - ok} failed, {sum(h['count'] for h in self.board_health.values())} design jobs")
@@ -324,6 +341,12 @@ class Run:
             merged = dict(p, description=desc)
             sc, parts, matched, dom, flags, gaps = score.rules(merged, self.profile, p["fam"], p["sen"], lf, tags)
             jid = hashlib.sha1(key.encode()).hexdigest()[:12]
+            dom = next((x["company_domain"] for x in items if x.get("company_domain")), None) or self.known_domains.get(norm_company(p["company"]))
+            if not dom:
+                for x in items:
+                    dom = company_domain(x.get("apply_url")) or company_domain(x.get("url"))
+                    if dom:
+                        break
             posted = min((x["posted"] for x in items if x.get("posted")), default=None)
             if posted and posted > TODAY:
                 posted = TODAY
@@ -333,7 +356,7 @@ class Run:
                 "loc": " · ".join(locs[:3]), "cc": cc, "region": best["region"], "wp": best["wp"], "hu": best["hu"], "huw": best["hu_why"],
                 "emp": emp, "sen": p["sen"], "fam": p["fam"], "score": sc, "rules": sc, "parts": parts, "skills": matched, "domains": dom,
                 "flags": flags, "gaps": gaps, "posted": posted, "tags": tags, "salary": next((x["salary"] for x in items if x.get("salary")), None),
-                "snip": desc[:700], "live": "verified" if p["kind"] == "ats" else "listed", "checked": TODAY, "imp": imp,
+                "snip": desc[:700], "live": "verified" if p["kind"] == "ats" else "listed", "checked": TODAY, "imp": imp, "dom": dom,
                 "_desc": desc, "_locs": locs, "_board": p.get("board"),
             }
         self.cur = recs
@@ -406,6 +429,8 @@ class Run:
                     r["closed"] = TODAY
                 if fill.get("company") and not r.get("company"):
                     r["company"] = fill["company"]
+                if fill.get("org_url") and not r.get("dom"):
+                    r["dom"] = company_domain(fill["org_url"])
                 if fill.get("locations") or fill.get("workplace_hint"):
                     if fill.get("locations") and not r.get("loc"):
                         r["loc"] = " · ".join(fill["locations"][:3])
@@ -536,7 +561,7 @@ def main(argv=None):
         steps.append(("search", r.run_search))
     steps.append(("harvest", r.harvest))
     if not args.no_boards:
-        steps.append(("boards", r.run_boards))
+        steps += [("sites", r.find_sites), ("boards", r.run_boards)]
     steps += [("process", r.process), ("lifecycle", r.lifecycle), ("verify", r.verify), ("llm", r.llm), ("alerts", r.alerts), ("publish", r.publish)]
     for name, fn in steps:
         t = time.time()

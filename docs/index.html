@@ -67,9 +67,13 @@ fieldset{border:0;margin:0;padding:0}legend{font-size:13px;color:var(--mute);mar
 .list{display:flex;flex-direction:column;gap:10px}
 .job{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;grid-template-columns:56px 1fr;gap:4px 14px}
 .job.closed{opacity:.55}.job.hidden{opacity:.5}
-.score{grid-row:span 3;width:56px;height:56px;border-radius:12px;display:grid;place-items:center;font:500 22px "Geist Mono",monospace;background:var(--soft)}
-.score.hi{background:var(--acc);color:var(--acc-ink)}.score.mid{background:var(--ink);color:var(--bg)}
-.score small{display:block;font-size:10px;font-family:Geist;opacity:.8;margin-top:-6px;text-align:center}
+.logo{grid-row:span 3;width:56px;height:56px;border-radius:12px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;overflow:hidden;position:relative}
+.logo img{width:72%;height:72%;object-fit:contain;position:relative;z-index:1}
+.logo span{position:absolute;inset:0;display:grid;place-items:center;font-weight:600;font-size:19px;color:#fff;background:var(--hue)}
+.logo.has-img span{display:none}.logo:not(.has-img) img{opacity:0}
+.head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.match{flex:none;font:500 13px "Geist Mono",monospace;color:var(--mute);white-space:nowrap;padding-top:3px}
+.match.hi{color:var(--acc)}
 .jt{font-size:17px;font-weight:600;line-height:1.3;margin:0}
 .jt a{text-decoration:none}.jt a:hover{text-decoration:underline}
 .co{font-size:15px;color:var(--mute)}
@@ -106,7 +110,7 @@ form.add label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:v
 .toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:12px 16px;border-radius:12px;font-size:14px;max-width:min(92vw,520px);z-index:9}
 .toast[hidden]{display:none}
 @media(max-width:600px){
-  .wrap{padding-top:12px}.job{grid-template-columns:48px 1fr}.score{width:48px;height:48px;font-size:19px}
+  .wrap{padding-top:12px}.job{grid-template-columns:48px 1fr}.logo{width:48px;height:48px}
   form.add{grid-template-columns:1fr}.bars{grid-template-columns:80px 1fr 40px}
   .seg button{padding:0 10px}
   table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}
@@ -292,9 +296,20 @@ function drawScale(){
 }
 const ro = new ResizeObserver(drawScale); ro.observe(fig);
 
+/* ---------- logos ---------- */
+function initials(name){ const w = String(name || "?").replace(/[^\p{L}\p{N} ]/gu, " ").trim().split(/\s+/); return ((w[0] || "?")[0] + (w[1] ? w[1][0] : "")).toUpperCase(); }
+function hue(name){ let h = 0; for (const c of String(name || "")) h = (h * 31 + c.charCodeAt(0)) % 360; return `hsl(${h} 32% 42%)`; }
+function logo(j){
+  const img = j.dom ? `<img src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(j.dom)}&sz=128" alt="" loading="lazy" referrerpolicy="no-referrer">` : "";
+  return `<div class="logo" style="--hue:${hue(j.company)}" title="${esc(j.company || "")}">${img}<span aria-hidden="true">${esc(initials(j.company))}</span></div>`;
+}
+// Google returns a 16px globe when it has no icon: keep the initials then.
+document.addEventListener("load", e => { const i = e.target; if (i.tagName === "IMG" && i.parentElement?.classList.contains("logo")) i.parentElement.classList.toggle("has-img", i.naturalWidth > 16); }, true);
+document.addEventListener("error", e => { const i = e.target; if (i.tagName === "IMG" && i.parentElement?.classList.contains("logo")) i.remove(); }, true);
+
 /* ---------- list ---------- */
 function card(j){
-  const sc = Math.round(j.score), cls = sc >= 70 ? "hi" : sc >= 55 ? "mid" : "";
+  const sc = Math.round(j.score), cls = sc >= 70 ? "hi" : "";
   const st = status(j), n = ageDays(j), isNew = j.first === TODAY || (j.first && ageDays({first:j.first}) <= 1 && !j.posted);
   const chips = [];
   if (isNew && j.live !== "closed") chips.push(`<span class="chip new">New</span>`);
@@ -321,8 +336,8 @@ function card(j){
       <div class="srcs small"><span class="mute">Found on:</span>${(j.sources || []).map(s => `<a href="${esc(s.u)}" rel="noopener" target="_blank">${esc(s.n)}</a>`).join("")}</div>
     </div>` : "";
   return `<article class="job ${j.live === "closed" ? "closed" : ""} ${st === "hidden" ? "hidden" : ""}" data-id="${j.id}">
-    <div class="score ${cls}" title="Match with your CV">${sc}</div>
-    <h3 class="jt"><a href="${esc(j.apply || j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a></h3>
+    ${logo(j)}
+    <div class="head"><h3 class="jt"><a href="${esc(j.apply || j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a></h3><span class="match ${cls}" title="Match with your CV">${sc} match</span></div>
     <div class="co">${esc(j.company || "Company not stated")}${j.tags && j.tags.length ? ` · <span class="small">${esc(j.tags.filter(t => LABELS.tag[t] && t !== "impact").map(t => LABELS.tag[t]).slice(0, 2).join(", "))}</span>` : ""}</div>
     <div class="chips">${chips.join("")}</div>
     <div class="acts">

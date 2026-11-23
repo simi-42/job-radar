@@ -326,6 +326,9 @@ def jsonld_jobs(page, base, src):
                          description=html_to_text(d.get("description", ""), DESC),
                          emp=d.get("employmentType") if isinstance(d.get("employmentType"), list) else [str(d.get("employmentType") or "")])
                 job["valid_through"] = d.get("validThrough")
+                org = d.get("hiringOrganization") if isinstance(d.get("hiringOrganization"), dict) else {}
+                same = org.get("sameAs")
+                job["org_url"] = (same[0] if isinstance(same, list) and same else same) or org.get("url")
                 out.append(job)
     return out
 

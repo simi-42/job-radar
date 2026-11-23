@@ -162,3 +162,48 @@ def detect_company(company):
     if career_pages:
         return "generic:" + career_pages[0], "careers page"
     return None, "none"
+
+
+def board_page(key):
+    kind, _, slug = key.partition(":")
+    s = slug.split("|")[0]
+    return {
+        "greenhouse": f"https://job-boards.greenhouse.io/{s}", "greenhouse-eu": f"https://job-boards.eu.greenhouse.io/{s}",
+        "lever": f"https://jobs.lever.co/{s}", "lever-eu": f"https://jobs.eu.lever.co/{s}", "ashby": f"https://jobs.ashbyhq.com/{s}",
+        "workable": f"https://apply.workable.com/{s}/", "recruitee": f"https://{s}.recruitee.com/", "personio": f"https://{s}.jobs.personio.{(slug.split('|') + ['de'])[1]}/",
+        "smartrecruiters": f"https://careers.smartrecruiters.com/{s}", "bamboohr": f"https://{s}.bamboohr.com/careers", "teamtailor": f"https://{s}.teamtailor.com/",
+        "breezy": f"https://{s}.breezy.hr/", "pinpoint": f"https://{s}.pinpointhq.com/",
+    }.get(kind)
+
+
+_HREF = re.compile(r"""(?:href|content)=["'](https?://[^"'\s>]+)""", re.I)
+_SITE_KEYS = re.compile(r'"(?:publicWebsite|website|websiteUrl|companyUrl|company_url|homepage)"\s*:\s*"(https?:[^"]+)"', re.I)
+
+
+def find_site(key, company):
+    """Best guess of a company's own website domain, read from its job board page."""
+    from .model import company_domain, norm_company
+    if key.startswith("workday:"):
+        return None
+    url = board_page(key)
+    if not url:
+        return None
+    try:
+        text = http.get_text(url, timeout=15, retries=0)
+    except http.FetchError:
+        return None
+    m = _SITE_KEYS.search(text)
+    if m and company_domain(m.group(1).replace("\\/", "/")):
+        return company_domain(m.group(1).replace("\\/", "/"))
+    counts = {}
+    for u in _HREF.findall(text):
+        d = company_domain(u)
+        if d:
+            counts[d] = counts.get(d, 0) + 1
+    if not counts:
+        return None
+    nn = norm_company(company)
+    named = [d for d in counts if nn and (nn[:6] in d.replace(".", "").replace("-", "") or d.split(".")[0] in nn)]
+    if named:
+        return max(named, key=lambda d: counts[d])
+    return None  # don't guess from unrelated links
