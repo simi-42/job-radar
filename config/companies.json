@@ -1,0 +1,4370 @@
+{
+ "_about": "Companies whose own job boards are polled daily. 'ats' is filled in automatically by the weekly discover run (kind:slug). Add a company with just name and site; leave ats empty.",
+ "companies": [
+  {
+   "name": "TrusTrace",
+   "site": "https://trustrace.com",
+   "careers": "https://careers.trustrace.com/jobs",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Retraced",
+   "site": "https://www.retraced.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Fairly Made",
+   "site": "https://www.fairlymade.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Good On You",
+   "site": "https://goodonyou.eco",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Made2Flow",
+   "site": "https://www.made2flow.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Renoon",
+   "site": "https://renoon.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Manufy",
+   "site": "https://manufy.com",
+   "careers": "https://manufy.com/careers",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Teemill",
+   "site": "https://teemill.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Greenstory",
+   "site": "https://greenstory.ca",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Global Fashion Agenda",
+   "site": "https://globalfashionagenda.org",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "tip me",
+   "site": "https://www.tip-me.org",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Open Supply Hub",
+   "site": "https://opensupplyhub.org",
+   "careers": "https://info.opensupplyhub.org/work-with-us",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "WageIndicator Foundation",
+   "site": "https://wageindicator.org",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Fair Wear Foundation",
+   "site": "https://www.fairwear.org",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Business & Human Rights Resource Centre",
+   "site": "https://www.business-humanrights.org",
+   "careers": "https://bhrrc.bamboohr.com/careers",
+   "ats": "bamboohr:bhrrc",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "&Wider",
+   "site": "https://www.andwider.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Quizrr",
+   "site": "https://www.quizrr.se",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Ulula",
+   "site": "https://ulula.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Fashion Revolution",
+   "site": "https://www.fashionrevolution.org",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Circularise",
+   "site": "https://www.circularise.com",
+   "careers": "https://circularise.com/careers-open-positions",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Provenance",
+   "site": "https://www.provenance.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Meridia",
+   "site": "https://www.meridia.land",
+   "careers": "https://apply.workable.com/meridia/",
+   "ats": "workable:meridia",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Circulor",
+   "site": "https://circulor.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Satelligence",
+   "site": "https://satelligence.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "OpenSC",
+   "site": "https://opensc.org",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "SupplyShift",
+   "site": "https://www.supplyshift.net",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Scantrust",
+   "site": "https://www.scantrust.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Temera",
+   "site": "https://www.temera.it",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Fairphone",
+   "site": "https://www.fairphone.com",
+   "careers": "https://fairphone.jobs.personio.com/",
+   "ats": "personio:fairphone",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Algrano",
+   "site": "https://www.algrano.com",
+   "careers": "https://algrano.com/careers",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Tony's Open Chain",
+   "site": "https://tonysopenchain.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Fairtrade International",
+   "site": "https://www.fairtrade.net",
+   "careers": "https://fairtrade.net/en/about/opportunities.html",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Material Exchange",
+   "site": "https://materialexchange.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "IDH Sustainable Trade Initiative",
+   "site": "https://www.idhsustainabletrade.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "United Repair Centre",
+   "site": "https://unitedrepaircentre.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Refurbed",
+   "site": "https://www.refurbed.com",
+   "careers": "https://www.refurbed.at/jobs/",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Munch",
+   "site": "https://munch.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "Lizee",
+   "site": "https://www.lizee.co",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Save Your Wardrobe",
+   "site": "https://www.saveyourwardrobe.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Tingit",
+   "site": "https://tingit.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Fleek",
+   "site": "https://www.joinfleek.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Back Market",
+   "site": "https://www.backmarket.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Vinted",
+   "site": "https://www.vinted.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "RREUSE",
+   "site": "https://rreuse.org",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Archive",
+   "site": "https://archiveresale.com",
+   "careers": "https://jobs.ashbyhq.com/archive",
+   "ats": "ashby:archive",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Sojo",
+   "site": "https://www.sojo.uk",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "The Seam",
+   "site": "https://www.theseam.uk",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Grover",
+   "site": "https://www.grover.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "The Next Closet",
+   "site": "https://thenextcloset.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Treet",
+   "site": "https://www.treet.co",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Flyp",
+   "site": "https://www.joinflyp.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Loop",
+   "site": "https://exploreloop.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Reconomy (ReDress)",
+   "site": "https://www.reconomy.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Re_fashion",
+   "site": "https://refashion.fr",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Reverse Resources",
+   "site": "https://reverseresources.net",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Circle Economy",
+   "site": "https://www.circle-economy.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Humusz Szövetség",
+   "site": "https://humusz.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "Zero Waste Europe",
+   "site": "https://zerowasteeurope.eu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Queen of Raw",
+   "site": "https://queenofraw.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Mudita",
+   "site": "https://mudita.com",
+   "careers": "https://mudita.com/career/",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Unpluq",
+   "site": "https://www.unpluq.com",
+   "careers": "https://www.unpluq.com/jobs",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "FAIRTIQ",
+   "site": "https://fairtiq.com",
+   "careers": "https://fairtiq.applytojob.com/",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "nextbike",
+   "site": "https://www.nextbike.net",
+   "careers": "https://www.nextbike.net/jobs/",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "European Sleeper",
+   "site": "https://www.europeansleeper.eu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Magyar Kerékpárosklub",
+   "site": "https://kerekparosklub.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "NIOK",
+   "site": "https://www.niok.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "betterplace.org",
+   "site": "https://www.betterplace.org",
+   "careers": "https://www.betterplace.org/c/stellen",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Tech To The Rescue",
+   "site": "https://www.techtotherescue.org",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Open Knowledge Foundation",
+   "site": "https://okfn.org",
+   "careers": "https://okfn.org/en/jobs/",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "openPetition",
+   "site": "https://www.openpetition.de",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "K-Monitor",
+   "site": "https://k-monitor.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "Tudatos Vásárlók Egyesülete",
+   "site": "https://tudatosvasarlo.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "beeco",
+   "site": "https://www.beeco.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "Meska",
+   "site": "https://www.meska.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "WEtell",
+   "site": "https://www.wetell.de",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "ProVeg International",
+   "site": "https://proveg.com",
+   "careers": "https://careers.proveg.org/jobs",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Matsmart / Motatos",
+   "site": "https://www.matsmart.se",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Winnow",
+   "site": "https://www.winnowsolutions.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Orbisk",
+   "site": "https://orbisk.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Ecosia",
+   "site": "https://www.ecosia.org",
+   "careers": "https://jobs.ashbyhq.com/ecosia.org",
+   "ats": "ashby:ecosia.org",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Dark Matter Labs",
+   "site": "https://darkmatterlabs.org",
+   "careers": "https://darkmatterlabs.org/jobs",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "&why",
+   "site": "https://www.why.de",
+   "careers": "https://www.why.de/careers",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "The Engine Room",
+   "site": "https://www.theengineroom.org",
+   "careers": "https://www.theengineroom.org/jobs",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Ura Design",
+   "site": "https://ura.design",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Draftlab",
+   "site": "https://draftlab.org",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Torchbox",
+   "site": "https://torchbox.com",
+   "careers": "https://torchbox.jobs.personio.com/",
+   "ats": "personio:torchbox",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "dxw",
+   "site": "https://www.dxw.com",
+   "careers": "https://www.dxw.com/careers/",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Common Knowledge",
+   "site": "https://commonknowledge.coop",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Wholegrain Digital",
+   "site": "https://www.wholegraindigital.com",
+   "careers": "https://www.wholegraindigital.com/jobs/",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Outlandish",
+   "site": "https://outlandish.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Superbloom",
+   "site": "https://superbloom.design",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Mightybytes",
+   "site": "https://mightybytes.com",
+   "careers": "https://apply.workable.com/mightybytes/",
+   "ats": "workable:mightybytes",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Clean Clothes Campaign",
+   "site": "https://cleanclothes.org",
+   "careers": "https://cleanclothes.org/about/jobs",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Better Buying Institute",
+   "site": "https://betterbuying.org",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "FEMNET",
+   "site": "https://femnet.de",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Public Eye",
+   "site": "https://www.publiceye.ch",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Südwind",
+   "site": "https://www.suedwind.at",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Labour Behind the Label",
+   "site": "https://labourbehindthelabel.org",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Fair Action",
+   "site": "https://fairaction.se",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Remix",
+   "site": "https://remixshop.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "reverse.fashion",
+   "site": "https://reverse.fashion",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Avelero",
+   "site": "https://avelero.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Resrcle",
+   "site": "https://resrcle.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Supply Trace",
+   "site": "https://supplytrace.org",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Reuse",
+   "site": "https://www.reuse.cl",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "givestar",
+   "site": "https://www.givestar.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Greyparrot",
+   "site": "https://www.greyparrot.ai",
+   "careers": "https://www.greyparrot.ai/careers",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "StrollMe",
+   "site": "https://strollme.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "CarbonFarm",
+   "site": "https://www.carbonfarm.tech",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Too Good To Go",
+   "site": "https://www.toogoodtogo.com",
+   "careers": "https://jobs.ashbyhq.com/toogoodtogo",
+   "ats": "ashby:toogoodtogo",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Tex Tracer",
+   "site": "https://www.tex-tracer.com",
+   "careers": "https://www.tex-tracer.com/careers",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Reskinned",
+   "site": "https://www.reskinned.clothing",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Weturn",
+   "site": "https://www.weturn.eco",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Vestiaire Collective",
+   "site": "https://www.vestiairecollective.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Thrift+",
+   "site": "https://www.thrift.plus",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "HURR",
+   "site": "https://www.hurrcollective.com",
+   "careers": "https://www.hurrcollective.com/careers",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Olio",
+   "site": "https://olioapp.com",
+   "careers": "https://olioapp.com/en/careers/",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Inclusive Trade",
+   "site": "https://inclusivetrade.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Wolf & Badger",
+   "site": "https://www.wolfandbadger.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "bcause",
+   "site": "https://www.bcause.com",
+   "careers": "https://bcause.com/team-und-investierende/karriere",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Scale Impact",
+   "site": "https://scaleimpact.hu/en/",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "OpenCorporates",
+   "site": "https://opencorporates.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Significa",
+   "site": "https://significa.co",
+   "careers": "https://significa.co/careers",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Beryl",
+   "site": "https://beryl.cc",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Trove",
+   "site": "https://trove.co",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "denxpert",
+   "site": "https://www.denxpert.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "Kingfisher (Proworx Digital)",
+   "site": "https://kingfisher360.digital",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "OPTEN",
+   "site": "https://www.opten.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "Diligent",
+   "site": "https://www.diligent.com",
+   "careers": "",
+   "ats": "greenhouse:diligentcorporation",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "greehill",
+   "site": "https://www.greehill.com",
+   "careers": "https://career.greehill.com",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "Panda Energia",
+   "site": "https://pandaenergia.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "GreenHESS",
+   "site": "https://greenhess.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "SpaceCrop",
+   "site": "https://spacecrop.eu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "Energiaklub",
+   "site": "https://energiaklub.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "WWF Hungary",
+   "site": "https://wwf.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "Volteum",
+   "site": "https://www.volteum.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "Parkl",
+   "site": "https://parkl.net",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "Oszkár",
+   "site": "https://www.oszkar.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "BKK",
+   "site": "https://bkk.hu",
+   "careers": "https://bkk.karrierportal.hu/allasok",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "MÁV Group",
+   "site": "https://www.mavcsoport.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "GreenGo",
+   "site": "https://www.greengo.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "Miutcánk",
+   "site": "https://miutcank.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "MiReHu",
+   "site": "https://mirehu.hu",
+   "careers": "https://mirehu.hu/karrier",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "MOHU",
+   "site": "https://mohu.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "Jófogás",
+   "site": "https://www.jofogas.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "Transcend",
+   "site": "https://transcendinfra.com",
+   "careers": "https://transcendinfra.com/careers",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "Gremon Systems",
+   "site": "https://gremonsystems.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "ALTEO Group",
+   "site": "https://alteo.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "Geonardo",
+   "site": "https://geonardo.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact",
+    "hungary"
+   ]
+  },
+  {
+   "name": "Bonapp.eco",
+   "site": "https://bonapp.eco",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Sharetribe",
+   "site": "https://www.sharetribe.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "ftm",
+    "impact"
+   ]
+  },
+  {
+   "name": "Prezi",
+   "site": "https://prezi.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Bitrise",
+   "site": "https://bitrise.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Shapr3D",
+   "site": "https://www.shapr3d.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Craft",
+   "site": "https://www.craft.do",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "SEON",
+   "site": "https://seon.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Tresorit",
+   "site": "https://tresorit.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Kinsta",
+   "site": "https://kinsta.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "NNG",
+   "site": "https://www.nng.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Starschema",
+   "site": "https://starschema.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Supercharge",
+   "site": "https://supercharge.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "UX studio",
+   "site": "https://www.uxstudioteam.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Instructure",
+   "site": "https://www.instructure.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary",
+    "edtech"
+   ]
+  },
+  {
+   "name": "GoTo (LogMeIn)",
+   "site": "https://www.goto.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Emarsys (SAP)",
+   "site": "https://emarsys.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Turbine AI",
+   "site": "https://turbine.ai",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Taxually",
+   "site": "https://www.taxually.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Billingo",
+   "site": "https://www.billingo.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Barion",
+   "site": "https://www.barion.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Szallas Group",
+   "site": "https://szallas.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "ingatlan.com",
+   "site": "https://ingatlan.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Synetiq",
+   "site": "https://synetiq.net",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Codecool",
+   "site": "https://codecool.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary",
+    "edtech"
+   ]
+  },
+  {
+   "name": "Intuitech",
+   "site": "https://intuitech.studio",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "BlackBelt Technology",
+   "site": "https://blackbelt.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Formlabs (Budapest)",
+   "site": "https://formlabs.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Wise (Budapest)",
+   "site": "https://wise.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Lensa",
+   "site": "https://lensa.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Cursor Insight",
+   "site": "https://www.cursorinsight.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Commsignia",
+   "site": "https://www.commsignia.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Ultinous",
+   "site": "https://ultinous.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Docler Holding",
+   "site": "https://doclerholding.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Sigma Technology",
+   "site": "https://sigmatechnology.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "OTP Bank",
+   "site": "https://www.otpbank.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Számlázz.hu",
+   "site": "https://www.szamlazz.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Profession.hu (Ringier)",
+   "site": "https://www.profession.hu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "hungary"
+   ]
+  },
+  {
+   "name": "Linear",
+   "site": "https://linear.app",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Raycast",
+   "site": "https://www.raycast.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Framer",
+   "site": "https://www.framer.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Figma",
+   "site": "https://www.figma.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Pitch",
+   "site": "https://pitch.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Spline",
+   "site": "https://spline.design",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Rive",
+   "site": "https://rive.app",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "WeTransfer",
+   "site": "https://wetransfer.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Mentimeter",
+   "site": "https://www.mentimeter.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "edtech"
+   ]
+  },
+  {
+   "name": "Epidemic Sound",
+   "site": "https://www.epidemicsound.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "komoot",
+   "site": "https://www.komoot.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first",
+    "health"
+   ]
+  },
+  {
+   "name": "Nothing",
+   "site": "https://nothing.tech",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Teenage Engineering",
+   "site": "https://teenage.engineering",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Ableton",
+   "site": "https://www.ableton.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Native Instruments",
+   "site": "https://www.native-instruments.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Doist",
+   "site": "https://doist.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Hotjar (Contentsquare)",
+   "site": "https://www.hotjar.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Toggl",
+   "site": "https://toggl.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Automattic",
+   "site": "https://automattic.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "GitLab",
+   "site": "https://about.gitlab.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Buffer",
+   "site": "https://buffer.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "37signals",
+   "site": "https://37signals.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Zapier",
+   "site": "https://zapier.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Webflow",
+   "site": "https://webflow.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Miro",
+   "site": "https://miro.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Grammarly",
+   "site": "https://www.grammarly.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Preply",
+   "site": "https://preply.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "edtech"
+   ]
+  },
+  {
+   "name": "MacPaw",
+   "site": "https://macpaw.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Readdle",
+   "site": "https://readdle.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Sketch",
+   "site": "https://www.sketch.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Penpot (Kaleidos)",
+   "site": "https://penpot.app",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "LottieFiles",
+   "site": "https://lottiefiles.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Maze",
+   "site": "https://maze.co",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "UXPin",
+   "site": "https://www.uxpin.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Zeplin",
+   "site": "https://zeplin.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Whimsical",
+   "site": "https://whimsical.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "tldraw",
+   "site": "https://tldraw.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Tally",
+   "site": "https://tally.so",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "PostHog",
+   "site": "https://posthog.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Supabase",
+   "site": "https://supabase.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Vercel",
+   "site": "https://vercel.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Sanity",
+   "site": "https://www.sanity.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Storyblok",
+   "site": "https://www.storyblok.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Contentful",
+   "site": "https://www.contentful.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Strapi",
+   "site": "https://strapi.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Ghost",
+   "site": "https://ghost.org",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Mozilla",
+   "site": "https://www.mozilla.org",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first",
+    "impact"
+   ]
+  },
+  {
+   "name": "Proton",
+   "site": "https://proton.me",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "impact"
+   ]
+  },
+  {
+   "name": "DuckDuckGo",
+   "site": "https://duckduckgo.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Nextcloud",
+   "site": "https://nextcloud.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Element",
+   "site": "https://element.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Cal.com",
+   "site": "https://cal.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Plausible",
+   "site": "https://plausible.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Lovable",
+   "site": "https://lovable.dev",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "n8n",
+   "site": "https://n8n.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Make",
+   "site": "https://www.make.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Remote",
+   "site": "https://remote.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Deel",
+   "site": "https://www.deel.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Oyster",
+   "site": "https://www.oysterhr.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Spotify",
+   "site": "https://www.spotify.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Duolingo",
+   "site": "https://www.duolingo.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "edtech"
+   ]
+  },
+  {
+   "name": "Canva",
+   "site": "https://www.canva.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Notion",
+   "site": "https://www.notion.so",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Loom (Atlassian)",
+   "site": "https://www.atlassian.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Intercom",
+   "site": "https://www.intercom.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Typeform",
+   "site": "https://www.typeform.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Productboard",
+   "site": "https://www.productboard.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Pipedrive",
+   "site": "https://www.pipedrive.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Lokalise",
+   "site": "https://lokalise.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Dovetail",
+   "site": "https://dovetail.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward"
+   ]
+  },
+  {
+   "name": "Hugging Face",
+   "site": "https://huggingface.co",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "remote-first"
+   ]
+  },
+  {
+   "name": "Electricity Maps",
+   "site": "https://www.electricitymaps.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "design-forward",
+    "impact"
+   ]
+  },
+  {
+   "name": "Revolut",
+   "site": "https://www.revolut.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Monzo",
+   "site": "https://monzo.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "N26",
+   "site": "https://n26.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Klarna",
+   "site": "https://www.klarna.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Adyen",
+   "site": "https://www.adyen.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Mollie",
+   "site": "https://www.mollie.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Qonto",
+   "site": "https://qonto.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Pleo",
+   "site": "https://www.pleo.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Spendesk",
+   "site": "https://www.spendesk.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Pennylane",
+   "site": "https://www.pennylane.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Trade Republic",
+   "site": "https://traderepublic.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Scalable Capital",
+   "site": "https://scalable.capital",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "bunq",
+   "site": "https://www.bunq.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Lunar",
+   "site": "https://www.lunar.app",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "GoCardless",
+   "site": "https://gocardless.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Checkout.com",
+   "site": "https://www.checkout.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Starling Bank",
+   "site": "https://www.starlingbank.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Tide",
+   "site": "https://www.tide.co",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Curve",
+   "site": "https://www.curve.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Swile",
+   "site": "https://www.swile.co",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Alan",
+   "site": "https://alan.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Payhawk",
+   "site": "https://payhawk.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Raisin",
+   "site": "https://www.raisin.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Moss",
+   "site": "https://www.getmoss.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Agicap",
+   "site": "https://agicap.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "TrueLayer",
+   "site": "https://truelayer.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Primer",
+   "site": "https://primer.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Paddle",
+   "site": "https://www.paddle.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Satispay",
+   "site": "https://www.satispay.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "SumUp",
+   "site": "https://www.sumup.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Mambu",
+   "site": "https://mambu.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Zopa",
+   "site": "https://www.zopa.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Cleo",
+   "site": "https://web.meetcleo.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Freetrade",
+   "site": "https://freetrade.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Plum",
+   "site": "https://withplum.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Taxfix",
+   "site": "https://taxfix.de",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Finom",
+   "site": "https://finom.co",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Teya",
+   "site": "https://www.teya.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Moneybox",
+   "site": "https://www.moneyboxapp.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Upvest",
+   "site": "https://upvest.co",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Vivid Money",
+   "site": "https://vivid.money",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Billie",
+   "site": "https://www.billie.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "PayFit",
+   "site": "https://payfit.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Swan",
+   "site": "https://www.swan.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Personio",
+   "site": "https://www.personio.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Celonis",
+   "site": "https://www.celonis.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Synthesia",
+   "site": "https://www.synthesia.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "ElevenLabs",
+   "site": "https://elevenlabs.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Mistral AI",
+   "site": "https://mistral.ai",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "DeepL",
+   "site": "https://www.deepl.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Pigment",
+   "site": "https://www.pigment.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Dataiku",
+   "site": "https://www.dataiku.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Algolia",
+   "site": "https://www.algolia.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Mirakl",
+   "site": "https://www.mirakl.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Malt",
+   "site": "https://www.malt.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Contentsquare",
+   "site": "https://contentsquare.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Aircall",
+   "site": "https://aircall.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Front",
+   "site": "https://front.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Livestorm",
+   "site": "https://livestorm.co",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Didomi",
+   "site": "https://www.didomi.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Brevo",
+   "site": "https://www.brevo.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Legora",
+   "site": "https://legora.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Parloa",
+   "site": "https://www.parloa.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Staffbase",
+   "site": "https://staffbase.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "commercetools",
+   "site": "https://commercetools.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Factorial",
+   "site": "https://factorialhr.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Perk (TravelPerk)",
+   "site": "https://www.perk.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Snyk",
+   "site": "https://snyk.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Juro",
+   "site": "https://juro.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Onfido",
+   "site": "https://onfido.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Veriff",
+   "site": "https://www.veriff.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Omnisend",
+   "site": "https://www.omnisend.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Hostinger",
+   "site": "https://www.hostinger.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Nord Security",
+   "site": "https://nordsecurity.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Printful",
+   "site": "https://www.printful.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Tidio",
+   "site": "https://www.tidio.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Text (LiveChat)",
+   "site": "https://www.text.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Productive",
+   "site": "https://productive.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Infobip",
+   "site": "https://www.infobip.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Microblink",
+   "site": "https://microblink.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Mews",
+   "site": "https://www.mews.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Apify",
+   "site": "https://apify.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Kiwi.com",
+   "site": "https://www.kiwi.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Emplifi",
+   "site": "https://emplifi.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Bloomreach",
+   "site": "https://www.bloomreach.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "UiPath",
+   "site": "https://www.uipath.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "FintechOS",
+   "site": "https://fintechos.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Quantive",
+   "site": "https://quantive.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Enhancv",
+   "site": "https://enhancv.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Smartly.io",
+   "site": "https://www.smartly.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Supermetrics",
+   "site": "https://supermetrics.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Aiven",
+   "site": "https://aiven.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Relex Solutions",
+   "site": "https://www.relexsolutions.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Trustpilot",
+   "site": "https://www.trustpilot.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Templafy",
+   "site": "https://www.templafy.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Sana Labs",
+   "site": "https://sanalabs.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "edtech"
+   ]
+  },
+  {
+   "name": "Elastic",
+   "site": "https://www.elastic.co",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Backbase",
+   "site": "https://www.backbase.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Sendcloud",
+   "site": "https://www.sendcloud.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Channable",
+   "site": "https://www.channable.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Bird",
+   "site": "https://bird.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Feedzai",
+   "site": "https://feedzai.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Talkdesk",
+   "site": "https://www.talkdesk.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "OutSystems",
+   "site": "https://www.outsystems.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Unbabel",
+   "site": "https://unbabel.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Coverflex",
+   "site": "https://www.coverflex.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Bending Spoons",
+   "site": "https://bendingspoons.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Holded",
+   "site": "https://www.holded.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Seedtag",
+   "site": "https://www.seedtag.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Jobandtalent",
+   "site": "https://www.jobandtalent.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Red Points",
+   "site": "https://www.redpoints.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Bolt",
+   "site": "https://bolt.eu",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Wolt",
+   "site": "https://wolt.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Glovo",
+   "site": "https://glovoapp.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Cabify",
+   "site": "https://cabify.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "BlaBlaCar",
+   "site": "https://www.blablacar.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Trainline",
+   "site": "https://www.thetrainline.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Citymapper",
+   "site": "https://citymapper.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "GetYourGuide",
+   "site": "https://www.getyourguide.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Booking.com",
+   "site": "https://www.booking.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Delivery Hero",
+   "site": "https://www.deliveryhero.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "HelloFresh",
+   "site": "https://www.hellofresh.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Zalando",
+   "site": "https://www.zalando.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Deliveroo",
+   "site": "https://deliveroo.co.uk",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Depop",
+   "site": "https://www.depop.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Wallapop",
+   "site": "https://wallapop.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Swappie",
+   "site": "https://swappie.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Picnic",
+   "site": "https://picnic.app",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Oda",
+   "site": "https://oda.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Rohlik",
+   "site": "https://www.rohlik.cz",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Vivino",
+   "site": "https://www.vivino.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Fever",
+   "site": "https://feverup.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Booksy",
+   "site": "https://booksy.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "DocPlanner",
+   "site": "https://www.docplanner.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Doctolib",
+   "site": "https://www.doctolib.fr",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Ankorstore",
+   "site": "https://www.ankorstore.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "ManoMano",
+   "site": "https://www.manomano.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Catawiki",
+   "site": "https://www.catawiki.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Gousto",
+   "site": "https://www.gousto.co.uk",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Bloom & Wild",
+   "site": "https://www.bloomandwild.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Kahoot!",
+   "site": "https://kahoot.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "edtech"
+   ]
+  },
+  {
+   "name": "Brainly",
+   "site": "https://brainly.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "edtech"
+   ]
+  },
+  {
+   "name": "GoStudent",
+   "site": "https://www.gostudent.org",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "edtech"
+   ]
+  },
+  {
+   "name": "Babbel",
+   "site": "https://www.babbel.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "edtech"
+   ]
+  },
+  {
+   "name": "Busuu",
+   "site": "https://www.busuu.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "edtech"
+   ]
+  },
+  {
+   "name": "Studocu",
+   "site": "https://www.studocu.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "edtech"
+   ]
+  },
+  {
+   "name": "Multiverse",
+   "site": "https://www.multiverse.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "edtech"
+   ]
+  },
+  {
+   "name": "Blinkist",
+   "site": "https://www.blinkist.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "edtech"
+   ]
+  },
+  {
+   "name": "Lingoda",
+   "site": "https://www.lingoda.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "edtech"
+   ]
+  },
+  {
+   "name": "Memrise",
+   "site": "https://www.memrise.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "edtech"
+   ]
+  },
+  {
+   "name": "Docebo",
+   "site": "https://www.docebo.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "edtech"
+   ]
+  },
+  {
+   "name": "Flo Health",
+   "site": "https://flo.health",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Freeletics",
+   "site": "https://www.freeletics.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Kaia Health",
+   "site": "https://kaiahealth.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Oviva",
+   "site": "https://oviva.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Clue",
+   "site": "https://helloclue.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Ada Health",
+   "site": "https://ada.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Sword Health",
+   "site": "https://swordhealth.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Kry / Livi",
+   "site": "https://www.kry.se",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Runna",
+   "site": "https://www.runna.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Withings",
+   "site": "https://www.withings.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Oura",
+   "site": "https://ouraring.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Lifesum",
+   "site": "https://lifesum.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "YAZIO",
+   "site": "https://www.yazio.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Zoe",
+   "site": "https://zoe.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Unmind",
+   "site": "https://unmind.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Urban Sports Club",
+   "site": "https://urbansportsclub.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Numan",
+   "site": "https://www.numan.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Headspace",
+   "site": "https://www.headspace.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "BetterMe",
+   "site": "https://betterme.world",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "health"
+   ]
+  },
+  {
+   "name": "Yousician",
+   "site": "https://yousician.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Octopus Energy",
+   "site": "https://octopus.energy",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Tibber",
+   "site": "https://tibber.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "1KOMMA5°",
+   "site": "https://1komma5.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Enpal",
+   "site": "https://www.enpal.de",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Plan A",
+   "site": "https://plana.earth",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Sweep",
+   "site": "https://www.sweep.net",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Normative",
+   "site": "https://normative.io",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Greenly",
+   "site": "https://greenly.earth",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Ecologi",
+   "site": "https://ecologi.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Doconomy",
+   "site": "https://www.doconomy.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Climeworks",
+   "site": "https://climeworks.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Sylvera",
+   "site": "https://www.sylvera.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "tado°",
+   "site": "https://www.tado.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Treedom",
+   "site": "https://www.treedom.net",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "CHOOOSE",
+   "site": "https://chooose.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Cogo",
+   "site": "https://cogo.co",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Kraken Tech",
+   "site": "https://kraken.tech",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu",
+    "impact"
+   ]
+  },
+  {
+   "name": "Sennder",
+   "site": "https://www.sennder.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  },
+  {
+   "name": "Forto",
+   "site": "https://forto.com",
+   "careers": "",
+   "ats": "",
+   "tags": [
+    "top-eu"
+   ]
+  }
+ ]
+}

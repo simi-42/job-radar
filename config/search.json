@@ -1,0 +1,25 @@
+{
+  "_about": "Search-engine angle. Needs BRAVE_API_KEY or SERPER_API_KEY as a repo secret (both have free tiers). Without one, a small DuckDuckGo fallback runs. 'daily' queries run every day; site lookups for boards with search:true run weekly, several sites per query. Results that point to a company job board also add that board to daily tracking.",
+  "freshness_days": 7,
+  "daily": [
+    "\"product designer\" remote Europe",
+    "\"senior product designer\" (Budapest OR Hungary)",
+    "\"ux designer\" Budapest",
+    "\"design systems\" designer remote Europe",
+    "\"product designer\" \"work from anywhere\"",
+    "site:jobs.ashbyhq.com \"product designer\" (Europe OR EMEA OR remote)",
+    "site:job-boards.greenhouse.io \"product designer\" (Europe OR EMEA OR remote)",
+    "site:job-boards.eu.greenhouse.io \"product designer\"",
+    "site:jobs.lever.co \"product designer\" (Europe OR EMEA OR remote)",
+    "site:apply.workable.com \"product designer\" remote",
+    "site:jobs.personio.de \"product designer\"",
+    "site:recruitee.com \"product designer\"",
+    "site:teamtailor.com \"product designer\"",
+    "site:linkedin.com/jobs/view \"product designer\" Hungary",
+    "site:linkedin.com/jobs/view \"product designer\" remote \"European Union\""
+  ],
+  "weekly_site_terms": "(\"product designer\" OR \"ux designer\" OR \"design systems\")",
+  "sites_per_query": 5,
+  "max_daily": 30,
+  "max_weekly": 40
+}

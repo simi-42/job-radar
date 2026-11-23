@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Job radar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* VOICE: a working instrument, calm and exact; the finding first.
+   IDEA: a radar readout: one long match-score scale with every open job plotted on it.
+   PICTURE: the score histogram strip with an orange threshold pointer you drag.
+   COLOUR and TYPE: aluminium and black, one orange pointer; Geist and Geist Mono.
+   LAYOUT: readout, scale, filters, then the job list; stacks on a phone. */
+:root{color-scheme:light dark;
+  --bg:light-dark(#e9eaec,#141517);--card:light-dark(#f7f7f8,#1c1d20);--ink:light-dark(#111214,#ececee);--mute:light-dark(#5b5e66,#9b9ea6);
+  --line:light-dark(#c9cbd0,#2f3136);--soft:light-dark(#dcdde0,#26282c);--acc:#ff4f00;--acc-ink:#fff;--ok:light-dark(#0f6b3c,#5fd394);--warn:light-dark(#8a5a00,#f0b860)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Geist,system-ui,sans-serif;overflow-x:clip;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+.wrap{max-width:1040px;margin:0 auto;padding:20px max(4vw,14px) 80px}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.05;font-weight:600;margin:6px 0 8px;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:20px;margin:0 0 10px;font-weight:600}
+.num{font-family:"Geist Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.mute{color:var(--mute)}.small{font-size:13px}
+a{color:inherit}
+button,select,input{font:inherit;color:inherit}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.brand{font-weight:600;font-size:15px;display:flex;gap:8px;align-items:center}
+.brand i{width:10px;height:10px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px color-mix(in srgb,var(--acc) 25%,transparent)}
+.btn{min-height:44px;padding:0 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);cursor:pointer;font-weight:500}
+.btn:hover{border-color:var(--ink)}.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn:disabled{opacity:.55;cursor:default}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.stat{margin:2px 0 18px;font-size:15px}
+/* scale */
+.scale{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 14px 6px;margin-bottom:14px}
+.scale-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:14px}
+.readout{font-size:15px}.readout b{font-family:"Geist Mono",monospace;font-size:22px;color:var(--acc);font-weight:500}
+.fig{position:relative;height:110px;margin-top:6px}
+.fig svg{position:absolute;inset:0;width:100%;height:100%}
+.fig input[type=range]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--mute);padding:4px 0 6px}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px;background:var(--c)}
+/* filters */
+.filters{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+.seg button{min-height:40px;padding:0 12px;border:0;background:none;cursor:pointer;font-size:14px;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.lbl{font-size:13px;color:var(--mute);margin-right:2px}
+input[type=search],select,input[type=url],input[type=text],input[type=password]{min-height:44px;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:0 12px;font-size:16px}
+input[type=search]{flex:1 1 220px}
+details.more{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 14px}
+details.more summary{min-height:44px;display:flex;align-items:center;cursor:pointer;font-weight:500;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px 18px;padding:4px 0 14px}
+fieldset{border:0;margin:0;padding:0}legend{font-size:13px;color:var(--mute);margin-bottom:4px}
+.chk{display:flex;gap:8px;align-items:center;min-height:32px;font-size:15px;cursor:pointer}
+.chk input{width:18px;height:18px;accent-color:var(--acc)}
+.active{display:flex;gap:6px;flex-wrap:wrap}
+/* list */
+.count{display:flex;justify-content:space-between;align-items:center;margin:4px 0 10px;font-size:14px;gap:8px;flex-wrap:wrap}
+.list{display:flex;flex-direction:column;gap:10px}
+.job{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;grid-template-columns:56px 1fr;gap:4px 14px}
+.job.closed{opacity:.55}.job.hidden{opacity:.5}
+.score{grid-row:span 3;width:56px;height:56px;border-radius:12px;display:grid;place-items:center;font:500 22px "Geist Mono",monospace;background:var(--soft)}
+.score.hi{background:var(--acc);color:var(--acc-ink)}.score.mid{background:var(--ink);color:var(--bg)}
+.score small{display:block;font-size:10px;font-family:Geist;opacity:.8;margin-top:-6px;text-align:center}
+.jt{font-size:17px;font-weight:600;line-height:1.3;margin:0}
+.jt a{text-decoration:none}.jt a:hover{text-decoration:underline}
+.co{font-size:15px;color:var(--mute)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;grid-column:2}
+.chip{font-size:12.5px;line-height:1;padding:6px 8px;border-radius:7px;background:var(--soft);white-space:nowrap}
+.chip.yes{background:var(--ink);color:var(--bg)}.chip.maybe{background:transparent;box-shadow:inset 0 0 0 1px var(--ink)}
+.chip.no{color:var(--mute)}.chip.new{background:var(--acc);color:var(--acc-ink)}.chip.flag{color:var(--warn);background:transparent;box-shadow:inset 0 0 0 1px currentColor}
+.chip.live{background:transparent;color:var(--ok);box-shadow:inset 0 0 0 1px currentColor}
+.acts{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;align-items:center}
+.acts .btn{min-height:40px;font-size:14px;padding:0 12px}
+.acts .btn[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.why{grid-column:1/-1;margin-top:8px;border-top:1px solid var(--line);padding-top:10px;font-size:14px}
+.bars{display:grid;grid-template-columns:90px 1fr 46px;gap:4px 10px;align-items:center;margin:4px 0 10px}
+.bar{height:8px;background:var(--soft);border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--ink)}
+.bar.neg i{background:var(--warn)}
+.snip{white-space:pre-line;color:var(--mute);max-height:9.5em;overflow:hidden;margin:8px 0}
+.srcs{display:flex;gap:10px;flex-wrap:wrap}
+.empty{padding:40px 14px;text-align:center;color:var(--mute);background:var(--card);border-radius:14px;border:1px dashed var(--line)}
+.more-btn{margin:14px auto 0;display:block}
+/* panels */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:22px}
+.panel[hidden]{display:none}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:8px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:500;color:var(--mute);font-size:13px}
+td.r{text-align:right}
+.scroll{overflow-x:auto}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;background:var(--mute)}
+.dot.ok{background:var(--ok)}.dot.bad{background:var(--acc)}
+form.add{display:grid;gap:10px;grid-template-columns:1fr 1fr auto;align-items:end;margin:8px 0 6px}
+form.add label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--mute)}
+.msg{font-size:14px;margin-top:8px;min-height:1.5em}
+.toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:12px 16px;border-radius:12px;font-size:14px;max-width:min(92vw,520px);z-index:9}
+.toast[hidden]{display:none}
+@media(max-width:600px){
+  .wrap{padding-top:12px}.job{grid-template-columns:48px 1fr}.score{width:48px;height:48px;font-size:19px}
+  form.add{grid-template-columns:1fr}.bars{grid-template-columns:80px 1fr 40px}
+  .seg button{padding:0 10px}
+  table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}
+  .stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:7em;text-align:start}
+  .stack td::before{content:attr(data-l);float:inline-start;width:6.5em;margin-inline-start:-7em;color:var(--mute);font-size:12px}
+  .stack td:empty{display:none}
+}
+@media(prefers-reduced-motion:no-preference){.job{transition:opacity .2s}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand"><i></i>Job radar</div>
+    <div class="row">
+      <button class="btn" id="b-sources" type="button">Sources</button>
+      <button class="btn primary" id="b-refresh" type="button">Refresh now</button>
+    </div>
+  </div>
+  <h1 id="headline">Loading jobs…</h1>
+  <p class="stat mute" id="sub"></p>
+
+  <section class="scale" aria-label="Match score scale">
+    <div class="scale-head">
+      <span class="readout">Showing match <b id="ro-min">0</b>+</span>
+      <span class="mute num" id="ro-count"></span>
+    </div>
+    <div class="fig" id="fig"><svg id="svg" aria-hidden="true"></svg>
+      <input type="range" id="minscore" min="0" max="100" step="1" value="0" aria-label="Minimum match score"></div>
+    <div class="legend"><span style="--c:var(--ink)">shown</span><span style="--c:var(--line)">below your minimum</span><span style="--c:var(--acc)">minimum score (drag)</span></div>
+  </section>
+
+  <section class="filters" aria-label="Filters">
+    <div class="row">
+      <span class="lbl">From Hungary</span>
+      <div class="seg" data-key="hu">
+        <button type="button" data-v="yes">Yes</button><button type="button" data-v="yesmaybe">Yes + maybe</button><button type="button" data-v="any">Any</button>
+      </div>
+    </div>
+    <div class="row">
+      <span class="lbl">Posted</span>
+      <div class="seg" data-key="age">
+        <button type="button" data-v="1">24h</button><button type="button" data-v="3">3d</button><button type="button" data-v="7">7d</button><button type="button" data-v="14">14d</button><button type="button" data-v="30">30d</button><button type="button" data-v="0">Any</button>
+      </div>
+    </div>
+    <div class="row">
+      <span class="lbl">Sort by</span>
+      <div class="seg" data-key="sort"><button type="button" data-v="match">Best match</button><button type="button" data-v="recent">Newest</button></div>
+    </div>
+    <div class="row">
+      <input type="search" id="q" placeholder="Search title, company, skill" aria-label="Search">
+      <select id="loc" aria-label="Location"></select>
+    </div>
+    <details class="more" id="more">
+      <summary>More filters <span class="mute small" id="more-n" style="margin-left:8px"></span></summary>
+      <div class="grid">
+        <fieldset><legend>Workplace</legend><div data-multi="wp"></div></fieldset>
+        <fieldset><legend>Employment type</legend><div data-multi="emp"></div></fieldset>
+        <fieldset><legend>Seniority</legend><div data-multi="sen"></div></fieldset>
+        <fieldset><legend>Role</legend><div data-multi="fam"></div></fieldset>
+        <fieldset><legend>Company lists</legend><div data-multi="tag"></div></fieldset>
+        <fieldset><legend>Found on</legend><div data-multi="kind"></div></fieldset>
+        <fieldset><legend>Your status</legend><div data-multi="st"></div></fieldset>
+        <fieldset><legend>Other</legend>
+          <label class="chk"><input type="checkbox" id="f-closed">Show closed jobs</label>
+          <label class="chk"><input type="checkbox" id="f-noflags">Hide jobs needing another language</label>
+          <button class="btn" type="button" id="f-reset" style="margin-top:8px">Reset filters</button>
+        </fieldset>
+      </div>
+    </details>
+  </section>
+
+  <div class="count"><span id="count"></span><span class="mute small" id="active"></span></div>
+  <div class="list" id="list"></div>
+  <button class="btn more-btn" id="b-more" type="button" hidden>Show more</button>
+
+  <section class="panel" id="p-sources" hidden aria-labelledby="h-src">
+    <h2 id="h-src">Sources</h2>
+    <p class="mute small" id="src-sum"></p>
+    <h2 style="font-size:16px;margin-top:16px">Add a job board</h2>
+    <p class="small mute">Paste any job board, search results page, RSS feed or company careers page. Company boards (Greenhouse, Lever, Ashby, Workable, Personio…) are tracked directly; other sites are read as pages and also looked up through search.</p>
+    <form class="add" id="f-add">
+      <label>Name<input type="text" id="a-name" required placeholder="e.g. Design jobs Berlin"></label>
+      <label>Link<input type="url" id="a-url" required placeholder="https://…"></label>
+      <button class="btn primary" type="submit">Add</button>
+    </form>
+    <label class="chk small"><input type="checkbox" id="a-search" checked>Also look this site up through search</label>
+    <div class="msg" id="a-msg" role="status"></div>
+    <div class="scroll"><table class="stack" id="t-src"></table></div>
+    <h2 style="font-size:16px;margin-top:22px">Connection</h2>
+    <p class="small mute">Refreshing and adding boards need a GitHub token, kept only in this browser. Make a <a href="https://github.com/settings/personal-access-tokens/new" rel="noopener">fine-grained token</a> for this repository only, with <b>Actions: read and write</b> and <b>Contents: read and write</b>.</p>
+    <form class="add" id="f-token">
+      <label>Repository<input type="text" id="t-repo" placeholder="owner/job-radar"></label>
+      <label>Token<input type="password" id="t-tok" placeholder="github_pat_…" autocomplete="off"></label>
+      <button class="btn" type="submit">Save</button>
+    </form>
+    <div class="msg" id="t-msg" role="status"></div>
+  </section>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+{
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const store = {get(k, d){try{const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v)}catch(e){return d}},
+               set(k, v){try{localStorage.setItem(k, JSON.stringify(v))}catch(e){}}};
+const TODAY = new Date().toISOString().slice(0, 10);
+const LABELS = {
+  wp: {remote:"Remote", hybrid:"Hybrid", onsite:"Office", unknown:"Not stated"},
+  emp: {"full-time":"Full-time", "part-time":"Part-time", contract:"Contract", freelance:"Freelance", none:"Not stated"},
+  sen: {senior:"Senior", lead:"Lead / manager", staff:"Staff", principal:"Principal", head:"Head / director", unspecified:"Not stated", mid:"Mid"},
+  fam: {core:"Product / UX / design systems", leadership:"Design leadership", adjacent:"Nearby (UI, design engineer…)"},
+  tag: {ftm:"Follow the Money", impact:"Impact", "design-forward":"Design-forward", "top-eu":"Top EU startups", hungary:"Hungarian companies", "remote-first":"Remote-first", discovered:"Found by the radar"},
+  kind: {ats:"Company job board", board:"Job board", search:"Search engine"},
+  st: {none:"Not marked", saved:"Saved", applied:"Applied", hidden:"Hidden"},
+  live: {verified:"On company board today", "page live":"Page checked", listed:"Listed on a board", unverified:"Couldn't check", closed:"Closed"},
+};
+const STEM = {prototyp:"prototyping", facilitat:"facilitation", sustainab:"sustainability", traceab:"traceability", transparen:"transparency", mentor:"mentoring", "a/b test":"A/B testing", "ab test":"A/B testing", "usability test":"usability testing", "user interview":"user interviews", "design system":"design systems"};
+const nice = k => STEM[k] || k;
+const DEFAULTS = {hu:"yes", age:"0", sort:"match", min:0, q:"", loc:"", closed:false, noflags:false,
+  wp:[], emp:[], sen:["senior","lead","staff","principal","head","unspecified"], fam:[], tag:[], kind:[], st:["none","saved","applied"]};
+let F = Object.assign({}, DEFAULTS, store.get("radar-filters", {}));
+let STATUS = store.get("radar-status", {});
+let JOBS = [], META = {}, SHOWN = 40, OPEN = new Set();
+
+const ageDays = j => { const d = j.posted || j.first; if (!d) return 999; return Math.max(0, Math.round((Date.parse(TODAY) - Date.parse(d)) / 864e5)); };
+const ago = n => n >= 999 ? "" : n === 0 ? "today" : n < 14 ? `${n}d ago` : n < 60 ? `${Math.round(n / 7)}w ago` : `${Math.round(n / 30)}mo ago`;
+const status = j => STATUS[j.id] || "none";
+const regionOf = j => j.region || "Not stated";
+
+function locMatch(j){
+  if (!F.loc) return true;
+  if (F.loc === "eu") return regionOf(j) === "Europe" || regionOf(j) === "Hungary";
+  if (F.loc.startsWith("cc:")) return (j.cc || []).includes(F.loc.slice(3));
+  return regionOf(j) === F.loc;
+}
+function pass(j, ignoreScore){
+  if (!F.closed && j.live === "closed") return false;
+  if (F.hu === "yes" && j.hu !== "yes") return false;
+  if (F.hu === "yesmaybe" && j.hu === "no") return false;
+  if (+F.age && ageDays(j) > +F.age) return false;
+  if (!ignoreScore && j.score < F.min) return false;
+  if (!locMatch(j)) return false;
+  if (F.wp.length && !F.wp.includes(j.wp || "unknown")) return false;
+  if (F.emp.length && !(j.emp && j.emp.length ? j.emp : ["none"]).some(e => F.emp.includes(e))) return false;
+  if (F.sen.length && !F.sen.includes(j.sen)) return false;
+  if (F.fam.length && !F.fam.includes(j.fam)) return false;
+  if (F.tag.length && !(j.tags || []).some(t => F.tag.includes(t))) return false;
+  if (F.kind.length && !(j.sources || []).some(s => F.kind.includes(s.k))) return false;
+  if (F.st.length && !F.st.includes(status(j))) return false;
+  if (F.noflags && (j.flags || []).some(f => /^needs |written in (?!German|Hungarian)/.test(f))) return false;
+  if (F.q){ const hay = [j.title, j.company, j.loc, (j.skills || []).join(" "), (j.tags || []).join(" "), j.snip].join(" ").toLowerCase();
+    if (!F.q.toLowerCase().split(/\s+/).every(w => hay.includes(w))) return false; }
+  return true;
+}
+
+/* ---------- scale ---------- */
+const svg = $("#svg"), fig = $("#fig");
+function drawScale(){
+  const W = fig.clientWidth, H = fig.clientHeight;
+  const pool = JOBS.filter(j => pass(j, true));
+  const bins = new Array(101).fill(0);
+  pool.forEach(j => bins[Math.max(0, Math.min(100, Math.round(j.score)))]++);
+  const max = Math.max(1, ...bins);
+  const pad = 10, base = H - 24, top = 18, x = s => pad + (W - 2 * pad) * s / 100, bw = Math.max(1.5, (W - 2 * pad) / 101 - 1);
+  let g = "";
+  for (let s = 0; s <= 100; s++){ if (!bins[s]) continue;
+    const h = Math.max(2, (base - top) * Math.sqrt(bins[s] / max));
+    g += `<rect x="${(x(s) - bw / 2).toFixed(1)}" y="${(base - h).toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="1" style="fill:${s >= F.min ? "var(--ink)" : "var(--line)"}"/>`; }
+  g += `<line x1="${pad}" x2="${W - pad}" y1="${base + .5}" y2="${base + .5}" style="stroke:var(--line)"/>`;
+  const step = W < 520 ? 25 : 10;
+  for (let s = 0; s <= 100; s += step) g += `<line x1="${x(s)}" x2="${x(s)}" y1="${base}" y2="${base + 5}" style="stroke:var(--mute)"/><text x="${x(s)}" y="${H - 4}" font-size="11" text-anchor="middle" style="fill:var(--mute)" font-family="Geist Mono, monospace">${s}</text>`;
+  const px = x(F.min);
+  g += `<line x1="${px}" x2="${px}" y1="4" y2="${base + 6}" style="stroke:var(--acc)" stroke-width="2.5"/><circle cx="${px}" cy="6" r="5" style="fill:var(--acc)"/>`;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.innerHTML = g;
+}
+const ro = new ResizeObserver(drawScale); ro.observe(fig);
+
+/* ---------- list ---------- */
+function card(j){
+  const sc = Math.round(j.score), cls = sc >= 70 ? "hi" : sc >= 55 ? "mid" : "";
+  const st = status(j), n = ageDays(j), isNew = j.first === TODAY || (j.first && ageDays({first:j.first}) <= 1 && !j.posted);
+  const chips = [];
+  if (isNew && j.live !== "closed") chips.push(`<span class="chip new">New</span>`);
+  chips.push(`<span class="chip ${j.hu}" title="Can you do it from Hungary?">${esc(j.huw || j.hu)}</span>`);
+  if (j.loc) chips.push(`<span class="chip">${esc(j.loc)}</span>`);
+  (j.emp || []).forEach(e => chips.push(`<span class="chip">${esc(LABELS.emp[e] || e)}</span>`));
+  if (j.salary) chips.push(`<span class="chip num">${esc(j.salary)}</span>`);
+  chips.push(`<span class="chip">${j.posted ? "Posted " + ago(n) : "First seen " + ago(n)}</span>`);
+  chips.push(`<span class="chip ${j.live === "verified" || j.live === "page live" ? "live" : ""}">${esc(LABELS.live[j.live] || j.live)}${j.live === "closed" && j.closed ? " " + esc(j.closed) : ""}</span>`);
+  (j.flags || []).forEach(f => chips.push(`<span class="chip flag">${esc(f)}</span>`));
+  const open = OPEN.has(j.id);
+  const p = j.parts || {};
+  const bar = (label, v, max) => `<span>${label}</span><span class="bar ${v < 0 ? "neg" : ""}"><i style="width:${Math.min(100, Math.abs(v) / max * 100)}%"></i></span><span class="num r">${v}/${max}</span>`;
+  const why = open ? `<div class="why">
+      ${j.llm ? `<p><b>AI read:</b> ${esc(j.llm.why)}${j.llm.gaps && j.llm.gaps.length ? `<br><span class="mute">Gaps: ${esc(j.llm.gaps.join("; "))}</span>` : ""}</p>` : ""}
+      <div class="bars small">${bar("Title", p.title || 0, 30)}${bar("Seniority", p.seniority || 0, 15)}${bar("Skills", p.skills || 0, 35)}${bar("Domain", p.domain || 0, 10)}${p.penalty ? `<span>Penalty</span><span class="bar neg"><i style="width:${Math.min(100, -p.penalty * 4)}%"></i></span><span class="num r">${p.penalty}</span>` : ""}</div>
+      ${j.llm ? `<p class="small mute">Rules score ${j.rules}; AI score ${j.llm.s} is shown.</p>` : ""}
+      ${j.skills && j.skills.length ? `<p class="small"><b>Your skills it mentions:</b> ${esc([...new Set(j.skills.map(nice))].join(", "))}</p>` : ""}
+      ${j.domains && j.domains.length ? `<p class="small"><b>Domain:</b> ${esc([...new Set(j.domains.map(nice))].join(", "))}</p>` : ""}
+      ${j.gaps && j.gaps.length ? `<p class="small mute">${esc(j.gaps.join("; "))}</p>` : ""}
+      ${j.snip ? `<div class="snip small">${esc(j.snip)}</div>` : ""}
+      <div class="srcs small"><span class="mute">Found on:</span>${(j.sources || []).map(s => `<a href="${esc(s.u)}" rel="noopener" target="_blank">${esc(s.n)}</a>`).join("")}</div>
+    </div>` : "";
+  return `<article class="job ${j.live === "closed" ? "closed" : ""} ${st === "hidden" ? "hidden" : ""}" data-id="${j.id}">
+    <div class="score ${cls}" title="Match with your CV">${sc}</div>
+    <h3 class="jt"><a href="${esc(j.apply || j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a></h3>
+    <div class="co">${esc(j.company || "Company not stated")}${j.tags && j.tags.length ? ` · <span class="small">${esc(j.tags.filter(t => LABELS.tag[t]).map(t => LABELS.tag[t]).slice(0, 2).join(", "))}</span>` : ""}</div>
+    <div class="chips">${chips.join("")}</div>
+    <div class="acts">
+      <button class="btn" type="button" data-act="why" aria-expanded="${open}">${open ? "Less" : "Why this score"}</button>
+      <button class="btn" type="button" data-act="saved" aria-pressed="${st === "saved"}">Save</button>
+      <button class="btn" type="button" data-act="applied" aria-pressed="${st === "applied"}">Applied</button>
+      <button class="btn" type="button" data-act="hidden" aria-pressed="${st === "hidden"}">Hide</button>
+    </div>${why}</article>`;
+}
+
+function render(){
+  store.set("radar-filters", F);
+  const rows = JOBS.filter(j => pass(j));
+  rows.sort(F.sort === "recent" ? (a, b) => ageDays(a) - ageDays(b) || b.score - a.score : (a, b) => b.score - a.score || ageDays(a) - ageDays(b));
+  $("#count").innerHTML = `<b class="num">${rows.length}</b> of <span class="num">${JOBS.filter(j => j.live !== "closed").length}</span> open jobs`;
+  $("#ro-min").textContent = F.min;
+  $("#ro-count").textContent = `${rows.length} shown`;
+  $("#list").innerHTML = rows.length ? rows.slice(0, SHOWN).map(card).join("") :
+    `<div class="empty">No jobs match these filters. Try “Yes + maybe”, a longer time range or a lower minimum score.</div>`;
+  $("#b-more").hidden = rows.length <= SHOWN;
+  const nMore = ["wp","emp","fam","tag","kind"].reduce((a, k) => a + F[k].length, 0) + (F.closed ? 1 : 0) + (F.noflags ? 1 : 0);
+  $("#more-n").textContent = nMore ? `${nMore} on` : "";
+  document.querySelectorAll(".seg").forEach(s => s.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(String(F[s.dataset.key]) === b.dataset.v))));
+  drawScale();
+}
+
+function buildFilters(){
+  const regions = {}, countries = {};
+  JOBS.forEach(j => { regions[regionOf(j)] = (regions[regionOf(j)] || 0) + 1; (j.cc || []).forEach(c => countries[c] = (countries[c] || 0) + 1); });
+  const names = new Intl.DisplayNames(["en"], {type:"region"});
+  const cn = c => { try { return names.of(c) } catch(e){ return c } };
+  let o = `<option value="">Anywhere</option><option value="Hungary">Hungary</option><option value="eu">Europe (incl. Hungary)</option>`;
+  ["Worldwide","North America","Other","Not stated"].forEach(r => regions[r] && (o += `<option value="${r}">${r === "Worldwide" ? "Remote worldwide" : r}</option>`));
+  o += `<optgroup label="Country">` + Object.entries(countries).sort((a, b) => b[1] - a[1]).map(([c, n]) => `<option value="cc:${c}">${esc(cn(c))} (${n})</option>`).join("") + `</optgroup>`;
+  $("#loc").innerHTML = o; $("#loc").value = F.loc;
+  document.querySelectorAll("[data-multi]").forEach(box => {
+    const key = box.dataset.multi;
+    box.innerHTML = Object.entries(LABELS[key]).map(([v, l]) => `<label class="chk"><input type="checkbox" value="${v}" ${F[key].includes(v) ? "checked" : ""}>${esc(l)}</label>`).join("");
+    box.addEventListener("change", () => { F[key] = [...box.querySelectorAll("input:checked")].map(i => i.value); SHOWN = 40; render(); });
+  });
+  $("#f-closed").checked = F.closed; $("#f-noflags").checked = F.noflags; $("#q").value = F.q; $("#minscore").value = F.min;
+}
+
+function headline(){
+  const open = JOBS.filter(j => j.live !== "closed");
+  const fresh = open.filter(j => j.hu === "yes" && ageDays({first:j.first}) <= 1 && j.score >= 60).length;
+  const doable = open.filter(j => j.hu === "yes").length;
+  $("#headline").textContent = fresh ? `${fresh} new ${fresh === 1 ? "match" : "matches"} you can do from Hungary` : `${doable} open jobs you can do from Hungary`;
+  const up = META.updated ? new Date(META.updated) : null;
+  const srcOk = (META.sources || []).filter(s => s.ok).length;
+  $("#sub").textContent = [up ? `Updated ${up.toLocaleString([], {weekday:"short", hour:"2-digit", minute:"2-digit"})}` : "",
+    `${open.length} open design jobs`, META.boards ? `${META.boards.ok} company boards` : "", srcOk ? `${srcOk} job boards` : ""].filter(Boolean).join(" · ");
+}
+
+/* ---------- sources panel ---------- */
+function renderSources(){
+  const S = META.sources || [];
+  const b = META.boards || {}, c = META.companies || {}, s = META.search || {}, l = META.llm || {};
+  $("#src-sum").innerHTML = `${S.filter(x => x.enabled).length} job boards (${S.filter(x => x.ok).length} read fine last run) · ${b.ok || 0} of ${b.tracked || 0} company job boards read · ${c.with_board || 0} of ${c.total || 0} listed companies have a known board · ${b.discovered || 0} boards found by the radar · search: ${esc(s.provider || "off")}, ${s.queries || 0} queries, ${s.boards_found || 0} new boards · AI scoring: ${l.on ? `${l.scored} jobs` : "off"}`;
+  $("#t-src").innerHTML = `<thead><tr><th>Board</th><th>Status</th><th>Design jobs</th><th>How</th><th>From</th></tr></thead><tbody>` +
+    S.map(x => `<tr><td data-l="Board"><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name)}</a></td>
+      <td data-l="Status"><span class="dot ${x.ok ? "ok" : x.ok === false ? "bad" : ""}"></span>${!x.enabled ? "Paused" : x.ok ? "OK" : x.ok === false ? esc((x.error || "Failed").slice(0, 80)) : "Not run yet"}</td>
+      <td data-l="Design jobs" class="num">${x.count || 0}</td><td data-l="How">${esc(x.adapter || "")}${x.search ? " + search" : ""}</td><td data-l="From">${esc(x.origin || "")}</td></tr>`).join("") + `</tbody>`;
+}
+
+/* ---------- GitHub actions: refresh + add board ---------- */
+const guessRepo = () => { const m = location.hostname.match(/^([^.]+)\.github\.io$/); const p = location.pathname.split("/").filter(Boolean)[0]; return m && p ? `${m[1]}/${p}` : ""; };
+const gh = () => ({repo: store.get("radar-repo", "") || guessRepo(), tok: store.get("radar-token", "")});
+async function api(path, opts = {}){
+  const {repo, tok} = gh();
+  const r = await fetch(`https://api.github.com/repos/${repo}${path}`, Object.assign({}, opts, {headers: Object.assign({"Accept":"application/vnd.github+json","Authorization":`Bearer ${tok}`,"X-GitHub-Api-Version":"2022-11-28"}, opts.headers || {})}));
+  if (!r.ok && r.status !== 204) throw new Error(`${r.status} ${(await r.text()).slice(0, 140)}`);
+  return r.status === 204 ? null : r.json();
+}
+let toastT;
+function toast(msg, ms = 4000){ const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastT); if (ms) toastT = setTimeout(() => t.hidden = true, ms); }
+async function refresh(){
+  const {repo, tok} = gh();
+  if (!tok || !repo){ openSources(); $("#t-msg").textContent = "Add a token first. Or run it from GitHub: Actions → Daily radar → Run workflow."; return; }
+  const btn = $("#b-refresh"); btn.disabled = true;
+  try {
+    const since = new Date().toISOString();
+    await api(`/actions/workflows/daily.yml/dispatches`, {method:"POST", body: JSON.stringify({ref:"main"})});
+    toast("Refresh started. This takes a few minutes…", 0);
+    let run = null;
+    for (let i = 0; i < 90; i++){
+      await new Promise(r => setTimeout(r, 10000));
+      const d = await api(`/actions/workflows/daily.yml/runs?per_page=3&event=workflow_dispatch`);
+      run = (d.workflow_runs || []).find(r => r.created_at >= since.slice(0, 19)) || run;
+      if (run && run.status === "completed") break;
+      if (run) toast(`Refreshing… ${run.status === "in_progress" ? "collecting jobs" : run.status}`, 0);
+    }
+    if (run && run.conclusion === "success"){ toast("Done. Loading new jobs…", 0); await new Promise(r => setTimeout(r, 45000)); await load(true); toast("Updated."); }
+    else toast(run ? `Run finished: ${run.conclusion}. Open GitHub Actions for details.` : "Still running. Reload the page in a few minutes.", 8000);
+  } catch(e){ toast("Couldn't start the refresh: " + e.message, 8000); }
+  btn.disabled = false;
+}
+const b64 = s => btoa(String.fromCharCode(...new TextEncoder().encode(s)));
+const unb64 = s => new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\n/g, "")), c => c.charCodeAt(0)));
+async function addSource(e){
+  e.preventDefault();
+  const name = $("#a-name").value.trim(), url = $("#a-url").value.trim(), msg = $("#a-msg");
+  const entry = {id: (name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "board") + "-" + Date.now().toString(36).slice(-4),
+                 name, url, adapter: "auto", origin: "added by you", enabled: true, search: $("#a-search").checked, added: TODAY};
+  const {tok, repo} = gh();
+  if (!tok){ msg.innerHTML = `No token saved, so add it on GitHub instead: open <a href="https://github.com/${esc(repo)}/edit/main/config/sources.json" target="_blank" rel="noopener">sources.json</a> and paste this line into the list:<br><code>${esc(JSON.stringify(entry))},</code>`; return; }
+  msg.textContent = "Adding…";
+  try {
+    const f = await api(`/contents/config/sources.json`);
+    const doc = JSON.parse(unb64(f.content));
+    if (doc.sources.some(s => s.url === url)){ msg.textContent = "That link is already a source."; return; }
+    doc.sources.push(entry);
+    await api(`/contents/config/sources.json`, {method:"PUT", body: JSON.stringify({message:`Add source: ${name}`, content: b64(JSON.stringify(doc, null, 1) + "\n"), sha: f.sha})});
+    msg.textContent = `Added ${name}. It will be read from the next run. Start one now with Refresh.`;
+    META.sources = (META.sources || []).concat([Object.assign({}, entry, {ok:null})]); renderSources();
+    $("#f-add").reset(); $("#a-search").checked = true;
+  } catch(err){ msg.textContent = "Couldn't add it: " + err.message; }
+}
+function openSources(){ const p = $("#p-sources"); p.hidden = false; renderSources(); p.scrollIntoView({behavior:"smooth"}); }
+
+/* ---------- events ---------- */
+document.querySelectorAll(".seg").forEach(s => s.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; F[s.dataset.key] = b.dataset.v; SHOWN = 40; render(); }));
+$("#minscore").addEventListener("input", e => { F.min = +e.target.value; SHOWN = 40; render(); });
+let qT; $("#q").addEventListener("input", e => { clearTimeout(qT); qT = setTimeout(() => { F.q = e.target.value.trim(); SHOWN = 40; render(); }, 180); });
+$("#loc").addEventListener("change", e => { F.loc = e.target.value; SHOWN = 40; render(); });
+$("#f-closed").addEventListener("change", e => { F.closed = e.target.checked; render(); });
+$("#f-noflags").addEventListener("change", e => { F.noflags = e.target.checked; render(); });
+$("#f-reset").addEventListener("click", () => { F = JSON.parse(JSON.stringify(DEFAULTS)); buildFilters(); render(); });
+$("#b-more").addEventListener("click", () => { SHOWN += 40; render(); });
+$("#b-refresh").addEventListener("click", refresh);
+$("#b-sources").addEventListener("click", () => { const p = $("#p-sources"); if (p.hidden) openSources(); else p.hidden = true; });
+$("#f-add").addEventListener("submit", addSource);
+$("#f-token").addEventListener("submit", e => { e.preventDefault(); store.set("radar-repo", $("#t-repo").value.trim()); if ($("#t-tok").value.trim()) store.set("radar-token", $("#t-tok").value.trim()); $("#t-tok").value = ""; $("#t-msg").textContent = "Saved in this browser."; });
+$("#list").addEventListener("click", e => {
+  const b = e.target.closest("[data-act]"); if (!b) return;
+  const id = b.closest(".job").dataset.id, act = b.dataset.act;
+  if (act === "why"){ OPEN.has(id) ? OPEN.delete(id) : OPEN.add(id); }
+  else { STATUS[id] = STATUS[id] === act ? undefined : act; if (!STATUS[id]) delete STATUS[id]; store.set("radar-status", STATUS); }
+  render();
+});
+
+async function load(bust){
+  const q = bust ? `?t=${Date.now()}` : `?d=${TODAY}`;
+  try {
+    const [jr, mr] = await Promise.all([fetch("data/jobs.json" + q), fetch("data/meta.json" + q)]);
+    const jd = await jr.json(); META = mr.ok ? await mr.json() : {};
+    JOBS = jd.jobs || [];
+  } catch(e){ $("#headline").textContent = "No data yet"; $("#sub").textContent = "The first run hasn't finished. Start it with Refresh now, or from GitHub Actions."; return; }
+  buildFilters(); headline(); render();
+  if (!$("#p-sources").hidden) renderSources();
+}
+$("#t-repo").value = gh().repo;
+load();
+}
+</script>
+</body>
+</html>
