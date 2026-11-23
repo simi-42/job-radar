@@ -1,0 +1,3542 @@
+{
+ "companies": {
+  "Business & Human Rights Resource Centre": {
+   "board": "bamboohr:bhrrc",
+   "method": "hint",
+   "checked": "2026-11-23"
+  },
+  "Meridia": {
+   "board": "workable:meridia",
+   "method": "hint",
+   "checked": "2026-11-23"
+  },
+  "Fairphone": {
+   "board": "personio:fairphone",
+   "method": "hint",
+   "checked": "2026-11-23"
+  },
+  "Archive": {
+   "board": "ashby:archive",
+   "method": "hint",
+   "checked": "2026-11-23"
+  },
+  "Ecosia": {
+   "board": "ashby:ecosia.org",
+   "method": "hint",
+   "checked": "2026-11-23"
+  },
+  "Torchbox": {
+   "board": "personio:torchbox",
+   "method": "hint",
+   "checked": "2026-11-23"
+  },
+  "Mightybytes": {
+   "board": "workable:mightybytes",
+   "method": "hint",
+   "checked": "2026-11-23"
+  },
+  "Too Good To Go": {
+   "board": "ashby:toogoodtogo",
+   "method": "hint",
+   "checked": "2026-11-23"
+  },
+  "Diligent": {
+   "board": "greenhouse:diligentcorporation",
+   "method": "hint",
+   "checked": "2026-11-23"
+  },
+  "Retraced": {
+   "board": "teamtailor:retraced",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "&Wider": {
+   "board": "workable:andwider",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Greenstory": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Made2Flow": {
+   "board": "generic:https://www.made2flow.com/work-with-us",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Teemill": {
+   "board": "workable:teemill",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Quizrr": {
+   "board": "generic:https://www.quizrr.se/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Fairly Made": {
+   "board": "generic:https://www.fairlymade.com/career",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Manufy": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Ulula": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "OpenSC": {
+   "board": "personio:opensc|com",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "SupplyShift": {
+   "board": "workday:sphera|wd1|careers",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Global Fashion Agenda": {
+   "board": "generic:https://globalfashionagenda.careers.hibob.com/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Open Supply Hub": {
+   "board": "generic:https://info.opensupplyhub.org/work-with-us",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Good On You": {
+   "board": "generic:https://www.linkedin.com/jobs/search?trk=organization_guest_guest_nav_menu_jobs",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Provenance": {
+   "board": "workable:provenance",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "tip me": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "TrusTrace": {
+   "board": "workable:trustrace",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Renoon": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Circularise": {
+   "board": "workable:circularise",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Refurbed": {
+   "board": "greenhouse:refurbed",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Material Exchange": {
+   "board": "workable:material-exchange",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Fairtrade International": {
+   "board": "breezy:fairtrade-america",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Scantrust": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Fair Wear Foundation": {
+   "board": "generic:https://www.fairwear.org/story/joint-statement-2026-mwr-bangladesh",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Back Market": {
+   "board": "ashby:backmarket",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Temera": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Circulor": {
+   "board": "generic:https://circulor.com/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Satelligence": {
+   "board": "generic:https://satelligence.com/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Munch": {
+   "board": "workable:munch",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Algrano": {
+   "board": "generic:https://algrano.com/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Tony's Open Chain": {
+   "board": "generic:https://www.tonysopenchain.com/join",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Save Your Wardrobe": {
+   "board": "workable:saveyourwardrobe",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Lizee": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "United Repair Centre": {
+   "board": "generic:https://www.unitedrepaircentre.com/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "WageIndicator Foundation": {
+   "board": "generic:https://wageindicator.org/about/who-we-are/jobs/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Tingit": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Fashion Revolution": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Fleek": {
+   "board": "ashby:fleek",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Grover": {
+   "board": "greenhouse:grover",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Circle Economy": {
+   "board": "personio:circle-economy|com",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Reconomy (ReDress)": {
+   "board": "pinpoint:reconomy",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "The Seam": {
+   "board": "workable:seam",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Treet": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Sojo": {
+   "board": "workable:sojo",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Loop": {
+   "board": "workable:loop",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Flyp": {
+   "board": "workable:flyp",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Queen of Raw": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "RREUSE": {
+   "board": "generic:https://www.rreuse.org/vacancies",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Vinted": {
+   "board": "generic:https://careers.vinted.com/?gh_src=xo3s2xe2teu&amp;utm_source=vinted&amp;utm_medium=web",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Zero Waste Europe": {
+   "board": "generic:https://zerowasteeurope.eu/join-us/donate/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Re_fashion": {
+   "board": "generic:https://talents.refashion.fr/jobs",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Unpluq": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "IDH Sustainable Trade Initiative": {
+   "board": "generic:https://idh.org/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Mudita": {
+   "board": "generic:https://mudita.com/career/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Humusz Szövetség": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Reverse Resources": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "European Sleeper": {
+   "board": "generic:https://www.europeansleeper.eu/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Magyar Kerékpárosklub": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "FAIRTIQ": {
+   "board": "generic:https://fairtiq.applytojob.com/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "nextbike": {
+   "board": "generic:https://www.nextbike.net/jobs/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "beeco": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Winnow": {
+   "board": "workable:winnow",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Orbisk": {
+   "board": "greenhouse-eu:orbisk",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "openPetition": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Tech To The Rescue": {
+   "board": "generic:https://techtotherescue.traffit.com/career/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "NIOK": {
+   "board": "generic:https://niok.hu/karrier/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "betterplace.org": {
+   "board": "generic:https://www.betterplace.org/c/stellen",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Open Knowledge Foundation": {
+   "board": "generic:https://okfn.org/en/jobs/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "K-Monitor": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Wholegrain Digital": {
+   "board": "bamboohr:wholegraindigital",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Draftlab": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "The Next Closet": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Tudatos Vásárlók Egyesülete": {
+   "board": "generic:https://tudatosvasarlo.hu/karrier-dolgozz-velunk/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Outlandish": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Dark Matter Labs": {
+   "board": "generic:https://darkmatterlabs.org/jobs",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Ura Design": {
+   "board": "generic:https://ura.design/en/blog/ura-joins-elfa",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Superbloom": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Common Knowledge": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "dxw": {
+   "board": "generic:https://www.dxw.com/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "&why": {
+   "board": "generic:https://www.why.de/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Meska": {
+   "board": "generic:https://www.meska.hu/Karrier",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "FEMNET": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Matsmart / Motatos": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Better Buying Institute": {
+   "board": "generic:https://cascale.org/about-us/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "WEtell": {
+   "board": "generic:https://www.wetell.de/community/jobs/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Greyparrot": {
+   "board": "recruitee:greyparrotai",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "StrollMe": {
+   "board": "personio:strollme|de",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Clean Clothes Campaign": {
+   "board": "generic:https://cleanclothes.org/about/jobs",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "ProVeg International": {
+   "board": "generic:https://careers.proveg.org/jobs",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Avelero": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Remix": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Reuse": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Public Eye": {
+   "board": "generic:https://www.publiceye.ch/en/about-us/organisation/jobs",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Supply Trace": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "The Engine Room": {
+   "board": "generic:https://www.theengineroom.org/jobs/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Fair Action": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "CarbonFarm": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Resrcle": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "OpenCorporates": {
+   "board": "recruitee:opencorporates",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Südwind": {
+   "board": "generic:https://www.suedwind.at/ueber-uns/jobs/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Labour Behind the Label": {
+   "board": "generic:https://labourbehindthelabel.org/join/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Beryl": {
+   "board": "bamboohr:beryl",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Reskinned": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Weturn": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Thrift+": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "reverse.fashion": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "HURR": {
+   "board": "generic:https://www.hurrcollective.com/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Wolf & Badger": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Vestiaire Collective": {
+   "board": "lever:vestiairecollective",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Tex Tracer": {
+   "board": "generic:https://www.tex-tracer.com/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "bcause": {
+   "board": "generic:https://bcause.com/team-und-investierende/karriere",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Inclusive Trade": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Trove": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "denxpert": {
+   "board": "generic:https://www.denxpert.com/about-us/career",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "OPTEN": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Olio": {
+   "board": "generic:https://olioapp.com/en/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Panda Energia": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Significa": {
+   "board": "generic:https://significa.co/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "SpaceCrop": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "GreenHESS": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Scale Impact": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "greehill": {
+   "board": "generic:https://career.greehill.com",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Kingfisher (Proworx Digital)": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Energiaklub": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "givestar": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Volteum": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "MOHU": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Parkl": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Oszkár": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Prezi": {
+   "board": "bamboohr:prezi",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Shapr3D": {
+   "board": "ashby:shapr3d",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "GreenGo": {
+   "board": "generic:https://www.greengo.com/hu/karrier",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Sharetribe": {
+   "board": "generic:https://www.sharetribe.com/company/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "SEON": {
+   "board": "ashby:seon",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Miutcánk": {
+   "board": "generic:https://miutcank.hu/karrier",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Geonardo": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "BKK": {
+   "board": "generic:https://bkk.karrierportal.hu/allasok",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Jófogás": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Gremon Systems": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "UX studio": {
+   "board": "recruitee:uxstudio",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Instructure": {
+   "board": "ashby:instructure",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Bitrise": {
+   "board": "generic:https://bitrise.io/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Kinsta": {
+   "board": "lever:kinsta",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Bonapp.eco": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "MÁV Group": {
+   "board": "generic:https://karrier.mavcsoport.hu/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Starschema": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Tresorit": {
+   "board": "generic:https://tresorit.com/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "WWF Hungary": {
+   "board": "generic:https://wwf.hu/karrier/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "NNG": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Intuitech": {
+   "board": "bamboohr:intuitech",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Taxually": {
+   "board": "generic:https://www.taxually.com/open-positions",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "GoTo (LogMeIn)": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Craft": {
+   "board": "generic:https://www.craft.do/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "ALTEO Group": {
+   "board": "generic:https://karrier.alteo.hu",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Formlabs (Budapest)": {
+   "board": "greenhouse:formlabs",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Synetiq": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Turbine AI": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Emarsys (SAP)": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Barion": {
+   "board": "generic:https://www.barion.com/en/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "MiReHu": {
+   "board": "generic:https://mirehu.hu/karrier",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Szallas Group": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Codecool": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "ingatlan.com": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Linear": {
+   "board": "ashby:linear",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Supercharge": {
+   "board": "lever-eu:supercharge",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Lensa": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Transcend": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Commsignia": {
+   "board": "generic:https://commsignia.com/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Cursor Insight": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Ultinous": {
+   "board": "generic:https://ultinous.com/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Raycast": {
+   "board": "ashby:raycast",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Billingo": {
+   "board": "generic:https://www.billingo.hu/karrier",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Pitch": {
+   "board": "workable:pitch-software",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Wise (Budapest)": {
+   "board": "generic:https://wise.jobs/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Rive": {
+   "board": "workable:rivecareers",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Figma": {
+   "board": "greenhouse:figma",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Framer": {
+   "board": "generic:https://www.framer.com/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Mentimeter": {
+   "board": "greenhouse-eu:mentimeter",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Epidemic Sound": {
+   "board": "ashby:epidemic-sound",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "WeTransfer": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Docler Holding": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "BlackBelt Technology": {
+   "board": "recruitee:blackbelt",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Native Instruments": {
+   "board": "pinpoint:inmusicbrands",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Hotjar (Contentsquare)": {
+   "board": "lever:contentsquare",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "OTP Bank": {
+   "board": "generic:https://www.otpbank.hu/karrier/hu/fooldal",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Toggl": {
+   "board": "ashby:toggl",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Spline": {
+   "board": "generic:https://www.ycombinator.com/companies/spline/jobs",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Nothing": {
+   "board": "generic:https://join.nothing.tech/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "GitLab": {
+   "board": "greenhouse:gitlab",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Doist": {
+   "board": "generic:https://www.todoist.com/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Buffer": {
+   "board": "ashby:buffer",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Zapier": {
+   "board": "ashby:zapier",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "komoot": {
+   "board": "generic:https://jobs.bendingspoons.com/?utm_campaign=homepage&utm_content=footer_link&utm_medium=website&utm_source=komoot",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Webflow": {
+   "board": "ashby:webflow",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Grammarly": {
+   "board": "greenhouse:grammarly",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Readdle": {
+   "board": "greenhouse:readdle70",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Profession.hu (Ringier)": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Ableton": {
+   "board": "generic:https://www.ableton.com/en/jobs/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Miro": {
+   "board": "ashby:miro",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Automattic": {
+   "board": "generic:https://automattic.com/work-with-us/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "37signals": {
+   "board": "generic:https://37signals.com/jobs",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "LottieFiles": {
+   "board": "bamboohr:lottiefiles",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "tldraw": {
+   "board": "ashby:tldraw",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Maze": {
+   "board": "ashby:mazedesign",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Számlázz.hu": {
+   "board": "generic:https://www.szamlazz.hu/karrier",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Teenage Engineering": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Penpot (Kaleidos)": {
+   "board": "personio:kaleidos|com",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Preply": {
+   "board": "ashby:preply",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Contentful": {
+   "board": "greenhouse:contentful",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Vercel": {
+   "board": "greenhouse:vercel",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Sketch": {
+   "board": "generic:https://www.sketch.com/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "UXPin": {
+   "board": "generic:https://www.uxpin.com/jobs",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "MacPaw": {
+   "board": "generic:https://macpaw.com/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Whimsical": {
+   "board": "generic:https://whimsical.com/company/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Storyblok": {
+   "board": "greenhouse:storyblok",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Ghost": {
+   "board": "ashby:ghost",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "PostHog": {
+   "board": "ashby:posthog",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Supabase": {
+   "board": "ashby:supabase",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Zeplin": {
+   "board": "generic:https://zeplin.io/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Sanity": {
+   "board": "ashby:sanity",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Tally": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Mozilla": {
+   "board": "greenhouse:mozilla",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Lovable": {
+   "board": "ashby:lovable",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Strapi": {
+   "board": "generic:https://strapi.io/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "n8n": {
+   "board": "ashby:n8n",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Proton": {
+   "board": "greenhouse:proton",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Plausible": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Duolingo": {
+   "board": "greenhouse:duolingo",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Make": {
+   "board": "greenhouse:make",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "DuckDuckGo": {
+   "board": "generic:https://duckduckgo.com/hiring",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Canva": {
+   "board": "workable:canva",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Spotify": {
+   "board": "lever:spotify",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Notion": {
+   "board": "ashby:notion",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Deel": {
+   "board": "ashby:deel",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Hugging Face": {
+   "board": "workable:huggingface",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Dovetail": {
+   "board": "ashby:dovetail",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Cal.com": {
+   "board": "workable:cal",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Remote": {
+   "board": "greenhouse:remote",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Intercom": {
+   "board": "greenhouse:intercom",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Oyster": {
+   "board": "ashby:oyster",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Element": {
+   "board": "workable:element",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Lokalise": {
+   "board": "greenhouse:lokalise",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Typeform": {
+   "board": "greenhouse:typeform",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Monzo": {
+   "board": "greenhouse:monzo",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "N26": {
+   "board": "greenhouse:n26",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Nextcloud": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Pipedrive": {
+   "board": "lever:pipedrive",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Qonto": {
+   "board": "ashby:qonto",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Revolut": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Trade Republic": {
+   "board": "greenhouse:traderepublic",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Adyen": {
+   "board": "greenhouse:adyen",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Pennylane": {
+   "board": "ashby:pennylane",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "GoCardless": {
+   "board": "greenhouse:gocardless",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Pleo": {
+   "board": "ashby:pleo",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Klarna": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "bunq": {
+   "board": "recruitee:bunq",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Checkout.com": {
+   "board": "ashby:checkout.com",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Spendesk": {
+   "board": "ashby:spendesk",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Electricity Maps": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Mollie": {
+   "board": "ashby:mollie",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Lunar": {
+   "board": "ashby:lunar",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Alan": {
+   "board": "ashby:alan",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Tide": {
+   "board": "greenhouse:tide",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Sigma Technology": {
+   "board": "generic:https://sigmatechnology.com/career/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Productboard": {
+   "board": "generic:https://www.productboard.com/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "TrueLayer": {
+   "board": "ashby:truelayer",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Primer": {
+   "board": "ashby:primer.io",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Agicap": {
+   "board": "lever:agicap",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Paddle": {
+   "board": "ashby:paddle",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Raisin": {
+   "board": "greenhouse-eu:raisin",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "SumUp": {
+   "board": "greenhouse:sumup",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Plum": {
+   "board": "workable:withplum",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Zopa": {
+   "board": "lever:zopa",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Satispay": {
+   "board": "ashby:satispay",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Freetrade": {
+   "board": "ashby:freetrade",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Payhawk": {
+   "board": "greenhouse-eu:payhawkio",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Upvest": {
+   "board": "ashby:upvest",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Moneybox": {
+   "board": "ashby:moneybox",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Moss": {
+   "board": "ashby:moss",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Taxfix": {
+   "board": "ashby:taxfix.com",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Scalable Capital": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Cleo": {
+   "board": "ashby:cleo-2",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Starling Bank": {
+   "board": "generic:https://www.starlingbank.com/current-account/joint-bank-account/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Loom (Atlassian)": {
+   "board": "generic:https://www.atlassian.com/company/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Curve": {
+   "board": "generic:https://www.curve.com/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Teya": {
+   "board": "ashby:teya",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Billie": {
+   "board": "ashby:billie",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Celonis": {
+   "board": "greenhouse:celonis",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Personio": {
+   "board": "workable:personio",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Mistral AI": {
+   "board": "ashby:mistral.ai",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Dataiku": {
+   "board": "greenhouse:dataiku",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Vivid Money": {
+   "board": "personio:vivid|de",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Finom": {
+   "board": "greenhouse:finom",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Algolia": {
+   "board": "greenhouse:algolia",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Mirakl": {
+   "board": "greenhouse:mirakllabs",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Swile": {
+   "board": "lever:swile",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Contentsquare": {
+   "board": "lever:contentsquare",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Malt": {
+   "board": "lever:malt",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "DeepL": {
+   "board": "ashby:DeepL",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Swan": {
+   "board": "ashby:swan",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Synthesia": {
+   "board": "ashby:synthesia",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Pigment": {
+   "board": "lever:pigment",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Aircall": {
+   "board": "greenhouse:aircallioinc",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Snyk": {
+   "board": "greenhouse-eu:aisi",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "ElevenLabs": {
+   "board": "ashby:elevenlabs",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "PayFit": {
+   "board": "generic:https://careers.payfit.com/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "commercetools": {
+   "board": "greenhouse:commercetools",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Brevo": {
+   "board": "lever:brevo",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Mambu": {
+   "board": "generic:https://mambu.com/en/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Juro": {
+   "board": "greenhouse:canonical_managed_posts",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Front": {
+   "board": "ashby:frontcareers",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Parloa": {
+   "board": "ashby:parloa",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Onfido": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Legora": {
+   "board": "ashby:legora",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Didomi": {
+   "board": "lever:didomi",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Staffbase": {
+   "board": "greenhouse:staffbase",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Livestorm": {
+   "board": "recruitee:livestorm",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Printful": {
+   "board": "teamtailor:printfulinc",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Hostinger": {
+   "board": "ashby:hostinger",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Veriff": {
+   "board": "greenhouse:veriff",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Infobip": {
+   "board": "workday:infobip|wd3|InfobipCareers",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Apify": {
+   "board": "ashby:apify",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Microblink": {
+   "board": "greenhouse:microblink",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "UiPath": {
+   "board": "ashby:uipath",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Bloomreach": {
+   "board": "greenhouse:bloomreach",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Smartly.io": {
+   "board": "greenhouse:smartlyio",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Quantive": {
+   "board": "greenhouse:workboard",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Emplifi": {
+   "board": "greenhouse:emplifi",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Tidio": {
+   "board": "generic:https://careers.tidio.com/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Trustpilot": {
+   "board": "greenhouse:trustpilot",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Perk (TravelPerk)": {
+   "board": "generic:https://www.perk.com/careers/?office=london",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Sana Labs": {
+   "board": "ashby:sana-roles",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Nord Security": {
+   "board": "generic:https://nordsecurity.com/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Templafy": {
+   "board": "teamtailor:templafy",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Omnisend": {
+   "board": "lever:omnisend",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Elastic": {
+   "board": "greenhouse:elastic",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Talkdesk": {
+   "board": "ashby:talkdesk",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Productive": {
+   "board": "generic:https://productive.io/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "FintechOS": {
+   "board": "generic:https://fintechos.com/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Text (LiveChat)": {
+   "board": "generic:https://www.text.com/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Enhancv": {
+   "board": "generic:https://enhancv.com/use-cases/for-career-coaches/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Bird": {
+   "board": "greenhouse:bird",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Aiven": {
+   "board": "generic:https://aiven.io/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Mews": {
+   "board": "generic:https://www.mews.com/en/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Relex Solutions": {
+   "board": "generic:https://www.relexsolutions.com/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Factorial": {
+   "board": "generic:https://careers.factorial.com/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Channable": {
+   "board": "recruitee:channable",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Holded": {
+   "board": "recruitee:careers-analytics",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Unbabel": {
+   "board": "generic:https://www.transperfect.com/careers/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Feedzai": {
+   "board": "greenhouse:feedzai",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Supermetrics": {
+   "board": "generic:https://supermetrics.com/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Backbase": {
+   "board": "generic:https://www.backbase.com/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Kiwi.com": {
+   "board": "generic:https://jobs.kiwi.com/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "GetYourGuide": {
+   "board": "ashby:getyourguide",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Cabify": {
+   "board": "greenhouse:cabify",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "BlaBlaCar": {
+   "board": "lever:blablacar",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Bolt": {
+   "board": "ashby:bolt",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Trainline": {
+   "board": "ashby:trainline",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "OutSystems": {
+   "board": "generic:https://www.outsystems.com/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Coverflex": {
+   "board": "generic:https://careers.coverflex.com/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Bending Spoons": {
+   "board": "generic:https://bendingspoons.com/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Jobandtalent": {
+   "board": "lever:jobandtalent",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Wallapop": {
+   "board": "greenhouse:wallapop",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Sendcloud": {
+   "board": "generic:https://jobs.sendcloud.com/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Wolt": {
+   "board": "greenhouse:wolt",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Rohlik": {
+   "board": "ashby:rohlik",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Seedtag": {
+   "board": "generic:https://jobs.seedtag.com/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Oda": {
+   "board": "teamtailor:tt",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Red Points": {
+   "board": "generic:https://www.redpoints.com/jobs/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "HelloFresh": {
+   "board": "greenhouse:hellofresh",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Glovo": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Deliveroo": {
+   "board": "ashby:deliveroo",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Delivery Hero": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Zalando": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Depop": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Fever": {
+   "board": "greenhouse:feverup",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Swappie": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Brainly": {
+   "board": "ashby:brainly",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "ManoMano": {
+   "board": "workable:manomano",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Catawiki": {
+   "board": "greenhouse:catawiki",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "DocPlanner": {
+   "board": "ashby:docplanner",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Ankorstore": {
+   "board": "ashby:ankorstore",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Multiverse": {
+   "board": "ashby:stackfuel",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Busuu": {
+   "board": "teamtailor:busuu",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Lingoda": {
+   "board": "pinpoint:lingoda",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Picnic": {
+   "board": "workable:picnic",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Memrise": {
+   "board": "workable:memrise",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Babbel": {
+   "board": "ashby:babbel",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Booking.com": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Bloom & Wild": {
+   "board": "workable:bloomandwild",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Kahoot!": {
+   "board": "workable:kahoot",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Docebo": {
+   "board": "ashby:docebo",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Flo Health": {
+   "board": "greenhouse:flohealth",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Doctolib": {
+   "board": "ashby:doctolib",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Oviva": {
+   "board": "ashby:oviva",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Sword Health": {
+   "board": "greenhouse:swordhealth",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Ada Health": {
+   "board": "greenhouse:adahealth",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Gousto": {
+   "board": "generic:https://www.gousto.co.uk/jobs",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "GoStudent": {
+   "board": "greenhouse:gostudent",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Zoe": {
+   "board": "ashby:zoe",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Blinkist": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Withings": {
+   "board": "workable:withings",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Vivino": {
+   "board": "generic:https://careers.vivino.com",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Unmind": {
+   "board": "ashby:unmind",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Oura": {
+   "board": "greenhouse:oura",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "YAZIO": {
+   "board": "ashby:yazio",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Yousician": {
+   "board": "greenhouse:yousician",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "BetterMe": {
+   "board": "breezy:betterme",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Numan": {
+   "board": "lever-eu:numan",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Urban Sports Club": {
+   "board": "greenhouse:usc",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Plan A": {
+   "board": "workable:plana",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Runna": {
+   "board": "ashby:runna",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Sweep": {
+   "board": "teamtailor:sweep",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Octopus Energy": {
+   "board": "lever:octoenergy",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "1KOMMA5°": {
+   "board": "personio:1komma5grad|de",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Doconomy": {
+   "board": "teamtailor:doconomy",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Sylvera": {
+   "board": "ashby:sylvera",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Studocu": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "tado°": {
+   "board": "personio:tado|de",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Greenly": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Citymapper": {
+   "board": "generic:https://citymapper.com/news/2582/citymapper-joins-via",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Freeletics": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Lifesum": {
+   "board": "generic:https://jobs.lifesum.com/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Kraken Tech": {
+   "board": "ashby:krakentech",
+   "method": "page",
+   "checked": "2026-11-23"
+  },
+  "Headspace": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Kaia Health": {
+   "board": "generic:https://kaiahealth.com/newsroom/press-releases/kaia-health-joins-sword-health/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Enpal": {
+   "board": "ashby:enpal",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Ecologi": {
+   "board": "generic:https://ecologi.careers.hibob.com/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Forto": {
+   "board": "ashby:forto",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Tibber": {
+   "board": "generic:https://jobs.tibber.com/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Kry / Livi": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Booksy": {
+   "board": "generic:https://careers.booksy.com/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "CHOOOSE": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Normative": {
+   "board": "generic:https://careers.greenly.earth/",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Cogo": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  },
+  "Clue": {
+   "board": "generic:https://helloclue.com/careers",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Sennder": {
+   "board": "generic:https://www.sennder.com/career",
+   "method": "careers page",
+   "checked": "2026-11-23"
+  },
+  "Climeworks": {
+   "board": "recruitee:climeworks",
+   "method": "probe",
+   "checked": "2026-11-23"
+  },
+  "Treedom": {
+   "board": null,
+   "method": "none",
+   "checked": "2026-11-23"
+  }
+ },
+ "discovered": {
+  "workday:cloudera|wd5|External_Career": {
+   "company": "Cloudera",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:dept": {
+   "company": "DEPT",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:clickhouse": {
+   "company": "Clickhouse",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:Clera": {
+   "company": "Clera",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:accenture|wd103|AccentureCareers": {
+   "company": "Accenture Song",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:ALTEN": {
+   "company": "Alten",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:abb|wd3|External_Career_Page": {
+   "company": "ABB",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:alliancewd|wd3|alpine-racing-careers": {
+   "company": "Alliancewd",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:ecolab|wd1|Ecolab_External": {
+   "company": "Ecolab",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:NEXTON": {
+   "company": "NEXTON",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:ag|wd3|Airbus": {
+   "company": "Airbus",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:analogdevices|wd1|External": {
+   "company": "Analogdevices",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:InPost": {
+   "company": "InPost",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:peec": {
+   "company": "Peec",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:hcompany": {
+   "company": "H Company",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:Devoteam": {
+   "company": "Devoteam",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:Endava": {
+   "company": "Endava",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "lever:airalo": {
+   "company": "Airalo",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:bjakcareer": {
+   "company": "Bjakcareer",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:condenast|wd115|CondeCareers": {
+   "company": "Condenast",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:kraken.com": {
+   "company": "Kraken Com",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:trading212": {
+   "company": "Trading212",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "recruitee:flyingbisons": {
+   "company": "Flying Bisons",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:injective": {
+   "company": "Injective",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:pixelmatters": {
+   "company": "Pixelmatters",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:prophet-security": {
+   "company": "Prophet Security",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:Valon": {
+   "company": "Valon",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:inthepocket": {
+   "company": "In The Pocket",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:Version1": {
+   "company": "Version 1",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:genesys|wd1|Genesys": {
+   "company": "Genesys",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:algo1": {
+   "company": "Algo1",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:vesoma": {
+   "company": "Vesoma",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:dowjones|wd1|Dow_Jones_Career": {
+   "company": "Dowjones",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:TensorWave": {
+   "company": "Tensorwave",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:getscope": {
+   "company": "Scope",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:faculty": {
+   "company": "Faculty",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:carwow": {
+   "company": "Carwow",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:duffel": {
+   "company": "Duffel",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:Aspora": {
+   "company": "Aspora",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:heinz|wd1|KraftHeinz_Careers": {
+   "company": "Heinz",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:housinganywhere": {
+   "company": "HousingAnywhere Group",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:thermofisher|wd5|ThermoFisherCareers": {
+   "company": "Thermofisher",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:spruce": {
+   "company": "Spruce",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:se3": {
+   "company": "Se3",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:Entain": {
+   "company": "Entain",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:citi|wd5|2": {
+   "company": "CITI",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "pinpoint:uncommon": {
+   "company": "Uncommon",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "pinpoint:tabby": {
+   "company": "Tabby",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:letly": {
+   "company": "Letly",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:9fin": {
+   "company": "9fin",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "lever:ciandt": {
+   "company": "Ciandt",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:wayflyer": {
+   "company": "Wayflyer",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:axis|wd3|External_Career_Site": {
+   "company": "AXIS",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:axle-careers": {
+   "company": "Axle Careers",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:curtisswright|wd1|CW_External_Career_Site": {
+   "company": "Curtisswright",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:jbtm|wd108|JBT_Marel_Career_Site": {
+   "company": "JBTM",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:PAConsulting": {
+   "company": "PA Consulting",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:Nexthink": {
+   "company": "Nexthink",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:kaluza": {
+   "company": "Kaluza",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:opentable": {
+   "company": "opentable",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:IFS1": {
+   "company": "IFS",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "personio:7learnings|de": {
+   "company": "7learnings",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:ApplusIDIADA1": {
+   "company": "Applus IDIADA",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:voize": {
+   "company": "Voize",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:isomorphiclabs": {
+   "company": "Isomorphic Labs",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "recruitee:hubvisory": {
+   "company": "Hubvisory",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:nord-security": {
+   "company": "Nord Security",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "lever:superside": {
+   "company": "Superside",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "lever:360learning": {
+   "company": "360Learning",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:cisco|wd5|Cisco_Careers": {
+   "company": "Cisco",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:cyrusone|wd1|CyrusOneCareerPortal": {
+   "company": "Cyrusone",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "teamtailor:knowmadmood": {
+   "company": "knowmad mood",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:marshmallow": {
+   "company": "Marshmallow",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:blackline|wd108|BlackLineCareers": {
+   "company": "Blackline",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:deliveroo": {
+   "company": "Deliveroo",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:WRITER": {
+   "company": "Writer",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:avantos": {
+   "company": "Avantos",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:Bet3651": {
+   "company": "bet365",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:hungryroot": {
+   "company": "Hungryroot",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "recruitee:iodigital": {
+   "company": "iO Digital",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:clio|wd3|ClioCareerSite": {
+   "company": "CLIO",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:NECSWS": {
+   "company": "NECSWS",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:saabgroup|wd116|Combitech_careers": {
+   "company": "Saabgroup",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:boeing|wd1|EXTERNAL_CAREERS": {
+   "company": "Boeing",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:beparallel": {
+   "company": "Parallel",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse-eu:feverup": {
+   "company": "Fever",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 1
+  },
+  "ashby:Clerk": {
+   "company": "Clerk",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:altera|wd1|Altera": {
+   "company": "Altera",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:entrust|wd1|EntrustCareers": {
+   "company": "Entrust",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:globalfoundries|wd1|External": {
+   "company": "Globalfoundries",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "teamtailor:tradingview": {
+   "company": "TradingView",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:enode": {
+   "company": "Enode",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:codeway": {
+   "company": "Codeway",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:beam-up": {
+   "company": "Beam Up",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:Hiflylabs": {
+   "company": "Hiflylabs",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "lever:unlimit": {
+   "company": "Unlimit",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:wikimedia": {
+   "company": "Wikimedia Foundation",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:sitecore": {
+   "company": "Sitecore",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse-eu:isaraerospace": {
+   "company": "Isar Aerospace SE",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 1
+  },
+  "ashby:neko-health": {
+   "company": "Neko Health",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:vertical-aerospace": {
+   "company": "Vertical Aerospace",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:fluxon": {
+   "company": "Fluxon",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:Locinox": {
+   "company": "Locinox",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse-eu:bitpanda": {
+   "company": "Bitpanda",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 1
+  },
+  "workday:db|wd3|DBWebsite": {
+   "company": "Deutsche Bank",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:hitachi|wd1|hitachi": {
+   "company": "Hitachi",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "lever:mendix": {
+   "company": "Mendix",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:monolithicpower|wd12|MPS_Careers": {
+   "company": "Monolithicpower",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:graphcore": {
+   "company": "Graphcore",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:flagstone": {
+   "company": "Flagstone",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:pvh|wd1|PVH_Careers": {
+   "company": "PVH (Tommy Hilfiger, Calvin Klein)",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "lever:ekimetrics": {
+   "company": "Ekimetrics",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:OCTOTechnology": {
+   "company": "OCTO Technology",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "lever:simulmedia": {
+   "company": "Simulmedia",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse-eu:tactilegames": {
+   "company": "Tactile Games",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 1
+  },
+  "ashby:supercell": {
+   "company": "Supercell",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "teamtailor:yonder": {
+   "company": "Yonder",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:zenjob": {
+   "company": "Zenjob",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:blackrock|wd1|BlackRock_Professional": {
+   "company": "Blackrock",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:capitalone|wd12|Capital_One": {
+   "company": "Capitalone",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:lendable": {
+   "company": "Lendable",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:CITECH": {
+   "company": "CITECH",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:ideo": {
+   "company": "IDEO",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse-eu:ebury": {
+   "company": "Ebury",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 1
+  },
+  "greenhouse:landor": {
+   "company": "Landor",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:billups": {
+   "company": "Billups",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "breezy:manyone": {
+   "company": "Manyone",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "recruitee:optics11": {
+   "company": "Optics11",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:OldSkullGames1": {
+   "company": "Old Skull Games",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:granola": {
+   "company": "Granola",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse-eu:proton": {
+   "company": "Proton",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 1
+  },
+  "greenhouse:wargamingen": {
+   "company": "Wargaming",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:goodstack": {
+   "company": "Goodstack",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:Snyk": {
+   "company": "Snyk",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:yubo": {
+   "company": "Yubo",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:zilch": {
+   "company": "Zilch",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:SoftwareMind": {
+   "company": "Software Mind",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:jack-jill": {
+   "company": "Jack Jill External Ats",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:metaview": {
+   "company": "Metaview",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:fundingcircle": {
+   "company": "Funding Circle",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:alta-ares": {
+   "company": "Alta Ares",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:runway-ml": {
+   "company": "Runway Ml",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:scaleai": {
+   "company": "Scale AI",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "bamboohr:geniant": {
+   "company": "Geniant",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "teamtailor:twodaydenmark": {
+   "company": "Twodaydenmark",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "teamtailor:knightecgroup": {
+   "company": "Knightecgroup",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "pinpoint:transformuk": {
+   "company": "Transformuk",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "pinpoint:rowdentech": {
+   "company": "Rowdentech",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "pinpoint:surgohealth": {
+   "company": "Surgohealth",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "bamboohr:traxtech": {
+   "company": "Traxtech",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "bamboohr:capcade": {
+   "company": "Capcade",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "bamboohr:codemettle": {
+   "company": "Codemettle",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:pwc|wd3|Global_Experienced_Careers": {
+   "company": "Pwc",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:servicetitan|wd1|ServiceTitan": {
+   "company": "Servicetitan",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "recruitee:beinguser": {
+   "company": "Beinguser",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:rabobank|wd3|jobs": {
+   "company": "Business Lending - Rabobank Full-time Hybrid Workday 2d ago",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "recruitee:metyisag": {
+   "company": "Metyisag",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "teamtailor:creditspring": {
+   "company": "Creditspring",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "teamtailor:crimsonacademy": {
+   "company": "Crimsonacademy",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:cotality|wd115|Global": {
+   "company": "Cotality",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workday:hcf|wd105|HCF_External_Career_Site": {
+   "company": "Hcf",
+   "origin": "via UX Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:usekernel": {
+   "company": "Kernel",
+   "origin": "via Accel portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:tailscale": {
+   "company": "Tailscale",
+   "origin": "via Accel portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:tolmo": {
+   "company": "tolmo.com",
+   "origin": "via Accel portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:1password": {
+   "company": "1Password",
+   "origin": "via Accel portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:zocdoc": {
+   "company": "Zocdoc",
+   "origin": "via Atomico portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:physicsx": {
+   "company": "PhysicsX",
+   "origin": "via Atomico portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:dexory": {
+   "company": "Dexory",
+   "origin": "via Atomico portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:Ashby": {
+   "company": "Ashby",
+   "origin": "via Atomico portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:pelago": {
+   "company": "Pelago Health",
+   "origin": "via Atomico portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:hinge-health": {
+   "company": "Hinge Health",
+   "origin": "via Atomico portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:sandtechholdingslimited": {
+   "company": "Sand Technologies",
+   "origin": "via Norrsken jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:aidocmedical": {
+   "company": "Aidoc",
+   "origin": "via Norrsken jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:codepath": {
+   "company": "codepath-org",
+   "origin": "via Fast Forward: Tech Nonprofit Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:thinkofus": {
+   "company": "Think of Us",
+   "origin": "via Fast Forward: Tech Nonprofit Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "smartrecruiters:Tidepool": {
+   "company": "Tidepool.org",
+   "origin": "via Fast Forward: Tech Nonprofit Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:Playlab": {
+   "company": "Playlab",
+   "origin": "via Fast Forward: Tech Nonprofit Jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:Omnea": {
+   "company": "Omnea",
+   "origin": "via Point Nine portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:sagansystems": {
+   "company": "Gladly",
+   "origin": "via Point Nine portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:jobber": {
+   "company": "Jobber",
+   "origin": "via Point Nine portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:sereact": {
+   "company": "Sereact",
+   "origin": "via Point Nine portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "workable:hilobyaktiia": {
+   "company": "Hilo",
+   "origin": "via Earlybird portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:quantumdiamonds": {
+   "company": "QuantumDiamonds",
+   "origin": "via Earlybird portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "greenhouse:isaraerospace": {
+   "company": "Isar Aerospace",
+   "origin": "via Earlybird portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:spaitial": {
+   "company": "SpAItial",
+   "origin": "via Earlybird portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  },
+  "ashby:arago": {
+   "company": "Arago Inc.",
+   "origin": "via Earlybird portfolio jobs",
+   "added": "2026-11-23",
+   "fails": 0,
+   "last_ok": "2026-11-23"
+  }
+ }
+}
