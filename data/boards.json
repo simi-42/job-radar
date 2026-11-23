@@ -2247,636 +2247,782 @@
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "greenhouse:dept": {
    "company": "DEPT",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "ashby:clickhouse": {
    "company": "Clickhouse",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "clickhouse.com"
   },
   "ashby:Clera": {
    "company": "Clera",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "getclera.com"
   },
   "workday:accenture|wd103|AccentureCareers": {
    "company": "Accenture Song",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "smartrecruiters:ALTEN": {
    "company": "Alten",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "alten.com"
   },
   "workday:abb|wd3|External_Career_Page": {
    "company": "ABB",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "workday:alliancewd|wd3|alpine-racing-careers": {
    "company": "Alliancewd",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "workday:ecolab|wd1|Ecolab_External": {
    "company": "Ecolab",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "smartrecruiters:NEXTON": {
    "company": "NEXTON",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "workday:ag|wd3|Airbus": {
    "company": "Airbus",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "workday:analogdevices|wd1|External": {
    "company": "Analogdevices",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "smartrecruiters:InPost": {
    "company": "InPost",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "inpost.eu"
   },
   "ashby:peec": {
    "company": "Peec",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "peec.ai"
   },
   "ashby:hcompany": {
    "company": "H Company",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "hcompany.ai"
   },
   "smartrecruiters:Devoteam": {
    "company": "Devoteam",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "devoteamcareers.com"
   },
   "smartrecruiters:Endava": {
    "company": "Endava",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "endava.com"
   },
   "lever:airalo": {
    "company": "Airalo",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "airalo.com"
   },
   "ashby:bjakcareer": {
    "company": "Bjakcareer",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "bjak.my"
   },
   "workday:condenast|wd115|CondeCareers": {
    "company": "Condenast",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "ashby:kraken.com": {
    "company": "Kraken Com",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "kraken.com"
   },
   "ashby:trading212": {
    "company": "Trading212",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "trading212.com"
   },
   "recruitee:flyingbisons": {
    "company": "Flying Bisons",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "flyingbisons.com"
   },
   "ashby:injective": {
    "company": "Injective",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "injective.com"
   },
   "ashby:pixelmatters": {
    "company": "Pixelmatters",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "pixelmatters.com"
   },
   "ashby:prophet-security": {
    "company": "Prophet Security",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "prophetsecurity.ai"
   },
   "ashby:Valon": {
    "company": "Valon",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "valon.ai"
   },
   "greenhouse:inthepocket": {
    "company": "In The Pocket",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "smartrecruiters:Version1": {
    "company": "Version 1",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "version1.com"
   },
   "workday:genesys|wd1|Genesys": {
    "company": "Genesys",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "ashby:algo1": {
    "company": "Algo1",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "algo1.ai"
   },
   "ashby:vesoma": {
    "company": "Vesoma",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "vesoma.com"
   },
   "workday:dowjones|wd1|Dow_Jones_Career": {
    "company": "Dowjones",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "ashby:TensorWave": {
    "company": "Tensorwave",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "tensorwave.com"
   },
   "ashby:getscope": {
    "company": "Scope",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "getscope.ai"
   },
   "ashby:faculty": {
    "company": "Faculty",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "faculty.ai"
   },
   "ashby:carwow": {
    "company": "Carwow",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "carwow.co.uk"
   },
   "ashby:duffel": {
    "company": "Duffel",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "duffel.com"
   },
   "ashby:Aspora": {
    "company": "Aspora",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "aspora.com"
   },
   "workday:heinz|wd1|KraftHeinz_Careers": {
    "company": "Heinz",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "greenhouse:housinganywhere": {
    "company": "HousingAnywhere Group",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "housinganywhere.com"
   },
   "workday:thermofisher|wd5|ThermoFisherCareers": {
    "company": "Thermofisher",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "ashby:spruce": {
    "company": "Spruce",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "spruce.eco"
   },
   "ashby:se3": {
    "company": "Se3",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "se3.ai"
   },
   "smartrecruiters:Entain": {
    "company": "Entain",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "entaincareers.com"
   },
   "workday:citi|wd5|2": {
    "company": "CITI",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "pinpoint:uncommon": {
    "company": "Uncommon",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "pinpoint:tabby": {
    "company": "Tabby",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "tabby.ai"
   },
   "ashby:letly": {
    "company": "Letly",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "letly.ai"
   },
   "ashby:9fin": {
    "company": "9fin",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "9fin.com"
   },
   "lever:ciandt": {
    "company": "Ciandt",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "ciandt.com"
   },
   "ashby:wayflyer": {
    "company": "Wayflyer",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "wayflyer.com"
   },
   "workday:axis|wd3|External_Career_Site": {
    "company": "AXIS",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "ashby:axle-careers": {
    "company": "Axle Careers",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "axle.energy"
   },
   "workday:curtisswright|wd1|CW_External_Career_Site": {
    "company": "Curtisswright",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "workday:jbtm|wd108|JBT_Marel_Career_Site": {
    "company": "JBTM",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "smartrecruiters:PAConsulting": {
    "company": "PA Consulting",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "paconsulting.com"
   },
   "smartrecruiters:Nexthink": {
    "company": "Nexthink",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "nexthink.com"
   },
   "ashby:kaluza": {
    "company": "Kaluza",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "kaluza.com"
   },
   "greenhouse:opentable": {
    "company": "opentable",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "smartrecruiters:IFS1": {
    "company": "IFS",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "ifs.link"
   },
   "personio:7learnings|de": {
    "company": "7learnings",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "7learnings.com"
   },
   "smartrecruiters:ApplusIDIADA1": {
    "company": "Applus IDIADA",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "ashby:voize": {
    "company": "Voize",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "voize.ai"
   },
   "greenhouse:isomorphiclabs": {
    "company": "Isomorphic Labs",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "isomorphiclabs.com"
   },
   "recruitee:hubvisory": {
    "company": "Hubvisory",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "hubvisory.com"
   },
   "ashby:nord-security": {
    "company": "Nord Security",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "nordsecurity.com"
   },
   "lever:superside": {
    "company": "Superside",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "superside.com"
   },
   "lever:360learning": {
    "company": "360Learning",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "360learning.com"
   },
   "workday:cisco|wd5|Cisco_Careers": {
    "company": "Cisco",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "workday:cyrusone|wd1|CyrusOneCareerPortal": {
    "company": "Cyrusone",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "teamtailor:knowmadmood": {
    "company": "knowmad mood",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "knowmadmood.com"
   },
   "ashby:marshmallow": {
    "company": "Marshmallow",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "marshmallow.co"
   },
   "workday:blackline|wd108|BlackLineCareers": {
    "company": "Blackline",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "greenhouse:deliveroo": {
    "company": "Deliveroo",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "deliveroo.co.uk"
   },
   "ashby:WRITER": {
    "company": "Writer",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "writer.com"
   },
   "ashby:avantos": {
    "company": "Avantos",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "avantos.ai"
   },
   "smartrecruiters:Bet3651": {
    "company": "bet365",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "greenhouse:hungryroot": {
    "company": "Hungryroot",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "recruitee:iodigital": {
    "company": "iO Digital",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "workday:clio|wd3|ClioCareerSite": {
    "company": "CLIO",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "smartrecruiters:NECSWS": {
    "company": "NECSWS",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "workday:saabgroup|wd116|Combitech_careers": {
    "company": "Saabgroup",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "workday:boeing|wd1|EXTERNAL_CAREERS": {
    "company": "Boeing",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "ashby:beparallel": {
    "company": "Parallel",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "beparallel.com"
   },
   "greenhouse-eu:feverup": {
    "company": "Fever",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 3
+   "fails": 4,
+   "site_checked": "2026-11-23"
   },
   "ashby:Clerk": {
    "company": "Clerk",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "clerk.com"
   },
   "workday:altera|wd1|Altera": {
    "company": "Altera",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "workday:entrust|wd1|EntrustCareers": {
    "company": "Entrust",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "workday:globalfoundries|wd1|External": {
    "company": "Globalfoundries",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "teamtailor:tradingview": {
    "company": "TradingView",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "tradingview.com"
   },
   "ashby:enode": {
    "company": "Enode",
@@ -2886,14 +3032,18 @@
    "last_ok": "2026-11-23",
    "tags": [
     "impact"
-   ]
+   ],
+   "site_checked": "2026-11-23",
+   "site": "enode.com"
   },
   "ashby:codeway": {
    "company": "Codeway",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "codeway.co"
   },
   "ashby:beam-up": {
    "company": "Beam Up",
@@ -2903,21 +3053,26 @@
    "last_ok": "2026-11-23",
    "tags": [
     "impact"
-   ]
+   ],
+   "site_checked": "2026-11-23",
+   "site": "beam.org"
   },
   "smartrecruiters:Hiflylabs": {
    "company": "Hiflylabs",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "hiflylabs.com"
   },
   "lever:unlimit": {
    "company": "Unlimit",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "greenhouse:wikimedia": {
    "company": "Wikimedia Foundation",
@@ -2927,520 +3082,638 @@
    "last_ok": "2026-11-23",
    "tags": [
     "impact"
-   ]
+   ],
+   "site_checked": "2026-11-23",
+   "site": "wikimediafoundation.org"
   },
   "ashby:sitecore": {
    "company": "Sitecore",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "sitecore.com"
   },
   "greenhouse-eu:isaraerospace": {
    "company": "Isar Aerospace SE",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 3
+   "fails": 4,
+   "site_checked": "2026-11-23",
+   "site": "isaraerospace.com"
   },
   "ashby:neko-health": {
    "company": "Neko Health",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "nekohealth.com"
   },
   "ashby:vertical-aerospace": {
    "company": "Vertical Aerospace",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "vertical-aerospace.com"
   },
   "greenhouse:fluxon": {
    "company": "Fluxon",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "fluxon.com"
   },
   "smartrecruiters:Locinox": {
    "company": "Locinox",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "locinox.com"
   },
   "greenhouse-eu:bitpanda": {
    "company": "Bitpanda",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 3
+   "fails": 4,
+   "site_checked": "2026-11-23"
   },
   "workday:db|wd3|DBWebsite": {
    "company": "Deutsche Bank",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "workday:hitachi|wd1|hitachi": {
    "company": "Hitachi",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "lever:mendix": {
    "company": "Mendix",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "mendix.com"
   },
   "workday:monolithicpower|wd12|MPS_Careers": {
    "company": "Monolithicpower",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "greenhouse:graphcore": {
    "company": "Graphcore",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "graphcore.ai"
   },
   "ashby:flagstone": {
    "company": "Flagstone",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "flagstoneim.com"
   },
   "workday:pvh|wd1|PVH_Careers": {
    "company": "PVH (Tommy Hilfiger, Calvin Klein)",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "lever:ekimetrics": {
    "company": "Ekimetrics",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "ekimetrics.com"
   },
   "smartrecruiters:OCTOTechnology": {
    "company": "OCTO Technology",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "octo.com"
   },
   "lever:simulmedia": {
    "company": "Simulmedia",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "simulmedia.com"
   },
   "greenhouse-eu:tactilegames": {
    "company": "Tactile Games",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 3
+   "fails": 4,
+   "site_checked": "2026-11-23"
   },
   "ashby:supercell": {
    "company": "Supercell",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "teamtailor:yonder": {
    "company": "Yonder",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "yonder.com"
   },
   "ashby:zenjob": {
    "company": "Zenjob",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "zenjob.com"
   },
   "workday:blackrock|wd1|BlackRock_Professional": {
    "company": "Blackrock",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "workday:capitalone|wd12|Capital_One": {
    "company": "Capitalone",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "ashby:lendable": {
    "company": "Lendable",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "lendable.co.uk"
   },
   "smartrecruiters:CITECH": {
    "company": "CITECH",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "citech.pro"
   },
   "greenhouse:ideo": {
    "company": "IDEO",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "ideo.com"
   },
   "greenhouse-eu:ebury": {
    "company": "Ebury",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 3
+   "fails": 4,
+   "site_checked": "2026-11-23"
   },
   "greenhouse:landor": {
    "company": "Landor",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "ashby:billups": {
    "company": "Billups",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "billups.com"
   },
   "breezy:manyone": {
    "company": "Manyone",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "manyone.com"
   },
   "recruitee:optics11": {
    "company": "Optics11",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "smartrecruiters:OldSkullGames1": {
    "company": "Old Skull Games",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "oldskullgames.com"
   },
   "ashby:granola": {
    "company": "Granola",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "greenhouse-eu:proton": {
    "company": "Proton",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 3
+   "fails": 4,
+   "site_checked": "2026-11-23"
   },
   "greenhouse:wargamingen": {
    "company": "Wargaming",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "ashby:goodstack": {
    "company": "Goodstack",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "goodstack.io"
   },
   "ashby:Snyk": {
    "company": "Snyk",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "snyk.io"
   },
   "ashby:yubo": {
    "company": "Yubo",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "yubo.live"
   },
   "ashby:zilch": {
    "company": "Zilch",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "zilch.com"
   },
   "smartrecruiters:SoftwareMind": {
    "company": "Software Mind",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "softwaremind.com"
   },
   "ashby:jack-jill": {
    "company": "Jack Jill External Ats",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "jackandjill.ai"
   },
   "ashby:metaview": {
    "company": "Metaview",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "metaview.ai"
   },
   "ashby:fundingcircle": {
    "company": "Funding Circle",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "fundingcircle.com"
   },
   "ashby:alta-ares": {
    "company": "Alta Ares",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "altaares.com"
   },
   "ashby:runway-ml": {
    "company": "Runway Ml",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "runwayml.com"
   },
   "greenhouse:scaleai": {
    "company": "Scale AI",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "bamboohr:geniant": {
    "company": "Geniant",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "teamtailor:twodaydenmark": {
    "company": "Twodaydenmark",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "twoday.se"
   },
   "teamtailor:knightecgroup": {
    "company": "Knightecgroup",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "knightecgroup.com"
   },
   "pinpoint:transformuk": {
    "company": "Transformuk",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "transformuk.com"
   },
   "pinpoint:rowdentech": {
    "company": "Rowdentech",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "rowdentech.com"
   },
   "pinpoint:surgohealth": {
    "company": "Surgohealth",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "surgohealth.com"
   },
   "bamboohr:traxtech": {
    "company": "Traxtech",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "bamboohr:capcade": {
    "company": "Capcade",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "bamboohr:codemettle": {
    "company": "Codemettle",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "workday:pwc|wd3|Global_Experienced_Careers": {
    "company": "Pwc",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "workday:servicetitan|wd1|ServiceTitan": {
    "company": "Servicetitan",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "recruitee:beinguser": {
    "company": "Beinguser",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "beinguser.com"
   },
   "workday:rabobank|wd3|jobs": {
    "company": "Business Lending - Rabobank Full-time Hybrid Workday 2d ago",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "recruitee:metyisag": {
    "company": "Metyisag",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "teamtailor:creditspring": {
    "company": "Creditspring",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "creditspring.co.uk"
   },
   "teamtailor:crimsonacademy": {
    "company": "Crimsonacademy",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "workday:cotality|wd115|Global": {
    "company": "Cotality",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "workday:hcf|wd105|HCF_External_Career_Site": {
    "company": "Hcf",
    "origin": "via UX Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "ashby:usekernel": {
    "company": "Kernel",
    "origin": "via Accel portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "greenhouse:tailscale": {
    "company": "Tailscale",
    "origin": "via Accel portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "ashby:tolmo": {
    "company": "tolmo.com",
    "origin": "via Accel portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "tolmo.com"
   },
   "ashby:1password": {
    "company": "1Password",
    "origin": "via Accel portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "1password.com"
   },
   "greenhouse:zocdoc": {
    "company": "Zocdoc",
    "origin": "via Atomico portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "greenhouse:physicsx": {
    "company": "PhysicsX",
    "origin": "via Atomico portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "physicsx.ai"
   },
   "greenhouse:dexory": {
    "company": "Dexory",
    "origin": "via Atomico portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "ashby:Ashby": {
    "company": "Ashby",
    "origin": "via Atomico portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "ashbyprd.com"
   },
   "greenhouse:pelago": {
    "company": "Pelago Health",
    "origin": "via Atomico portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "ashby:hinge-health": {
    "company": "Hinge Health",
    "origin": "via Atomico portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "hingehealth.com"
   },
   "greenhouse:sandtechholdingslimited": {
    "company": "Sand Technologies",
@@ -3450,7 +3723,8 @@
    "last_ok": "2026-11-23",
    "tags": [
     "impact"
-   ]
+   ],
+   "site_checked": "2026-11-23"
   },
   "greenhouse:aidocmedical": {
    "company": "Aidoc",
@@ -3460,7 +3734,8 @@
    "last_ok": "2026-11-23",
    "tags": [
     "impact"
-   ]
+   ],
+   "site_checked": "2026-11-23"
   },
   "greenhouse:codepath": {
    "company": "codepath-org",
@@ -3470,7 +3745,8 @@
    "last_ok": "2026-11-23",
    "tags": [
     "impact"
-   ]
+   ],
+   "site_checked": "2026-11-23"
   },
   "greenhouse:thinkofus": {
    "company": "Think of Us",
@@ -3480,7 +3756,8 @@
    "last_ok": "2026-11-23",
    "tags": [
     "impact"
-   ]
+   ],
+   "site_checked": "2026-11-23"
   },
   "smartrecruiters:Tidepool": {
    "company": "Tidepool.org",
@@ -3490,7 +3767,8 @@
    "last_ok": "2026-11-23",
    "tags": [
     "impact"
-   ]
+   ],
+   "site_checked": "2026-11-23"
   },
   "ashby:Playlab": {
    "company": "Playlab",
@@ -3500,70 +3778,89 @@
    "last_ok": "2026-11-23",
    "tags": [
     "impact"
-   ]
+   ],
+   "site_checked": "2026-11-23",
+   "site": "playlab.ai"
   },
   "ashby:Omnea": {
    "company": "Omnea",
    "origin": "via Point Nine portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "omnea.co"
   },
   "greenhouse:sagansystems": {
    "company": "Gladly",
    "origin": "via Point Nine portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "gladly.com"
   },
   "ashby:jobber": {
    "company": "Jobber",
    "origin": "via Point Nine portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "getjobber.com"
   },
   "ashby:sereact": {
    "company": "Sereact",
    "origin": "via Point Nine portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "sereact.ai"
   },
   "workable:hilobyaktiia": {
    "company": "Hilo",
    "origin": "via Earlybird portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23"
   },
   "ashby:quantumdiamonds": {
    "company": "QuantumDiamonds",
    "origin": "via Earlybird portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "qd-st.com"
   },
   "greenhouse:isaraerospace": {
    "company": "Isar Aerospace",
    "origin": "via Earlybird portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "isaraerospace.com"
   },
   "ashby:spaitial": {
    "company": "SpAItial",
    "origin": "via Earlybird portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "spaitial.ai"
   },
   "ashby:arago": {
    "company": "Arago Inc.",
    "origin": "via Earlybird portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-23"
+   "last_ok": "2026-11-23",
+   "site_checked": "2026-11-23",
+   "site": "arago.inc"
   }
  }
 }

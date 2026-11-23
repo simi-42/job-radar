@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-23T09:32:06+00:00",
- "duration_s": 83,
+ "updated": "2026-11-23T09:36:28+00:00",
+ "duration_s": 88,
  "full": true,
  "counts": {
-  "open": 1138,
-  "new_today": 1138,
-  "hu_yes": 65,
+  "open": 1072,
+  "new_today": 1072,
+  "hu_yes": 60,
   "alerts": 0,
-  "closed_recent": 51
+  "closed_recent": 30
  },
  "sources": [
   {
@@ -1215,7 +1215,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 24,
+   "count": 23,
    "error": null,
    "note": null
   },
