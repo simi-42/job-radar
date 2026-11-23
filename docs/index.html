@@ -79,6 +79,7 @@ fieldset{border:0;margin:0;padding:0}legend{font-size:13px;color:var(--mute);mar
 .co{font-size:15px;color:var(--mute)}
 .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;grid-column:2}
 .chip{font-size:12.5px;line-height:1;padding:6px 8px;border-radius:7px;background:var(--soft);white-space:nowrap}
+.chip.yes,.chip.maybe,.chip.no{white-space:normal;line-height:1.25;max-width:100%}
 .chip.yes{background:var(--ink);color:var(--bg)}.chip.maybe{background:transparent;box-shadow:inset 0 0 0 1px var(--ink)}
 .chip.no{color:var(--mute)}.chip.new{background:var(--acc);color:var(--acc-ink)}.chip.flag{color:var(--warn);background:transparent;box-shadow:inset 0 0 0 1px currentColor}
 .chip.imp{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok);font-weight:500}
@@ -341,7 +342,7 @@ function card(j){
     <div class="co">${esc(j.company || "Company not stated")}${j.tags && j.tags.length ? ` · <span class="small">${esc(j.tags.filter(t => LABELS.tag[t] && t !== "impact").map(t => LABELS.tag[t]).slice(0, 2).join(", "))}</span>` : ""}</div>
     <div class="chips">${chips.join("")}</div>
     <div class="acts">
-      <button class="btn" type="button" data-act="why" aria-expanded="${open}">${open ? "Less" : "Why this score"}</button>
+      <button class="btn" type="button" data-act="why" aria-expanded="${open}">${open ? "Less" : "Details"}</button>
       <button class="btn" type="button" data-act="saved" aria-pressed="${st === "saved"}">Save</button>
       <button class="btn" type="button" data-act="applied" aria-pressed="${st === "applied"}">Applied</button>
       <button class="btn" type="button" data-act="hidden" aria-pressed="${st === "hidden"}">Hide</button>

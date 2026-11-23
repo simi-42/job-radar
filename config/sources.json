@@ -420,7 +420,7 @@
    "origin": "Follow the Money",
    "enabled": true,
    "search": true,
-   "impact": true
+   "impact": false
   },
   {
    "id": "remoteclimate",
@@ -450,7 +450,7 @@
    "origin": "Follow the Money",
    "enabled": true,
    "search": false,
-   "impact": true
+   "impact": false
   },
   {
    "id": "freelancingforgood",
