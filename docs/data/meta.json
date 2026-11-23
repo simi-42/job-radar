@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-23T09:36:28+00:00",
- "duration_s": 88,
+ "updated": "2026-11-23T09:39:41+00:00",
+ "duration_s": 87,
  "full": true,
  "counts": {
   "open": 1072,
@@ -1215,7 +1215,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 23,
+   "count": 24,
    "error": null,
    "note": null
   },
@@ -1228,7 +1228,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 28,
+   "count": 27,
    "error": null,
    "note": null
   },
