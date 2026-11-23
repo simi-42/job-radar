@@ -89,7 +89,7 @@ class Adapters(unittest.TestCase):
             jobs = fn({"id": "t", "url": url})
             self.assertEqual(len(jobs), 1, fn.__name__)
         h = boards.himalayas({"id": "t", "url": "https://himalayas.app/jobs/api?limit=100"})[0]
-        self.assertIn("UTC-1 to UTC+3", h["description"])
+        self.assertIn("CET +/- 2", h["description"])
 
     def test_rss_wp_job_manager(self):
         feed = """<?xml version="1.0"?><rss version="2.0" xmlns:job_listing="https://wpjobmanager.com"><channel><item><title>Senior Product Designer</title>
@@ -104,6 +104,15 @@ class Adapters(unittest.TestCase):
         self.assertEqual(boards.resolve_adapter({"url": "https://remotive.com/api/x", "adapter": "auto"})[0], "remotive")
         self.assertEqual(boards.resolve_adapter({"url": "https://foo.org/feed/", "adapter": "auto"})[0], "rss")
         self.assertEqual(boards.resolve_adapter({"url": "https://foo.org/jobs", "adapter": "auto"})[0], "generic")
+
+
+class LinkTitles(unittest.TestCase):
+    def test_clean(self):
+        self.assertEqual(boards._clean_link_title("🇩🇰 København, DK Senior Product Designer - Twoday"), ("Senior Product Designer", "Twoday", "København, DK"))
+        t, c, l = boards._clean_link_title("Pika is hiring for a position of Senior Product Designer in Palo Alto, CA")
+        self.assertEqual((t, c, l), ("Senior Product Designer", "Pika", "Palo Alto, CA"))
+        self.assertEqual(boards._company_from_url("https://4dayweek.io/job/senior-product-designer-at-nexus-mods-ae641807"), "Nexus Mods")
+        self.assertEqual(boards._company_from_url("https://www.remoterocketship.com/publicjobs/company/kettle/jobs/x"), "Kettle")
 
 
 class Detect(unittest.TestCase):

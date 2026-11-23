@@ -357,7 +357,7 @@ class Run:
         log(f"lifecycle: {closed} closed, {carried} carried over, {dropped} dropped")
 
     # ---------- 7. verify board/search finds ----------
-    def verify(self, limit=120):
+    def verify(self, limit=300):
         todo = [r for r in self.cur.values() if r.get("kind") != "ats" and r.get("live") != "closed"
                 and (r.get("live") == "listed" or days_between(r.get("checked"), TODAY) >= 3)]
         todo.sort(key=lambda r: -r.get("score", 0))
@@ -381,8 +381,23 @@ class Run:
                     r["closed"] = TODAY
                 if fill.get("company") and not r.get("company"):
                     r["company"] = fill["company"]
-                if fill.get("locations") and not r.get("loc"):
-                    r["loc"] = " · ".join(fill["locations"][:3])
+                if fill.get("locations") or fill.get("workplace_hint"):
+                    if fill.get("locations") and not r.get("loc"):
+                        r["loc"] = " · ".join(fill["locations"][:3])
+                    self._reclassify(r, fill)
+
+    def _reclassify(self, r, fill):
+        """Re-run workplace and Hungary checks with what the job's own page says, if that is clearer."""
+        from .model import make_job
+        desc = fill.get("description") or r.get("_desc") or r.get("snip", "")
+        locs = list(dict.fromkeys((r.get("_locs") or ([r["loc"]] if r.get("loc") else [])) + (fill.get("locations") or [])))
+        j = make_job(title=r["title"], company=r.get("company", ""), url=r["url"], source="verify", kind="board", locations=locs,
+                     workplace=fill.get("workplace_hint"), description=desc)
+        low = (r["title"] + "\n" + desc).lower()
+        wp = classify.workplace(j, low)
+        g = classify.geo_and_eligibility(j, low, wp)
+        if r.get("hu") == "maybe" or r.get("wp") == "unknown":
+            r.update(wp=wp, hu=g["hu"], huw=g["hu_why"], region=g["region"], cc=g["countries"])
 
     # ---------- 8. optional LLM pass ----------
     def _apply_llm(self, r, l):
@@ -454,7 +469,7 @@ class Run:
             h = self.src_health.get(s["id"], {})
             src_rows.append({"id": s["id"], "name": s["name"], "url": s["url"], "origin": s.get("origin", ""), "enabled": s.get("enabled", True),
                              "search": s.get("search", False), "adapter": h.get("adapter") or s.get("adapter"), "ok": h.get("ok"),
-                             "count": h.get("count", 0), "error": h.get("error")})
+                             "count": h.get("count", 0), "error": h.get("error"), "note": s.get("note")})
         comp = self.bstate["companies"]
         open_jobs = [j for j in jobs if j.get("live") != "closed"]
         meta = {

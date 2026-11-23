@@ -98,7 +98,11 @@ def himalayas(src):
             sal = f"{j.get('minSalary')}–{j.get('maxSalary')} {j.get('currency', '')}" if j.get("minSalary") else None
             desc = html_to_text(j.get("description", ""), DESC)
             if tz:
-                desc = f"Time zones allowed: UTC{min(tz):+g} to UTC{max(tz):+g}\n" + desc
+                tzf = [float(t) for t in tz if str(t).lstrip("-+").replace(".", "").isdigit()]
+                if any(0 <= t <= 3 for t in tzf):
+                    desc = "Time zones: CET +/- 2 hours allowed.\n" + desc
+                elif tzf:
+                    desc = f"Time zones allowed: UTC{min(tzf):+g} to UTC{max(tzf):+g}\n" + desc
             out.append(_j(j["title"], j.get("companyName"), j.get("applicationLink") or j.get("guid"), src["id"], locations=locs, remote=True,
                           posted=j.get("pubDate"), description=desc, emp=[j.get("employmentType", "")],
                           seniority_hint=" ".join(j.get("seniority") or []), salary=sal))
@@ -326,6 +330,39 @@ def jsonld_jobs(page, base, src):
     return out
 
 
+_FLAG = re.compile(r"^[\U0001F1E6-\U0001F1FF]{2}\s*")
+_TITLE_START = re.compile(r"\b(senior|sr\.?|lead|staff|principal|head|junior|mid|founding|product|ux|ui|user|interaction|digital|design|experience)\b", re.I)
+
+
+def _clean_link_title(text):
+    """'🇩🇰 København, DK Senior Product Designer - Twoday' -> (title, company, location)."""
+    t, loc = text, ""
+    if _FLAG.match(t):
+        t = _FLAG.sub("", t)
+        m = _TITLE_START.search(t)
+        if m and m.start() > 0:
+            loc, t = t[:m.start()].strip(" ,·-"), t[m.start():]
+    t = re.sub(r"^.*?\bfor a position of\s+", "", t, flags=re.I)
+    company = ""
+    m = re.match(r"^(?P<company>.{2,60}?) is hiring (?:a |an )?(?:for a position of )?(?P<title>.+)$", text, re.I)
+    if m:
+        company = m.group("company").strip()
+    m = re.search(r"\s+in\s+([A-Z][^,]{1,40}(?:,\s*[A-Za-z ]{2,30})?)$", t)
+    if m and not loc:
+        loc, t = m.group(1), t[:m.start()]
+    t2, c2 = split_title_company(t)
+    if c2 and title_family(t2):
+        t, company = t2, company or c2
+    return re.split(r"\s{2,}| · | \| ", t)[0][:120].strip(), company, loc
+
+
+def _company_from_url(url):
+    m = re.search(r"/compan(?:y|ies)/([a-z0-9][a-z0-9-]{1,60})/", url) or re.search(r"-at-([a-z0-9-]+?)-[0-9a-f]{6,}/?$", url)
+    if m:
+        return m.group(1).replace("-", " ").title()
+    return ""
+
+
 def links_jobs(page, base, src):
     out, seen = [], set()
     host = urlparse(base).netloc
@@ -341,12 +378,12 @@ def links_jobs(page, base, src):
         if url in seen or urlparse(url).scheme not in ("http", "https"):
             continue
         seen.add(url)
-        rest = text[len(title):].strip(" ·|-—")
-        company = ""
-        t2, c2 = split_title_company(text)
-        if c2 and title_family(t2):
-            title, company = t2, c2
-        out.append(_j(title, company or (host if parse_ats_url(url) is None else ""), url, src["id"], description=rest[:300]))
+        title, company, loc = _clean_link_title(text)
+        if not title_family(title):
+            continue
+        company = company or _company_from_url(url)
+        rest = text.replace(title, "").strip(" ·|-—")
+        out.append(_j(title, company, url, src["id"], locations=[loc] if loc else [], description=rest[:300]))
         if len(out) >= 60:
             break
     return out

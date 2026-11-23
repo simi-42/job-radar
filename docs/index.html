@@ -376,7 +376,7 @@ function renderSources(){
   $("#src-sum").innerHTML = `${S.filter(x => x.enabled).length} job boards (${S.filter(x => x.ok).length} read fine last run) · ${b.ok || 0} of ${b.tracked || 0} company job boards read · ${c.with_board || 0} of ${c.total || 0} listed companies have a known board · ${b.discovered || 0} boards found by the radar · search: ${esc(s.provider || "off")}, ${s.queries || 0} queries, ${s.boards_found || 0} new boards · AI scoring: ${l.on ? `${l.scored} jobs` : "off"}`;
   $("#t-src").innerHTML = `<thead><tr><th>Board</th><th>Status</th><th>Design jobs</th><th>How</th><th>From</th></tr></thead><tbody>` +
     S.map(x => `<tr><td data-l="Board"><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name)}</a></td>
-      <td data-l="Status"><span class="dot ${x.ok ? "ok" : x.ok === false ? "bad" : ""}"></span>${!x.enabled ? "Paused" : x.ok ? "OK" : x.ok === false ? esc((x.error || "Failed").slice(0, 80)) : "Not run yet"}</td>
+      <td data-l="Status"><span class="dot ${x.adapter === "none" ? "" : x.ok ? "ok" : x.ok === false ? "bad" : ""}"></span>${!x.enabled ? "Paused" + (x.note ? ": " + esc(x.note) : "") : x.adapter === "none" ? (x.search ? "Search only" : "Off") + (x.note ? `<br><span class="small mute">${esc(x.note)}</span>` : "") : x.ok ? "OK" : x.ok === false ? esc((x.error || "Failed").slice(0, 80)) : "Not run yet"}</td>
       <td data-l="Design jobs" class="num">${x.count || 0}</td><td data-l="How">${esc(x.adapter || "")}${x.search ? " + search" : ""}</td><td data-l="From">${esc(x.origin || "")}</td></tr>`).join("") + `</tbody>`;
 }
 

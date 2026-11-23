@@ -90,6 +90,16 @@ class Eligibility(unittest.TestCase):
         wp, g = elig(["London, UK"], workplace="On-site")
         self.assertEqual((wp, g["hu"]), ("onsite", "no"))
 
+    def test_americas(self):
+        wp, g = elig(["North America"], remote=True, desc="Work from anywhere in North America.")
+        self.assertEqual(g["hu"], "no")
+        wp, g = elig(["US Only", "Anywhere in the World"], remote=True)
+        self.assertEqual(g["hu"], "no")
+        wp, g = elig(["United States"], remote=True, desc="Time zones: CET +/- 2 hours allowed.")
+        self.assertEqual(g["hu"], "maybe")
+        wp, g = elig(["Remote"], remote=True, desc="You can work from anywhere in the world.")
+        self.assertEqual(g["hu"], "yes")
+
     def test_unknown(self):
         wp, g = elig([])
         self.assertEqual(g["hu"], "maybe")

@@ -117,11 +117,16 @@ _US_TZ = re.compile(r"\b(?:est|edt|pst|pdt|cst|mst|eastern|pacific)\s+(?:time|ho
 EU_TERMS = ("eu", "the eu", "european union", "europe", "eea", "eu/eea", "an eu country", "eu countries")
 
 
+_ANY_REGION = re.compile(r"^\s*(?:in|within|across)\s+(?:the\s+)?(?:us\b|u\.s\.|usa|united states|north america|canada|americas|latam|latin america|uk\b|united kingdom|india|australia|apac)")
+
+
 def _anywhere(desc):
     for m in _ANYWHERE.finditer(desc):
         tail = desc[m.end():m.end() + 45]
         if re.search(r"\b(for|up to)\b.{0,25}\b(days?|weeks?|months?)\b|\d+\s*(days?|weeks?)", tail):
             continue  # 'work from anywhere for 4 weeks a year' is a perk, not a remote policy
+        if _ANY_REGION.search(tail):
+            continue  # 'anywhere in the US' is not worldwide
         return True
     return False
 
@@ -213,6 +218,14 @@ def geo_and_eligibility(job, text_low, wp):
     if _CET_PM.search(desc) or _CET_PM.search(loc_low):
         tz_ok = True
 
+    non_eu_only = bool(countries) and not eu_countries
+    if (americas_word or non_eu_only) and not europe_word:
+        # Location restricted to the Americas or other non-European countries
+        if us_only or not worldwide:
+            if tz_ok is True or _US_TZ.search(desc):
+                return dict(countries=countries, region=region, hu="maybe", hu_why=f"Remote in {lab or 'the Americas'}; your time zone listed, residency may be required")
+            return dict(countries=countries, region=region, hu="no", hu_why=f"Remote, {lab or 'Americas'} only")
+        return dict(countries=countries, region=region, hu="maybe", hu_why=f"Listed as worldwide and {lab}; check residency")
     if neg and not (worldwide or europe_word):
         return dict(countries=countries, region=region, hu="no", hu_why=f"Remote, must be in {neg}")
     if neg:
