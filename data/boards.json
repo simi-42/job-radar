@@ -2841,7 +2841,7 @@
    "company": "Fever",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 1
+   "fails": 2
   },
   "ashby:Clerk": {
    "company": "Clerk",
@@ -2931,7 +2931,7 @@
    "company": "Isar Aerospace SE",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 1
+   "fails": 2
   },
   "ashby:neko-health": {
    "company": "Neko Health",
@@ -2965,7 +2965,7 @@
    "company": "Bitpanda",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 1
+   "fails": 2
   },
   "workday:db|wd3|DBWebsite": {
    "company": "Deutsche Bank",
@@ -3041,7 +3041,7 @@
    "company": "Tactile Games",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 1
+   "fails": 2
   },
   "ashby:supercell": {
    "company": "Supercell",
@@ -3103,7 +3103,7 @@
    "company": "Ebury",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 1
+   "fails": 2
   },
   "greenhouse:landor": {
    "company": "Landor",
@@ -3151,7 +3151,7 @@
    "company": "Proton",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 1
+   "fails": 2
   },
   "greenhouse:wargamingen": {
    "company": "Wargaming",

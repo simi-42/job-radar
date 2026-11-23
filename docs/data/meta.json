@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-23T09:22:44+00:00",
- "duration_s": 234,
+ "updated": "2026-11-23T09:27:53+00:00",
+ "duration_s": 86,
  "full": true,
  "counts": {
-  "open": 1084,
-  "new_today": 1084,
-  "hu_yes": 86,
+  "open": 1162,
+  "new_today": 1162,
+  "hu_yes": 65,
   "alerts": 0,
-  "closed_recent": 2
+  "closed_recent": 24
  },
  "sources": [
   {
@@ -20,7 +20,8 @@
    "adapter": "hiddenjobs",
    "ok": true,
    "count": 587,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "climatetechlist",
@@ -32,7 +33,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "climatebase",
@@ -41,10 +43,11 @@
    "origin": "your boards",
    "enabled": true,
    "search": true,
-   "adapter": "generic",
-   "ok": false,
+   "adapter": "none",
+   "ok": true,
    "count": 0,
-   "error": "FetchError: 403 Forbidden https://climatebase.org/jobs?l=&q=product+designer"
+   "error": null,
+   "note": "Blocks automated reading (403); covered through search"
   },
   {
    "id": "euremotejobs",
@@ -53,10 +56,11 @@
    "origin": "your boards",
    "enabled": true,
    "search": true,
-   "adapter": "rss",
-   "ok": false,
+   "adapter": "none",
+   "ok": true,
    "count": 0,
-   "error": "FetchError: 401 Unauthorized https://euremotejobs.com/?feed=job_feed&search_keywords=designer"
+   "error": null,
+   "note": "Feed refuses automated reading (401); covered through search"
   },
   {
    "id": "hiringcafe",
@@ -65,10 +69,11 @@
    "origin": "your boards",
    "enabled": true,
    "search": true,
-   "adapter": "generic",
-   "ok": false,
+   "adapter": "none",
+   "ok": true,
    "count": 0,
-   "error": "FetchError: 403 Forbidden https://hiring.cafe/?searchState=%7B%22searchQuery%22%3A%22product+designer%22%7D"
+   "error": null,
+   "note": "Blocks automated reading (403); covered through search"
   },
   {
    "id": "probablygood",
@@ -80,7 +85,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "relomote",
@@ -89,10 +95,11 @@
    "origin": "your boards",
    "enabled": true,
    "search": true,
-   "adapter": "generic",
-   "ok": false,
+   "adapter": "none",
+   "ok": true,
    "count": 0,
-   "error": "FetchError: 403 Forbidden https://relomote.com/?search=product+designer"
+   "error": null,
+   "note": "Blocks automated reading (403); covered through search"
   },
   {
    "id": "rwfa",
@@ -104,7 +111,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 7,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "stillhiring",
@@ -116,7 +124,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "wttj",
@@ -128,7 +137,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "workingnomads",
@@ -140,7 +150,8 @@
    "adapter": "workingnomads",
    "ok": true,
    "count": 1,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "uxjobs",
@@ -152,7 +163,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 60,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "remotive",
@@ -164,7 +176,8 @@
    "adapter": "remotive",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "remoteok",
@@ -176,7 +189,8 @@
    "adapter": "remoteok",
    "ok": true,
    "count": 3,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "himalayas",
@@ -188,7 +202,8 @@
    "adapter": "himalayas",
    "ok": true,
    "count": 43,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "arbeitnow",
@@ -199,8 +214,9 @@
    "search": false,
    "adapter": "arbeitnow",
    "ok": true,
-   "count": 18,
-   "error": null
+   "count": 21,
+   "error": null,
+   "note": null
   },
   {
    "id": "jobicy",
@@ -212,7 +228,8 @@
    "adapter": "jobicy",
    "ok": true,
    "count": 17,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "wwr",
@@ -224,7 +241,8 @@
    "adapter": "rss",
    "ok": true,
    "count": 9,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "jobspresso",
@@ -236,7 +254,8 @@
    "adapter": "rss",
    "ok": true,
    "count": 7,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "berlinstartupjobs",
@@ -248,7 +267,8 @@
    "adapter": "rss",
    "ok": true,
    "count": 1,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "authenticjobs",
@@ -260,19 +280,21 @@
    "adapter": "rss",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "reliefweb",
    "name": "ReliefWeb",
    "url": "https://api.reliefweb.int/v1/jobs?appname=job-radar&query%5Bvalue%5D=designer&profile=full&limit=50",
    "origin": "Grassroots & Grace",
-   "enabled": true,
+   "enabled": false,
    "search": false,
    "adapter": "reliefweb",
-   "ok": false,
+   "ok": null,
    "count": 0,
-   "error": "FetchError: 410 Gone https://api.reliefweb.int/v1/jobs?appname=job-radar&query%5Bvalue%5D=designer&profile=full&limit=50"
+   "error": null,
+   "note": "API v1 retired (410); v2 needs an approved app name"
   },
   {
    "id": "accel",
@@ -284,7 +306,8 @@
    "adapter": "getro",
    "ok": true,
    "count": 34,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "atomico",
@@ -296,7 +319,8 @@
    "adapter": "getro",
    "ok": true,
    "count": 32,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "norrsken",
@@ -308,7 +332,8 @@
    "adapter": "getro",
    "ok": true,
    "count": 14,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "rubio",
@@ -320,7 +345,8 @@
    "adapter": "getro",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "ffwd",
@@ -332,67 +358,73 @@
    "adapter": "getro",
    "ok": true,
    "count": 20,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "northzone",
    "name": "Northzone portfolio jobs",
    "url": "https://jobs.northzone.com/jobs?q=designer",
    "origin": "VC talent boards",
-   "enabled": true,
+   "enabled": false,
    "search": false,
    "adapter": "getro",
-   "ok": false,
+   "ok": null,
    "count": 0,
-   "error": "FetchError: URLError https://jobs.northzone.com/jobs?q=designer"
+   "error": null,
+   "note": "Board address not found"
   },
   {
    "id": "balderton",
    "name": "Balderton portfolio jobs",
    "url": "https://jobs.balderton.com/jobs?q=designer",
    "origin": "VC talent boards",
-   "enabled": true,
+   "enabled": false,
    "search": false,
    "adapter": "getro",
-   "ok": false,
+   "ok": null,
    "count": 0,
-   "error": "FetchError: URLError https://jobs.balderton.com/jobs?q=designer"
+   "error": null,
+   "note": "Board address not found"
   },
   {
    "id": "creandum",
    "name": "Creandum portfolio jobs",
    "url": "https://jobs.creandum.com/jobs?q=designer",
    "origin": "VC talent boards",
-   "enabled": true,
+   "enabled": false,
    "search": false,
    "adapter": "getro",
-   "ok": false,
+   "ok": null,
    "count": 0,
-   "error": "FetchError: URLError https://jobs.creandum.com/jobs?q=designer"
+   "error": null,
+   "note": "Board address not found"
   },
   {
    "id": "speedinvest",
    "name": "Speedinvest portfolio jobs",
    "url": "https://jobs.speedinvest.com/jobs?q=designer",
    "origin": "VC talent boards",
-   "enabled": true,
+   "enabled": false,
    "search": false,
    "adapter": "getro",
-   "ok": false,
+   "ok": null,
    "count": 0,
-   "error": "FetchError: URLError https://jobs.speedinvest.com/jobs?q=designer"
+   "error": null,
+   "note": "Board address not found"
   },
   {
    "id": "seedcamp",
    "name": "Seedcamp portfolio jobs",
    "url": "https://jobs.seedcamp.com/jobs?q=designer",
    "origin": "VC talent boards",
-   "enabled": true,
+   "enabled": false,
    "search": false,
    "adapter": "getro",
-   "ok": false,
+   "ok": null,
    "count": 0,
-   "error": "FetchError: URLError https://jobs.seedcamp.com/jobs?q=designer"
+   "error": null,
+   "note": "Board address not found"
   },
   {
    "id": "pointnine",
@@ -404,7 +436,8 @@
    "adapter": "getro",
    "ok": true,
    "count": 30,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "earlybird",
@@ -416,7 +449,8 @@
    "adapter": "getro",
    "ok": true,
    "count": 26,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "climatedesigners",
@@ -425,10 +459,11 @@
    "origin": "Follow the Money",
    "enabled": true,
    "search": false,
-   "adapter": "generic",
-   "ok": false,
+   "adapter": "none",
+   "ok": true,
    "count": 0,
-   "error": "FetchError: 403 Forbidden https://climatebase.org/board/climatedesigners"
+   "error": null,
+   "note": "On Climatebase, which blocks automated reading; covered through search"
   },
   {
    "id": "techjobsforgood",
@@ -440,7 +475,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "jict",
@@ -452,7 +488,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "sff",
@@ -464,7 +501,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "hardproblems",
@@ -476,7 +514,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 162,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "veganjobs",
@@ -488,7 +527,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "4dayweek",
@@ -500,7 +540,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 30,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "remoteclimate",
@@ -512,7 +553,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "goodjobs",
@@ -524,7 +566,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "ycjobs",
@@ -536,7 +579,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 8,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "freelancingforgood",
@@ -548,7 +592,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "idealist",
@@ -560,7 +605,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "impactroles",
@@ -572,19 +618,21 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "pcdn",
    "name": "PCDN Global",
-   "url": "https://pcdn.global/jobs/",
+   "url": "https://pcdn.global/",
    "origin": "Grassroots & Grace",
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": false,
+   "ok": true,
    "count": 0,
-   "error": "FetchError: 404 Not Found https://pcdn.global/jobs/"
+   "error": null,
+   "note": null
   },
   {
    "id": "impactpool",
@@ -596,7 +644,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 2,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "devex",
@@ -608,7 +657,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "developmentaid",
@@ -620,7 +670,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "unjobs",
@@ -632,7 +683,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "devnetjobs",
@@ -644,7 +696,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "humanitairejobs",
@@ -656,7 +709,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "climatejobs",
@@ -668,7 +722,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "conservationcareers",
@@ -680,7 +735,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "joshswaterjobs",
@@ -692,7 +748,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "thejobfeed",
@@ -704,7 +761,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "nextbillion",
@@ -716,7 +774,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "impactinvestingcareers",
@@ -728,7 +787,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "giin",
@@ -740,7 +800,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "80000hours",
@@ -752,7 +813,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "eaopps",
@@ -764,7 +826,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "aac",
@@ -776,7 +839,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "altprotein",
@@ -788,7 +852,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "genderjobs",
@@ -800,19 +865,21 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "digitalrights",
    "name": "Digital Rights Community",
-   "url": "https://digitalrights.community/jobs",
+   "url": "https://digitalrights.community/",
    "origin": "Grassroots & Grace",
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": false,
+   "ok": true,
    "count": 0,
-   "error": "FetchError: 404 Not Found https://digitalrights.community/jobs"
+   "error": null,
+   "note": null
   },
   {
    "id": "humanrightscareers",
@@ -824,7 +891,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "globaljobs",
@@ -836,7 +904,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "peacebuilding",
@@ -848,7 +917,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "csrjobs",
@@ -860,7 +930,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "myimpact",
@@ -872,7 +943,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "eurobrussels",
@@ -884,19 +956,21 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "escapethecity",
    "name": "Escape the City",
-   "url": "https://www.escapethecity.org/opportunities",
+   "url": "https://www.escapethecity.org/",
    "origin": "Grassroots & Grace",
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": false,
+   "ok": true,
    "count": 0,
-   "error": "FetchError: 404 Not Found https://www.escapethecity.org/opportunities"
+   "error": null,
+   "note": null
   },
   {
    "id": "socialenterpriseuk",
@@ -908,7 +982,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "charityjob",
@@ -920,7 +995,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "environmentjob",
@@ -932,7 +1008,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "hacesfalta",
@@ -944,7 +1021,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "nachhaltigejobs",
@@ -956,7 +1034,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "jobverde",
@@ -968,7 +1047,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "makesense",
@@ -980,7 +1060,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "euaffairs",
@@ -992,7 +1073,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "greenjobsnet",
@@ -1004,7 +1086,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "impactopportunity",
@@ -1016,7 +1099,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "workforgood",
@@ -1028,7 +1112,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "feministjobs",
@@ -1040,7 +1125,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "goodfoodjobs",
@@ -1052,7 +1138,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "charityvillage",
@@ -1064,7 +1151,8 @@
    "adapter": "generic",
    "ok": null,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "nofluffjobs",
@@ -1076,7 +1164,8 @@
    "adapter": "generic",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "profession",
@@ -1085,10 +1174,11 @@
    "origin": "Hungary",
    "enabled": true,
    "search": true,
-   "adapter": "generic",
-   "ok": false,
+   "adapter": "none",
+   "ok": true,
    "count": 0,
-   "error": "FetchError: 500 Internal Server Error https://www.profession.hu/allasok/1,0,0,ux%20designer"
+   "error": null,
+   "note": "Server error for automated reading; covered through search"
   },
   {
    "id": "linkedin",
@@ -1100,7 +1190,8 @@
    "adapter": "none",
    "ok": true,
    "count": 0,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "dribbble",
@@ -1112,19 +1203,21 @@
    "adapter": "generic",
    "ok": true,
    "count": 17,
-   "error": null
+   "error": null,
+   "note": null
   },
   {
    "id": "weloveproduct",
    "name": "WeLoveProduct",
-   "url": "https://weloveproduct.co/jobs",
+   "url": "https://weloveproduct.co/",
    "origin": "design boards",
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": false,
-   "count": 0,
-   "error": "FetchError: 404 Not Found https://weloveproduct.co/jobs"
+   "ok": true,
+   "count": 25,
+   "error": null,
+   "note": null
   },
   {
    "id": "remoterocketship",
@@ -1135,8 +1228,9 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 28,
-   "error": null
+   "count": 27,
+   "error": null,
+   "note": null
   },
   {
    "id": "startupjobs",
@@ -1145,10 +1239,11 @@
    "origin": "design boards",
    "enabled": true,
    "search": true,
-   "adapter": "generic",
-   "ok": false,
+   "adapter": "none",
+   "ok": true,
    "count": 0,
-   "error": "FetchError: 403 Forbidden https://startup.jobs/?q=product+designer"
+   "error": null,
+   "note": "Blocks automated reading (403); covered through search"
   },
   {
    "id": "landingjobs",
@@ -1157,10 +1252,11 @@
    "origin": "design boards",
    "enabled": true,
    "search": true,
-   "adapter": "generic",
-   "ok": false,
+   "adapter": "none",
+   "ok": true,
    "count": 0,
-   "error": "FetchError: 403 Forbidden https://landing.jobs/jobs?q=designer"
+   "error": null,
+   "note": "Blocks automated reading (403); covered through search"
   }
  ],
  "boards": {
