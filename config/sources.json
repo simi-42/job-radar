@@ -978,6 +978,16 @@
    "search": true,
    "note": "Blocks automated reading (403); covered through search",
    "impact": false
+  },
+  {
+   "id": "product-jobs-anywhere-ls8v",
+   "name": "Product Jobs Anywhere",
+   "url": "https://productjobsanywhere.com/",
+   "adapter": "auto",
+   "origin": "added by you",
+   "enabled": true,
+   "search": true,
+   "added": "2026-11-24"
   }
  ]
 }
