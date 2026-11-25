@@ -4365,6 +4365,326 @@
    "tags": [
     "top-eu"
    ]
+  },
+  {
+   "name": "GiveDirectly",
+   "site": "https://www.givedirectly.org",
+   "careers": "",
+   "ats": "greenhouse:givedirectly",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "Wikimedia Foundation",
+   "site": "https://wikimediafoundation.org",
+   "careers": "",
+   "ats": "greenhouse:wikimedia",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "DataKind",
+   "site": "https://www.datakind.org",
+   "careers": "",
+   "ats": "greenhouse:datakindinc",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "NPR",
+   "site": "https://www.npr.org",
+   "careers": "",
+   "ats": "greenhouse:nationalpublicradioinc",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "ACLU",
+   "site": "https://www.aclu.org",
+   "careers": "",
+   "ats": "greenhouse:aclu",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "Consumer Reports",
+   "site": "https://www.consumerreports.org",
+   "careers": "",
+   "ats": "greenhouse:consumerreports",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "Khan Academy",
+   "site": "https://www.khanacademy.org",
+   "careers": "",
+   "ats": "greenhouse:khanacademy",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "Data & Society",
+   "site": "https://datasociety.net",
+   "careers": "",
+   "ats": "greenhouse:datasocietyresearchinstitute",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "PLOS",
+   "site": "https://plos.org",
+   "careers": "",
+   "ats": "greenhouse-eu:plos",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "Schoolhouse",
+   "site": "https://schoolhouse.world",
+   "careers": "",
+   "ats": "ashby:schoolhouse-world",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "Overstory",
+   "site": "https://www.overstory.com",
+   "careers": "",
+   "ats": "ashby:overstory",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "CareMessage",
+   "site": "https://www.caremessage.org",
+   "careers": "",
+   "ats": "ashby:caremessage",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "OpenFn",
+   "site": "https://www.openfn.org",
+   "careers": "",
+   "ats": "workable:openfn",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "Micro:bit Educational Foundation",
+   "site": "https://microbit.org",
+   "careers": "",
+   "ats": "workable:micro-bit-educational-foundation",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "The HALO Trust",
+   "site": "https://www.halotrust.org",
+   "careers": "",
+   "ats": "workable:the-halo-trust",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "Movement Labs",
+   "site": "https://movementlabs.org",
+   "careers": "",
+   "ats": "workable:movement-labs",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "TYPO3",
+   "site": "https://typo3.com",
+   "careers": "",
+   "ats": "personio:typo3|com",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "OpenProject",
+   "site": "https://www.openproject.org",
+   "careers": "",
+   "ats": "personio:openproject-gmbh|com",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "Meedan",
+   "site": "https://meedan.com",
+   "careers": "",
+   "ats": "bamboohr:meedan",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "Internet Society",
+   "site": "https://www.internetsociety.org",
+   "careers": "",
+   "ats": "bamboohr:internetsociety",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "Tiko",
+   "site": "https://tiko.ngo",
+   "careers": "",
+   "ats": "bamboohr:triggerise",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "ICCT",
+   "site": "https://theicct.org",
+   "careers": "",
+   "ats": "bamboohr:icct",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "Bluesquare",
+   "site": "https://www.bluesquarehub.com",
+   "careers": "",
+   "ats": "teamtailor:bluesquare-jobs",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "CDP",
+   "site": "https://www.cdp.net",
+   "careers": "",
+   "ats": "teamtailor:cdpworldwide",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "Full Fact",
+   "site": "https://fullfact.org",
+   "careers": "",
+   "ats": "teamtailor:fullfact",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "Open Contracting Partnership",
+   "site": "https://www.open-contracting.org",
+   "careers": "",
+   "ats": "breezy:open-contracting-partnership",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "International Rescue Committee",
+   "site": "https://www.rescue.org",
+   "careers": "",
+   "ats": "workday:theirc|wd1|External_Careers",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "The Nature Conservancy",
+   "site": "https://www.nature.org",
+   "careers": "",
+   "ats": "workday:nature|wd108|ExternalCareers",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "Gates Foundation",
+   "site": "https://www.gatesfoundation.org",
+   "careers": "",
+   "ats": "workday:gatesfoundation|wd1|Gates",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "National Geographic Society",
+   "site": "https://www.nationalgeographic.org",
+   "careers": "",
+   "ats": "workday:ngs|wd1|ngs_external_career_site",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "EMBL",
+   "site": "https://www.embl.org",
+   "careers": "",
+   "ats": "workday:embl|wd103|EMBL",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
+  },
+  {
+   "name": "International Baccalaureate",
+   "site": "https://www.ibo.org",
+   "careers": "",
+   "ats": "oracle:ejst.fa.em3.oraclecloud.com|CX_1",
+   "tags": [
+    "impact",
+    "tech4good"
+   ]
   }
  ]
 }

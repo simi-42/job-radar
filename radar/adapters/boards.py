@@ -576,10 +576,52 @@ def generic(src, url=None):
     return uniq
 
 
+# ---------- curated roundups (e.g. jessica.tech weekly Tech for Good jobs) ----------
+# Every company job board linked in a roundup is handed to the run so it gets tracked daily (BOARD_LINKS),
+# and the design roles in it come through as jobs straight away.
+BOARD_LINKS = []   # (job url, company) found in roundups this run
+_HEAD = re.compile(r"<h([2-4])[^>]*>(.*?)</h\1>|<a\b[^>]*href=[\"']([^\"']+)[\"'][^>]*>(.*?)</a>", re.S | re.I)
+
+
+def roundup(src):
+    """Read the newest post(s) of a blog that lists jobs as links under organisation headings."""
+    status, index, final = http.fetch(src["url"])
+    pat = src.get("post_pattern")
+    posts = []
+    for href, _ in _A.findall(index):
+        u = urljoin(final, href)
+        if (re.search(pat, u) if pat else u.startswith(final.rstrip("/") + "/") and u.rstrip("/") != final.rstrip("/")) and u not in posts:
+            posts.append(u)
+    posts = sorted(posts, reverse=True)[: int(src.get("posts", 2))] or [final]
+    out, seen = [], set()
+    for post in posts:
+        try:
+            _, page, pfinal = http.fetch(post)
+        except Exception:
+            continue
+        org = ""
+        for lvl, head, href, inner in _HEAD.findall(page):
+            if head:
+                org = re.sub(r"\s+", " ", html_to_text(head)).strip(" :")[:80]
+                continue
+            url = urljoin(pfinal, href)
+            if urlparse(url).netloc == urlparse(pfinal).netloc or url in seen:
+                continue
+            seen.add(url)
+            text = re.sub(r"\s+", " ", html_to_text(inner)).strip()
+            company = org if org and len(org) < 60 and not re.search(r"remote|location|global|europe|united|usa|\buk\b|asia|africa|americas", org, re.I) else ""
+            company = company or _company_from_url(url)
+            BOARD_LINKS.append((url, company))
+            if text and title_family(text):
+                out.append(_j(text[:120], company, url, src["id"]))
+    DIAG[src["id"]] = {"reason": "ok" if out else ("no_match" if seen else "unclear"), "status": status, "via": f"{len(posts)} posts, {len(seen)} links"}
+    return out
+
+
 NAMED = {
     "hiddenjobs": hiddenjobs, "rss": rss, "remotive": remotive, "remoteok": remoteok, "himalayas": himalayas,
     "arbeitnow": arbeitnow, "jobicy": jobicy, "workingnomads": workingnomads, "reliefweb": reliefweb,
-    "getro": getro, "generic": generic,
+    "getro": getro, "generic": generic, "roundup": roundup,
 }
 DOMAIN_ADAPTER = {
     "remotive.com": "remotive", "remoteok.com": "remoteok", "himalayas.app": "himalayas", "arbeitnow.com": "arbeitnow",

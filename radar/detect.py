@@ -24,6 +24,7 @@ PATTERNS = [
     ("breezy", re.compile(r"(?<![a-z0-9-])([a-z0-9-]+)\.breezy\.hr")),
     ("pinpoint", re.compile(r"(?<![a-z0-9-])([a-z0-9-]+)\.pinpointhq\.com")),
     ("workday", re.compile(r"([a-z0-9-]+)\.(wd\d+)\.myworkdayjobs\.com/(?:[a-z]{2}-[A-Z]{2}/)?([A-Za-z0-9_-]+)")),
+    ("oracle", re.compile(r"([a-z0-9-]+\.fa\.[a-z0-9-]+\.oraclecloud\.com)/hcmUI/CandidateExperience/[a-z]{2}(?:-[A-Z]{2})?/sites/([A-Za-z0-9_]+)")),
 ]
 BAD_SLUGS = {"www", "api", "app", "apply", "jobs", "embed", "careers", "static", "assets", "cdn", "help", "support", "boards", "job-boards",
              "brandedboards", "en", "de", "fr", "v1", "v0", "posting-api", "wday", "login", "s", "j", "search", "blog", "status", "favicon.ico"}
@@ -43,6 +44,8 @@ def parse_ats_url(url):
             if site.lower() in ("wday", "en-us"):
                 continue
             return f"workday:{tenant}|{wd}|{site}"
+        if kind == "oracle":
+            return f"oracle:{m.group(1)}|{m.group(2)}"
         slug = m.group(1).strip("/.")
         if slug.lower() in BAD_SLUGS or len(slug) < 2:
             continue

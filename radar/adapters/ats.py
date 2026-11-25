@@ -232,6 +232,29 @@ def workday(slug, company):
     return out
 
 
+def oracle(slug, company):
+    """Oracle Recruiting Cloud (HCM) public career sites. slug: 'host|siteNumber', e.g. 'ejst.fa.em3.oraclecloud.com|CX_1'."""
+    host, _, site = slug.partition("|")
+    out = []
+    for kw in ("design", "UX"):
+        url = (f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList"
+               f"&finder=findReqs;siteNumber={site},keyword={kw},limit=100")
+        data = http.get_json(url)
+        for item in data.get("items", []):
+            for r in item.get("requisitionList") or []:
+                title = r.get("Title", "")
+                if not title_family(title):
+                    continue
+                locs = [r.get("PrimaryLocation", "")] + [x.get("Name", "") for x in (r.get("secondaryLocations") or []) if isinstance(x, dict)]
+                wp = {"ORA_REMOTE": "remote", "ORA_HYBRID": "hybrid", "ORA_ON_SITE": "onsite"}.get(r.get("WorkplaceTypeCode"))
+                out.append(make_job(title=title, company=company, url=f"https://{host}/hcmUI/CandidateExperience/en/sites/{site}/job/{r.get('Id')}",
+                                    source=f"oracle:{host.split('.')[0]}", kind="ats", locations=locs, workplace=wp,
+                                    posted=r.get("PostedDate"), description=html_to_text(r.get("ShortDescriptionStr") or "", DESC),
+                                    extra_geo=[r.get("PrimaryLocationCountry") or ""]))
+    seen = set()
+    return [j for j in out if not (j["url"] in seen or seen.add(j["url"]))]
+
+
 def fetch_board(key, company):
     kind, _, slug = key.partition(":")
     fn = {
@@ -242,6 +265,7 @@ def fetch_board(key, company):
         "smartrecruiters": lambda: smartrecruiters(slug, company), "bamboohr": lambda: bamboohr(slug, company),
         "teamtailor": lambda: teamtailor(slug, company), "breezy": lambda: breezy(slug, company),
         "pinpoint": lambda: pinpoint(slug, company), "workday": lambda: workday(slug, company),
+        "oracle": lambda: oracle(slug, company),
     }.get(kind)
     if not fn:
         raise ValueError(f"unknown board kind {kind}")

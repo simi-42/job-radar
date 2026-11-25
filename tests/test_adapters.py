@@ -207,6 +207,32 @@ class BoardReaders(unittest.TestCase):
         boards.generic({"id": "p", "url": "https://plain.example/jobs"})
         self.assertEqual(boards.DIAG["p"]["reason"], "no_match")
 
+    def test_roundup(self):
+        index = '<a href="/blog/tech-good-jobs-2026-11-11/">old</a><a href="/blog/tech-good-jobs-2026-11-18/">new</a><a href="/about/">x</a>'
+        post = ('<h2>Remote</h2><h3>Wikimedia</h3><ul><li><a href="https://job-boards.greenhouse.io/wikimedia/jobs/8319366">Senior UX Designer</a></li>'
+                '<li><a href="https://job-boards.greenhouse.io/wikimedia/jobs/1">Senior SRE</a></li></ul>'
+                '<h3>International Baccalaureate</h3><a href="https://ejst.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1809">UX Design Senior Specialist</a>'
+                '<a href="https://jessica.tech/about/">me</a>')
+        fixtures({"tech-good-jobs-2026-11-18": post, "tech-good-jobs-2026-11-11": "<p>none</p>", "jessica.tech/blog/": index})
+        boards.BOARD_LINKS.clear()
+        jobs = boards.roundup({"id": "jt", "url": "https://jessica.tech/blog/", "post_pattern": r"tech-good-jobs-\d{4}", "posts": 2})
+        self.assertEqual([(j["title"], j["company"]) for j in jobs],
+                         [("Senior UX Designer", "Wikimedia"), ("UX Design Senior Specialist", "International Baccalaureate")])
+        from radar import detect
+        self.assertEqual({detect.parse_ats_url(u) for u, _ in boards.BOARD_LINKS},
+                         {"greenhouse:wikimedia", "oracle:ejst.fa.em3.oraclecloud.com|CX_1"})
+
+    def test_oracle(self):
+        from radar.adapters import ats
+        data = {"items": [{"requisitionList": [
+            {"Id": "1809", "Title": "UX Design Senior Specialist", "PrimaryLocation": "The Hague, Netherlands", "PostedDate": "2026-11-10",
+             "WorkplaceTypeCode": "ORA_HYBRID", "PrimaryLocationCountry": "NL"},
+            {"Id": "1792", "Title": "Engineering Manager", "PrimaryLocation": "Cardiff"}]}]}
+        fixtures({"recruitingCEJobRequisitions": data})
+        jobs = ats.fetch_board("oracle:ejst.fa.em3.oraclecloud.com|CX_1", "International Baccalaureate")
+        self.assertEqual([(j["title"], j["url"]) for j in jobs],
+                         [("UX Design Senior Specialist", "https://ejst.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1809")])
+
 
 if __name__ == "__main__":
     unittest.main()

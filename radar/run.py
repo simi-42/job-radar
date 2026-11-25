@@ -210,6 +210,10 @@ class Run:
                 if key and self.discover(key, j.get("company") if j.get("company") != "Unknown" else "", f"via {j.get('source_name')}",
                                          ["impact"] if j.get("impact_src") else None):
                     n += 1
+        for u, company in boards.BOARD_LINKS:
+            key = detect.parse_ats_url(u)
+            if key and self.discover(key, company, "via a jobs roundup", ["impact"]):
+                n += 1
         log(f"harvested {n} new company job boards from listings")
 
     def find_sites(self, limit=250):

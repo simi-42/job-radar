@@ -988,6 +988,20 @@
    "enabled": true,
    "search": true,
    "added": "2026-11-24"
+  },
+  {
+   "id": "jessicatech",
+   "name": "Tech for Good jobs roundup (jessica.tech)",
+   "url": "https://jessica.tech/blog/",
+   "adapter": "roundup",
+   "post_pattern": "tech-good-jobs-\\d{4}-\\d{2}-\\d{2}",
+   "posts": 2,
+   "origin": "added by you",
+   "enabled": true,
+   "search": false,
+   "impact": true,
+   "added": "2026-11-25",
+   "note": "Weekly roundup. Every company job board it links to is tracked daily from then on."
   }
  ]
 }
