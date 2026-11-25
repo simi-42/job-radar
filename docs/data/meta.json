@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-24T06:11:01+00:00",
- "duration_s": 92,
+ "updated": "2026-11-25T06:11:48+00:00",
+ "duration_s": 87,
  "full": false,
  "counts": {
-  "open": 1165,
-  "new_today": 106,
-  "hu_yes": 64,
+  "open": 1341,
+  "new_today": 189,
+  "hu_yes": 76,
   "alerts": 0,
-  "closed_recent": 43
+  "closed_recent": 60
  },
  "sources": [
   {
@@ -19,7 +19,7 @@
    "search": false,
    "adapter": "hiddenjobs",
    "ok": true,
-   "count": 585,
+   "count": 571,
    "error": null,
    "note": null,
    "impact": false,
@@ -257,7 +257,7 @@
    "search": false,
    "adapter": "himalayas",
    "ok": true,
-   "count": 43,
+   "count": 42,
    "error": null,
    "note": null,
    "impact": false,
@@ -274,7 +274,7 @@
    "search": false,
    "adapter": "arbeitnow",
    "ok": true,
-   "count": 19,
+   "count": 20,
    "error": null,
    "note": null,
    "impact": false,
@@ -291,7 +291,7 @@
    "search": false,
    "adapter": "jobicy",
    "ok": true,
-   "count": 15,
+   "count": 18,
    "error": null,
    "note": null,
    "impact": false,
@@ -325,7 +325,7 @@
    "search": false,
    "adapter": "rss",
    "ok": true,
-   "count": 7,
+   "count": 8,
    "error": null,
    "note": null,
    "impact": false,
@@ -393,7 +393,7 @@
    "search": false,
    "adapter": "getro",
    "ok": true,
-   "count": 36,
+   "count": 32,
    "error": null,
    "note": null,
    "impact": false,
@@ -461,7 +461,7 @@
    "search": false,
    "adapter": "getro",
    "ok": true,
-   "count": 20,
+   "count": 18,
    "error": null,
    "note": null,
    "impact": true,
@@ -580,7 +580,7 @@
    "search": false,
    "adapter": "getro",
    "ok": true,
-   "count": 28,
+   "count": 26,
    "error": null,
    "note": null,
    "impact": false,
@@ -665,7 +665,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 168,
+   "count": 171,
    "error": null,
    "note": null,
    "impact": true,
@@ -699,7 +699,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 32,
+   "count": 31,
    "error": null,
    "note": null,
    "impact": false,
@@ -835,7 +835,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 2,
+   "count": 1,
    "error": null,
    "note": null,
    "impact": true,
@@ -851,14 +851,14 @@
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": true,
+   "ok": false,
    "count": 0,
-   "error": null,
+   "error": "FetchError: 403 Forbidden https://www.devex.com/jobs/search?query=designer",
    "note": null,
    "impact": true,
    "direct": "https://www.devex.com/jobs/search?query=designer",
    "why": "blocked",
-   "via": "page"
+   "via": null
   },
   {
    "id": "developmentaid",
@@ -920,12 +920,12 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 1,
+   "count": 0,
    "error": null,
    "note": null,
    "impact": true,
    "direct": "https://humanitairejobs.org/",
-   "why": "ok",
+   "why": "no_match",
    "via": "feed"
   },
   {
@@ -1163,7 +1163,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.humanrightscareers.com/jobs/",
-   "why": "no_match",
+   "why": "unclear",
    "via": "feed"
   },
   {
@@ -1583,7 +1583,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 18,
+   "count": 13,
    "error": null,
    "note": null,
    "impact": false,
@@ -1600,7 +1600,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 30,
+   "count": 33,
    "error": null,
    "note": null,
    "impact": false,
@@ -1641,11 +1641,28 @@
    "direct": "https://landing.jobs/jobs?q=designer",
    "why": "skipped",
    "via": null
+  },
+  {
+   "id": "product-jobs-anywhere-ls8v",
+   "name": "Product Jobs Anywhere",
+   "url": "https://productjobsanywhere.com/",
+   "origin": "added by you",
+   "enabled": true,
+   "search": true,
+   "adapter": "generic",
+   "ok": true,
+   "count": 10,
+   "error": null,
+   "note": null,
+   "impact": false,
+   "direct": "https://productjobsanywhere.com/",
+   "why": "ok",
+   "via": "page links"
   }
  ],
  "boards": {
-  "tracked": 554,
-  "ok": 538,
+  "tracked": 759,
+  "ok": 736,
   "failed": [
    {
     "key": "greenhouse-eu:orbisk",
@@ -1698,37 +1715,72 @@
     "error": "FetchError: 404 Not Found https://tt.teamtailor.com/jobs.rss"
    },
    {
-    "key": "greenhouse-eu:feverup",
-    "company": "Fever",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/feverup/jobs"
+    "key": "greenhouse-eu:octopuslegacy",
+    "company": "Octopus Legacy",
+    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/octopuslegacy/jobs"
    },
    {
-    "key": "greenhouse-eu:isaraerospace",
-    "company": "Isar Aerospace SE",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/isaraerospace/jobs"
+    "key": "greenhouse-eu:digilab",
+    "company": "digiLab",
+    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/digilab/jobs"
    },
    {
-    "key": "greenhouse-eu:bitpanda",
-    "company": "Bitpanda",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/bitpanda/jobs"
+    "key": "greenhouse-eu:enginy",
+    "company": "Enginy",
+    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/enginy/jobs"
    },
    {
-    "key": "greenhouse-eu:tactilegames",
-    "company": "Tactile Games",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/tactilegames/jobs"
+    "key": "greenhouse-eu:ledgy",
+    "company": "Ledgy",
+    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/ledgy/jobs"
    },
    {
-    "key": "greenhouse-eu:ebury",
-    "company": "Ebury",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/ebury/jobs"
+    "key": "greenhouse-eu:apadmi",
+    "company": "Apadmi",
+    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/apadmi/jobs"
    },
    {
-    "key": "greenhouse-eu:proton",
-    "company": "Proton",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/proton/jobs"
+    "key": "greenhouse-eu:financialtimes33",
+    "company": "Financial Times",
+    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/financialtimes33/jobs"
+   },
+   {
+    "key": "greenhouse-eu:world4you",
+    "company": "World4you",
+    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/world4you/jobs"
+   },
+   {
+    "key": "greenhouse-eu:exclaimer",
+    "company": "Exclaimer",
+    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/exclaimer/jobs"
+   },
+   {
+    "key": "greenhouse-eu:decathlontechnologyen",
+    "company": "Decathlon Digital",
+    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/decathlontechnologyen/jobs"
+   },
+   {
+    "key": "ashby:superhuman",
+    "company": "Superhuman",
+    "error": "FetchError: 404 Not Found https://api.ashbyhq.com/posting-api/job-board/superhuman?includeCompensation=true"
+   },
+   {
+    "key": "greenhouse-eu:readdle70",
+    "company": "Readdle",
+    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/readdle70/jobs"
+   },
+   {
+    "key": "greenhouse-eu:decathlontechnology",
+    "company": "Decathlon Digital",
+    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/decathlontechnology/jobs"
+   },
+   {
+    "key": "greenhouse-eu:terraquantum",
+    "company": "Terra Quantum",
+    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/terraquantum/jobs"
    }
   ],
-  "discovered": 202
+  "discovered": 413
  },
  "companies": {
   "total": 448,
