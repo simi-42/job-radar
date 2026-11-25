@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-25T06:11:48+00:00",
- "duration_s": 87,
+ "updated": "2026-11-25T15:44:06+00:00",
+ "duration_s": 83,
  "full": false,
  "counts": {
-  "open": 1341,
-  "new_today": 189,
-  "hu_yes": 76,
+  "open": 1389,
+  "new_today": 240,
+  "hu_yes": 73,
   "alerts": 0,
-  "closed_recent": 60
+  "closed_recent": 66
  },
  "sources": [
   {
@@ -19,7 +19,7 @@
    "search": false,
    "adapter": "hiddenjobs",
    "ok": true,
-   "count": 571,
+   "count": 574,
    "error": null,
    "note": null,
    "impact": false,
@@ -240,7 +240,7 @@
    "search": false,
    "adapter": "remoteok",
    "ok": true,
-   "count": 3,
+   "count": 2,
    "error": null,
    "note": null,
    "impact": false,
@@ -257,7 +257,7 @@
    "search": false,
    "adapter": "himalayas",
    "ok": true,
-   "count": 42,
+   "count": 46,
    "error": null,
    "note": null,
    "impact": false,
@@ -274,7 +274,7 @@
    "search": false,
    "adapter": "arbeitnow",
    "ok": true,
-   "count": 20,
+   "count": 13,
    "error": null,
    "note": null,
    "impact": false,
@@ -291,7 +291,7 @@
    "search": false,
    "adapter": "jobicy",
    "ok": true,
-   "count": 18,
+   "count": 19,
    "error": null,
    "note": null,
    "impact": false,
@@ -308,7 +308,7 @@
    "search": false,
    "adapter": "rss",
    "ok": true,
-   "count": 9,
+   "count": 7,
    "error": null,
    "note": null,
    "impact": false,
@@ -393,7 +393,7 @@
    "search": false,
    "adapter": "getro",
    "ok": true,
-   "count": 32,
+   "count": 20,
    "error": null,
    "note": null,
    "impact": false,
@@ -410,7 +410,7 @@
    "search": false,
    "adapter": "getro",
    "ok": true,
-   "count": 32,
+   "count": 30,
    "error": null,
    "note": null,
    "impact": false,
@@ -563,7 +563,7 @@
    "search": false,
    "adapter": "getro",
    "ok": true,
-   "count": 30,
+   "count": 32,
    "error": null,
    "note": null,
    "impact": false,
@@ -580,7 +580,7 @@
    "search": false,
    "adapter": "getro",
    "ok": true,
-   "count": 26,
+   "count": 28,
    "error": null,
    "note": null,
    "impact": false,
@@ -665,7 +665,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 171,
+   "count": 178,
    "error": null,
    "note": null,
    "impact": true,
@@ -699,7 +699,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 31,
+   "count": 33,
    "error": null,
    "note": null,
    "impact": false,
@@ -1566,7 +1566,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 17,
+   "count": 16,
    "error": null,
    "note": null,
    "impact": false,
@@ -1583,7 +1583,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 13,
+   "count": 17,
    "error": null,
    "note": null,
    "impact": false,
@@ -1600,7 +1600,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 33,
+   "count": 34,
    "error": null,
    "note": null,
    "impact": false,
@@ -1658,11 +1658,28 @@
    "direct": "https://productjobsanywhere.com/",
    "why": "ok",
    "via": "page links"
+  },
+  {
+   "id": "jessicatech",
+   "name": "Tech for Good jobs roundup (jessica.tech)",
+   "url": "https://jessica.tech/blog/",
+   "origin": "added by you",
+   "enabled": true,
+   "search": false,
+   "adapter": "roundup",
+   "ok": true,
+   "count": 0,
+   "error": null,
+   "note": "Weekly roundup. Every company job board it links to is tracked daily from then on.",
+   "impact": true,
+   "direct": "https://jessica.tech/blog/",
+   "why": "no_match",
+   "via": "1 posts, 100 links"
   }
  ],
  "boards": {
-  "tracked": 759,
-  "ok": 736,
+  "tracked": 805,
+  "ok": 780,
   "failed": [
    {
     "key": "greenhouse-eu:orbisk",
@@ -1713,6 +1730,16 @@
     "key": "teamtailor:tt",
     "company": "Oda",
     "error": "FetchError: 404 Not Found https://tt.teamtailor.com/jobs.rss"
+   },
+   {
+    "key": "greenhouse-eu:plos",
+    "company": "PLOS",
+    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/plos/jobs"
+   },
+   {
+    "key": "personio:typo3|com",
+    "company": "TYPO3",
+    "error": "FetchError: 404 Not Found https://typo3.jobs.personio.com/xml?language=en"
    },
    {
     "key": "greenhouse-eu:octopuslegacy",
@@ -1780,11 +1807,11 @@
     "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/terraquantum/jobs"
    }
   ],
-  "discovered": 413
+  "discovered": 428
  },
  "companies": {
-  "total": 448,
-  "with_board": 353
+  "total": 480,
+  "with_board": 385
  },
  "search": {
   "provider": "duckduckgo",

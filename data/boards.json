@@ -2239,6 +2239,166 @@
    "board": null,
    "method": "none",
    "checked": "2026-11-23"
+  },
+  "GiveDirectly": {
+   "board": "greenhouse:givedirectly",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "Wikimedia Foundation": {
+   "board": "greenhouse:wikimedia",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "DataKind": {
+   "board": "greenhouse:datakindinc",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "NPR": {
+   "board": "greenhouse:nationalpublicradioinc",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "ACLU": {
+   "board": "greenhouse:aclu",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "Consumer Reports": {
+   "board": "greenhouse:consumerreports",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "Khan Academy": {
+   "board": "greenhouse:khanacademy",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "Data & Society": {
+   "board": "greenhouse:datasocietyresearchinstitute",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "PLOS": {
+   "board": "greenhouse-eu:plos",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "Schoolhouse": {
+   "board": "ashby:schoolhouse-world",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "Overstory": {
+   "board": "ashby:overstory",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "CareMessage": {
+   "board": "ashby:caremessage",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "OpenFn": {
+   "board": "workable:openfn",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "Micro:bit Educational Foundation": {
+   "board": "workable:micro-bit-educational-foundation",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "The HALO Trust": {
+   "board": "workable:the-halo-trust",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "Movement Labs": {
+   "board": "workable:movement-labs",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "TYPO3": {
+   "board": "personio:typo3|com",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "OpenProject": {
+   "board": "personio:openproject-gmbh|com",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "Meedan": {
+   "board": "bamboohr:meedan",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "Internet Society": {
+   "board": "bamboohr:internetsociety",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "Tiko": {
+   "board": "bamboohr:triggerise",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "ICCT": {
+   "board": "bamboohr:icct",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "Bluesquare": {
+   "board": "teamtailor:bluesquare-jobs",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "CDP": {
+   "board": "teamtailor:cdpworldwide",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "Full Fact": {
+   "board": "teamtailor:fullfact",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "Open Contracting Partnership": {
+   "board": "breezy:open-contracting-partnership",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "International Rescue Committee": {
+   "board": "workday:theirc|wd1|External_Careers",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "The Nature Conservancy": {
+   "board": "workday:nature|wd108|ExternalCareers",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "Gates Foundation": {
+   "board": "workday:gatesfoundation|wd1|Gates",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "National Geographic Society": {
+   "board": "workday:ngs|wd1|ngs_external_career_site",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "EMBL": {
+   "board": "workday:embl|wd103|EMBL",
+   "method": "hint",
+   "checked": "2026-11-25"
+  },
+  "International Baccalaureate": {
+   "board": "oracle:ejst.fa.em3.oraclecloud.com|CX_1",
+   "method": "hint",
+   "checked": "2026-11-25"
   }
  },
  "discovered": {
@@ -4115,7 +4275,7 @@
    "company": "Octopus Legacy",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 1,
+   "fails": 2,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -4218,7 +4378,7 @@
    "company": "digiLab",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 1,
+   "fails": 2,
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "digilab.ai"
@@ -4330,7 +4490,7 @@
    "company": "Enginy",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 1,
+   "fails": 2,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -4376,7 +4536,7 @@
    "company": "Ledgy",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 1,
+   "fails": 2,
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "ledgy.com"
@@ -4573,7 +4733,7 @@
    "company": "Apadmi",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 1,
+   "fails": 2,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -4581,7 +4741,7 @@
    "company": "Financial Times",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 1,
+   "fails": 2,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -4760,7 +4920,7 @@
    "company": "World4you",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 1,
+   "fails": 2,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5063,7 +5223,7 @@
    "company": "Exclaimer",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 1,
+   "fails": 2,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5303,7 +5463,7 @@
    "company": "Decathlon Digital",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 1,
+   "fails": 2,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5415,7 +5575,7 @@
    "company": "Superhuman",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 1,
+   "fails": 2,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5423,7 +5583,7 @@
    "company": "Readdle",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 1,
+   "fails": 2,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5533,7 +5693,7 @@
    "company": "Decathlon Digital",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 1,
+   "fails": 2,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5678,7 +5838,7 @@
    "company": "Terra Quantum",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 1,
+   "fails": 2,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -6004,6 +6164,144 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-25",
+   "last_ok": "2026-11-25"
+  },
+  "workday:amadeus|wd502|jobs": {
+   "company": "Amadeus",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-25",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-25",
+   "last_ok": "2026-11-25"
+  },
+  "oracle:fa-ewdg-saasfaprod1.fa.ocs.oraclecloud.com|CX": {
+   "company": "Cyncly",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-25",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-25",
+   "last_ok": "2026-11-25"
+  },
+  "oracle:fa-ewto-saasfaprod1.fa.ocs.oraclecloud.com|CX_1001": {
+   "company": "Milestone",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-25",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-25",
+   "last_ok": "2026-11-25"
+  },
+  "oracle:ebet.fa.em3.oraclecloud.com|MK": {
+   "company": "Compare the Market",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-25",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-25",
+   "last_ok": "2026-11-25"
+  },
+  "oracle:hdpc.fa.us2.oraclecloud.com|LateralHiring": {
+   "company": "Goldman Sachs",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-25",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-25",
+   "last_ok": "2026-11-25"
+  },
+  "oracle:fa-exxd-saasfaprod1.fa.ocs.oraclecloud.com|CX_1001": {
+   "company": "Atruvia",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-25",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-25",
+   "last_ok": "2026-11-25"
+  },
+  "oracle:ekeq.fa.em2.oraclecloud.com|CX_3001": {
+   "company": "Next",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-25",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-25",
+   "last_ok": "2026-11-25"
+  },
+  "oracle:fa-exhj-saasfaprod1.fa.ocs.oraclecloud.com|CX": {
+   "company": "Virtuos",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-25",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-25",
+   "last_ok": "2026-11-25"
+  },
+  "oracle:efuy.fa.em3.oraclecloud.com|CX_1": {
+   "company": "Lewisham Council",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-25",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-25",
+   "last_ok": "2026-11-25"
+  },
+  "personio:smight-gmbh|com": {
+   "company": "Smight",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-25",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-25",
+   "site": "smight.com",
+   "last_ok": "2026-11-25"
+  },
+  "oracle:ebet.fa.em3.oraclecloud.com|CX": {
+   "company": "Compare the Market",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-25",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-25",
+   "last_ok": "2026-11-25"
+  },
+  "ashby:weave": {
+   "company": "Weave",
+   "origin": "via UX Jobs",
+   "added": "2026-11-25",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-25",
+   "site": "getweave.com",
+   "last_ok": "2026-11-25"
+  },
+  "oracle:ekxm.fa.ap1.oraclecloud.com|CX": {
+   "company": "Ekxm.Fa.Ap1.Oraclecloud",
+   "origin": "via UX Jobs",
+   "added": "2026-11-25",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-25",
+   "last_ok": "2026-11-25"
+  },
+  "greenhouse:flodesk": {
+   "company": "Flodesk $190k–$230k Remote 💎 Hidden gem 16h ago",
+   "origin": "via UX Jobs",
+   "added": "2026-11-25",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-25",
+   "last_ok": "2026-11-25"
+  },
+  "greenhouse:ondofinance": {
+   "company": "Ondo Finance Remote Greenhouse 22h ago",
+   "origin": "via UX Jobs",
+   "added": "2026-11-25",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-25",
+   "site": "ondo.finance",
    "last_ok": "2026-11-25"
   }
  }
