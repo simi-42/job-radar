@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-25T15:44:06+00:00",
- "duration_s": 83,
+ "updated": "2026-11-26T06:10:06+00:00",
+ "duration_s": 96,
  "full": false,
  "counts": {
-  "open": 1389,
-  "new_today": 240,
-  "hu_yes": 73,
+  "open": 1480,
+  "new_today": 98,
+  "hu_yes": 83,
   "alerts": 0,
-  "closed_recent": 66
+  "closed_recent": 68
  },
  "sources": [
   {
@@ -19,7 +19,7 @@
    "search": false,
    "adapter": "hiddenjobs",
    "ok": true,
-   "count": 574,
+   "count": 583,
    "error": null,
    "note": null,
    "impact": false,
@@ -274,7 +274,7 @@
    "search": false,
    "adapter": "arbeitnow",
    "ok": true,
-   "count": 13,
+   "count": 16,
    "error": null,
    "note": null,
    "impact": false,
@@ -325,7 +325,7 @@
    "search": false,
    "adapter": "rss",
    "ok": true,
-   "count": 8,
+   "count": 7,
    "error": null,
    "note": null,
    "impact": false,
@@ -665,7 +665,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 178,
+   "count": 175,
    "error": null,
    "note": null,
    "impact": true,
@@ -687,8 +687,8 @@
    "note": null,
    "impact": true,
    "direct": "https://veganjobs.com/remote-vegan-jobs/",
-   "why": "no_match",
-   "via": "feed"
+   "why": "blocked",
+   "via": "page"
   },
   {
    "id": "4dayweek",
@@ -699,7 +699,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 33,
+   "count": 30,
    "error": null,
    "note": null,
    "impact": false,
@@ -1163,7 +1163,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.humanrightscareers.com/jobs/",
-   "why": "unclear",
+   "why": "no_match",
    "via": "feed"
   },
   {
@@ -1566,7 +1566,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 16,
+   "count": 15,
    "error": null,
    "note": null,
    "impact": false,
@@ -1583,7 +1583,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 17,
+   "count": 20,
    "error": null,
    "note": null,
    "impact": false,
@@ -1600,7 +1600,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 34,
+   "count": 31,
    "error": null,
    "note": null,
    "impact": false,
@@ -1678,8 +1678,8 @@
   }
  ],
  "boards": {
-  "tracked": 805,
-  "ok": 780,
+  "tracked": 834,
+  "ok": 808,
   "failed": [
    {
     "key": "greenhouse-eu:orbisk",
@@ -1805,9 +1805,14 @@
     "key": "greenhouse-eu:terraquantum",
     "company": "Terra Quantum",
     "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/terraquantum/jobs"
+   },
+   {
+    "key": "ashby:alpaca",
+    "company": "alpaca research",
+    "error": "FetchError: 404 Not Found https://api.ashbyhq.com/posting-api/job-board/alpaca?includeCompensation=true"
    }
   ],
-  "discovered": 428
+  "discovered": 457
  },
  "companies": {
   "total": 480,
