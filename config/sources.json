@@ -1012,6 +1012,16 @@
    "enabled": true,
    "search": true,
    "added": "2026-11-27"
+  },
+  {
+   "id": "hidden-jobs-8pqy",
+   "name": "Hidden Jobs",
+   "url": "https://sarabrunettini.github.io/hiddenjobs/",
+   "adapter": "auto",
+   "origin": "added by you",
+   "enabled": true,
+   "search": true,
+   "added": "2026-11-27"
   }
  ]
 }
