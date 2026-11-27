@@ -580,11 +580,22 @@ def generic(src, url=None):
 # Every company job board linked in a roundup is handed to the run so it gets tracked daily (BOARD_LINKS),
 # and the design roles in it come through as jobs straight away.
 BOARD_LINKS = []   # (job url, company) found in roundups this run
-_HEAD = re.compile(r"<h([2-4])[^>]*>(.*?)</h\1>|<a\b[^>]*href=[\"']([^\"']+)[\"'][^>]*>(.*?)</a>", re.S | re.I)
+# A job is a heading holding a location and the linked title ("### Remote, Europe [Senior UX Designer](...)");
+# the paragraph after it opens with the organisation ("[Wikimedia](...) is the nonprofit that ...").
+_JOB_HEAD = re.compile(r"<h([2-4])[^>]*>(.*?)</h\1>\s*(?:<p[^>]*>(.*?)</p>)?", re.S | re.I)
+_GEO_WORDS = re.compile(r"remote|location|global|europe|united|usa|\buk\b|asia|africa|americas|hybrid|countries|timezone", re.I)
+
+
+def _org_from_para(para):
+    m = _A.search(para or "")
+    if m and (para or "").lstrip().lower().startswith(("<a", "<strong><a", "<b><a")):
+        return re.sub(r"\s+", " ", html_to_text(m.group(2))).strip()[:80]
+    first = re.split(r"\s+(?:is|are|makes|builds|works|helps|was)\s", html_to_text(para or ""), maxsplit=1)[0].strip()
+    return first if 1 <= len(first.split()) <= 6 else ""
 
 
 def roundup(src):
-    """Read the newest post(s) of a blog that lists jobs as links under organisation headings."""
+    """Read the newest post(s) of a blog that lists jobs as linked titles in headings, organisation in the next paragraph."""
     status, index, final = http.fetch(src["url"])
     pat = src.get("post_pattern")
     posts = []
@@ -599,24 +610,34 @@ def roundup(src):
             _, page, pfinal = http.fetch(post)
         except Exception:
             continue
-        org = ""
-        for lvl, head, href, inner in _HEAD.findall(page):
-            if head:
-                org = re.sub(r"\s+", " ", html_to_text(head)).strip(" :")[:80]
+        own = urlparse(pfinal).netloc
+        last_org = ""
+        for _, head, para in _JOB_HEAD.findall(page):
+            links = [(urljoin(pfinal, h), re.sub(r"\s+", " ", html_to_text(t)).strip()) for h, t in _A.findall(head)]
+            links = [(u, t) for u, t in links if urlparse(u).netloc and urlparse(u).netloc != own]
+            if not links:   # a section or organisation heading, e.g. "## Remote or UK" or "## Alzheimer's Society"
+                text = re.sub(r"\s+", " ", html_to_text(head)).strip(" :")
+                last_org = "" if _GEO_WORDS.search(text) or len(text) > 60 else text
                 continue
-            url = urljoin(pfinal, href)
-            if urlparse(url).netloc == urlparse(pfinal).netloc or url in seen:
-                continue
-            seen.add(url)
-            text = re.sub(r"\s+", " ", html_to_text(inner)).strip()
-            company = org if org and len(org) < 60 and not re.search(r"remote|location|global|europe|united|usa|\buk\b|asia|africa|americas", org, re.I) else ""
-            company = company or _company_from_url(url)
-            BOARD_LINKS.append((url, company))
-            if text and title_family(text):
-                out.append(_j(text[:120], company, url, src["id"]))
-    DIAG[src["id"]] = {"reason": "ok" if out else ("no_match" if seen else "unclear"), "status": status, "via": f"{len(posts)} posts, {len(seen)} links"}
+            org = _org_from_para(para) or last_org
+            loc = re.sub(r"\s+", " ", html_to_text(re.sub(r"<a\b.*?</a>", " ", head, flags=re.S))).strip(" :;,-")
+            loc = re.sub(r"https?://\S+", "", loc).strip(" :;,-")
+            for url, text in links:
+                if url in seen:
+                    continue
+                seen.add(url)
+                company = org or _company_from_url(url)
+                BOARD_LINKS.append((url, company))
+                if text and title_family(text):
+                    out.append(_j(text[:120], company, url, src["id"], locations=[loc] if loc else []))
+        for h, _ in _A.findall(page):   # links outside job headings can still point at company job boards
+            u = urljoin(pfinal, h)
+            if u not in seen and urlparse(u).netloc not in ("", own):
+                seen.add(u)
+                BOARD_LINKS.append((u, ""))
+    DIAG[src["id"]] = {"reason": "ok" if out else ("no_match" if seen else "unclear"), "status": status,
+                       "via": f"{len(posts)} post{'s' if len(posts) != 1 else ''}, {len(seen)} links"}
     return out
-
 
 NAMED = {
     "hiddenjobs": hiddenjobs, "rss": rss, "remotive": remotive, "remoteok": remoteok, "himalayas": himalayas,

@@ -209,17 +209,23 @@ class BoardReaders(unittest.TestCase):
 
     def test_roundup(self):
         index = '<a href="/blog/tech-good-jobs-2026-11-11/">old</a><a href="/blog/tech-good-jobs-2026-11-18/">new</a><a href="/about/">x</a>'
-        post = ('<h2>Remote</h2><h3>Wikimedia</h3><ul><li><a href="https://job-boards.greenhouse.io/wikimedia/jobs/8319366">Senior UX Designer</a></li>'
-                '<li><a href="https://job-boards.greenhouse.io/wikimedia/jobs/1">Senior SRE</a></li></ul>'
-                '<h3>International Baccalaureate</h3><a href="https://ejst.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1809">UX Design Senior Specialist</a>'
+        post = ('<h2>Remote</h2>'
+                '<h3>Select locations: <a href="https://wikimediafoundation.org/jobs/">https://wikimediafoundation.org/jobs/</a> '
+                '<a href="https://job-boards.greenhouse.io/wikimedia/jobs/8319366">Senior UX Designer</a></h3>'
+                '<p><a href="https://wikimediafoundation.org">Wikimedia Foundation</a> is the nonprofit that hosts Wikipedia.</p>'
+                '<h3>Select locations <a href="https://job-boards.greenhouse.io/wikimedia/jobs/1">Senior SRE</a></h3><p>Wikimedia Foundation is ...</p>'
+                '<h2>Netherlands</h2>'
+                '<h3>The Hague, Netherlands <a href="https://ejst.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1809">UX Design\n Senior Specialist</a></h3>'
+                '<p><a href="https://ibo.org">International Baccalaureate</a> offers ...</p>'
                 '<a href="https://jessica.tech/about/">me</a>')
         fixtures({"tech-good-jobs-2026-11-18": post, "tech-good-jobs-2026-11-11": "<p>none</p>", "jessica.tech/blog/": index})
         boards.BOARD_LINKS.clear()
         jobs = boards.roundup({"id": "jt", "url": "https://jessica.tech/blog/", "post_pattern": r"tech-good-jobs-\d{4}", "posts": 2})
         self.assertEqual([(j["title"], j["company"]) for j in jobs],
-                         [("Senior UX Designer", "Wikimedia"), ("UX Design Senior Specialist", "International Baccalaureate")])
+                         [("Senior UX Designer", "Wikimedia Foundation"), ("UX Design Senior Specialist", "International Baccalaureate")])
+        self.assertEqual(jobs[1]["locations"], ["The Hague, Netherlands"])
         from radar import detect
-        self.assertEqual({detect.parse_ats_url(u) for u, _ in boards.BOARD_LINKS},
+        self.assertEqual({detect.parse_ats_url(u) for u, _ in boards.BOARD_LINKS} - {None},
                          {"greenhouse:wikimedia", "oracle:ejst.fa.em3.oraclecloud.com|CX_1"})
 
     def test_oracle(self):
