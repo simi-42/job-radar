@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
+<script>try{document.documentElement.dataset.theme=JSON.parse(localStorage.getItem("radar-theme"))||"light"}catch(e){document.documentElement.dataset.theme="light"}</script>
 <title>Job radar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,10 +12,10 @@
 <style>
 /* VOICE: a working instrument, calm and exact; the finding first.
    IDEA: a radar readout: filters as compact segmented rows, then the job cards.
-   PICTURE: the score histogram strip with an orange threshold pointer you drag.
+   PICTURE: compact pill filters and job cards; light by default, dark on request.
    COLOUR and TYPE: aluminium and black, one orange pointer; Geist and Geist Mono.
    LAYOUT: readout, filters, then the job list; stacks on a phone. */
-:root{color-scheme:light dark;
+:root{color-scheme:light;
   --bg:light-dark(#e9eaec,#141517);--card:light-dark(#f7f7f8,#1c1d20);--ink:light-dark(#111214,#ececee);--mute:light-dark(#5b5e66,#9b9ea6);
   --line:light-dark(#c9cbd0,#2f3136);--soft:light-dark(#dcdde0,#26282c);--acc:#ff4f00;--acc-ink:#fff;--ok:light-dark(#0f6b3c,#5fd394);--warn:light-dark(#8a5a00,#f0b860)}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
@@ -63,6 +64,7 @@ dialog.sheet::backdrop{background:rgb(0 0 0 / .5)}
 .sheet-head h2{margin:0}
 .sheet-body{padding:16px 18px 20px}
 .btn.close{min-width:44px;padding:0;font-size:16px}
+.btn.theme{min-width:44px;padding:0;font-size:18px;line-height:1}
 body:has(dialog[open]){overflow:hidden}
 .filters{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
@@ -150,6 +152,7 @@ form.add label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:v
   <div class="top">
     <div class="brand"><i></i>Job radar</div>
     <div class="row">
+      <button class="btn theme" id="b-theme" type="button" aria-label="Switch to dark mode" title="Light / dark"></button>
       <button class="btn" id="b-sources" type="button">Sources</button>
       <button class="btn primary" id="b-refresh" type="button">Refresh now</button>
     </div>
@@ -419,7 +422,7 @@ function headline(){
 /* ---------- boards to check by hand ---------- */
 const WHY = {blocked:"Blocks automated reading", needs_js:"Shows jobs only in a browser", skipped:"Not read automatically",
   paused:"Paused", error:"Didn't load on the last run", unclear:"Couldn't find the listings", unknown:"No jobs read on the last run"};
-const needsHand = x => x.why ? !["ok", "no_match"].includes(x.why) : !x.count;
+const needsHand = x => !x.closed && (x.why ? !["ok", "no_match"].includes(x.why) : !x.count);
 function renderHand(){
   const all = (META.sources || []).filter(needsHand);
   const rows = all.filter(x => F.imp !== "impact" || x.impact)
@@ -534,6 +537,16 @@ $("#b-more").addEventListener("click", () => { SHOWN += 40; render(); });
 $("#b-new").addEventListener("click", () => { F.newonly = !F.newonly; SHOWN = 40; render(); });
 $("#b-refresh").addEventListener("click", refresh);
 $("#b-sources").addEventListener("click", openSources);
+function paintTheme(){
+  const dark = document.documentElement.dataset.theme === "dark";
+  $("#b-theme").textContent = dark ? "☀︎" : "☾";
+  $("#b-theme").setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+}
+$("#b-theme").addEventListener("click", () => {
+  const t = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = t; store.set("radar-theme", t); paintTheme();
+});
+paintTheme();
 $("#f-add").addEventListener("submit", addSource);
 $("#f-token").addEventListener("submit", e => { e.preventDefault(); store.set("radar-repo", $("#t-repo").value.trim()); if ($("#t-tok").value.trim()) store.set("radar-token", $("#t-tok").value.trim()); $("#t-tok").value = ""; $("#t-msg").textContent = "Saved in this browser."; });
 $("#hand-list").addEventListener("click", e => {

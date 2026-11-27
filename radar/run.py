@@ -604,7 +604,7 @@ class Run:
             src_rows.append({"id": s["id"], "name": s["name"], "url": s["url"], "origin": s.get("origin", ""), "enabled": s.get("enabled", True),
                              "search": s.get("search", False), "adapter": h.get("adapter") or s.get("adapter"), "ok": h.get("ok"),
                              "count": h.get("count", 0), "error": h.get("error"), "note": s.get("note"),
-                             "impact": bool(s.get("impact")), "direct": s.get("direct") or s["url"],
+                             "impact": bool(s.get("impact")), "direct": s.get("direct") or s["url"], "closed": bool(s.get("closed")),
                              "why": (h.get("why") or {}).get("reason") or ("paused" if not s.get("enabled", True) else None),
                              "via": (h.get("why") or {}).get("via")})
         comp = self.bstate["companies"]

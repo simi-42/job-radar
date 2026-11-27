@@ -720,10 +720,53 @@ def roundup(src):
                        "via": f"{len(posts)} post{'s' if len(posts) != 1 else ''}, {len(seen)} links"}
     return out
 
+# ---------- daily design-jobs feed (design-growth-skills / Stapply open ATS data, CC0) ----------
+FEED = "https://raw.githubusercontent.com/egor-krasnoperov/design-growth-skills/jobs-feed/"
+_SCOPE = {"EUROPE": "Europe", "EU": "Europe", "EMEA": "EMEA", "WORLDWIDE": "Worldwide", "UK": "United Kingdom"}
+_LEVEL = {"junior": "junior", "middle": "mid", "senior": "senior", "leadership": "lead"}
+
+
+def designfeed(src):
+    """European and worldwide-remote design vacancies from a daily feed; each row links to the employer's own posting."""
+    base = src.get("feed") or FEED
+    latest = http.get_json(base + "latest.json")
+    day = latest["index"].rsplit("/", 1)[0]
+    idx = http.get_json(base + latest["index"])
+    regions = set(src.get("regions") or ["EUROPE", "WORLDWIDE"])
+    out = []
+    for f in idx.get("files", []):
+        if f.get("region") not in regions:
+            continue
+        try:
+            rows = http.get_json(f"{base}{day}/{f['path']}").get("jobs", [])
+        except Exception:
+            continue
+        for r in rows:
+            title = r.get("title") or ""
+            if not title_family(title) or not r.get("url"):
+                continue
+            locs = [r["place"]] if r.get("place") else []
+            scope = r.get("remoteScope") or ""
+            if scope == "worldwide":
+                locs.append("Worldwide")
+            elif scope.startswith("region:"):
+                locs.append(_SCOPE.get(scope[7:].upper(), scope[7:]))
+            elif scope.startswith("country:"):
+                locs.append(geo.label(scope[8:].upper()))
+            desc = ", ".join(r.get("skills") or [])
+            if r.get("yearsMin"):
+                desc = f"Requires {r['yearsMin']}+ years of experience. {desc}"
+            out.append(_j(title, r.get("company") or "", r["url"], src["id"], locations=locs, workplace=r.get("workMode"),
+                          posted=r.get("publishedAt"), seniority_hint=_LEVEL.get(r.get("level"), ""), description=desc,
+                          salary=r.get("salary") if isinstance(r.get("salary"), str) else None))
+    DIAG[src["id"]] = {"reason": "ok" if out else "no_match", "status": 200, "via": f"feed of {day}"}
+    return out
+
+
 NAMED = {
     "hiddenjobs": hiddenjobs, "rss": rss, "remotive": remotive, "remoteok": remoteok, "himalayas": himalayas,
     "arbeitnow": arbeitnow, "jobicy": jobicy, "workingnomads": workingnomads, "reliefweb": reliefweb,
-    "getro": getro, "generic": generic, "roundup": roundup, "sitemap": sitemap,
+    "getro": getro, "generic": generic, "roundup": roundup, "sitemap": sitemap, "designfeed": designfeed,
 }
 DOMAIN_ADAPTER = {
     "remotive.com": "remotive", "remoteok.com": "remoteok", "himalayas.app": "himalayas", "arbeitnow.com": "arbeitnow",

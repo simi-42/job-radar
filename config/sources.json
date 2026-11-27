@@ -1,5 +1,5 @@
 {
- "_about": "Job boards and aggregators. adapter: a named adapter, 'rss', 'generic' (any web page: feed, embedded data, structured data or links) or 'auto' (decided on the next run). search: also look this site up through the search engine. Set enabled to false to pause one. Add new ones from the site's Sources panel or here. impact: jobs from this board get the Impact tag. direct: the link the site offers for checking a board by hand, with the search filled in (defaults to url).",
+ "_about": "Job boards and aggregators. adapter: a named adapter, 'rss', 'generic' (any web page: feed, embedded data, structured data or links) or 'auto' (decided on the next run). search: also look this site up through the search engine. Set enabled to false to pause one. Add new ones from the site's Sources panel or here. impact: jobs from this board get the Impact tag. direct: the link the site offers for checking a board by hand, with the search filled in (defaults to url). closed: board no longer exists (kept for the record, not listed to check by hand).",
  "sources": [
   {
    "id": "hiddenjobs",
@@ -42,7 +42,8 @@
    "enabled": true,
    "search": true,
    "note": "Feed refuses automated reading (401); covered through search",
-   "impact": false
+   "impact": false,
+   "direct": "https://euremotejobs.com/jobs/?search_keywords=product+designer"
   },
   {
    "id": "hiringcafe",
@@ -53,7 +54,8 @@
    "enabled": true,
    "search": true,
    "note": "Blocks automated reading (403); covered through search",
-   "impact": false
+   "impact": false,
+   "direct": "https://hiringcafe.com/classic?searchState=%7B%22searchQuery%22%3A%22product%20designer%22%2C%22dateFetchedPastNDays%22%3A4%2C%22sortBy%22%3A%22date%22%7D"
   },
   {
    "id": "probablygood",
@@ -64,7 +66,8 @@
    "enabled": true,
    "search": true,
    "impact": true,
-   "note": "Shows jobs only in a browser and has no job sitemap"
+   "note": "Shows jobs only in a browser and has no job sitemap",
+   "direct": "https://jobs.probablygood.org/?jobs_prod%5Bquery%5D=product%20designer"
   },
   {
    "id": "relomote",
@@ -75,7 +78,8 @@
    "enabled": true,
    "search": true,
    "note": "Blocks automated reading (403); covered through search",
-   "impact": false
+   "impact": false,
+   "direct": "https://relomote.com/?search=product+designer"
   },
   {
    "id": "rwfa",
@@ -107,7 +111,8 @@
    "enabled": true,
    "search": true,
    "impact": false,
-   "note": "Job search now asks you to sign in"
+   "note": "Job search now asks you to sign in",
+   "direct": "https://www.welcometothejungle.com/en/jobs?query=product%20designer"
   },
   {
    "id": "workingnomads",
@@ -229,7 +234,7 @@
    "search": false,
    "note": "API v1 retired (410); v2 needs an approved app name",
    "impact": true,
-   "direct": "https://reliefweb.int/jobs?search=designer"
+   "direct": "https://reliefweb.int/jobs?search=product%20designer"
   },
   {
    "id": "accel",
@@ -290,7 +295,8 @@
    "enabled": true,
    "search": false,
    "note": "Moved to opportunities.northzone.com",
-   "impact": false
+   "impact": false,
+   "direct": "https://opportunities.northzone.com/jobs?q=product%20designer"
   },
   {
    "id": "balderton",
@@ -301,7 +307,8 @@
    "enabled": false,
    "search": false,
    "note": "Old board address is gone; no new public board found",
-   "impact": false
+   "impact": false,
+   "closed": true
   },
   {
    "id": "creandum",
@@ -312,7 +319,8 @@
    "enabled": false,
    "search": false,
    "note": "Old board address is gone; no new public board found",
-   "impact": false
+   "impact": false,
+   "closed": true
   },
   {
    "id": "speedinvest",
@@ -399,7 +407,8 @@
    "enabled": false,
    "search": true,
    "impact": true,
-   "note": "Board closed (its job board host says it is unavailable)"
+   "note": "Board closed (its job board host says it is unavailable)",
+   "closed": true
   },
   {
    "id": "hardproblems",
@@ -525,7 +534,8 @@
    "origin": "Grassroots & Grace",
    "enabled": true,
    "search": true,
-   "impact": true
+   "impact": true,
+   "direct": "https://www.devex.com/jobs/search?query=product%20designer"
   },
   {
    "id": "developmentaid",
@@ -535,7 +545,8 @@
    "origin": "Grassroots & Grace",
    "enabled": true,
    "search": true,
-   "impact": true
+   "impact": true,
+   "direct": "https://www.developmentaid.org/jobs/search?searchText=product%20designer"
   },
   {
    "id": "unjobs",
@@ -646,7 +657,8 @@
    "enabled": true,
    "search": true,
    "impact": true,
-   "note": "Shows jobs only in a browser; its sitemap lists organisations, not jobs"
+   "note": "Shows jobs only in a browser; its sitemap lists organisations, not jobs",
+   "direct": "https://jobs.80000hours.org/?query=product%20designer"
   },
   {
    "id": "eaopps",
@@ -727,7 +739,8 @@
    "enabled": false,
    "search": false,
    "impact": true,
-   "note": "Jobs page removed (404)"
+   "note": "Jobs page removed (404)",
+   "closed": true
   },
   {
    "id": "csrjobs",
@@ -854,7 +867,8 @@
    "enabled": false,
    "search": true,
    "impact": true,
-   "note": "Site is down (address does not resolve)"
+   "note": "Site is down (address does not resolve)",
+   "closed": true
   },
   {
    "id": "greenjobsnet",
@@ -935,7 +949,8 @@
    "enabled": true,
    "search": true,
    "note": "Server error for automated reading; covered through search",
-   "impact": false
+   "impact": false,
+   "direct": "https://www.profession.hu/allasok/1,0,0,product%20designer"
   },
   {
    "id": "linkedin",
@@ -945,7 +960,8 @@
    "origin": "search",
    "enabled": true,
    "search": true,
-   "impact": false
+   "impact": false,
+   "direct": "https://www.linkedin.com/jobs/search/?keywords=product%20designer&location=European%20Union&f_WT=2&f_TPR=r259200&sortBy=DD"
   },
   {
    "id": "dribbble",
@@ -986,7 +1002,8 @@
    "enabled": true,
    "search": true,
    "note": "Blocks automated reading (403); covered through search",
-   "impact": false
+   "impact": false,
+   "direct": "https://startup.jobs/?q=product+designer"
   },
   {
    "id": "landingjobs",
@@ -997,7 +1014,8 @@
    "enabled": true,
    "search": true,
    "note": "Blocks automated reading (403); covered through search",
-   "impact": false
+   "impact": false,
+   "direct": "https://landing.jobs/jobs?query=product+designer"
   },
   {
    "id": "product-jobs-anywhere-ls8v",
@@ -1082,6 +1100,17 @@
    "enabled": true,
    "search": true,
    "added": "2026-11-27"
+  },
+  {
+   "id": "designfeed",
+   "name": "Design jobs feed (job-finder skill)",
+   "url": "https://raw.githubusercontent.com/egor-krasnoperov/design-growth-skills/jobs-feed/latest.json",
+   "adapter": "designfeed",
+   "origin": "added by you",
+   "enabled": true,
+   "search": false,
+   "added": "2026-11-27",
+   "note": "Daily list of European and worldwide-remote design vacancies from Egor Krasnoperov's job-finder skill (Stapply open ATS data, CC0)"
   }
  ]
 }

@@ -256,5 +256,21 @@ class SearchFinds(unittest.TestCase):
             self.assertIsNone(search.to_job({"url": url, "title": title, "snippet": ""})[1], title)
 
 
+class DesignFeed(unittest.TestCase):
+    def tearDown(self):
+        http.FIXTURES = None
+
+    def test_feed_rows(self):
+        idx = {"files": [{"path": "europe/HU.json", "region": "EUROPE"}, {"path": "na/US.json", "region": "NA"}]}
+        rows = {"jobs": [{"title": "UX Designer", "company": "DEPT", "place": "Budapest, Hungary", "url": "https://job-boards.greenhouse.io/dept/jobs/1",
+                          "workMode": "hybrid", "publishedAt": "2026-11-24", "level": "middle", "yearsMin": 3},
+                         {"title": "Office Manager", "company": "X", "url": "https://x.example/1"}]}
+        fixtures({"jobs-feed/latest.json": {"date": "2026-11-27", "index": "2026-11-27/index.json"},
+                  "2026-11-27/index.json": idx, "2026-11-27/europe/HU.json": rows})
+        jobs = boards.designfeed({"id": "df"})
+        self.assertEqual([(j["title"], j["company"], j["seniority_hint"]) for j in jobs], [("UX Designer", "DEPT", "mid")])
+        self.assertIn("3+ years", jobs[0]["description"])
+
+
 if __name__ == "__main__":
     unittest.main()
