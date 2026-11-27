@@ -60,13 +60,16 @@ def _parquet_url(manifest):
 
 
 def _keep_place(country, remote, place):
-    """Europe, Hungary, remote or not stated: the radar's own filters decide the rest."""
+    """Europe, Hungary or remote. Rows with no place at all are left out: in this data they are mostly
+    boards from outside Europe, and they would only fill the "maybe" list."""
     if remote:
         return True
     if country:
         return geo.is_europe(country.upper())
     low = (place or "").lower()
-    return not low or bool(re.search(r"europe|emea|worldwide|anywhere|remote", low)) or any(geo.is_europe(c) for c in geo.countries_in(place))
+    if not low:
+        return False
+    return bool(re.search(r"europe|emea|worldwide|anywhere|remote", low)) or any(geo.is_europe(c) for c in geo.countries_in(place))
 
 
 def read(manifest=None, parquet=None, log=print):
@@ -108,7 +111,8 @@ def read(manifest=None, parquet=None, log=print):
         job = make_job(title=title, company=r.get("company") or "", url=r["url"], source="stapply", kind="ats",
                        locations=locs, workplace="remote" if remote else (wp or None), posted=str(posted) if posted else None,
                        description=html_to_text(r.get("description") or "", DESC), emp=[emp] if isinstance(emp, str) else emp,
-                       salary=r.get("salary_summary"), apply_url=r.get("apply_url"), extra_geo=[r.get("country_iso") or ""],
+                       salary=r.get("salary_summary"), apply_url=r.get("apply_url"),
+                       extra_geo=[geo.label(r["country_iso"].upper())] if r.get("country_iso") else [],
                        seniority_hint=r.get("experience") if isinstance(r.get("experience"), str) else None)
         job["board_key"] = "stapply"
         job["source_name"] = "Company board (via Stapply)"

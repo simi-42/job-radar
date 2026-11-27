@@ -172,7 +172,7 @@ class Run:
                 if t not in d[key].setdefault("tags", []):
                     d[key]["tags"].append(t)
             return False
-        if any(r.get("board") == key for r in self.bstate["companies"].values()):
+        if any(r.get("board") == key for r in self.bstate["companies"].values()) or self.stapply_covers(key):
             return False
         if len(d) >= 1500:
             return False
@@ -276,7 +276,13 @@ class Run:
     # ---------- 4. company boards ----------
     def harvest(self):
         n = 0
+        if self.stapply_ok:   # boards found earlier that Stapply covers, or that came from its rows, aren't needed
+            d = self.bstate["discovered"]
+            for k in [k for k, v in d.items() if self.stapply_covers(k) or "Stapply" in v.get("origin", "") or "job-finder" in v.get("origin", "")]:
+                d.pop(k)
         for j, _ in self.raw:
+            if j.get("source") == "stapply":
+                continue
             for u in (j.get("apply_url"), j.get("url")):
                 key = detect.parse_ats_url(u)
                 if key and self.discover(key, j.get("company") if j.get("company") != "Unknown" else "", f"via {j.get('source_name')}",
@@ -447,7 +453,7 @@ class Run:
                 "loc": loc_label(locs, cc), "cc": cc, "region": best["region"], "wp": best["wp"], "hu": best["hu"], "huw": best["hu_why"],
                 "emp": emp, "sen": sen, "senw": senw, "fam": p["fam"], "score": sc, "rules": sc, "parts": parts, "skills": matched, "domains": dom,
                 "flags": flags, "gaps": gaps, "posted": posted, "tags": tags, "salary": next((x["salary"] for x in items if x.get("salary")), None),
-                "snip": desc[:700], "live": "verified" if p["kind"] == "ats" else "listed", "checked": TODAY, "imp": imp, "dom": dom,
+                "snip": desc[:320], "live": "verified" if p["kind"] == "ats" else "listed", "checked": TODAY, "imp": imp, "dom": dom,
                 "_desc": desc, "_locs": locs, "_board": p.get("board"),
             }
         self.cur = recs
@@ -642,6 +648,8 @@ class Run:
         jobs = []
         for r in self.cur.values():
             out = {k: v for k, v in r.items() if not k.startswith("_") and v not in (None, "", [], {})}
+            if out.get("sources"):
+                out["sources"] = [{k: v for k, v in x.items() if not (k == "u" and v == out.get("url"))} for x in out["sources"]]
             jobs.append(out)
         jobs.sort(key=lambda r: (r.get("live") == "closed", -r.get("score", 0)))
         save(PUB / "jobs.json", {"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "count": len(jobs), "jobs": jobs})

@@ -341,7 +341,7 @@ function card(j){
       ${j.domains && j.domains.length ? `<p class="small"><b>Domain:</b> ${esc([...new Set(j.domains.map(nice))].join(", "))}</p>` : ""}
       ${j.gaps && j.gaps.length ? `<p class="small mute">${esc(j.gaps.join("; "))}</p>` : ""}
       ${j.snip ? `<div class="snip small">${esc(j.snip)}</div>` : ""}
-      <div class="srcs small"><span class="mute">Found on:</span>${(j.sources || []).map(s => `<a href="${esc(s.u)}" rel="noopener" target="_blank">${esc(s.n)}</a>`).join("")}</div>
+      <div class="srcs small"><span class="mute">Found on:</span>${(j.sources || []).map(s => `<a href="${esc(s.u || j.url)}" rel="noopener" target="_blank">${esc(s.n)}</a>`).join("")}</div>
     </div>` : "";
   return `<article class="job ${j.live === "closed" ? "closed" : ""} ${st === "hidden" ? "hidden" : ""}" data-id="${j.id}">
     ${logo(j)}
