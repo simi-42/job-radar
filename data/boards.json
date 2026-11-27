@@ -4275,7 +4275,7 @@
    "company": "Octopus Legacy",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 4,
+   "fails": 5,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -4378,7 +4378,7 @@
    "company": "digiLab",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 4,
+   "fails": 5,
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "digilab.ai"
@@ -4490,7 +4490,7 @@
    "company": "Enginy",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 4,
+   "fails": 5,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -4536,7 +4536,7 @@
    "company": "Ledgy",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 4,
+   "fails": 5,
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "ledgy.com"
@@ -4733,7 +4733,7 @@
    "company": "Apadmi",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 4,
+   "fails": 5,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -4741,7 +4741,7 @@
    "company": "Financial Times",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 4,
+   "fails": 5,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -4920,7 +4920,7 @@
    "company": "World4you",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 4,
+   "fails": 5,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5223,7 +5223,7 @@
    "company": "Exclaimer",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 4,
+   "fails": 5,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5463,7 +5463,7 @@
    "company": "Decathlon Digital",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 4,
+   "fails": 5,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5575,7 +5575,7 @@
    "company": "Superhuman",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 4,
+   "fails": 5,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5583,7 +5583,7 @@
    "company": "Readdle",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 4,
+   "fails": 5,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5693,7 +5693,7 @@
    "company": "Decathlon Digital",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 4,
+   "fails": 5,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5701,7 +5701,7 @@
    "company": "Molecule",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 1,
+   "fails": 2,
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "molecule.xyz",
@@ -5838,7 +5838,7 @@
    "company": "Terra Quantum",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 4,
+   "fails": 5,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -6395,7 +6395,7 @@
    "company": "alpaca research",
    "origin": "via Hidden Jobs",
    "added": "2026-11-26",
-   "fails": 2,
+   "fails": 3,
    "tags": [],
    "site_checked": "2026-11-26"
   },
@@ -7256,6 +7256,52 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:philips|wd3|jobs-and-careers": {
+   "company": "Philips",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:teliacompany|wd3|Telia_careers": {
+   "company": "Telia",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:bdx|wd1|EXTERNAL_CAREER_SITE_IRELAND": {
+   "company": "IRELAND",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:jj|wd5|JJ": {
+   "company": "JJ",
+   "origin": "via Hidden Jobs",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:vertice": {
+   "company": "Vertice",
+   "origin": "via UX Jobs",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "vertice.one",
    "last_ok": "2026-11-27"
   }
  }

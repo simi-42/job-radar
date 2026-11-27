@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-27T06:15:21+00:00",
- "duration_s": 114,
+ "updated": "2026-11-27T20:39:54+00:00",
+ "duration_s": 105,
  "full": false,
  "counts": {
-  "open": 1634,
-  "new_today": 195,
-  "hu_yes": 83,
+  "open": 1660,
+  "new_today": 244,
+  "hu_yes": 81,
   "alerts": 0,
-  "closed_recent": 112
+  "closed_recent": 140
  },
  "sources": [
   {
@@ -19,7 +19,7 @@
    "search": false,
    "adapter": "hiddenjobs",
    "ok": true,
-   "count": 664,
+   "count": 662,
    "error": null,
    "note": null,
    "impact": false,
@@ -274,7 +274,7 @@
    "search": false,
    "adapter": "arbeitnow",
    "ok": true,
-   "count": 20,
+   "count": 16,
    "error": null,
    "note": null,
    "impact": false,
@@ -291,7 +291,7 @@
    "search": false,
    "adapter": "jobicy",
    "ok": true,
-   "count": 26,
+   "count": 27,
    "error": null,
    "note": null,
    "impact": false,
@@ -308,7 +308,7 @@
    "search": false,
    "adapter": "rss",
    "ok": true,
-   "count": 7,
+   "count": 8,
    "error": null,
    "note": null,
    "impact": false,
@@ -325,7 +325,7 @@
    "search": false,
    "adapter": "rss",
    "ok": true,
-   "count": 8,
+   "count": 7,
    "error": null,
    "note": null,
    "impact": false,
@@ -393,7 +393,7 @@
    "search": false,
    "adapter": "getro",
    "ok": true,
-   "count": 20,
+   "count": 16,
    "error": null,
    "note": null,
    "impact": false,
@@ -410,7 +410,7 @@
    "search": false,
    "adapter": "getro",
    "ok": true,
-   "count": 30,
+   "count": 28,
    "error": null,
    "note": null,
    "impact": false,
@@ -665,7 +665,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 173,
+   "count": 174,
    "error": null,
    "note": null,
    "impact": true,
@@ -903,13 +903,13 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 0,
+   "count": 2,
    "error": null,
    "note": null,
    "impact": true,
    "direct": "https://www.devnetjobs.org/",
-   "why": "no_match",
-   "via": "page"
+   "why": "ok",
+   "via": "page links"
   },
   {
    "id": "humanitairejobs",
@@ -936,14 +936,14 @@
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": true,
+   "ok": false,
    "count": 0,
-   "error": null,
+   "error": "FetchError: 403 Forbidden https://climate.jobs/",
    "note": null,
    "impact": true,
    "direct": "https://climate.jobs/",
-   "why": "no_match",
-   "via": "page"
+   "why": "blocked",
+   "via": null
   },
   {
    "id": "conservationcareers",
@@ -1004,14 +1004,14 @@
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": true,
-   "count": 1,
-   "error": null,
+   "ok": false,
+   "count": 0,
+   "error": "FetchError: 403 Forbidden https://nextbillion.net/jobs/",
    "note": null,
    "impact": true,
    "direct": "https://nextbillion.net/jobs/",
-   "why": "ok",
-   "via": "page links"
+   "why": "blocked",
+   "via": null
   },
   {
    "id": "impactinvestingcareers",
@@ -1412,14 +1412,14 @@
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": true,
+   "ok": false,
    "count": 0,
-   "error": null,
+   "error": "FetchError: 403 Forbidden https://greenjobs.net/",
    "note": null,
    "impact": true,
    "direct": "https://greenjobs.net/",
-   "why": "no_match",
-   "via": "page"
+   "why": "blocked",
+   "via": null
   },
   {
    "id": "impactopportunity",
@@ -1566,7 +1566,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 15,
+   "count": 16,
    "error": null,
    "note": null,
    "impact": false,
@@ -1583,7 +1583,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 24,
+   "count": 20,
    "error": null,
    "note": null,
    "impact": false,
@@ -1600,7 +1600,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 32,
+   "count": 34,
    "error": null,
    "note": null,
    "impact": false,
@@ -1678,13 +1678,33 @@
   }
  ],
  "boards": {
-  "tracked": 906,
-  "ok": 879,
+  "tracked": 911,
+  "ok": 880,
   "failed": [
+   {
+    "key": "generic:https://zerowasteeurope.eu/join-us/donate/",
+    "company": "Zero Waste Europe",
+    "error": "FetchError: 403 Forbidden https://zerowasteeurope.eu/join-us/donate/"
+   },
+   {
+    "key": "generic:https://niok.hu/karrier/",
+    "company": "NIOK",
+    "error": "FetchError: 403 Forbidden https://niok.hu/karrier/"
+   },
    {
     "key": "greenhouse-eu:orbisk",
     "company": "Orbisk",
     "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/orbisk/jobs"
+   },
+   {
+    "key": "generic:https://wwf.hu/karrier/",
+    "company": "WWF Hungary",
+    "error": "FetchError: 403 Forbidden https://wwf.hu/karrier/"
+   },
+   {
+    "key": "generic:https://ultinous.com/careers/",
+    "company": "Ultinous",
+    "error": "FetchError: 403 Forbidden https://ultinous.com/careers/"
    },
    {
     "key": "greenhouse-eu:mentimeter",
@@ -1817,7 +1837,7 @@
     "error": "FetchError: 404 Not Found https://api.ashbyhq.com/posting-api/job-board/alpaca?includeCompensation=true"
    }
   ],
-  "discovered": 529
+  "discovered": 534
  },
  "companies": {
   "total": 480,
