@@ -1002,6 +1002,16 @@
    "impact": true,
    "added": "2026-11-25",
    "note": "Weekly roundup. Every company job board it links to is tracked daily from then on."
+  },
+  {
+   "id": "real-work-from-anywhere-6o5c",
+   "name": "Real Work From Anywhere",
+   "url": "https://www.realworkfromanywhere.com/",
+   "adapter": "auto",
+   "origin": "added by you",
+   "enabled": true,
+   "search": true,
+   "added": "2026-11-27"
   }
  ]
 }
