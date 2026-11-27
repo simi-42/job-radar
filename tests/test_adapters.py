@@ -245,5 +245,16 @@ class BoardReaders(unittest.TestCase):
                          [("UX Design Senior Specialist", "https://ejst.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1809")])
 
 
+class SearchFinds(unittest.TestCase):
+    def test_single_ads_only(self):
+        from radar.adapters import search
+        ok = search.to_job({"url": "https://uxwork.nl/job/finom", "title": "Senior Product Designer Job Opening at Finom", "snippet": ""})[1]
+        self.assertEqual((ok["title"], ok["company"]), ("Senior Product Designer", "Finom"))
+        for title, url in (("2523 Remote Product Designer Jobs", "https://www.woodyjobs.com/remote"),
+                           ("Senior Product Designer jobs in Remote", "https://uk.indeed.com/q"),
+                           ("New on uiuxjobsboard.com: Senior Product Designer", "https://www.instagram.com/p/x")):
+            self.assertIsNone(search.to_job({"url": url, "title": title, "snippet": ""})[1], title)
+
+
 if __name__ == "__main__":
     unittest.main()

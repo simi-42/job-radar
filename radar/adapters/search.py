@@ -64,9 +64,42 @@ _LI = [
 ]
 
 
+_SOCIAL = re.compile(r"(?:^|\.)(?:instagram|facebook|tiktok|youtube|pinterest|threads|twitter|x|reddit|medium|quora)\.(?:com|net)$")
+_LISTING = re.compile(r"^\d[\d,. ]*\+?\s|\bjobs\b|\bjob (?:search|openings)\b|\bvacancies\b|\bcareers? (?:at|in)\b", re.I)
+_WRAP = re.compile(r"^(?:job application for|apply (?:now )?for|\[hiring\]|hiring:?|we(?:'| a)re hiring:?)\s+", re.I)
+_AT = re.compile(r"^(?P<title>.+?)\s+(?:job(?: opening)?\s+)?(?:at|@)\s+(?P<company>[^|–—-]{2,60}?)\s*$", re.I)
+
+
+_GOTO = {"fail": 0}
+
+
+def resolve(url):
+    """Some search results come back as google.com/goto redirects: follow them to the real page."""
+    if "google." in urlparse(url).netloc and ("/goto" in url or "/url?" in url):
+        if _GOTO["fail"] >= 3:   # Google isn't letting them through this run
+            return None
+        try:
+            final = http.fetch(url, retries=0, timeout=10)[2]
+            _GOTO["fail"] = 0
+            return final
+        except http.FetchError:
+            _GOTO["fail"] += 1
+            return None
+    return url
+
+
+def junk(title, url):
+    """Search finds that aren't single job ads: listing pages, social posts, unresolved Google redirects."""
+    host = urlparse(url or "").netloc.lower()
+    return "google." in host or bool(_SOCIAL.search(host)) or bool(_LISTING.search(_WRAP.sub("", title or "")))
+
+
 def to_job(r):
     """Turn a search result into (board_key or None, job or None)."""
-    url, title = r["url"], r["title"]
+    url = resolve(r["url"])
+    if not url or "google." in urlparse(url).netloc:
+        return None, None
+    title = r["title"]
     key = parse_ats_url(url)
     if key:
         return key, None
@@ -79,8 +112,16 @@ def to_job(r):
                 return None, make_job(title=m.group("title"), company=m.group("company"), url=url.split("?")[0], source="linkedin",
                                       kind="search", board="LinkedIn", locations=[loc], description=r.get("snippet", ""))
         return None, None
-    t = re.split(r" \| | – | — | - ", title)[0]
+    if _SOCIAL.search(host):
+        return None, None
+    t = _WRAP.sub("", re.split(r" \| | – | — | - ", title)[0]).strip()
+    if _LISTING.search(t):   # "2,523 Remote Product Designer Jobs", "Senior Product Designer jobs in Remote"
+        return None, None
+    company = ""
+    m = _AT.match(t)
+    if m and title_family(m.group("title")):
+        t, company = m.group("title").strip(), m.group("company").strip()
     if title_family(t):
-        return None, make_job(title=t, company="", url=url, source=host.replace("www.", ""), kind="search", board=host,
+        return None, make_job(title=t, company=company, url=url, source=host.replace("www.", ""), kind="search", board=host,
                               description=r.get("snippet", ""))
     return None, None

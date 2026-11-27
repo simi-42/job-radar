@@ -478,7 +478,8 @@ class Run:
             else:
                 if old.get("posted") and old["posted"] < (date.fromisoformat(TODAY) - timedelta(days=400)).isoformat():
                     old.pop("posted")
-                if days_between(old.get("last"), TODAY) > 5 or _JUNK_TITLE.search(old.get("title", "")):
+                if days_between(old.get("last"), TODAY) > 5 or _JUNK_TITLE.search(old.get("title", "")) \
+                        or (old.get("kind") == "search" and search.junk(old.get("title"), old.get("url"))):
                     dropped += 1
                     meta.pop(jid, None)
                     continue
