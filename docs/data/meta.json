@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-27T21:41:48+00:00",
- "duration_s": 92,
+ "updated": "2026-11-27T21:55:31+00:00",
+ "duration_s": 122,
  "full": false,
  "counts": {
-  "open": 1719,
-  "new_today": 398,
-  "hu_yes": 78,
+  "open": 2277,
+  "new_today": 947,
+  "hu_yes": 124,
   "alerts": 0,
-  "closed_recent": 164
+  "closed_recent": 186
  },
  "sources": [
   {
@@ -24,6 +24,7 @@
    "note": null,
    "impact": false,
    "direct": "https://raw.githubusercontent.com/sarabrunettini/hiddenjobs/main/jobs.json",
+   "closed": false,
    "why": "ok",
    "via": null
   },
@@ -41,6 +42,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.climatetechlist.com/jobs?q=designer",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -58,6 +60,7 @@
    "note": "Blocks automated reading (403); covered through search",
    "impact": true,
    "direct": "https://climatebase.org/jobs?l=&q=product+designer&remote=true",
+   "closed": false,
    "why": "skipped",
    "via": null
   },
@@ -74,7 +77,8 @@
    "error": null,
    "note": "Feed refuses automated reading (401); covered through search",
    "impact": false,
-   "direct": "https://euremotejobs.com/?feed=job_feed&search_keywords=designer",
+   "direct": "https://euremotejobs.com/jobs/?search_keywords=product+designer",
+   "closed": false,
    "why": "skipped",
    "via": null
   },
@@ -91,7 +95,8 @@
    "error": null,
    "note": "Blocks automated reading (403); covered through search",
    "impact": false,
-   "direct": "https://hiring.cafe/?searchState=%7B%22searchQuery%22%3A%22product+designer%22%7D",
+   "direct": "https://hiringcafe.com/classic?searchState=%7B%22searchQuery%22%3A%22product%20designer%22%2C%22dateFetchedPastNDays%22%3A4%2C%22sortBy%22%3A%22date%22%7D",
+   "closed": false,
    "why": "skipped",
    "via": null
   },
@@ -108,7 +113,8 @@
    "error": null,
    "note": "Shows jobs only in a browser and has no job sitemap",
    "impact": true,
-   "direct": "https://jobs.probablygood.org/?jobs_prod%5Bquery%5D=designer",
+   "direct": "https://jobs.probablygood.org/?jobs_prod%5Bquery%5D=product%20designer",
+   "closed": false,
    "why": "needs_js",
    "via": "page"
   },
@@ -126,6 +132,7 @@
    "note": "Blocks automated reading (403); covered through search",
    "impact": false,
    "direct": "https://relomote.com/?search=product+designer",
+   "closed": false,
    "why": "skipped",
    "via": null
   },
@@ -143,6 +150,7 @@
    "note": null,
    "impact": false,
    "direct": "https://www.realworkfromanywhere.com/remote-design-jobs",
+   "closed": false,
    "why": "ok",
    "via": "page links"
   },
@@ -160,6 +168,7 @@
    "note": "Shows companies only in a browser; its data feed is closed to crawlers",
    "impact": false,
    "direct": "https://stillhiring.today/",
+   "closed": false,
    "why": "needs_js",
    "via": "page"
   },
@@ -177,6 +186,7 @@
    "note": "Job search now asks you to sign in",
    "impact": false,
    "direct": "https://www.welcometothejungle.com/en/jobs?query=product%20designer",
+   "closed": false,
    "why": "needs_js",
    "via": "page"
   },
@@ -194,6 +204,7 @@
    "note": null,
    "impact": false,
    "direct": "https://www.workingnomads.com/api/exposed_jobs/",
+   "closed": false,
    "why": "ok",
    "via": null
   },
@@ -211,6 +222,7 @@
    "note": null,
    "impact": false,
    "direct": "https://jobs.uxjobs.io/",
+   "closed": false,
    "why": "ok",
    "via": "page links"
   },
@@ -228,6 +240,7 @@
    "note": null,
    "impact": false,
    "direct": "https://remotive.com/api/remote-jobs?category=design",
+   "closed": false,
    "why": "no_match",
    "via": null
   },
@@ -245,6 +258,7 @@
    "note": null,
    "impact": false,
    "direct": "https://remoteok.com/api",
+   "closed": false,
    "why": "no_match",
    "via": null
   },
@@ -262,6 +276,7 @@
    "note": null,
    "impact": false,
    "direct": "https://himalayas.app/jobs/api/search?q=product%20designer",
+   "closed": false,
    "why": "ok",
    "via": null
   },
@@ -279,6 +294,7 @@
    "note": null,
    "impact": false,
    "direct": "https://www.arbeitnow.com/api/job-board-api",
+   "closed": false,
    "why": "ok",
    "via": null
   },
@@ -296,6 +312,7 @@
    "note": null,
    "impact": false,
    "direct": "https://jobicy.com/api/v2/remote-jobs?count=100&industry=design-multimedia",
+   "closed": false,
    "why": "ok",
    "via": null
   },
@@ -313,6 +330,7 @@
    "note": null,
    "impact": false,
    "direct": "https://weworkremotely.com/categories/remote-design-jobs.rss",
+   "closed": false,
    "why": "ok",
    "via": null
   },
@@ -330,6 +348,7 @@
    "note": null,
    "impact": false,
    "direct": "https://jobspresso.co/?feed=job_feed&search_keywords=designer",
+   "closed": false,
    "why": "ok",
    "via": null
   },
@@ -347,6 +366,7 @@
    "note": null,
    "impact": false,
    "direct": "https://berlinstartupjobs.com/design-ux/feed/",
+   "closed": false,
    "why": "ok",
    "via": null
   },
@@ -364,6 +384,7 @@
    "note": null,
    "impact": false,
    "direct": "https://authenticjobs.com/feed/",
+   "closed": false,
    "why": "no_match",
    "via": null
   },
@@ -380,7 +401,8 @@
    "error": null,
    "note": "API v1 retired (410); v2 needs an approved app name",
    "impact": true,
-   "direct": "https://reliefweb.int/jobs?search=designer",
+   "direct": "https://reliefweb.int/jobs?search=product%20designer",
+   "closed": false,
    "why": "paused",
    "via": null
   },
@@ -398,6 +420,7 @@
    "note": null,
    "impact": false,
    "direct": "https://jobs.accel.com/jobs?q=designer",
+   "closed": false,
    "why": "ok",
    "via": null
   },
@@ -415,6 +438,7 @@
    "note": null,
    "impact": false,
    "direct": "https://careers.atomico.com/jobs?q=designer",
+   "closed": false,
    "why": "ok",
    "via": null
   },
@@ -432,6 +456,7 @@
    "note": null,
    "impact": true,
    "direct": "https://jobs.norrsken.org/jobs?q=designer",
+   "closed": false,
    "why": "ok",
    "via": null
   },
@@ -449,6 +474,7 @@
    "note": null,
    "impact": true,
    "direct": "https://rubio.getro.com/jobs?q=designer",
+   "closed": false,
    "why": "no_match",
    "via": null
   },
@@ -466,6 +492,7 @@
    "note": null,
    "impact": true,
    "direct": "https://jobs.ffwd.org/jobs?q=designer",
+   "closed": false,
    "why": "ok",
    "via": null
   },
@@ -482,7 +509,8 @@
    "error": "FetchError: URLError https://opportunities.northzone.com/jobs?q=designer",
    "note": "Moved to opportunities.northzone.com",
    "impact": false,
-   "direct": "https://opportunities.northzone.com/jobs?q=designer",
+   "direct": "https://opportunities.northzone.com/jobs?q=product%20designer",
+   "closed": false,
    "why": "error",
    "via": null
   },
@@ -500,6 +528,7 @@
    "note": "Old board address is gone; no new public board found",
    "impact": false,
    "direct": "https://jobs.balderton.com/jobs?q=designer",
+   "closed": true,
    "why": "paused",
    "via": null
   },
@@ -517,6 +546,7 @@
    "note": "Old board address is gone; no new public board found",
    "impact": false,
    "direct": "https://jobs.creandum.com/jobs?q=designer",
+   "closed": true,
    "why": "paused",
    "via": null
   },
@@ -534,6 +564,7 @@
    "note": "Moved to careers.speedinvest.com",
    "impact": false,
    "direct": "https://careers.speedinvest.com/jobs?q=designer",
+   "closed": false,
    "why": "ok",
    "via": null
   },
@@ -551,6 +582,7 @@
    "note": "Moved to talent.seedcamp.com",
    "impact": false,
    "direct": "https://talent.seedcamp.com/jobs?q=designer",
+   "closed": false,
    "why": "ok",
    "via": null
   },
@@ -568,6 +600,7 @@
    "note": null,
    "impact": false,
    "direct": "https://jobs.pointnine.com/jobs?q=designer",
+   "closed": false,
    "why": "ok",
    "via": null
   },
@@ -585,6 +618,7 @@
    "note": null,
    "impact": false,
    "direct": "https://jobs.earlybird.com/jobs?q=designer",
+   "closed": false,
    "why": "ok",
    "via": null
   },
@@ -602,6 +636,7 @@
    "note": "On Climatebase, which blocks automated reading; covered through search",
    "impact": true,
    "direct": "https://climatebase.org/board/climatedesigners",
+   "closed": false,
    "why": "skipped",
    "via": null
   },
@@ -619,6 +654,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.techjobsforgood.com/jobs/?q=designer",
+   "closed": false,
    "why": "ok",
    "via": "page links"
   },
@@ -636,6 +672,7 @@
    "note": "Jobs in Climate Tech moved here; shows jobs only in a browser",
    "impact": true,
    "direct": "https://jobs.sustainableventures.co.uk/",
+   "closed": false,
    "why": "blocked",
    "via": "page"
   },
@@ -653,6 +690,7 @@
    "note": "Board closed (its job board host says it is unavailable)",
    "impact": true,
    "direct": "https://jobs.thesustainablefashionforum.com/",
+   "closed": true,
    "why": "paused",
    "via": null
   },
@@ -670,6 +708,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.hardproblems.com/jobs",
+   "closed": false,
    "why": "ok",
    "via": "feed"
   },
@@ -687,6 +726,7 @@
    "note": null,
    "impact": true,
    "direct": "https://veganjobs.com/remote-vegan-jobs/",
+   "closed": false,
    "why": "no_match",
    "via": "feed"
   },
@@ -704,6 +744,7 @@
    "note": null,
    "impact": false,
    "direct": "https://4dayweek.io/remote-jobs/design",
+   "closed": false,
    "why": "ok",
    "via": "feed + page links"
   },
@@ -721,6 +762,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.remoteclimatejobs.com/",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -738,6 +780,7 @@
    "note": null,
    "impact": true,
    "direct": "https://goodjobs.eu/jobs?query=designer",
+   "closed": false,
    "why": "ok",
    "via": "page links"
   },
@@ -755,6 +798,7 @@
    "note": null,
    "impact": false,
    "direct": "https://www.ycombinator.com/jobs/role/designer/remote",
+   "closed": false,
    "why": "ok",
    "via": "page"
   },
@@ -772,6 +816,7 @@
    "note": null,
    "impact": true,
    "direct": "https://freelancingforgood.com/jobs/",
+   "closed": false,
    "why": "no_match",
    "via": "feed"
   },
@@ -789,8 +834,9 @@
    "note": "Read through its job sitemap (design roles only)",
    "impact": true,
    "direct": "https://www.idealist.org/en/jobs?q=product%20designer&locationType=REMOTE",
+   "closed": false,
    "why": "ok",
-   "via": "sitemap: 2256 pages, 4 design, 4 opened"
+   "via": "sitemap: 2245 pages, 4 design, 4 opened"
   },
   {
    "id": "impactroles",
@@ -806,6 +852,7 @@
    "note": null,
    "impact": true,
    "direct": "https://impactroles.org/",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -823,6 +870,7 @@
    "note": null,
    "impact": true,
    "direct": "https://pcdn.global/",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -840,6 +888,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.impactpool.org/search?q=designer",
+   "closed": false,
    "why": "ok",
    "via": "page links"
   },
@@ -856,7 +905,8 @@
    "error": "FetchError: 403 Forbidden https://www.devex.com/jobs/search?query=designer",
    "note": null,
    "impact": true,
-   "direct": "https://www.devex.com/jobs/search?query=designer",
+   "direct": "https://www.devex.com/jobs/search?query=product%20designer",
+   "closed": false,
    "why": "blocked",
    "via": null
   },
@@ -873,7 +923,8 @@
    "error": null,
    "note": null,
    "impact": true,
-   "direct": "https://www.developmentaid.org/jobs/search?searchText=designer",
+   "direct": "https://www.developmentaid.org/jobs/search?searchText=product%20designer",
+   "closed": false,
    "why": "blocked",
    "via": "page"
   },
@@ -891,6 +942,7 @@
    "note": null,
    "impact": true,
    "direct": "https://unjobs.org/search/designer",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -908,6 +960,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.devnetjobs.org/",
+   "closed": false,
    "why": "ok",
    "via": "page links"
   },
@@ -925,6 +978,7 @@
    "note": null,
    "impact": true,
    "direct": "https://humanitairejobs.org/",
+   "closed": false,
    "why": "no_match",
    "via": "feed"
   },
@@ -942,6 +996,7 @@
    "note": null,
    "impact": true,
    "direct": "https://climate.jobs/",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -959,6 +1014,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.conservation-careers.com/conservation-jobs/",
+   "closed": false,
    "why": "ok",
    "via": "wordpress feed"
   },
@@ -976,6 +1032,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.joshswaterjobs.com/",
+   "closed": false,
    "why": "no_match",
    "via": "feed"
   },
@@ -993,6 +1050,7 @@
    "note": null,
    "impact": true,
    "direct": "https://thejobfeed.org/",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -1010,6 +1068,7 @@
    "note": null,
    "impact": true,
    "direct": "https://nextbillion.net/jobs/",
+   "closed": false,
    "why": "ok",
    "via": "page links"
   },
@@ -1027,6 +1086,7 @@
    "note": null,
    "impact": true,
    "direct": "https://impactinvesting.careers/",
+   "closed": false,
    "why": "needs_js",
    "via": "page"
   },
@@ -1044,6 +1104,7 @@
    "note": null,
    "impact": true,
    "direct": "https://jobs.thegiin.org/",
+   "closed": false,
    "why": "needs_js",
    "via": "page"
   },
@@ -1060,7 +1121,8 @@
    "error": null,
    "note": "Shows jobs only in a browser; its sitemap lists organisations, not jobs",
    "impact": true,
-   "direct": "https://jobs.80000hours.org/?query=designer",
+   "direct": "https://jobs.80000hours.org/?query=product%20designer",
+   "closed": false,
    "why": "needs_js",
    "via": "page"
   },
@@ -1078,6 +1140,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.effectivealtruism.org/opportunities",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -1095,6 +1158,7 @@
    "note": null,
    "impact": true,
    "direct": "https://animaladvocacycareers.org/job-board/",
+   "closed": false,
    "why": "ok",
    "via": "wordpress feed"
   },
@@ -1112,6 +1176,7 @@
    "note": null,
    "impact": true,
    "direct": "https://altprotein.jobs/",
+   "closed": false,
    "why": "needs_js",
    "via": "page"
   },
@@ -1129,6 +1194,7 @@
    "note": null,
    "impact": true,
    "direct": "https://genderjobs.org/",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -1146,6 +1212,7 @@
    "note": null,
    "impact": true,
    "direct": "https://digitalrights.community/",
+   "closed": false,
    "why": "unclear",
    "via": "page"
   },
@@ -1163,6 +1230,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.humanrightscareers.com/jobs/",
+   "closed": false,
    "why": "no_match",
    "via": "feed"
   },
@@ -1180,6 +1248,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.globaljobs.org/",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -1197,6 +1266,7 @@
    "note": "Jobs page removed (404)",
    "impact": true,
    "direct": "https://www.allianceforpeacebuilding.org/peacebuilding-jobs",
+   "closed": true,
    "why": "paused",
    "via": null
   },
@@ -1214,6 +1284,7 @@
    "note": null,
    "impact": true,
    "direct": "https://csrjobs.club/jobboard",
+   "closed": false,
    "why": "no_match",
    "via": "feed"
   },
@@ -1231,6 +1302,7 @@
    "note": null,
    "impact": true,
    "direct": "https://myimpact.work/en/home",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -1248,6 +1320,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.eurobrussels.com/",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -1265,6 +1338,7 @@
    "note": "Read through its job sitemap (design roles only)",
    "impact": true,
    "direct": "https://www.escapethecity.org/search/jobs",
+   "closed": false,
    "why": "ok",
    "via": "sitemap: 8431 pages, 29 design, 28 opened"
   },
@@ -1282,6 +1356,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.socialenterprise.org.uk/jobs/",
+   "closed": false,
    "why": "needs_js",
    "via": "feed"
   },
@@ -1299,6 +1374,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.charityjob.co.uk/jobs?keywords=product+designer",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -1316,6 +1392,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.environmentjob.co.uk/",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -1333,6 +1410,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.hacesfalta.org/",
+   "closed": false,
    "why": "needs_js",
    "via": "page"
   },
@@ -1350,6 +1428,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.nachhaltigejobs.de/",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -1367,6 +1446,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.jobverde.de/",
+   "closed": false,
    "why": "unclear",
    "via": "page"
   },
@@ -1384,6 +1464,7 @@
    "note": null,
    "impact": true,
    "direct": "https://jobs.makesense.org/en/jobs?query=designer",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -1401,6 +1482,7 @@
    "note": "Site is down (address does not resolve)",
    "impact": true,
    "direct": "https://euaffairs.jobs/",
+   "closed": true,
    "why": "paused",
    "via": null
   },
@@ -1418,6 +1500,7 @@
    "note": null,
    "impact": true,
    "direct": "https://greenjobs.net/",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -1435,6 +1518,7 @@
    "note": null,
    "impact": true,
    "direct": "https://impactopportunity.org/",
+   "closed": false,
    "why": "blocked",
    "via": null
   },
@@ -1452,6 +1536,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.workforgood.org/",
+   "closed": false,
    "why": "no_match",
    "via": "feed"
   },
@@ -1469,6 +1554,7 @@
    "note": null,
    "impact": true,
    "direct": "https://jobs.feminist.org/",
+   "closed": false,
    "why": "no_match",
    "via": "feed"
   },
@@ -1486,6 +1572,7 @@
    "note": null,
    "impact": true,
    "direct": "https://www.goodfoodjobs.com/",
+   "closed": false,
    "why": "needs_js",
    "via": "page"
   },
@@ -1503,6 +1590,7 @@
    "note": null,
    "impact": true,
    "direct": "https://charityvillage.com/",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -1520,6 +1608,7 @@
    "note": null,
    "impact": false,
    "direct": "https://nofluffjobs.com/hu/ux",
+   "closed": false,
    "why": "needs_js",
    "via": "page"
   },
@@ -1536,7 +1625,8 @@
    "error": null,
    "note": "Server error for automated reading; covered through search",
    "impact": false,
-   "direct": "https://www.profession.hu/allasok/1,0,0,ux%20designer",
+   "direct": "https://www.profession.hu/allasok/1,0,0,product%20designer",
+   "closed": false,
    "why": "skipped",
    "via": null
   },
@@ -1553,7 +1643,8 @@
    "error": null,
    "note": null,
    "impact": false,
-   "direct": "https://www.linkedin.com/jobs/",
+   "direct": "https://www.linkedin.com/jobs/search/?keywords=product%20designer&location=European%20Union&f_WT=2&f_TPR=r259200&sortBy=DD",
+   "closed": false,
    "why": "skipped",
    "via": null
   },
@@ -1571,6 +1662,7 @@
    "note": null,
    "impact": false,
    "direct": "https://dribbble.com/jobs?keyword=product+designer",
+   "closed": false,
    "why": "ok",
    "via": "feed"
   },
@@ -1583,11 +1675,12 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 19,
+   "count": 20,
    "error": null,
    "note": null,
    "impact": false,
    "direct": "https://weloveproduct.co/",
+   "closed": false,
    "why": "ok",
    "via": "page links"
   },
@@ -1600,11 +1693,12 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 34,
+   "count": 33,
    "error": null,
    "note": null,
    "impact": false,
    "direct": "https://www.remoterocketship.com/jobs/product-designer",
+   "closed": false,
    "why": "ok",
    "via": "page links"
   },
@@ -1622,6 +1716,7 @@
    "note": "Blocks automated reading (403); covered through search",
    "impact": false,
    "direct": "https://startup.jobs/?q=product+designer",
+   "closed": false,
    "why": "skipped",
    "via": null
   },
@@ -1638,7 +1733,8 @@
    "error": null,
    "note": "Blocks automated reading (403); covered through search",
    "impact": false,
-   "direct": "https://landing.jobs/jobs?q=designer",
+   "direct": "https://landing.jobs/jobs?query=product+designer",
+   "closed": false,
    "why": "skipped",
    "via": null
   },
@@ -1656,6 +1752,7 @@
    "note": null,
    "impact": false,
    "direct": "https://productjobsanywhere.com/",
+   "closed": false,
    "why": "ok",
    "via": "page links"
   },
@@ -1673,6 +1770,7 @@
    "note": "Weekly roundup. Every company job board it links to is tracked daily from then on.",
    "impact": true,
    "direct": "https://jessica.tech/blog/",
+   "closed": false,
    "why": "ok",
    "via": "1 post, 278 links"
   },
@@ -1690,6 +1788,7 @@
    "note": null,
    "impact": false,
    "direct": "https://anywhereroles.com/?q=product%20designer",
+   "closed": false,
    "why": "ok",
    "via": "feed + page links"
   },
@@ -1707,6 +1806,7 @@
    "note": null,
    "impact": false,
    "direct": "https://anywhereroles.com/?q=ux%20designer",
+   "closed": false,
    "why": "ok",
    "via": "feed + page links"
   },
@@ -1724,6 +1824,7 @@
    "note": null,
    "impact": false,
    "direct": "https://career.digicpictures.com/jobs",
+   "closed": false,
    "why": "needs_js",
    "via": "page"
   },
@@ -1741,6 +1842,7 @@
    "note": null,
    "impact": false,
    "direct": "https://allas.dmu.gov.hu/DataCenter/Registration/JobAdvertisements/allasok",
+   "closed": false,
    "why": "needs_js",
    "via": "page"
   },
@@ -1758,6 +1860,7 @@
    "note": null,
    "impact": false,
    "direct": "https://career.idomsoft.hu/jobs/budapest/",
+   "closed": false,
    "why": "no_match",
    "via": "page"
   },
@@ -1775,13 +1878,32 @@
    "note": null,
    "impact": false,
    "direct": "https://workfor.international.greenpeace.org",
+   "closed": false,
    "why": "needs_js",
    "via": "page"
+  },
+  {
+   "id": "designfeed",
+   "name": "Design jobs feed (job-finder skill)",
+   "url": "https://raw.githubusercontent.com/egor-krasnoperov/design-growth-skills/jobs-feed/latest.json",
+   "origin": "added by you",
+   "enabled": true,
+   "search": false,
+   "adapter": "designfeed",
+   "ok": true,
+   "count": 962,
+   "error": null,
+   "note": "Daily list of European and worldwide-remote design vacancies from Egor Krasnoperov's job-finder skill (Stapply open ATS data, CC0)",
+   "impact": false,
+   "direct": "https://raw.githubusercontent.com/egor-krasnoperov/design-growth-skills/jobs-feed/latest.json",
+   "closed": false,
+   "why": "ok",
+   "via": "feed of 2026-11-27"
   }
  ],
  "boards": {
-  "tracked": 906,
-  "ok": 894,
+  "tracked": 1075,
+  "ok": 1051,
   "failed": [
    {
     "key": "greenhouse-eu:orbisk",
@@ -1842,9 +1964,69 @@
     "key": "personio:typo3|com",
     "company": "TYPO3",
     "error": "FetchError: 404 Not Found https://typo3.jobs.personio.com/xml?language=en"
+   },
+   {
+    "key": "personio:innerspace|com",
+    "company": "Innerspace",
+    "error": "FetchError: 404 Not Found https://innerspace.jobs.personio.com/xml?language=en"
+   },
+   {
+    "key": "personio:evernow-gmbh|com",
+    "company": "Evernow GmbH",
+    "error": "FetchError: 404 Not Found https://evernow-gmbh.jobs.personio.com/xml?language=en"
+   },
+   {
+    "key": "ashby:Superhuman",
+    "company": "Superhuman",
+    "error": "FetchError: 404 Not Found https://api.ashbyhq.com/posting-api/job-board/Superhuman?includeCompensation=true"
+   },
+   {
+    "key": "personio:cofinproag|com",
+    "company": "Cofinproag",
+    "error": "FetchError: 404 Not Found https://cofinproag.jobs.personio.com/xml?language=en"
+   },
+   {
+    "key": "personio:hanako-gmbh|com",
+    "company": "Hanako",
+    "error": "FetchError: 404 Not Found https://hanako-gmbh.jobs.personio.com/xml?language=en"
+   },
+   {
+    "key": "personio:desk-ly|com",
+    "company": "desk.ly",
+    "error": "FetchError: 404 Not Found https://desk-ly.jobs.personio.com/xml?language=en"
+   },
+   {
+    "key": "greenhouse-eu:proalphagroup",
+    "company": "Proalpha Group",
+    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/proalphagroup/jobs"
+   },
+   {
+    "key": "personio:achtbytes|com",
+    "company": "Achtbytes",
+    "error": "FetchError: 404 Not Found https://achtbytes.jobs.personio.com/xml?language=en"
+   },
+   {
+    "key": "personio:own3d|com",
+    "company": "StreamTV Media GmbH",
+    "error": "FetchError: 404 Not Found https://own3d.jobs.personio.com/xml?language=en"
+   },
+   {
+    "key": "greenhouse-eu:workwize",
+    "company": "Workwize",
+    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/workwize/jobs"
+   },
+   {
+    "key": "greenhouse-eu:constructortech",
+    "company": "Constructor TECH",
+    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/constructortech/jobs"
+   },
+   {
+    "key": "greenhouse-eu:valtech",
+    "company": "Valtech",
+    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/valtech/jobs"
    }
   ],
-  "discovered": 544
+  "discovered": 713
  },
  "companies": {
   "total": 480,

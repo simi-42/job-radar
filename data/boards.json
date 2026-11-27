@@ -7403,6 +7403,1617 @@
    "tags": [],
    "site_checked": "2026-11-27",
    "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:exinity": {
+   "company": "Exinity",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "exinity.com",
+   "last_ok": "2026-11-27"
+  },
+  "bamboohr:digitainsoftware": {
+   "company": "Digitain",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "personio:innerspace|com": {
+   "company": "Innerspace",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 1,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "innerspace.eu"
+  },
+  "recruitee:fieldside": {
+   "company": "Fieldside",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "fieldside.be",
+   "last_ok": "2026-11-27"
+  },
+  "oracle:ekkf.fa.em2.oraclecloud.com|cx": {
+   "company": "Samsonite",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:playtech": {
+   "company": "Playtech",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:frontify": {
+   "company": "Frontify",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "frontify.com",
+   "last_ok": "2026-11-27"
+  },
+  "lever:sonarsource": {
+   "company": "Sonar",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "sonarsource.com",
+   "last_ok": "2026-11-27"
+  },
+  "workday:cloudera|wd5|external_career": {
+   "company": "Cloudera",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "teamtailor:providentromania": {
+   "company": "Provident Romania",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "provident.ro",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse:ubiquiti": {
+   "company": "ubiquiti",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "personio:wederundnoch|com": {
+   "company": "MATTER & LØUT",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "matterlout.com",
+   "last_ok": "2026-11-27"
+  },
+  "workday:miele|wd3|miele-jobs": {
+   "company": "Miele",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:bowatt": {
+   "company": "BoWatt GmbH",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "bowatt.com",
+   "last_ok": "2026-11-27"
+  },
+  "teamtailor:agiledayoy": {
+   "company": "Agileday Oy",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "agileday.com",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:langdock": {
+   "company": "Langdock",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "langdock.com",
+   "last_ok": "2026-11-27"
+  },
+  "personio:asseco-solutions|com": {
+   "company": "Asseco Solutions AG",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "assecosolutions.com",
+   "last_ok": "2026-11-27"
+  },
+  "personio:evernow-gmbh|com": {
+   "company": "Evernow GmbH",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 1,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "evernow.io"
+  },
+  "smartrecruiters:deliveryhero": {
+   "company": "Delivery Hero",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "deliveryhero.com",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:scalablegmbh": {
+   "company": "Scalable GmbH",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:redcare-pharmacy": {
+   "company": "Redcare Pharmacy",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "redcare-pharmacy.com",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:Superhuman": {
+   "company": "Superhuman",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 1,
+   "tags": [],
+   "site_checked": "2026-11-27"
+  },
+  "smartrecruiters:stackone": {
+   "company": "StackOne",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "stackone.com",
+   "last_ok": "2026-11-27"
+  },
+  "lever:Packmatic": {
+   "company": "Packmatic GmbH",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "packmatic.io",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse:blacklane": {
+   "company": "BLACKLANE",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:mercura": {
+   "company": "Mercura",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "mercura.ai",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:reonic": {
+   "company": "Reonic",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "reonic.com",
+   "last_ok": "2026-11-27"
+  },
+  "oracle:edix.fa.us2.oraclecloud.com|CX_1": {
+   "company": "CORSAIR",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:avelios-medical": {
+   "company": "Avelios Medical",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "avelios.com",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:mirelo": {
+   "company": "Mirelo AI",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "mirelo.ai",
+   "last_ok": "2026-11-27"
+  },
+  "personio:ariadneio|com": {
+   "company": "Ariadne GmbH",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "ariadne.io",
+   "last_ok": "2026-11-27"
+  },
+  "personio:cofinproag|com": {
+   "company": "Cofinproag",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 1,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "cofinpro.de"
+  },
+  "personio:hanako-gmbh|com": {
+   "company": "Hanako",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 1,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "hanako-health.com"
+  },
+  "personio:implico-gmbh|com": {
+   "company": "Implico",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "implico.com",
+   "last_ok": "2026-11-27"
+  },
+  "personio:impower|com": {
+   "company": "Impower",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "impower.de",
+   "last_ok": "2026-11-27"
+  },
+  "personio:techpilot|com": {
+   "company": "Techpilot",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "techpilot.com",
+   "last_ok": "2026-11-27"
+  },
+  "personio:desk-ly|com": {
+   "company": "desk.ly",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 1,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "desk.ly"
+  },
+  "personio:snapaddy|com": {
+   "company": "snapAddy",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "snapaddy.com",
+   "last_ok": "2026-11-27"
+  },
+  "personio:finapi-gmbh|com": {
+   "company": "finAPI GmbH",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "finapi.io",
+   "last_ok": "2026-11-27"
+  },
+  "personio:vr-smart-guide-gmbh|com": {
+   "company": "VR Smart Guide GmbH",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "vr-smart-guide.de",
+   "last_ok": "2026-11-27"
+  },
+  "workday:munters|wd3|external_careers": {
+   "company": "Munters",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:Bertelsmann-Jobs": {
+   "company": "Bertelsmann",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "bertelsmann.de",
+   "last_ok": "2026-11-27"
+  },
+  "oracle:fa-eyjr-saasfaeuraprod1.fa.ocs.oraclecloud.com|CX_1": {
+   "company": "HUK-COBURG",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:pergolux": {
+   "company": "Pergolux",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "pergolux.de",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse-eu:proalphagroup": {
+   "company": "Proalpha Group",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 1,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "proalpha.com"
+  },
+  "personio:achtbytes|com": {
+   "company": "Achtbytes",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 1,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "achtbytes.com"
+  },
+  "personio:meltingelements|com": {
+   "company": "Melting Elements GmbH",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "meltingelements.com",
+   "last_ok": "2026-11-27"
+  },
+  "personio:own3d|com": {
+   "company": "StreamTV Media GmbH",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 1,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "stream.tv"
+  },
+  "personio:turbine-kreuzberg|com": {
+   "company": "Turbine Kreuzberg GmbH",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "turbinekreuzberg.com",
+   "last_ok": "2026-11-27"
+  },
+  "personio:appliedai|com": {
+   "company": "appliedAI",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "appliedai.de",
+   "last_ok": "2026-11-27"
+  },
+  "personio:holy|com": {
+   "company": "holy",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "holy.com",
+   "last_ok": "2026-11-27"
+  },
+  "personio:jonasundderwolf|com": {
+   "company": "Jonas und der Wolf GmbH",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "jonasundderwolf.de",
+   "last_ok": "2026-11-27"
+  },
+  "personio:sistrix-gmbh|com": {
+   "company": "SISTRIX",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "sistrix.de",
+   "last_ok": "2026-11-27"
+  },
+  "teamtailor:sybo": {
+   "company": "SYBO",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "sybo.com",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:nagarro1": {
+   "company": "Nagarro",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "nagarro.com",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:nexthink": {
+   "company": "Nexthink",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "nexthink.com",
+   "last_ok": "2026-11-27"
+  },
+  "lever:terrahq": {
+   "company": "Terra",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "terrahq.com",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse:theknotworldwide": {
+   "company": "The Knot Worldwide",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse:newrelic": {
+   "company": "New Relic",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "newrelic.com",
+   "last_ok": "2026-11-27"
+  },
+  "workday:theapexgroup|wd3|apexgroupcareers": {
+   "company": "Theapexgroup",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:dowjones|wd1|dow_jones_career": {
+   "company": "Dowjones",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:polene-paris": {
+   "company": "Polène Paris",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:Iliad-Free": {
+   "company": "Iliad - Free",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "iliad-free.fr",
+   "last_ok": "2026-11-27"
+  },
+  "workday:gevernova|wd5|only_confidential_executive_recruiting": {
+   "company": "Gevernova (Only Confidential Executive Recruiting)",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:sia": {
+   "company": "Sia",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "sia-partners.com",
+   "last_ok": "2026-11-27"
+  },
+  "teamtailor:spartes": {
+   "company": "Groupe Spartes",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "spartes.fr",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:bereal": {
+   "company": "BeReal",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "bereal.com",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:Scalian": {
+   "company": "Scalian",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "scalian.com",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:devoteam": {
+   "company": "Devoteam",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "devoteamcareers.com",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:lucis": {
+   "company": "Lucis",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "lucis.life",
+   "last_ok": "2026-11-27"
+  },
+  "personio:pando|com": {
+   "company": "Pando",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "hellopando.com",
+   "last_ok": "2026-11-27"
+  },
+  "workday:thales|wd3|careers": {
+   "company": "Thales",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:relx|wd3|risksolutions": {
+   "company": "LexisNexis® Risk Solutions",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:galileo|wd3|galileo_career_site": {
+   "company": "Galileo Global Education",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:edenpeople|wd3|Edenred_Careers": {
+   "company": "Edenred",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:EVERIENCE": {
+   "company": "EVERIENCE",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "everience.com",
+   "last_ok": "2026-11-27"
+  },
+  "oracle:fa-eoic-saasfaprod1.fa.ocs.oraclecloud.com|CX_12001": {
+   "company": "Fa Eoic Saasfaprod1",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "lever:winamax": {
+   "company": "WINAMAX",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:mc2i|wd3|talents_mc2i": {
+   "company": "Mc2i",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:TBCBANK": {
+   "company": "TBCBANK",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:flutterbe|wd3|FlutterInt_External": {
+   "company": "Flutterbe",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:pwc|wd3|global_experienced_careers": {
+   "company": "Pwc",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:genesys|wd1|genesys": {
+   "company": "Genesys",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:logitech|wd5|logitech": {
+   "company": "Logitech",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:whippy": {
+   "company": "Whippy",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "whippy.ai",
+   "last_ok": "2026-11-27"
+  },
+  "bamboohr:teckro": {
+   "company": "teckro",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:Kota": {
+   "company": "Kota",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "kota.io",
+   "last_ok": "2026-11-27"
+  },
+  "workday:resmed|wd3|resmed_external_careers": {
+   "company": "Resmed",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:wk|wd3|external": {
+   "company": "Wk",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:eightsleep": {
+   "company": "Eight Sleep",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "eightsleep.com",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:nebuly": {
+   "company": "Nebuly",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "nebuly.com",
+   "last_ok": "2026-11-27"
+  },
+  "bamboohr:mdotm": {
+   "company": "mdotm",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:dexcom|wd1|dexcom": {
+   "company": "Dexcom",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "lever:Civitta": {
+   "company": "Civitta",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "civitta.com",
+   "last_ok": "2026-11-27"
+  },
+  "workday:nasdaq|wd1|global_external_site": {
+   "company": "Nasdaq",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "lever-eu:symphony": {
+   "company": "Symphony",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "symphony.is",
+   "last_ok": "2026-11-27"
+  },
+  "workday:entrust|wd1|entrustcareers": {
+   "company": "Entrust",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:philips|wd3|internal-job-postings-list-for-philips-contingent-workers": {
+   "company": "Philips (Internal Job Postings List For Philips Contingent Workers)",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:crisp": {
+   "company": "Crisp",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "recruitee:fridayrecruitment": {
+   "company": "Friday Recruitment",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "fridayrecruitment.nl",
+   "last_ok": "2026-11-27"
+  },
+  "recruitee:arcady": {
+   "company": "Arcady",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse-eu:workwize": {
+   "company": "Workwize",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 1,
+   "tags": [],
+   "site_checked": "2026-11-27"
+  },
+  "recruitee:creativeclicks": {
+   "company": "Creative Clicks B.V.",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse:wongdoody": {
+   "company": "wongdoody",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "teamtailor:taketaketake-amby": {
+   "company": "Take Take Take",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "teamtailor:nyeogklokehoder": {
+   "company": "Nye og Kloke Hoder",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "nyeogklokehoder.no",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:RiseGuide": {
+   "company": "RiseGuide",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "breezy:6037": {
+   "company": "6037",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:softwaremind": {
+   "company": "Software Mind",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "softwaremind.com",
+   "last_ok": "2026-11-27"
+  },
+  "recruitee:intent": {
+   "company": "intent",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "withintent.com",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:ProMediaGroup": {
+   "company": "ProMedia Group",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "promedia.nl",
+   "last_ok": "2026-11-27"
+  },
+  "recruitee:digitalforms": {
+   "company": "Digital Forms",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:motorolasolutions|wd5|careers": {
+   "company": "Motorolasolutions",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:jll|wd1|jllcareers": {
+   "company": "Jll",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:kcura|wd1|external_career_site": {
+   "company": "Kcura",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:npv": {
+   "company": "npv labs",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "npvtm.com",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:Bounce": {
+   "company": "Bounce",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "bounce.com",
+   "last_ok": "2026-11-27"
+  },
+  "workday:bitsight|wd1|bitsight": {
+   "company": "Bitsight",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:inetum2": {
+   "company": "Inetum",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "inetum.com",
+   "last_ok": "2026-11-27"
+  },
+  "bamboohr:uphill": {
+   "company": "UpHill Health",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:airapps": {
+   "company": "Air Apps",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "airapps.com",
+   "last_ok": "2026-11-27"
+  },
+  "personio:neptune-software|com": {
+   "company": "Neptune Software",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "pinpoint:intermedia": {
+   "company": "Intermedia Intelligent Communications",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "intermedia.com",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:endava": {
+   "company": "Endava",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "endava.com",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:metromakro": {
+   "company": "METRO/MAKRO",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:db|wd3|dbwebsite": {
+   "company": "Db",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:aghanim": {
+   "company": "Aghanim",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "aghanim.com",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse-eu:constructortech": {
+   "company": "Constructor TECH",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 1,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "constructor.tech"
+  },
+  "smartrecruiters:HMGroup": {
+   "company": "H&M Group",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:ubisoft2": {
+   "company": "Ubisoft",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "ubisoft.com",
+   "last_ok": "2026-11-27"
+  },
+  "teamtailor:toteme": {
+   "company": "TOTEME",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "toteme.com",
+   "last_ok": "2026-11-27"
+  },
+  "oracle:iaings.fa.ocs.oraclecloud.com|SinchCareer": {
+   "company": "Iaings",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "teamtailor:pihr": {
+   "company": "Pihr",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "pihr.com",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:tandem-health": {
+   "company": "Tandem Health",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "tandemhealth.ai",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:validio": {
+   "company": "Validio",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "validio.io",
+   "last_ok": "2026-11-27"
+  },
+  "teamtailor:adavoab": {
+   "company": "Adavo AB",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "adavo.se",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse-eu:valtech": {
+   "company": "Valtech",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 1,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "valtech.com"
+  },
+  "workday:eset|wd3|ESET_External": {
+   "company": "ESET",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:holywater": {
+   "company": "HOLYWATER TECH",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "holywater.tech",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:tellos": {
+   "company": "Tellos, Inc.",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "telloshq.com",
+   "last_ok": "2026-11-27"
+  },
+  "personio:7learnings|com": {
+   "company": "7Learnings GmbH",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "7learnings.com",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:Mastra": {
+   "company": "Mastra",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "mastra.ai",
+   "last_ok": "2026-11-27"
+  },
+  "bamboohr:prismstudio": {
+   "company": "prismstudio",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:WunderGraph": {
+   "company": "WunderGraph, Inc.",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "wundergraph.com",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:constructor": {
+   "company": "Constructor",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "constructor.io",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse:fueledcareers": {
+   "company": "Fueled",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "fueled.com",
+   "last_ok": "2026-11-27"
+  },
+  "personio:cycloid|com": {
+   "company": "Cycloid",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "cycloid.io",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:tilthq": {
+   "company": "Tilt Finance",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "tilt.com",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse:carrotfertility": {
+   "company": "Carrot",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:partsbase": {
+   "company": "PartsBase Inc.",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "partsbase.com",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse:twilio": {
+   "company": "Twilio",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "twilio.com",
+   "last_ok": "2026-11-27"
+  },
+  "bamboohr:experlogix": {
+   "company": "experlogix",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:phantom": {
+   "company": "Phantom",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "phantom.app",
+   "last_ok": "2026-11-27"
+  },
+  "lever:vacancies": {
+   "company": "United Tech",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:camunda": {
+   "company": "Camunda",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "camunda.com",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse:careaccess": {
+   "company": "Care Access",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "lever:Smile.io": {
+   "company": "Smile.io",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "smile.io",
+   "last_ok": "2026-11-27"
+  },
+  "breezy:minerva-project": {
+   "company": "Minerva Project",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:trm-labs": {
+   "company": "TRM Labs",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "trmlabs.com",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:Tremendous": {
+   "company": "Tremendous",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "tremendous.com",
+   "last_ok": "2026-11-27"
+  },
+  "lever-eu:pnlfin": {
+   "company": "Finom",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "smartrecruiters:PeopleCanFly": {
+   "company": "People Can Fly",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "peoplecanfly.com",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:render": {
+   "company": "Render",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "render.com",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:owner": {
+   "company": "Owner.com",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "owner.com",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse:future": {
+   "company": "Future",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "future.co",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:restream": {
+   "company": "Restream",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "restream.io",
+   "last_ok": "2026-11-27"
+  },
+  "workday:collectorsuniverse|wd1|collectors": {
+   "company": "Collectors",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:evercommerce|wd1|evercommerce_careers": {
+   "company": "EverCommerce",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:dentsuaegis|wd3|dan_global": {
+   "company": "Dentsuaegis",
+   "origin": "via Design jobs feed (job-finder skill)",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
   }
  }
 }
