@@ -4275,7 +4275,7 @@
    "company": "Octopus Legacy",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 5,
+   "fails": 6,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -4378,7 +4378,7 @@
    "company": "digiLab",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 5,
+   "fails": 6,
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "digilab.ai"
@@ -4490,7 +4490,7 @@
    "company": "Enginy",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 5,
+   "fails": 6,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -4536,7 +4536,7 @@
    "company": "Ledgy",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 5,
+   "fails": 6,
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "ledgy.com"
@@ -4733,7 +4733,7 @@
    "company": "Apadmi",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 5,
+   "fails": 6,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -4741,7 +4741,7 @@
    "company": "Financial Times",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 5,
+   "fails": 6,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -4920,7 +4920,7 @@
    "company": "World4you",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 5,
+   "fails": 6,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5223,7 +5223,7 @@
    "company": "Exclaimer",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 5,
+   "fails": 6,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5463,7 +5463,7 @@
    "company": "Decathlon Digital",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 5,
+   "fails": 6,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5575,7 +5575,7 @@
    "company": "Superhuman",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 5,
+   "fails": 6,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5583,7 +5583,7 @@
    "company": "Readdle",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 5,
+   "fails": 6,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5693,7 +5693,7 @@
    "company": "Decathlon Digital",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 5,
+   "fails": 6,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5701,7 +5701,7 @@
    "company": "Molecule",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 2,
+   "fails": 3,
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "molecule.xyz",
@@ -5838,7 +5838,7 @@
    "company": "Terra Quantum",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 5,
+   "fails": 6,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -6395,7 +6395,7 @@
    "company": "alpaca research",
    "origin": "via Hidden Jobs",
    "added": "2026-11-26",
-   "fails": 3,
+   "fails": 4,
    "tags": [],
    "site_checked": "2026-11-26"
   },
@@ -7302,6 +7302,78 @@
    "tags": [],
    "site_checked": "2026-11-27",
    "site": "vertice.one",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse:onetrust": {
+   "company": "OneTrust",
+   "origin": "via Speedinvest portfolio jobs",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse:bitpanda": {
+   "company": "Bitpanda",
+   "origin": "via Speedinvest portfolio jobs",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:join9am": {
+   "company": "9amHealth",
+   "origin": "via Speedinvest portfolio jobs",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "join9am.com",
+   "last_ok": "2026-11-27"
+  },
+  "pinpoint:zincwork": {
+   "company": "Zinc",
+   "origin": "via Seedcamp portfolio jobs",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "zincwork.com",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:duck-duck-go": {
+   "company": "Duck Duck Go",
+   "origin": "via a jobs roundup",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [
+    "impact"
+   ],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workday:rsc|wd103|RoyalSocietyofChemistry": {
+   "company": "Royal Society for Chemistry",
+   "origin": "via a jobs roundup",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [
+    "impact"
+   ],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse:markmorrisdancegroup": {
+   "company": "Mark Morris Dance Group",
+   "origin": "via a jobs roundup",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [
+    "impact"
+   ],
+   "site_checked": "2026-11-27",
+   "site": "markmorrisdancegroup.org",
    "last_ok": "2026-11-27"
   }
  }
