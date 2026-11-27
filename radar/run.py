@@ -52,7 +52,7 @@ def days_between(a, b):
         return 999
 
 
-_JUNK_TITLE = re.compile(r"\b\d+\s*(?:days?|weeks?|hours?|months?)\s+ago\b|[$€£]\s?\d", re.I)
+_JUNK_TITLE = re.compile(r"\b\d+\s*(?:days?|weeks?|hours?|months?|[hdwm])\s+ago\b|[$€£]\s?\d", re.I)
 _PAY_TAIL = re.compile(r"\s*(?:[|·•]|\s-\s)\s*[^|·•]*?[$€£]\s?\d[^|·•]*$|\s*\([^()]*[$€£]\s?\d[^()]*\)")
 
 

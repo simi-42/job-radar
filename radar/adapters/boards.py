@@ -457,8 +457,17 @@ def links_jobs(page, base, src):
         else:
             if len(text) > 160:
                 continue
-            title, company, loc = _clean_link_title(text)
+            # one run of text such as "UX Designer - Unleash Full-time Remote Teamtailor 2h ago"
             posted = None
+            mago = re.search(r"\s*\b(\d+\s*(?:[hdwm]|hours?|days?|weeks?|months?)\s+ago|today|yesterday)\b.*$", text, re.I)
+            if mago:
+                posted, text = posted_from_ago(mago.group(1)), text[:mago.start()]
+            title, company, loc = _clean_link_title(text)
+            if not company and " - " in title:
+                left, right = title.split(" - ", 1)
+                right = re.split(r"\s+(?:full[- ]time|part[- ]time|contract|freelance|remote|hybrid|on-?site)\b", right, flags=re.I)[0].strip()
+                if title_family(left) and right and len(right.split()) <= 5:
+                    title, company = left.strip(), right
         if not title_family(title):
             continue
         seen.add(url)
