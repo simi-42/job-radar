@@ -181,7 +181,7 @@ class BoardReaders(unittest.TestCase):
         self.assertNotIn("$", jobs[0]["title"] + jobs[0]["company"])
 
     def test_sitemap_board(self):
-        smap = ('<urlset><url><loc>https://board.example/opportunity/1-digital-design-lead-at-vital-strategies</loc><lastmod>2026-11-26T02:14:37+00:00</lastmod></url>'
+        smap = ('<urlset><url><loc>https://board.example/opportunity/1-digital-design-lead-at-vital-strategies</loc><changefreq>daily</changefreq><lastmod>2026-11-26T02:14:37+00:00</lastmod></url>'
                 '<url><loc>https://board.example/opportunity/2-pr-officer-at-comic-relief</loc><lastmod>2026-11-26</lastmod></url>'
                 '<url><loc>https://board.example/opportunity/3-senior-product-designer-at-old-co</loc><lastmod>2020-01-01</lastmod></url></urlset>')
         page = ('<script type="application/ld+json">{"@type":"JobPosting","title":"Digital Design Lead with Vital Strategies | Escape The City",'

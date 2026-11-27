@@ -559,9 +559,10 @@ def generic(src, url=None):
     if not out:
         out = wp_jobs(src, page, final)
         via = "wordpress feed" if out else via
-    if not out:
-        out = links_jobs(page, final, src)
-        via = "page links" if out else via
+    if len(out) < 5:
+        more = links_jobs(page, final, src)
+        if len(more) > len(out):
+            out, via = out + more, "page links" if not out else via + " + page links"
     # de-duplicate by URL
     seen, uniq = set(), []
     for j in out:
@@ -574,7 +575,18 @@ def generic(src, url=None):
 
 
 # ---------- boards that list job pages in a sitemap (Idealist, Escape the City, ...) ----------
-_LOC = re.compile(r"<url>\s*<loc>\s*([^<\s]+)\s*</loc>(?:\s*<lastmod>\s*([^<\s]+)\s*</lastmod>)?", re.I)
+_URLBLOCK = re.compile(r"<url>(.*?)</url>", re.S | re.I)
+_LOCTAG = re.compile(r"<loc>\s*([^<\s]+)\s*</loc>", re.I)
+_MODTAG = re.compile(r"<lastmod>\s*([^<\s]+)\s*</lastmod>", re.I)
+
+
+def _sitemap_urls(text):
+    out = []
+    for block in _URLBLOCK.findall(text):
+        loc, mod = _LOCTAG.search(block), _MODTAG.search(block)
+        if loc:
+            out.append((loc.group(1), mod.group(1) if mod else ""))
+    return out
 _SUBMAP = re.compile(r"<sitemap>\s*<loc>\s*([^<\s]+)\s*</loc>", re.I)
 _DESIGN_SLUG = re.compile(r"(?:^|[-/_])(?:product-design|ux|ui|user-experience|interaction-design|design-system|designer|head-of-design|"
                           r"design-lead|design-manager|design-director|director-of-design|vp-design|service-design|content-design|"
@@ -609,7 +621,7 @@ def sitemap(src):
         if subs:
             maps += [u for u in subs if re.search(src.get("submap", r"job|opportunit|vacanc|position"), u, re.I)]
             continue
-        urls += _LOC.findall(text)
+        urls += _sitemap_urls(text)
     cutoff = (dt.date.today() - dt.timedelta(days=int(src.get("days", 45)))).isoformat()
     picked = [(u, mod) for u, mod in urls if match.search(u) and _DESIGN_SLUG.search(urlparse(u).path) and (not mod or mod[:10] >= cutoff)]
     picked.sort(key=lambda x: x[1] or "", reverse=True)
@@ -627,8 +639,8 @@ def sitemap(src):
             j["title"] = re.sub(r"\s*\|[^|]+$", "", j["title"]).strip()          # "... | Escape The City"
             if j.get("company"):
                 j["title"] = re.sub(rf"\s+(?:with|at)\s+{re.escape(j['company'])}$", "", j["title"], flags=re.I)
-            if mod and (not j.get("posted") or j["posted"] < "2015"):
-                j["posted"] = mod[:10]
+            if not j.get("posted") or j["posted"] < "2015":   # some boards put a placeholder year in their job data
+                j["posted"] = mod[:10] if mod else None
             if title_family(j["title"]):
                 out.append(j)
     DIAG[src["id"]] = {"reason": "ok" if out else ("no_match" if urls else "unclear"), "status": 200,

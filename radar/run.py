@@ -12,7 +12,7 @@ import re
 import sys
 import time
 import traceback
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -50,6 +50,15 @@ def days_between(a, b):
         return (date.fromisoformat(b) - date.fromisoformat(a)).days
     except (TypeError, ValueError):
         return 999
+
+
+_JUNK_TITLE = re.compile(r"\b\d+\s*(?:days?|weeks?|hours?|months?)\s+ago\b|[$€£]\s?\d", re.I)
+_PAY_TAIL = re.compile(r"\s*(?:[|·•]|\s-\s)\s*[^|·•]*?[$€£]\s?\d[^|·•]*$|\s*\([^()]*[$€£]\s?\d[^()]*\)")
+
+
+def clean_title(t):
+    """'Design Systems Specialist - Fully Remote | Upto $80/hr' -> 'Design Systems Specialist - Fully Remote'."""
+    return _PAY_TAIL.sub("", t or "").strip(" -|·") or t
 
 
 def loc_label(locs, cc):
@@ -171,6 +180,11 @@ class Run:
         if prov == "duckduckgo":
             queries = queries[:6]
         queries = queries[: cfg.get("max_daily", 30)]
+        # The radar runs twice a day; searching once a day is enough and halves the use of paid search credits.
+        if self.state.setdefault("search", {}).get("last_daily") == TODAY and not self.full:
+            queries = []
+        else:
+            self.state["search"]["last_daily"] = TODAY
         last_weekly = self.state.setdefault("search", {}).get("last_weekly")
         if self.full or days_between(last_weekly, TODAY) >= 7:
             hosts = []
@@ -363,11 +377,12 @@ class Run:
                     dom = company_domain(x.get("apply_url")) or company_domain(x.get("url"))
                     if dom:
                         break
-            posted = min((x["posted"] for x in items if x.get("posted")), default=None)
+            floor = (date.fromisoformat(TODAY) - timedelta(days=400)).isoformat()   # older "posted" dates are placeholders
+            posted = min((x["posted"] for x in items if x.get("posted") and x["posted"] >= floor), default=None)
             if posted and posted > TODAY:
                 posted = TODAY
             recs[jid] = {
-                "id": jid, "title": p["title"], "company": p["company"] if p["company"] != "Unknown" else "",
+                "id": jid, "title": clean_title(p["title"]), "company": p["company"] if p["company"] != "Unknown" else "",
                 "url": p["url"], "apply": p.get("apply_url"), "sources": srcs, "kind": p["kind"],
                 "loc": loc_label(locs, cc), "cc": cc, "region": best["region"], "wp": best["wp"], "hu": best["hu"], "huw": best["hu_why"],
                 "emp": emp, "sen": p["sen"], "fam": p["fam"], "score": sc, "rules": sc, "parts": parts, "skills": matched, "domains": dom,
@@ -426,7 +441,7 @@ class Run:
                     carried += 1
                 self.cur[jid] = old
             else:
-                if days_between(old.get("last"), TODAY) > 5:
+                if days_between(old.get("last"), TODAY) > 5 or _JUNK_TITLE.search(old.get("title", "")):
                     dropped += 1
                     meta.pop(jid, None)
                     continue
