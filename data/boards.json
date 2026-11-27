@@ -3139,7 +3139,7 @@
    "company": "Fever",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 6,
+   "fails": 7,
    "site_checked": "2026-11-23"
   },
   "ashby:Clerk": {
@@ -3259,7 +3259,7 @@
    "company": "Isar Aerospace SE",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 6,
+   "fails": 7,
    "site_checked": "2026-11-23",
    "site": "isaraerospace.com"
   },
@@ -3303,7 +3303,7 @@
    "company": "Bitpanda",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 6,
+   "fails": 7,
    "site_checked": "2026-11-23"
   },
   "workday:db|wd3|DBWebsite": {
@@ -3396,7 +3396,7 @@
    "company": "Tactile Games",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 6,
+   "fails": 7,
    "site_checked": "2026-11-23"
   },
   "ashby:supercell": {
@@ -3472,7 +3472,7 @@
    "company": "Ebury",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 6,
+   "fails": 7,
    "site_checked": "2026-11-23"
   },
   "greenhouse:landor": {
@@ -3530,7 +3530,7 @@
    "company": "Proton",
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
-   "fails": 6,
+   "fails": 7,
    "site_checked": "2026-11-23"
   },
   "greenhouse:wargamingen": {
@@ -4275,7 +4275,7 @@
    "company": "Octopus Legacy",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 6,
+   "fails": 7,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -4378,7 +4378,7 @@
    "company": "digiLab",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 6,
+   "fails": 7,
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "digilab.ai"
@@ -4490,7 +4490,7 @@
    "company": "Enginy",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 6,
+   "fails": 7,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -4536,7 +4536,7 @@
    "company": "Ledgy",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 6,
+   "fails": 7,
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "ledgy.com"
@@ -4733,7 +4733,7 @@
    "company": "Apadmi",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 6,
+   "fails": 7,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -4741,7 +4741,7 @@
    "company": "Financial Times",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 6,
+   "fails": 7,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -4920,7 +4920,7 @@
    "company": "World4you",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 6,
+   "fails": 7,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5223,7 +5223,7 @@
    "company": "Exclaimer",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 6,
+   "fails": 7,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5463,7 +5463,7 @@
    "company": "Decathlon Digital",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 6,
+   "fails": 7,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5575,7 +5575,7 @@
    "company": "Superhuman",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 6,
+   "fails": 7,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5583,7 +5583,7 @@
    "company": "Readdle",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 6,
+   "fails": 7,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5693,7 +5693,7 @@
    "company": "Decathlon Digital",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 6,
+   "fails": 7,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -5701,7 +5701,7 @@
    "company": "Molecule",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 6,
+   "fails": 7,
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "molecule.xyz",
@@ -5838,7 +5838,7 @@
    "company": "Terra Quantum",
    "origin": "via Hidden Jobs",
    "added": "2026-11-25",
-   "fails": 6,
+   "fails": 7,
    "tags": [],
    "site_checked": "2026-11-25"
   },
@@ -6395,7 +6395,7 @@
    "company": "alpaca research",
    "origin": "via Hidden Jobs",
    "added": "2026-11-26",
-   "fails": 6,
+   "fails": 7,
    "tags": [],
    "site_checked": "2026-11-26"
   },
@@ -7374,6 +7374,34 @@
    ],
    "site_checked": "2026-11-27",
    "site": "markmorrisdancegroup.org",
+   "last_ok": "2026-11-27"
+  },
+  "ashby:quo": {
+   "company": "Quo",
+   "origin": "search",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "site": "quo.com",
+   "last_ok": "2026-11-27"
+  },
+  "greenhouse:medium": {
+   "company": "Medium",
+   "origin": "search",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
+   "last_ok": "2026-11-27"
+  },
+  "workable:sortly": {
+   "company": "Sortly",
+   "origin": "search",
+   "added": "2026-11-27",
+   "fails": 0,
+   "tags": [],
+   "site_checked": "2026-11-27",
    "last_ok": "2026-11-27"
   }
  }
