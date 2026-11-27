@@ -131,5 +131,22 @@ class Languages(unittest.TestCase):
         self.assertEqual(f, [])
 
 
+class MergedEligibility(unittest.TestCase):
+    """A job seen on several sources gets one Hungary decision from all of them."""
+    def setUp(self):
+        from radar.run import Run
+        self.run = Run.__new__(Run)
+        self.base = dict(title="Senior Product Designer", kind="board", tags=[], description="", geo_hint=[])
+
+    def test_hybrid_abroad_beats_a_source_without_location(self):
+        a = dict(self.base, locations=[], wp="unknown")
+        b = dict(self.base, locations=["London, UK"], wp="hybrid")
+        self.assertEqual(self.run._merged_eligibility([a, b], a, "Hybrid, London office")["hu"], "no")
+
+    def test_hungarian_company_without_city(self):
+        j = dict(self.base, locations=[], wp="hybrid", tags=["hungary"], kind="ats")
+        self.assertEqual(self.run._merged_eligibility([j], j, "Hybrid role")["hu"], "yes")
+
+
 if __name__ == "__main__":
     unittest.main()

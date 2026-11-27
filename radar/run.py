@@ -16,7 +16,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
-from . import alert, classify, detect, http, score, verify
+from . import alert, classify, detect, geo, http, score, verify
 from .adapters import ats, boards, search
 from .model import TODAY, company_domain, job_key, norm_company
 
@@ -329,7 +329,7 @@ class Run:
         for key, items in groups.items():
             items.sort(key=lambda x: (KIND_RANK[x["kind"]], -len(x.get("description", ""))))
             p = items[0]
-            best = min(items, key=lambda x: HU_RANK[x["hu"]])
+            best = self._merged_eligibility(items, p, max((x.get("description", "") for x in items), key=len))
             desc = max((x.get("description", "") for x in items), key=len)
             locs, cc, tags, srcs, emp = [], [], [], [], []
             for x in items:
@@ -393,6 +393,26 @@ class Run:
         self.cur = recs
         log(f"{len(self.raw)} raw listings → {len(recs)} unique design jobs")
 
+    def _merged_eligibility(self, items, p, desc):
+        """One Hungary decision from everything the sources say about a job. A source that leaves the place
+        out must not outvote one that names a hybrid office in another country."""
+        locs, hints, tags = [], [], []
+        for x in items:
+            for l in x.get("locations") or []:
+                if l and l not in locs:
+                    locs.append(l)
+            for h in x.get("geo_hint") or []:
+                if h and h not in hints:
+                    hints.append(h)
+            tags += [t for t in x.get("tags") or [] if t not in tags]
+        known = [x["wp"] for x in items if x["wp"] != "unknown"]
+        own = [x["wp"] for x in items if x["kind"] == "ats" and x["wp"] != "unknown"]   # the company's own board knows best
+        wp = own[0] if own else next((w for w in ("hybrid", "onsite", "remote") if w in known), "unknown")
+        if "hungary" in tags and not any(geo.countries_in(l) for l in locs + hints):
+            hints.append("Hungary")   # a Hungarian company that doesn't name the city
+        g = classify.geo_and_eligibility({"locations": locs, "geo_hint": hints}, (p["title"] + "\n" + desc).lower(), wp)
+        return dict(g, wp=wp)
+
     # ---------- 6. lifecycle ----------
     def lifecycle(self):
         meta = self.state["jobs"]
@@ -441,6 +461,8 @@ class Run:
                     carried += 1
                 self.cur[jid] = old
             else:
+                if old.get("posted") and old["posted"] < (date.fromisoformat(TODAY) - timedelta(days=400)).isoformat():
+                    old.pop("posted")
                 if days_between(old.get("last"), TODAY) > 5 or _JUNK_TITLE.search(old.get("title", "")):
                     dropped += 1
                     meta.pop(jid, None)

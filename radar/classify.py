@@ -183,6 +183,9 @@ def geo_and_eligibility(job, text_low, wp):
             return dict(countries=countries, region=region, hu="maybe", hu_why="Location and remote policy not stated")
         if wp == "unknown" and (worldwide or europe_word) and not countries:
             return dict(countries=countries, region=region, hu="maybe", hu_why="Europe-wide listing, remote policy not stated")
+        if not lab and region == "Not stated":
+            return dict(countries=countries, region=region, hu="no",
+                        hu_why={"hybrid": "Hybrid, office location not stated", "onsite": "Office job, location not stated"}.get(wp, "Not listed as remote"))
         where = lab or region
         return dict(countries=countries, region=region, hu="no",
                     hu_why={"hybrid": f"Hybrid in {where}", "onsite": f"Office in {where}"}.get(wp, f"In {where}, not listed as remote"))
