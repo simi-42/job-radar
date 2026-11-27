@@ -1072,6 +1072,16 @@
    "enabled": true,
    "search": true,
    "added": "2026-11-27"
+  },
+  {
+   "id": "greenpeace-ly64",
+   "name": "Greenpeace",
+   "url": "https://workfor.international.greenpeace.org",
+   "adapter": "auto",
+   "origin": "added by you",
+   "enabled": true,
+   "search": true,
+   "added": "2026-11-27"
   }
  ]
 }
