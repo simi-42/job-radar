@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-27T21:55:31+00:00",
- "duration_s": 122,
+ "updated": "2026-11-27T22:05:26+00:00",
+ "duration_s": 126,
  "full": false,
  "counts": {
-  "open": 2277,
-  "new_today": 947,
-  "hu_yes": 124,
+  "open": 7396,
+  "new_today": 6140,
+  "hu_yes": 139,
   "alerts": 0,
-  "closed_recent": 186
+  "closed_recent": 280
  },
  "sources": [
   {
@@ -179,7 +179,7 @@
    "origin": "your boards",
    "enabled": true,
    "search": true,
-   "adapter": "generic",
+   "adapter": "stapply",
    "ok": true,
    "count": 0,
    "error": null,
@@ -187,8 +187,8 @@
    "impact": false,
    "direct": "https://www.welcometothejungle.com/en/jobs?query=product%20designer",
    "closed": false,
-   "why": "needs_js",
-   "via": "page"
+   "why": "covered",
+   "via": "Stapply"
   },
   {
    "id": "workingnomads",
@@ -323,16 +323,16 @@
    "origin": "aggregator API",
    "enabled": true,
    "search": false,
-   "adapter": "rss",
+   "adapter": "stapply",
    "ok": true,
-   "count": 8,
+   "count": 0,
    "error": null,
    "note": null,
    "impact": false,
    "direct": "https://weworkremotely.com/categories/remote-design-jobs.rss",
    "closed": false,
-   "why": "ok",
-   "via": null
+   "why": "covered",
+   "via": "Stapply"
   },
   {
    "id": "jobspresso",
@@ -791,16 +791,16 @@
    "origin": "Follow the Money",
    "enabled": true,
    "search": false,
-   "adapter": "generic",
+   "adapter": "stapply",
    "ok": true,
-   "count": 7,
+   "count": 0,
    "error": null,
    "note": null,
    "impact": false,
    "direct": "https://www.ycombinator.com/jobs/role/designer/remote",
    "closed": false,
-   "why": "ok",
-   "via": "page"
+   "why": "covered",
+   "via": "Stapply"
   },
   {
    "id": "freelancingforgood",
@@ -1675,7 +1675,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 20,
+   "count": 19,
    "error": null,
    "note": null,
    "impact": false,
@@ -1693,7 +1693,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 33,
+   "count": 34,
    "error": null,
    "note": null,
    "impact": false,
@@ -1881,39 +1881,59 @@
    "closed": false,
    "why": "needs_js",
    "via": "page"
-  },
-  {
-   "id": "designfeed",
-   "name": "Design jobs feed (job-finder skill)",
-   "url": "https://raw.githubusercontent.com/egor-krasnoperov/design-growth-skills/jobs-feed/latest.json",
-   "origin": "added by you",
-   "enabled": true,
-   "search": false,
-   "adapter": "designfeed",
-   "ok": true,
-   "count": 962,
-   "error": null,
-   "note": "Daily list of European and worldwide-remote design vacancies from Egor Krasnoperov's job-finder skill (Stapply open ATS data, CC0)",
-   "impact": false,
-   "direct": "https://raw.githubusercontent.com/egor-krasnoperov/design-growth-skills/jobs-feed/latest.json",
-   "closed": false,
-   "why": "ok",
-   "via": "feed of 2026-11-27"
   }
  ],
+ "stapply": {
+  "generated_at": "2026-11-27T14:30:03.844045+00:00",
+  "ok": true,
+  "read": "2026-11-27",
+  "jobs": 7692,
+  "rows": 75975,
+  "seconds": 26,
+  "sources": [
+   "wttj",
+   "wwr",
+   "ycjobs"
+  ],
+  "by_source": {
+   "builtin": 1989,
+   "ashby": 759,
+   "eures": 617,
+   "workday": 460,
+   "smartrecruiters": 458,
+   "greenhouse": 321,
+   "successfactors": 301,
+   "workable": 255,
+   "teamtailor": 202,
+   "manatal": 184,
+   "oracle": 182,
+   "welcometothejungle": 170,
+   "lever": 145,
+   "avature": 142,
+   "wellfound": 134,
+   "phenom": 109,
+   "recruitee": 100,
+   "zoho_recruit": 99,
+   "bamboohr": 99,
+   "personio": 98,
+   "breezy": 79,
+   "jazzhr": 63,
+   "eightfold": 53,
+   "join_com": 49,
+   "icims": 42
+  },
+  "covered_boards": 70658,
+  "skipped_boards": 1660,
+  "on": true
+ },
  "boards": {
-  "tracked": 1075,
-  "ok": 1051,
+  "tracked": 202,
+  "ok": 197,
   "failed": [
    {
     "key": "greenhouse-eu:orbisk",
     "company": "Orbisk",
     "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/orbisk/jobs"
-   },
-   {
-    "key": "greenhouse-eu:mentimeter",
-    "company": "Mentimeter",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/mentimeter/jobs"
    },
    {
     "key": "ashby:toggl",
@@ -1924,21 +1944,6 @@
     "key": "greenhouse:grammarly",
     "company": "Grammarly",
     "error": "FetchError: 404 Not Found https://boards-api.greenhouse.io/v1/boards/grammarly/jobs"
-   },
-   {
-    "key": "greenhouse-eu:payhawkio",
-    "company": "Payhawk",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/payhawkio/jobs"
-   },
-   {
-    "key": "greenhouse-eu:raisin",
-    "company": "Raisin",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/raisin/jobs"
-   },
-   {
-    "key": "greenhouse-eu:aisi",
-    "company": "Snyk",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/aisi/jobs"
    },
    {
     "key": "ashby:sana-roles",
@@ -1954,79 +1959,9 @@
     "key": "teamtailor:tt",
     "company": "Oda",
     "error": "FetchError: 404 Not Found https://tt.teamtailor.com/jobs.rss"
-   },
-   {
-    "key": "greenhouse-eu:plos",
-    "company": "PLOS",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/plos/jobs"
-   },
-   {
-    "key": "personio:typo3|com",
-    "company": "TYPO3",
-    "error": "FetchError: 404 Not Found https://typo3.jobs.personio.com/xml?language=en"
-   },
-   {
-    "key": "personio:innerspace|com",
-    "company": "Innerspace",
-    "error": "FetchError: 404 Not Found https://innerspace.jobs.personio.com/xml?language=en"
-   },
-   {
-    "key": "personio:evernow-gmbh|com",
-    "company": "Evernow GmbH",
-    "error": "FetchError: 404 Not Found https://evernow-gmbh.jobs.personio.com/xml?language=en"
-   },
-   {
-    "key": "ashby:Superhuman",
-    "company": "Superhuman",
-    "error": "FetchError: 404 Not Found https://api.ashbyhq.com/posting-api/job-board/Superhuman?includeCompensation=true"
-   },
-   {
-    "key": "personio:cofinproag|com",
-    "company": "Cofinproag",
-    "error": "FetchError: 404 Not Found https://cofinproag.jobs.personio.com/xml?language=en"
-   },
-   {
-    "key": "personio:hanako-gmbh|com",
-    "company": "Hanako",
-    "error": "FetchError: 404 Not Found https://hanako-gmbh.jobs.personio.com/xml?language=en"
-   },
-   {
-    "key": "personio:desk-ly|com",
-    "company": "desk.ly",
-    "error": "FetchError: 404 Not Found https://desk-ly.jobs.personio.com/xml?language=en"
-   },
-   {
-    "key": "greenhouse-eu:proalphagroup",
-    "company": "Proalpha Group",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/proalphagroup/jobs"
-   },
-   {
-    "key": "personio:achtbytes|com",
-    "company": "Achtbytes",
-    "error": "FetchError: 404 Not Found https://achtbytes.jobs.personio.com/xml?language=en"
-   },
-   {
-    "key": "personio:own3d|com",
-    "company": "StreamTV Media GmbH",
-    "error": "FetchError: 404 Not Found https://own3d.jobs.personio.com/xml?language=en"
-   },
-   {
-    "key": "greenhouse-eu:workwize",
-    "company": "Workwize",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/workwize/jobs"
-   },
-   {
-    "key": "greenhouse-eu:constructortech",
-    "company": "Constructor TECH",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/constructortech/jobs"
-   },
-   {
-    "key": "greenhouse-eu:valtech",
-    "company": "Valtech",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/valtech/jobs"
    }
   ],
-  "discovered": 713
+  "discovered": 1500
  },
  "companies": {
   "total": 480,
