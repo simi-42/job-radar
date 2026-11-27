@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-27T22:05:26+00:00",
- "duration_s": 126,
+ "updated": "2026-11-27T22:09:31+00:00",
+ "duration_s": 97,
  "full": false,
  "counts": {
-  "open": 7396,
-  "new_today": 6140,
-  "hu_yes": 139,
+  "open": 5244,
+  "new_today": 3990,
+  "hu_yes": 136,
   "alerts": 0,
-  "closed_recent": 280
+  "closed_recent": 310
  },
  "sources": [
   {
@@ -1098,15 +1098,15 @@
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": true,
+   "ok": false,
    "count": 0,
-   "error": null,
+   "error": "FetchError: 403 Forbidden https://jobs.thegiin.org/",
    "note": null,
    "impact": true,
    "direct": "https://jobs.thegiin.org/",
    "closed": false,
-   "why": "needs_js",
-   "via": "page"
+   "why": "blocked",
+   "via": null
   },
   {
    "id": "80000hours",
@@ -1675,7 +1675,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 19,
+   "count": 18,
    "error": null,
    "note": null,
    "impact": false,
@@ -1887,43 +1887,43 @@
   "generated_at": "2026-11-27T14:30:03.844045+00:00",
   "ok": true,
   "read": "2026-11-27",
-  "jobs": 7692,
+  "jobs": 5304,
   "rows": 75975,
-  "seconds": 26,
+  "seconds": 27,
   "sources": [
    "wttj",
    "wwr",
    "ycjobs"
   ],
   "by_source": {
-   "builtin": 1989,
    "ashby": 759,
-   "eures": 617,
-   "workday": 460,
+   "eures": 616,
    "smartrecruiters": 458,
+   "workday": 409,
    "greenhouse": 321,
-   "successfactors": 301,
+   "successfactors": 267,
    "workable": 255,
-   "teamtailor": 202,
-   "manatal": 184,
+   "teamtailor": 193,
    "oracle": 182,
    "welcometothejungle": 170,
    "lever": 145,
-   "avature": 142,
    "wellfound": 134,
    "phenom": 109,
    "recruitee": 100,
-   "zoho_recruit": 99,
    "bamboohr": 99,
    "personio": 98,
+   "zoho_recruit": 98,
    "breezy": 79,
+   "manatal": 78,
    "jazzhr": 63,
    "eightfold": 53,
    "join_com": 49,
-   "icims": 42
+   "icims": 42,
+   "pinpoint": 37,
+   "jibe": 33
   },
   "covered_boards": 70658,
-  "skipped_boards": 1660,
+  "skipped_boards": 216,
   "on": true
  },
  "boards": {
@@ -1961,7 +1961,7 @@
     "error": "FetchError: 404 Not Found https://tt.teamtailor.com/jobs.rss"
    }
   ],
-  "discovered": 1500
+  "discovered": 35
  },
  "companies": {
   "total": 480,
