@@ -1032,6 +1032,16 @@
    "enabled": true,
    "search": true,
    "added": "2026-11-27"
+  },
+  {
+   "id": "korm-ny-k2bq",
+   "name": "Kormány",
+   "url": "https://allas.dmu.gov.hu/DataCenter/Registration/JobAdvertisements/allasok",
+   "adapter": "auto",
+   "origin": "added by you",
+   "enabled": true,
+   "search": true,
+   "added": "2026-11-27"
   }
  ]
 }
