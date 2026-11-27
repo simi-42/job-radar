@@ -77,6 +77,8 @@ fieldset{border:0;margin:0;padding:0}legend{font-size:13px;color:var(--mute);mar
 .jt{font-size:17px;font-weight:600;line-height:1.3;margin:0}
 .jt a{text-decoration:none}.jt a:hover{text-decoration:underline}
 .co{font-size:15px;color:var(--mute)}
+.when{color:var(--ink);margin-top:2px}
+.when .mute{color:var(--mute)}
 .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;grid-column:2}
 .chip{font-size:12.5px;line-height:1;padding:6px 8px;border-radius:7px;background:var(--soft);white-space:nowrap}
 .chip.yes,.chip.maybe,.chip.no{white-space:normal;line-height:1.25;max-width:100%}
@@ -261,7 +263,8 @@ let STATUS = store.get("radar-status", {});
 let JOBS = [], META = {}, SHOWN = 40, OPEN = new Set();
 let CHECKED = store.get("radar-checked", {});
 
-const ageDays = j => { const d = j.posted || j.first; if (!d) return 999; return Math.max(0, Math.round((Date.parse(TODAY) - Date.parse(d)) / 864e5)); };
+// Jobs with no posting date that were already on a board when the radar first read it have no real date: they only show under "Any".
+const ageDays = j => { const d = j.posted || (j.undated ? null : j.first); if (!d) return 999; return Math.max(0, Math.round((Date.parse(TODAY) - Date.parse(d)) / 864e5)); };
 const ago = n => n >= 999 ? "" : n === 0 ? "today" : n < 14 ? `${n}d ago` : n < 60 ? `${Math.round(n / 7)}w ago` : `${Math.round(n / 30)}mo ago`;
 const status = j => STATUS[j.id] || "none";
 const regionOf = j => j.region || "Not stated";
@@ -328,6 +331,12 @@ document.addEventListener("load", e => { const i = e.target; if (i.tagName === "
 document.addEventListener("error", e => { const i = e.target; if (i.tagName === "IMG" && i.parentElement?.classList.contains("logo")) i.remove(); }, true);
 
 /* ---------- list ---------- */
+function when(j){
+  const seen = ago(ageDays({first: j.first}));
+  if (j.posted) return `Posted ${ago(ageDays({posted: j.posted}))}${j.first && j.first !== j.posted && seen !== ago(ageDays({posted: j.posted})) ? ` <span class="mute">· first seen ${seen}</span>` : ""}`;
+  if (j.undated) return `<span title="The board doesn't say when it was posted">Posting date unknown</span> <span class="mute">· first seen ${seen}</span>`;
+  return `First seen ${seen}`;
+}
 function card(j){
   const sc = Math.round(j.score), cls = sc >= 70 ? "hi" : "";
   const st = status(j), n = ageDays(j), isNew = j.first === TODAY || (j.first && ageDays({first:j.first}) <= 1 && !j.posted);
@@ -338,7 +347,6 @@ function card(j){
   if (j.loc) chips.push(`<span class="chip">${esc(j.loc)}</span>`);
   (j.emp || []).forEach(e => chips.push(`<span class="chip">${esc(LABELS.emp[e] || e)}</span>`));
   if (j.salary) chips.push(`<span class="chip num">${esc(j.salary)}</span>`);
-  chips.push(`<span class="chip">${j.posted ? "Posted " + ago(n) : "First seen " + ago(n)}</span>`);
   chips.push(`<span class="chip ${j.live === "verified" || j.live === "page live" ? "live" : ""}">${esc(LABELS.live[j.live] || j.live)}${j.live === "closed" && j.closed ? " " + esc(j.closed) : ""}</span>`);
   (j.flags || []).forEach(f => chips.push(`<span class="chip flag">${esc(f)}</span>`));
   const open = OPEN.has(j.id);
@@ -358,7 +366,8 @@ function card(j){
   return `<article class="job ${j.live === "closed" ? "closed" : ""} ${st === "hidden" ? "hidden" : ""}" data-id="${j.id}">
     ${logo(j)}
     <div class="head"><h3 class="jt"><a href="${esc(j.apply || j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a></h3><span class="match ${cls}" title="Match with your CV">${sc} match</span></div>
-    <div class="co">${esc(j.company || "Company not stated")}${j.tags && j.tags.length ? ` · <span class="small">${esc(j.tags.filter(t => LABELS.tag[t] && t !== "impact").map(t => LABELS.tag[t]).slice(0, 2).join(", "))}</span>` : ""}</div>
+    <div class="co">${esc(j.company || "Company not stated")}${j.tags && j.tags.filter(t => LABELS.tag[t] && t !== "impact").length ? ` · <span class="small">${esc(j.tags.filter(t => LABELS.tag[t] && t !== "impact").map(t => LABELS.tag[t]).slice(0, 2).join(", "))}</span>` : ""}</div>
+    <div class="when small">${when(j)}</div>
     <div class="chips">${chips.join("")}</div>
     <div class="acts">
       <button class="btn" type="button" data-act="why" aria-expanded="${open}">${open ? "Less" : "Details"}</button>
@@ -452,7 +461,7 @@ const guessRepo = () => { const m = location.hostname.match(/^([^.]+)\.github\.i
 const gh = () => ({repo: store.get("radar-repo", "") || guessRepo(), tok: store.get("radar-token", "")});
 async function api(path, opts = {}){
   const {repo, tok} = gh();
-  const r = await fetch(`https://api.github.com/repos/${repo}${path}`, Object.assign({}, opts, {headers: Object.assign({"Accept":"application/vnd.github+json","Authorization":`Bearer ${tok}`,"X-GitHub-Api-Version":"2022-11-28"}, opts.headers || {})}));
+  const r = await fetch(`https://api.github.com/repos/${repo}${path}`, Object.assign({cache: "no-store"}, opts, {headers: Object.assign({"Accept":"application/vnd.github+json","Authorization":`Bearer ${tok}`,"X-GitHub-Api-Version":"2022-11-28"}, opts.headers || {})}));
   if (!r.ok && r.status !== 204) throw new Error(`${r.status} ${(await r.text()).slice(0, 140)}`);
   return r.status === 204 ? null : r.json();
 }
@@ -489,12 +498,24 @@ async function addSource(e){
   const {tok, repo} = gh();
   if (!tok){ msg.innerHTML = `No token saved, so add it on GitHub instead: open <a href="https://github.com/${esc(repo)}/edit/main/config/sources.json" target="_blank" rel="noopener">sources.json</a> and paste this line into the list:<br><code>${esc(JSON.stringify(entry))},</code>`; return; }
   msg.textContent = "Adding…";
+  const host = u => { try { return new URL(u).hostname.replace(/^www\./, "") } catch(e){ return u } };
   try {
-    const f = await api(`/contents/config/sources.json`);
-    const doc = JSON.parse(unb64(f.content));
-    if (doc.sources.some(s => s.url === url)){ msg.textContent = "That link is already a source."; return; }
-    doc.sources.push(entry);
-    await api(`/contents/config/sources.json`, {method:"PUT", body: JSON.stringify({message:`Add source: ${name}`, content: b64(JSON.stringify(doc, null, 1) + "\n"), sha: f.sha})});
+    // Read the file fresh each try: right after another add, GitHub can still hand out the old copy, and saving over it fails (409).
+    for (let attempt = 1; ; attempt++){
+      const f = await api(`/contents/config/sources.json?ts=${Date.now()}`);
+      const doc = JSON.parse(unb64(f.content));
+      const same = doc.sources.find(s => host(s.url) === host(url));
+      if (same){ msg.textContent = `${host(url)} is already a source: ${same.name}.`; return; }
+      doc.sources.push(entry);
+      try {
+        await api(`/contents/config/sources.json`, {method:"PUT", body: JSON.stringify({message:`Add source: ${name}`, content: b64(JSON.stringify(doc, null, 1) + "\n"), sha: f.sha})});
+        break;
+      } catch(err){
+        if (attempt >= 4 || !/^(409|422)/.test(err.message)) throw err;
+        msg.textContent = "Adding… (GitHub was busy, trying again)";
+        await new Promise(r => setTimeout(r, 2500 * attempt));
+      }
+    }
     msg.textContent = `Added ${name}. It will be read from the next run. Start one now with Refresh.`;
     META.sources = (META.sources || []).concat([Object.assign({}, entry, {ok:null})]); renderSources();
     $("#f-add").reset(); $("#a-search").checked = true;

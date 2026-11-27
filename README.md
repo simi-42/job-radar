@@ -2,7 +2,7 @@
 
 A personal job tracker for product design roles. It reads job boards and company careers pages, scores each job against your CV, labels whether you can do it from Hungary, and alerts your phone about good new matches.
 
-It runs once a day on GitHub Actions, which is free for public repositories and uses no AI tokens unless you add a key. The site is a single page on GitHub Pages.
+It runs twice a day (05:17 and 17:17 Budapest time) on GitHub Actions, which is free for public repositories and uses no AI tokens unless you add a key. The site is a single page on GitHub Pages.
 
 ## Where jobs come from
 

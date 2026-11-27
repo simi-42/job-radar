@@ -2,7 +2,12 @@ name: Daily radar
 
 on:
   schedule:
-    - cron: "17 5 * * *"   # 06:17 in Budapest in winter, 07:17 in summer
+    # 05:17 and 17:17 in Budapest. GitHub schedules in UTC, so both the summer and the winter times are listed
+    # and the gate job below lets through only the one that matches Budapest's clock that day.
+    - cron: "17 3 * * *"
+    - cron: "17 4 * * *"
+    - cron: "17 15 * * *"
+    - cron: "17 16 * * *"
   workflow_dispatch:
     inputs:
       full:
@@ -20,7 +25,30 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      go: ${{ steps.t.outputs.go }}
+    steps:
+      - id: t
+        env:
+          EVENT: ${{ github.event_name }}
+          CRON: ${{ github.event.schedule }}
+        run: |
+          off=$(TZ=Europe/Budapest date +%z)   # +0100 in winter, +0200 in summer
+          go=true
+          if [ "$EVENT" = "schedule" ]; then
+            case "$off|$CRON" in
+              "+0200|17 3 * * *"|"+0200|17 15 * * *"|"+0100|17 4 * * *"|"+0100|17 16 * * *") go=true ;;
+              *) go=false ;;
+            esac
+          fi
+          echo "go=$go" >> "$GITHUB_OUTPUT"
+          echo "Budapest offset $off, trigger '${CRON:-manual}', run: $go"
+
   collect:
+    needs: gate
+    if: needs.gate.outputs.go == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 50
     steps:

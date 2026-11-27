@@ -52,6 +52,15 @@ def days_between(a, b):
         return 999
 
 
+def loc_label(locs, cc):
+    """Short place text for the card. A remote job open to 150 countries shouldn't read 'Afghanistan · Albania · Algeria'."""
+    if len(locs) <= 4:
+        return " · ".join(locs)
+    if "HU" in (cc or []):
+        return f"Hungary and {len(locs) - 1} other places"
+    return f"{len(locs)} places"
+
+
 class Run:
     def __init__(self, full=False, budget_s=40 * 60):
         self.t0 = time.time()
@@ -360,7 +369,7 @@ class Run:
             recs[jid] = {
                 "id": jid, "title": p["title"], "company": p["company"] if p["company"] != "Unknown" else "",
                 "url": p["url"], "apply": p.get("apply_url"), "sources": srcs, "kind": p["kind"],
-                "loc": " · ".join(locs[:3]), "cc": cc, "region": best["region"], "wp": best["wp"], "hu": best["hu"], "huw": best["hu_why"],
+                "loc": loc_label(locs, cc), "cc": cc, "region": best["region"], "wp": best["wp"], "hu": best["hu"], "huw": best["hu_why"],
                 "emp": emp, "sen": p["sen"], "fam": p["fam"], "score": sc, "rules": sc, "parts": parts, "skills": matched, "domains": dom,
                 "flags": flags, "gaps": gaps, "posted": posted, "tags": tags, "salary": next((x["salary"] for x in items if x.get("salary")), None),
                 "snip": desc[:700], "live": "verified" if p["kind"] == "ats" else "listed", "checked": TODAY, "imp": imp, "dom": dom,
@@ -372,11 +381,25 @@ class Run:
     # ---------- 6. lifecycle ----------
     def lifecycle(self):
         meta = self.state["jobs"]
+        # The day each source was first read: jobs without a posting date that were already there that day
+        # have no real date, so they are kept out of the "posted in the last N days" filters.
+        src_first = self.state.setdefault("src_first", {})
+        seen_by = {}
+        for jid, r in self.cur.items():
+            f = meta.get(jid, {}).get("first", TODAY)
+            for s in r.get("sources", []):
+                seen_by[s.get("n")] = min(seen_by.get(s.get("n"), TODAY), f)
+        for n, f in seen_by.items():
+            src_first.setdefault(n, f)
         for jid, r in self.cur.items():
             m = meta.setdefault(jid, {"first": TODAY})
             m.pop("closed", None)
             m["last"] = TODAY
             r["first"], r["last"] = m["first"], TODAY
+            if not r.get("posted"):
+                start = min((src_first.get(s.get("n"), TODAY) for s in r.get("sources", [])), default=TODAY)
+                if r["first"] <= start:
+                    r["undated"] = True
             if r["kind"] != "ats" and m.get("live") and days_between(m.get("checked"), TODAY) < 3:
                 r["live"], r["checked"] = m["live"], m["checked"]
             if m.get("llm"):
@@ -496,7 +519,8 @@ class Run:
         fresh = []
         for r in self.cur.values():
             m = meta.get(r["id"], {})
-            if m.get("alerted") or r.get("live") == "closed" or r.get("first") != TODAY:
+            if m.get("alerted") or r.get("live") == "closed" or r.get("first") != TODAY or r.get("undated") \
+                    or (r.get("posted") and days_between(r["posted"][:10], TODAY) > 14):
                 continue
             ok_place = r["hu"] in cfg["hu"] or (cfg.get("also_hungary_onsite") and "HU" in r.get("cc", []))
             if r["score"] >= cfg["min_score"] and ok_place:

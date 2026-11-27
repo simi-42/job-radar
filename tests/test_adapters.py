@@ -170,20 +170,25 @@ class BoardReaders(unittest.TestCase):
         http.FIXTURES = None
         boards.DIAG.clear()
 
-    def test_algolia_board(self):
-        page = ('<html><body><div id="__next"></div><script src="/_next/static/chunks/pages/_app-abc.js"></script>'
-                '<script src="https://www.googletagmanager.com/gtag.js"></script></body></html>')
-        js = 'var c=algoliasearch("ABCDEFGH12","0123456789abcdef0123456789abcdef");'
-        hits = {"nbHits": 2, "hits": [
-            {"objectID": "1", "title": "Senior Product Designer", "company_name": "Clean Air Fund", "url_external": "https://cleanair.org/jobs/1",
-             "card_locations": ["Remote, Europe"], "date_published": 1763856000},
-            {"objectID": "2", "title": "Operations Manager", "company_name": "X", "url_external": "https://x.org/2"}]}
-        fixtures({"static/chunks/pages/_app": js, "algolia.net/1/indexes/jobs_prod/query": hits, "board.example.org": page})
-        src = {"id": "pg", "url": "https://board.example.org/?jobs_prod%5Bquery%5D=designer"}
-        jobs = boards.generic(src)
-        self.assertEqual([(j["title"], j["company"], j["url"]) for j in jobs],
-                         [("Senior Product Designer", "Clean Air Fund", "https://cleanair.org/jobs/1")])
-        self.assertEqual(boards.DIAG["pg"]["via"], "algolia")
+    def test_job_card_links(self):
+        card = ('<a href="/jobs/senior-product-designer-kit-9283"><span>10 days ago</span><h3>Senior Product Designer - Product Growth</h3>'
+                '<p>Kit</p><span>10 days ago</span><span>Anywhere in the World</span><span>$172,000</span></a>'
+                '<a href="/jobs/x"><span>🇩🇰</span><span>København, DK</span> <b>Senior UX Designer</b> <i>Twoday</i></a>')
+        jobs = boards.links_jobs(card, "https://board.example/remote-design-jobs", {"id": "rw"})
+        self.assertEqual([(j["title"], j["company"]) for j in jobs],
+                         [("Senior Product Designer - Product Growth", "Kit"), ("Senior UX Designer", "Twoday")])
+        self.assertEqual(jobs[0]["posted"], boards.posted_from_ago("10 days ago"))
+        self.assertNotIn("$", jobs[0]["title"] + jobs[0]["company"])
+
+    def test_sitemap_board(self):
+        smap = ('<urlset><url><loc>https://board.example/opportunity/1-digital-design-lead-at-vital-strategies</loc><lastmod>2026-11-26T02:14:37+00:00</lastmod></url>'
+                '<url><loc>https://board.example/opportunity/2-pr-officer-at-comic-relief</loc><lastmod>2026-11-26</lastmod></url>'
+                '<url><loc>https://board.example/opportunity/3-senior-product-designer-at-old-co</loc><lastmod>2020-01-01</lastmod></url></urlset>')
+        page = ('<script type="application/ld+json">{"@type":"JobPosting","title":"Digital Design Lead with Vital Strategies | Escape The City",'
+                '"hiringOrganization":{"name":"Vital Strategies"},"datePosted":"2002-03-05"}</script>')
+        fixtures({"board.example/sitemap.xml": smap, "1-digital-design-lead": page, "robots.txt": "User-agent: *\nDisallow:"})
+        jobs = boards.sitemap({"id": "etc", "sitemap": "https://board.example/sitemap.xml", "match": "/opportunity/", "days": 3650})
+        self.assertEqual([(j["title"], j["company"], j["posted"][:10]) for j in jobs], [("Digital Design Lead", "Vital Strategies", "2026-11-26")])
 
     def test_wordpress_job_feed(self):
         page = '<html><head><link rel="stylesheet" href="/wp-content/themes/x.css"></head><body><div id="app"></div></body></html>'

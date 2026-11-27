@@ -1,9 +1,11 @@
 """Job boards and aggregators: named APIs, RSS, Getro talent boards, and a generic reader for any page."""
+import datetime as dt
 import json
 import re
+import urllib.robotparser
 from urllib.parse import urljoin, urlparse
 
-from .. import http
+from .. import geo, http
 from ..classify import title_family
 from ..detect import parse_ats_url
 from ..model import html_to_text, make_job, registrable
@@ -379,27 +381,93 @@ def _company_from_url(url):
     return ""
 
 
+_AGO = re.compile(r"^(?:posted\s+)?(?:(\d+|an?|one)\s*(minute|min|hour|hr|day|week|wk|month|mo)s?\s+ago|(\d+)\s*([hdwm])(?:\s+ago)?|today|yesterday|just now|new)$", re.I)
+_PAY = re.compile(r"[$€£¥₹]|\b(?:usd|eur|gbp|chf|huf|pln)\b|\b\d{2,3}(?:[,.]\d{3})+\b|\b\d{2,3}k\b", re.I)
+_PLACE = re.compile(r"\b(?:anywhere|remote|worldwide|global|hybrid|on-?site|in[- ]office|europe|emea|eu\b|uk\b|usa?\b|americas|apac|latam|timezone|utc|cet|gmt)", re.I)
+_UNITS = {"min": 0, "minute": 0, "hour": 0, "hr": 0, "h": 0, "day": 1, "d": 1, "week": 7, "wk": 7, "w": 7, "month": 30, "mo": 30, "m": 30}
+
+
+def posted_from_ago(text, today=None):
+    """'10 days ago' / '3d' / 'yesterday' -> ISO date, else None."""
+    m = _AGO.match((text or "").strip())
+    if not m:
+        return None
+    t = text.strip().lower()
+    days = 0
+    if "yesterday" in t:
+        days = 1
+    elif m.group(1):
+        n = 1 if m.group(1) in ("a", "an", "one") else int(m.group(1))
+        days = n * _UNITS[m.group(2).lower()]
+    elif m.group(3):
+        days = int(m.group(3)) * _UNITS[m.group(4).lower()]
+    base = dt.date.fromisoformat(today) if today else dt.date.today()
+    return (base - dt.timedelta(days=days)).isoformat()
+
+
+def _card_parts(inner):
+    """Text pieces of a job card link, in order, without repeats: ['10 days ago', 'Senior Product Designer', 'Kit', ...]."""
+    parts = []
+    for piece in re.split(r"<[^>]+>", inner):
+        t = re.sub(r"\s+", " ", html_to_text(piece)).strip(" ·|•–—-")
+        if t and (not parts or parts[-1] != t) and t not in parts:
+            parts.append(t)
+    return parts
+
+
+def parse_card(inner):
+    """Split a job card link into (title, company, location, posted)."""
+    parts = _card_parts(inner)
+    title_i = next((i for i, t in enumerate(parts) if len(t) <= 120 and title_family(t)), None)
+    if title_i is None:
+        return None
+    title, company, loc, posted = parts[title_i], "", "", None
+    for i, t in enumerate(parts):
+        if i == title_i:
+            continue
+        if not posted and _AGO.match(t):
+            posted = posted_from_ago(t)
+        elif _AGO.match(t) or _PAY.search(t) or len(t) > 80:
+            continue
+        elif not loc and (_PLACE.search(t) or geo.countries_in(t)):
+            loc = t
+        elif not company and len(t.split()) <= 6 and re.search(r"[^\W\d_]{2,}", t) and not re.search(r"^(?:apply|view|see|save|new|featured|full[- ]time|part[- ]time|contract)\b", t, re.I):
+            company = t
+    return title, company, loc, posted
+
+
+def _after(page, end, n=4):
+    """Text pieces right after a link that holds only the title, e.g. the company and place printed below it."""
+    return _card_parts(page[end:end + 700])[:n]
+
+
 def links_jobs(page, base, src):
     out, seen = [], set()
-    host = urlparse(base).netloc
-    for href, inner in _A.findall(page):
+    for m in _A.finditer(page):
+        href, inner = m.group(1), m.group(2)
         text = re.sub(r"\s+", " ", html_to_text(inner)).strip()
-        if not text or len(text) > 160:
-            continue
-        # Use the first line-ish chunk as the title
-        title = re.split(r"\s{2,}|\n| · | \| ", text)[0][:120]
-        if not title_family(title):
+        if not text:
             continue
         url = urljoin(base, href)
         if url in seen or urlparse(url).scheme not in ("http", "https"):
             continue
-        seen.add(url)
-        title, company, loc = _clean_link_title(text)
+        card = parse_card(inner) if len(_card_parts(inner)) > 1 else None
+        if card:
+            title, company, loc, posted = card
+        else:
+            if len(text) > 160:
+                continue
+            title, company, loc = _clean_link_title(text)
+            posted = None
         if not title_family(title):
             continue
+        seen.add(url)
+        if not company:
+            rest = parse_card(f"<b>{title}</b>" + "".join(f"<i>{p}</i>" for p in _after(page, m.end())))
+            if rest:
+                company, loc, posted = rest[1], loc or rest[2], posted or rest[3]
         company = company or _company_from_url(url)
-        rest = text.replace(title, "").strip(" ·|-—")
-        out.append(_j(title, company, url, src["id"], locations=[loc] if loc else [], description=rest[:300]))
+        out.append(_j(title, company, url, src["id"], locations=[loc] if loc else [], posted=posted))
         if len(out) >= 60:
             break
     return out
@@ -470,74 +538,6 @@ def wp_jobs(src, page, final):
     return out
 
 
-# ---------- boards whose search runs on Algolia (80,000 Hours, Probably Good, Idealist, ...) ----------
-
-_ALG_PAIR = re.compile(r'["\']([A-Z0-9]{10})["\']\s*,\s*["\']([a-f0-9]{32})["\']')
-_ALG_APP = re.compile(r'(?:appId|applicationId|application_id|ALGOLIA_APP(?:LICATION)?_ID|algoliaAppId)\W{1,6}([A-Z0-9]{10})\b')
-_ALG_DSN = re.compile(r'\b([a-zA-Z0-9]{10})(?:-dsn)?\.algolia(?:net)?\.(?:net|io)')
-_ALG_KEY = re.compile(r'(?:apiKey|searchApiKey|searchKey|search_key|search_api_key|searchOnlyApiKey|ALGOLIA_(?:SEARCH_)?(?:API_)?KEY|algoliaApiKey)'
-                      r'\W{1,6}([A-Za-z0-9+/=]{32,400})["\']')
-_ALG_IDX = re.compile(r'(?:indexName|index_name|ALGOLIA_INDEX(?:_NAME)?|algoliaIndex)\W{1,6}([\w.\-]{2,80})["\']')
-_ALG_ROUTE = re.compile(r'([A-Za-z][\w.\-]{1,60})(?:\[|%5B)query(?:\]|%5D)=')
-_SCRIPT_SRC = re.compile(r'<script[^>]+src=["\']([^"\']+)["\']', re.I)
-_NOT_APP_JS = re.compile(r"googletagmanager|google-analytics|gtag|hotjar|facebook|intercom|stripe|recaptcha|cookie|consent|segment|"
-                         r"clarity|hubspot|sentry|polyfill|jquery|plausible|fathom|crisp|zendesk|youtube|vimeo|maps\.google", re.I)
-
-
-def _algolia_config(page, final, src):
-    """Find Algolia app id, search key and index names in the page and its own scripts."""
-    texts = [page]
-    if "algolia" not in page.lower():
-        host = registrable(urlparse(final).netloc)
-        srcs = [urljoin(final, s) for s in _SCRIPT_SRC.findall(page) if not _NOT_APP_JS.search(s)]
-        srcs = [s for s in srcs if registrable(urlparse(s).netloc) == host or re.search(r"cloudfront|vercel|netlify|cdn\.", s)]
-        srcs.sort(key=lambda s: 0 if re.search(r"_app|main|app[.-]|index|pages/|jobs|search|board", s) else 1)
-        for s in srcs[:8]:
-            try:
-                js = http.get_text(s, timeout=20)
-            except Exception:
-                continue
-            if "algolia" in js.lower() or _ALG_PAIR.search(js):
-                texts.append(js)
-    blob = "\n".join(texts)
-    app = key = None
-    m = _ALG_PAIR.search(blob)
-    if m:
-        app, key = m.group(1), m.group(2)
-    app = app or next(iter(_ALG_APP.findall(blob)), None)
-    if not app:
-        dsn = [a.upper() for a in _ALG_DSN.findall(blob) if not a.isdigit()]
-        app = dsn[0] if dsn else None
-    key = key or next(iter(_ALG_KEY.findall(blob)), None)
-    idx = _ALG_ROUTE.findall(src.get("url", "")) + _ALG_ROUTE.findall(final) + _ALG_IDX.findall(blob)
-    idx = list(dict.fromkeys(i for i in idx if not i.lower().startswith(("http", "query"))))
-    return app, key, idx[:5]
-
-
-def algolia_jobs(src, page, final, query="design"):
-    app, key, indices = _algolia_config(page, final, src)
-    if not (app and key and indices):
-        return []
-    p = urlparse(final)
-    head = {"X-Algolia-Application-Id": app, "X-Algolia-API-Key": key, "Referer": final, "Origin": f"{p.scheme}://{p.netloc}"}
-    for idx in indices:
-        try:
-            data = http.get_json(f"https://{app.lower()}-dsn.algolia.net/1/indexes/{idx}/query", method="POST", headers=head,
-                                 data={"params": f"query={query}&hitsPerPage=300"})
-        except Exception:
-            continue
-        out = []
-        for hit in data.get("hits") or []:
-            if not any(isinstance(hit.get(k), (str, dict)) and hit.get(k) for k in URL_KEYS):
-                hit = dict(hit, url=f"{src.get('direct') or src['url']}#job-{hit.get('objectID', '')}")
-            j = _job_from_dict(hit, final, src)
-            if j:
-                out.append(j)
-        if out or data.get("nbHits"):
-            return out
-    return []
-
-
 def generic(src, url=None):
     url = url or src["url"]
     status, page, final = http.fetch(url)
@@ -562,9 +562,6 @@ def generic(src, url=None):
     if not out:
         out = links_jobs(page, final, src)
         via = "page links" if out else via
-    if not out and (_ALG_ROUTE.search(url) or "algolia" in page.lower() or _SPA.search(page)):
-        out = algolia_jobs(src, page, final)
-        via = "algolia" if out else via
     # de-duplicate by URL
     seen, uniq = set(), []
     for j in out:
@@ -574,6 +571,69 @@ def generic(src, url=None):
         uniq.append(j)
     diagnose(src, status, page, len(uniq), via)
     return uniq
+
+
+# ---------- boards that list job pages in a sitemap (Idealist, Escape the City, ...) ----------
+_LOC = re.compile(r"<url>\s*<loc>\s*([^<\s]+)\s*</loc>(?:\s*<lastmod>\s*([^<\s]+)\s*</lastmod>)?", re.I)
+_SUBMAP = re.compile(r"<sitemap>\s*<loc>\s*([^<\s]+)\s*</loc>", re.I)
+_DESIGN_SLUG = re.compile(r"(?:^|[-/_])(?:product-design|ux|ui|user-experience|interaction-design|design-system|designer|head-of-design|"
+                          r"design-lead|design-manager|design-director|director-of-design|vp-design|service-design|content-design|"
+                          r"experience-design|digital-design)(?:$|[-/_])", re.I)
+
+
+def _allowed(url):
+    """Respect the board's robots.txt for our requests."""
+    p = urlparse(url)
+    rp = _ROBOTS.get(p.netloc)
+    if rp is None:
+        rp = urllib.robotparser.RobotFileParser()
+        try:
+            rp.parse(http.get_text(f"{p.scheme}://{p.netloc}/robots.txt", timeout=15).splitlines())
+        except Exception:
+            rp.parse([])
+        _ROBOTS[p.netloc] = rp
+    return rp.can_fetch(http.UA, url)
+
+
+_ROBOTS = {}
+
+
+def sitemap(src):
+    """src: {"sitemap": url of the sitemap or index, "match": regex a job page URL must match, "days": max age, "max": pages to open}."""
+    match = re.compile(src.get("match", r"/jobs?/"))
+    maps, urls = [src["sitemap"]], []
+    while maps and len(maps) < 40:
+        m = maps.pop(0)
+        text = http.get_text(m, timeout=40)
+        subs = _SUBMAP.findall(text)
+        if subs:
+            maps += [u for u in subs if re.search(src.get("submap", r"job|opportunit|vacanc|position"), u, re.I)]
+            continue
+        urls += _LOC.findall(text)
+    cutoff = (dt.date.today() - dt.timedelta(days=int(src.get("days", 45)))).isoformat()
+    picked = [(u, mod) for u, mod in urls if match.search(u) and _DESIGN_SLUG.search(urlparse(u).path) and (not mod or mod[:10] >= cutoff)]
+    picked.sort(key=lambda x: x[1] or "", reverse=True)
+    out, opened = [], 0
+    for u, mod in picked[: int(src.get("max", 40))]:
+        if not _allowed(u):
+            continue
+        try:
+            _, page, final = http.fetch(u)
+        except Exception:
+            continue
+        opened += 1
+        for j in jsonld_jobs(page, final, src):
+            j["url"] = final
+            j["title"] = re.sub(r"\s*\|[^|]+$", "", j["title"]).strip()          # "... | Escape The City"
+            if j.get("company"):
+                j["title"] = re.sub(rf"\s+(?:with|at)\s+{re.escape(j['company'])}$", "", j["title"], flags=re.I)
+            if mod and (not j.get("posted") or j["posted"] < "2015"):
+                j["posted"] = mod[:10]
+            if title_family(j["title"]):
+                out.append(j)
+    DIAG[src["id"]] = {"reason": "ok" if out else ("no_match" if urls else "unclear"), "status": 200,
+                       "via": f"sitemap: {len(urls)} pages, {len(picked)} design, {opened} opened"}
+    return out
 
 
 # ---------- curated roundups (e.g. jessica.tech weekly Tech for Good jobs) ----------
@@ -642,7 +702,7 @@ def roundup(src):
 NAMED = {
     "hiddenjobs": hiddenjobs, "rss": rss, "remotive": remotive, "remoteok": remoteok, "himalayas": himalayas,
     "arbeitnow": arbeitnow, "jobicy": jobicy, "workingnomads": workingnomads, "reliefweb": reliefweb,
-    "getro": getro, "generic": generic, "roundup": roundup,
+    "getro": getro, "generic": generic, "roundup": roundup, "sitemap": sitemap,
 }
 DOMAIN_ADAPTER = {
     "remotive.com": "remotive", "remoteok.com": "remoteok", "himalayas.app": "himalayas", "arbeitnow.com": "arbeitnow",

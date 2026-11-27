@@ -63,7 +63,8 @@
    "origin": "your boards",
    "enabled": true,
    "search": true,
-   "impact": true
+   "impact": true,
+   "note": "Shows jobs only in a browser and has no job sitemap"
   },
   {
    "id": "relomote",
@@ -94,7 +95,8 @@
    "origin": "your boards",
    "enabled": true,
    "search": true,
-   "impact": false
+   "impact": false,
+   "note": "Shows companies only in a browser; its data feed is closed to crawlers"
   },
   {
    "id": "wttj",
@@ -104,7 +106,8 @@
    "origin": "your boards",
    "enabled": true,
    "search": true,
-   "impact": false
+   "impact": false,
+   "note": "Job search now asks you to sign in"
   },
   {
    "id": "workingnomads",
@@ -281,12 +284,12 @@
   {
    "id": "northzone",
    "name": "Northzone portfolio jobs",
-   "url": "https://jobs.northzone.com/jobs?q=designer",
+   "url": "https://opportunities.northzone.com/jobs?q=designer",
    "adapter": "getro",
    "origin": "VC talent boards",
-   "enabled": false,
+   "enabled": true,
    "search": false,
-   "note": "Board address not found",
+   "note": "Moved to opportunities.northzone.com",
    "impact": false
   },
   {
@@ -297,7 +300,7 @@
    "origin": "VC talent boards",
    "enabled": false,
    "search": false,
-   "note": "Board address not found",
+   "note": "Old board address is gone; no new public board found",
    "impact": false
   },
   {
@@ -308,29 +311,29 @@
    "origin": "VC talent boards",
    "enabled": false,
    "search": false,
-   "note": "Board address not found",
+   "note": "Old board address is gone; no new public board found",
    "impact": false
   },
   {
    "id": "speedinvest",
    "name": "Speedinvest portfolio jobs",
-   "url": "https://jobs.speedinvest.com/jobs?q=designer",
+   "url": "https://careers.speedinvest.com/jobs?q=designer",
    "adapter": "getro",
    "origin": "VC talent boards",
-   "enabled": false,
+   "enabled": true,
    "search": false,
-   "note": "Board address not found",
+   "note": "Moved to careers.speedinvest.com",
    "impact": false
   },
   {
    "id": "seedcamp",
    "name": "Seedcamp portfolio jobs",
-   "url": "https://jobs.seedcamp.com/jobs?q=designer",
+   "url": "https://talent.seedcamp.com/jobs?q=designer",
    "adapter": "getro",
    "origin": "VC talent boards",
-   "enabled": false,
+   "enabled": true,
    "search": false,
-   "note": "Board address not found",
+   "note": "Moved to talent.seedcamp.com",
    "impact": false
   },
   {
@@ -378,12 +381,14 @@
   {
    "id": "jict",
    "name": "Jobs in Climate Tech",
-   "url": "https://brandedboards.workable.com/jobs-in-climate-tech",
+   "url": "https://jobs.sustainableventures.co.uk/",
    "adapter": "generic",
    "origin": "Follow the Money",
    "enabled": true,
    "search": false,
-   "impact": true
+   "impact": true,
+   "direct": "https://jobs.sustainableventures.co.uk/",
+   "note": "Jobs in Climate Tech moved here; shows jobs only in a browser"
   },
   {
    "id": "sff",
@@ -391,9 +396,10 @@
    "url": "https://jobs.thesustainablefashionforum.com/",
    "adapter": "generic",
    "origin": "Follow the Money",
-   "enabled": true,
+   "enabled": false,
    "search": true,
-   "impact": true
+   "impact": true,
+   "note": "Board closed (its job board host says it is unavailable)"
   },
   {
    "id": "hardproblems",
@@ -469,12 +475,17 @@
    "id": "idealist",
    "name": "Idealist",
    "url": "https://www.idealist.org/en/jobs?q=product%20designer",
-   "adapter": "generic",
+   "adapter": "sitemap",
    "origin": "Grassroots & Grace",
    "enabled": true,
    "search": true,
    "impact": true,
-   "direct": "https://www.idealist.org/en/jobs?q=product%20designer&locationType=REMOTE"
+   "direct": "https://www.idealist.org/en/jobs?q=product%20designer&locationType=REMOTE",
+   "sitemap": "https://www.idealist.org/sitemap-jobs-en-1.xml",
+   "match": "/nonprofit-job/",
+   "days": 45,
+   "max": 40,
+   "note": "Read through its job sitemap (design roles only)"
   },
   {
    "id": "impactroles",
@@ -634,7 +645,8 @@
    "origin": "Grassroots & Grace",
    "enabled": true,
    "search": true,
-   "impact": true
+   "impact": true,
+   "note": "Shows jobs only in a browser; its sitemap lists organisations, not jobs"
   },
   {
    "id": "eaopps",
@@ -712,9 +724,10 @@
    "url": "https://www.allianceforpeacebuilding.org/peacebuilding-jobs",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": true,
+   "enabled": false,
    "search": false,
-   "impact": true
+   "impact": true,
+   "note": "Jobs page removed (404)"
   },
   {
    "id": "csrjobs",
@@ -750,11 +763,17 @@
    "id": "escapethecity",
    "name": "Escape the City",
    "url": "https://www.escapethecity.org/",
-   "adapter": "generic",
+   "adapter": "sitemap",
    "origin": "Grassroots & Grace",
    "enabled": true,
    "search": true,
-   "impact": true
+   "impact": true,
+   "sitemap": "https://www.escapethecity.org/sitemap.xml",
+   "match": "/opportunity/",
+   "days": 30,
+   "max": 40,
+   "direct": "https://www.escapethecity.org/search/jobs",
+   "note": "Read through its job sitemap (design roles only)"
   },
   {
    "id": "socialenterpriseuk",
@@ -832,9 +851,10 @@
    "url": "https://euaffairs.jobs/",
    "adapter": "generic",
    "origin": "Grassroots & Grace",
-   "enabled": true,
+   "enabled": false,
    "search": true,
-   "impact": true
+   "impact": true,
+   "note": "Site is down (address does not resolve)"
   },
   {
    "id": "greenjobsnet",
@@ -1004,23 +1024,23 @@
    "note": "Weekly roundup. Every company job board it links to is tracked daily from then on."
   },
   {
-   "id": "real-work-from-anywhere-6o5c",
-   "name": "Real Work From Anywhere",
-   "url": "https://www.realworkfromanywhere.com/",
-   "adapter": "auto",
+   "id": "anywhereroles",
+   "name": "AnywhereRoles: product designer",
+   "url": "https://anywhereroles.com/?q=product%20designer",
+   "adapter": "generic",
    "origin": "added by you",
    "enabled": true,
    "search": true,
    "added": "2026-11-27"
   },
   {
-   "id": "hidden-jobs-8pqy",
-   "name": "Hidden Jobs",
-   "url": "https://sarabrunettini.github.io/hiddenjobs/",
-   "adapter": "auto",
+   "id": "anywhereroles-ux",
+   "name": "AnywhereRoles: UX designer",
+   "url": "https://anywhereroles.com/?q=ux%20designer",
+   "adapter": "generic",
    "origin": "added by you",
    "enabled": true,
-   "search": true,
+   "search": false,
    "added": "2026-11-27"
   },
   {
