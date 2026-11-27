@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-27T20:55:29+00:00",
- "duration_s": 120,
+ "updated": "2026-11-27T21:00:47+00:00",
+ "duration_s": 166,
  "full": false,
  "counts": {
-  "open": 1757,
-  "new_today": 353,
-  "hu_yes": 86,
+  "open": 1722,
+  "new_today": 352,
+  "hu_yes": 79,
   "alerts": 0,
-  "closed_recent": 153
+  "closed_recent": 156
  },
  "sources": [
   {
@@ -699,13 +699,13 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 1,
+   "count": 30,
    "error": null,
    "note": null,
    "impact": false,
    "direct": "https://4dayweek.io/remote-jobs/design",
    "why": "ok",
-   "via": "feed"
+   "via": "feed + page links"
   },
   {
    "id": "remoteclimate",
@@ -936,14 +936,14 @@
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": true,
+   "ok": false,
    "count": 0,
-   "error": null,
+   "error": "FetchError: 403 Forbidden https://climate.jobs/",
    "note": null,
    "impact": true,
    "direct": "https://climate.jobs/",
-   "why": "no_match",
-   "via": "page"
+   "why": "blocked",
+   "via": null
   },
   {
    "id": "conservationcareers",
@@ -1004,14 +1004,14 @@
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": true,
-   "count": 1,
-   "error": null,
+   "ok": false,
+   "count": 0,
+   "error": "FetchError: 403 Forbidden https://nextbillion.net/jobs/",
    "note": null,
    "impact": true,
    "direct": "https://nextbillion.net/jobs/",
-   "why": "ok",
-   "via": "page links"
+   "why": "blocked",
+   "via": null
   },
   {
    "id": "impactinvestingcareers",
@@ -1157,14 +1157,14 @@
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": true,
+   "ok": false,
    "count": 0,
-   "error": null,
+   "error": "FetchError: URLError https://www.humanrightscareers.com/jobs/",
    "note": null,
    "impact": true,
    "direct": "https://www.humanrightscareers.com/jobs/",
-   "why": "no_match",
-   "via": "feed"
+   "why": "error",
+   "via": null
   },
   {
    "id": "globaljobs",
@@ -1260,13 +1260,13 @@
    "search": true,
    "adapter": "sitemap",
    "ok": true,
-   "count": 24,
+   "count": 17,
    "error": null,
    "note": "Read through its job sitemap (design roles only)",
    "impact": true,
    "direct": "https://www.escapethecity.org/search/jobs",
    "why": "ok",
-   "via": "sitemap: 8431 pages, 72 design, 39 opened"
+   "via": "sitemap: 8431 pages, 29 design, 28 opened"
   },
   {
    "id": "socialenterpriseuk",
@@ -1412,14 +1412,14 @@
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": true,
+   "ok": false,
    "count": 0,
-   "error": null,
+   "error": "FetchError: 403 Forbidden https://greenjobs.net/",
    "note": null,
    "impact": true,
    "direct": "https://greenjobs.net/",
-   "why": "no_match",
-   "via": "page"
+   "why": "blocked",
+   "via": null
   },
   {
    "id": "impactopportunity",
@@ -1583,7 +1583,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 21,
+   "count": 19,
    "error": null,
    "note": null,
    "impact": false,
@@ -1685,13 +1685,13 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 1,
+   "count": 11,
    "error": null,
    "note": null,
    "impact": false,
    "direct": "https://anywhereroles.com/?q=product%20designer",
    "why": "ok",
-   "via": "feed"
+   "via": "feed + page links"
   },
   {
    "id": "anywhereroles-ux",
@@ -1702,13 +1702,13 @@
    "search": false,
    "adapter": "generic",
    "ok": true,
-   "count": 1,
+   "count": 11,
    "error": null,
    "note": null,
    "impact": false,
    "direct": "https://anywhereroles.com/?q=ux%20designer",
    "why": "ok",
-   "via": "feed"
+   "via": "feed + page links"
   },
   {
    "id": "digic-pictures-is1j",
@@ -1743,16 +1743,70 @@
    "direct": "https://allas.dmu.gov.hu/DataCenter/Registration/JobAdvertisements/allasok",
    "why": "needs_js",
    "via": "page"
+  },
+  {
+   "id": "idomsoft",
+   "name": "Idomsoft",
+   "url": "https://career.idomsoft.hu/jobs/budapest/",
+   "origin": "added by you",
+   "enabled": true,
+   "search": true,
+   "adapter": "generic",
+   "ok": true,
+   "count": 0,
+   "error": null,
+   "note": null,
+   "impact": false,
+   "direct": "https://career.idomsoft.hu/jobs/budapest/",
+   "why": "no_match",
+   "via": "page"
+  },
+  {
+   "id": "greenpeace-ly64",
+   "name": "Greenpeace",
+   "url": "https://workfor.international.greenpeace.org",
+   "origin": "added by you",
+   "enabled": true,
+   "search": true,
+   "adapter": "generic",
+   "ok": true,
+   "count": 0,
+   "error": null,
+   "note": null,
+   "impact": false,
+   "direct": "https://workfor.international.greenpeace.org",
+   "why": "needs_js",
+   "via": "page"
   }
  ],
  "boards": {
-  "tracked": 918,
-  "ok": 891,
+  "tracked": 905,
+  "ok": 887,
   "failed": [
+   {
+    "key": "generic:https://zerowasteeurope.eu/join-us/donate/",
+    "company": "Zero Waste Europe",
+    "error": "FetchError: 403 Forbidden https://zerowasteeurope.eu/join-us/donate/"
+   },
+   {
+    "key": "generic:https://niok.hu/karrier/",
+    "company": "NIOK",
+    "error": "FetchError: 403 Forbidden https://niok.hu/karrier/"
+   },
    {
     "key": "greenhouse-eu:orbisk",
     "company": "Orbisk",
     "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/orbisk/jobs"
+   },
+   {
+    "key": "generic:https://wwf.hu/karrier/",
+    "company": "WWF Hungary",
+    "error": "FetchError: 403 Forbidden https://wwf.hu/karrier/"
+   },
+   {
+    "key": "generic:https://ultinous.com/careers/",
+    "company": "Ultinous",
+    "error": "FetchError: 403 Forbidden https://ultinous.com/careers/"
    },
    {
     "key": "greenhouse-eu:mentimeter",
@@ -1810,74 +1864,9 @@
     "error": "FetchError: 404 Not Found https://typo3.jobs.personio.com/xml?language=en"
    },
    {
-    "key": "greenhouse-eu:octopuslegacy",
-    "company": "Octopus Legacy",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/octopuslegacy/jobs"
-   },
-   {
-    "key": "greenhouse-eu:digilab",
-    "company": "digiLab",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/digilab/jobs"
-   },
-   {
-    "key": "greenhouse-eu:enginy",
-    "company": "Enginy",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/enginy/jobs"
-   },
-   {
-    "key": "greenhouse-eu:ledgy",
-    "company": "Ledgy",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/ledgy/jobs"
-   },
-   {
-    "key": "greenhouse-eu:apadmi",
-    "company": "Apadmi",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/apadmi/jobs"
-   },
-   {
-    "key": "greenhouse-eu:financialtimes33",
-    "company": "Financial Times",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/financialtimes33/jobs"
-   },
-   {
-    "key": "greenhouse-eu:world4you",
-    "company": "World4you",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/world4you/jobs"
-   },
-   {
-    "key": "greenhouse-eu:exclaimer",
-    "company": "Exclaimer",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/exclaimer/jobs"
-   },
-   {
-    "key": "greenhouse-eu:decathlontechnologyen",
-    "company": "Decathlon Digital",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/decathlontechnologyen/jobs"
-   },
-   {
-    "key": "ashby:superhuman",
-    "company": "Superhuman",
-    "error": "FetchError: 404 Not Found https://api.ashbyhq.com/posting-api/job-board/superhuman?includeCompensation=true"
-   },
-   {
-    "key": "greenhouse-eu:readdle70",
-    "company": "Readdle",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/readdle70/jobs"
-   },
-   {
-    "key": "greenhouse-eu:decathlontechnology",
-    "company": "Decathlon Digital",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/decathlontechnology/jobs"
-   },
-   {
     "key": "ashby:molecule",
     "company": "Molecule",
     "error": "FetchError: 404 Not Found https://api.ashbyhq.com/posting-api/job-board/molecule?includeCompensation=true"
-   },
-   {
-    "key": "greenhouse-eu:terraquantum",
-    "company": "Terra Quantum",
-    "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/terraquantum/jobs"
    },
    {
     "key": "ashby:alpaca",
