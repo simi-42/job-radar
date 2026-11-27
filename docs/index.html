@@ -10,10 +10,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
 <style>
 /* VOICE: a working instrument, calm and exact; the finding first.
-   IDEA: a radar readout: one long match-score scale with every open job plotted on it.
+   IDEA: a radar readout: filters as compact segmented rows, then the job cards.
    PICTURE: the score histogram strip with an orange threshold pointer you drag.
    COLOUR and TYPE: aluminium and black, one orange pointer; Geist and Geist Mono.
-   LAYOUT: readout, scale, filters, then the job list; stacks on a phone. */
+   LAYOUT: readout, filters, then the job list; stacks on a phone. */
 :root{color-scheme:light dark;
   --bg:light-dark(#e9eaec,#141517);--card:light-dark(#f7f7f8,#1c1d20);--ink:light-dark(#111214,#ececee);--mute:light-dark(#5b5e66,#9b9ea6);
   --line:light-dark(#c9cbd0,#2f3136);--soft:light-dark(#dcdde0,#26282c);--acc:#ff4f00;--acc-ink:#fff;--ok:light-dark(#0f6b3c,#5fd394);--warn:light-dark(#8a5a00,#f0b860)}
@@ -36,15 +36,6 @@ button,select,input{font:inherit;color:inherit}
 .btn:disabled{opacity:.55;cursor:default}
 :focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 .stat{margin:2px 0 18px;font-size:15px}
-/* scale */
-.scale{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 14px 6px;margin-bottom:14px}
-.scale-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:14px}
-.readout{font-size:15px}.readout b{font-family:"Geist Mono",monospace;font-size:22px;color:var(--acc);font-weight:500}
-.fig{position:relative;height:110px;margin-top:6px}
-.fig svg{position:absolute;inset:0;width:100%;height:100%}
-.fig input[type=range]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
-.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--mute);padding:4px 0 6px}
-.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px;background:var(--c)}
 /* filters */
 .filters{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
@@ -148,16 +139,6 @@ form.add label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:v
   <h1 id="headline">Loading jobs…</h1>
   <p class="stat mute" id="sub"></p>
 
-  <section class="scale" aria-label="Match score scale">
-    <div class="scale-head">
-      <span class="readout">Showing match <b id="ro-min">0</b>+</span>
-      <span class="mute num" id="ro-count"></span>
-    </div>
-    <div class="fig" id="fig"><svg id="svg" aria-hidden="true"></svg>
-      <input type="range" id="minscore" min="0" max="100" step="1" value="0" aria-label="Minimum match score"></div>
-    <div class="legend"><span style="--c:var(--ink)">shown</span><span style="--c:var(--line)">below your minimum</span><span style="--c:var(--acc)">minimum score (drag)</span></div>
-  </section>
-
   <section class="filters" aria-label="Filters">
     <div class="row">
       <span class="lbl">From Hungary</span>
@@ -173,6 +154,12 @@ form.add label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:v
       <span class="lbl">Posted</span>
       <div class="seg" data-key="age">
         <button type="button" data-v="1">24h</button><button type="button" data-v="3">3d</button><button type="button" data-v="7">7d</button><button type="button" data-v="14">14d</button><button type="button" data-v="30">30d</button><button type="button" data-v="0">Any</button>
+      </div>
+    </div>
+    <div class="row">
+      <span class="lbl">Match</span>
+      <div class="seg" data-key="min">
+        <button type="button" data-v="0">Any</button><button type="button" data-v="50">50+</button><button type="button" data-v="60">60+</button><button type="button" data-v="70">70+</button><button type="button" data-v="80">80+</button>
       </div>
     </div>
     <div class="row">
@@ -256,9 +243,10 @@ const LABELS = {
 };
 const STEM = {prototyp:"prototyping", facilitat:"facilitation", sustainab:"sustainability", traceab:"traceability", transparen:"transparency", mentor:"mentoring", "a/b test":"A/B testing", "ab test":"A/B testing", "usability test":"usability testing", "user interview":"user interviews", "design system":"design systems"};
 const nice = k => STEM[k] || k;
-const DEFAULTS = {imp:"all", hu:"yes", age:"0", sort:"match", min:0, q:"", loc:"", closed:false, noflags:false,
+const DEFAULTS = {imp:"all", hu:"yes", age:"0", sort:"match", min:"0", q:"", loc:"", closed:false, noflags:false,
   wp:[], emp:[], sen:["senior","lead","staff","principal","head","unspecified"], fam:[], tag:[], kind:[], st:["none","saved","applied"]};
 let F = Object.assign({}, DEFAULTS, store.get("radar-filters", {}));
+F.min = String([0, 50, 60, 70, 80].filter(v => v <= +F.min).pop() || 0);   // older saves could hold any number from the slider
 let STATUS = store.get("radar-status", {});
 let JOBS = [], META = {}, SHOWN = 40, OPEN = new Set();
 let CHECKED = store.get("radar-checked", {});
@@ -281,7 +269,7 @@ function pass(j, ignoreScore){
   if (F.hu === "yes" && j.hu !== "yes") return false;
   if (F.hu === "yesmaybe" && j.hu === "no") return false;
   if (+F.age && ageDays(j) > +F.age) return false;
-  if (!ignoreScore && j.score < F.min) return false;
+  if (!ignoreScore && j.score < +F.min) return false;
   if (!locMatch(j)) return false;
   if (F.wp.length && !F.wp.includes(j.wp || "unknown")) return false;
   if (F.emp.length && !(j.emp && j.emp.length ? j.emp : ["none"]).some(e => F.emp.includes(e))) return false;
@@ -295,29 +283,6 @@ function pass(j, ignoreScore){
     if (!F.q.toLowerCase().split(/\s+/).every(w => hay.includes(w))) return false; }
   return true;
 }
-
-/* ---------- scale ---------- */
-const svg = $("#svg"), fig = $("#fig");
-function drawScale(){
-  const W = fig.clientWidth, H = fig.clientHeight;
-  const pool = JOBS.filter(j => pass(j, true));
-  const bins = new Array(101).fill(0);
-  pool.forEach(j => bins[Math.max(0, Math.min(100, Math.round(j.score)))]++);
-  const max = Math.max(1, ...bins);
-  const pad = 10, base = H - 24, top = 18, x = s => pad + (W - 2 * pad) * s / 100, bw = Math.max(1.5, (W - 2 * pad) / 101 - 1);
-  let g = "";
-  for (let s = 0; s <= 100; s++){ if (!bins[s]) continue;
-    const h = Math.max(2, (base - top) * Math.sqrt(bins[s] / max));
-    g += `<rect x="${(x(s) - bw / 2).toFixed(1)}" y="${(base - h).toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="1" style="fill:${s >= F.min ? "var(--ink)" : "var(--line)"}"/>`; }
-  g += `<line x1="${pad}" x2="${W - pad}" y1="${base + .5}" y2="${base + .5}" style="stroke:var(--line)"/>`;
-  const step = W < 520 ? 25 : 10;
-  for (let s = 0; s <= 100; s += step) g += `<line x1="${x(s)}" x2="${x(s)}" y1="${base}" y2="${base + 5}" style="stroke:var(--mute)"/><text x="${x(s)}" y="${H - 4}" font-size="11" text-anchor="middle" style="fill:var(--mute)" font-family="Geist Mono, monospace">${s}</text>`;
-  const px = x(F.min);
-  g += `<line x1="${px}" x2="${px}" y1="4" y2="${base + 6}" style="stroke:var(--acc)" stroke-width="2.5"/><circle cx="${px}" cy="6" r="5" style="fill:var(--acc)"/>`;
-  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
-  svg.innerHTML = g;
-}
-const ro = new ResizeObserver(drawScale); ro.observe(fig);
 
 /* ---------- logos ---------- */
 function initials(name){ const w = String(name || "?").replace(/[^\p{L}\p{N} ]/gu, " ").trim().split(/\s+/); return ((w[0] || "?")[0] + (w[1] ? w[1][0] : "")).toUpperCase(); }
@@ -382,15 +347,12 @@ function render(){
   const rows = JOBS.filter(j => pass(j));
   rows.sort(F.sort === "recent" ? (a, b) => ageDays(a) - ageDays(b) || b.score - a.score : (a, b) => b.score - a.score || ageDays(a) - ageDays(b));
   $("#count").innerHTML = `<b class="num">${rows.length}</b> of <span class="num">${JOBS.filter(j => j.live !== "closed").length}</span> open jobs`;
-  $("#ro-min").textContent = F.min;
-  $("#ro-count").textContent = `${rows.length} shown`;
   $("#list").innerHTML = rows.length ? rows.slice(0, SHOWN).map(card).join("") :
     `<div class="empty">No jobs match these filters. Try “Yes + maybe”, a longer time range or a lower minimum score.</div>`;
   $("#b-more").hidden = rows.length <= SHOWN;
   const nMore = ["wp","emp","fam","tag","kind"].reduce((a, k) => a + F[k].length, 0) + (F.closed ? 1 : 0) + (F.noflags ? 1 : 0);
   $("#more-n").textContent = nMore ? `${nMore} on` : "";
   document.querySelectorAll(".seg").forEach(s => s.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(String(F[s.dataset.key]) === b.dataset.v))));
-  drawScale();
   renderHand();
 }
 
@@ -408,7 +370,7 @@ function buildFilters(){
     box.innerHTML = Object.entries(LABELS[key]).map(([v, l]) => `<label class="chk"><input type="checkbox" value="${v}" ${F[key].includes(v) ? "checked" : ""}>${esc(l)}</label>`).join("");
     box.addEventListener("change", () => { F[key] = [...box.querySelectorAll("input:checked")].map(i => i.value); SHOWN = 40; render(); });
   });
-  $("#f-closed").checked = F.closed; $("#f-noflags").checked = F.noflags; $("#q").value = F.q; $("#minscore").value = F.min;
+  $("#f-closed").checked = F.closed; $("#f-noflags").checked = F.noflags; $("#q").value = F.q;
 }
 
 function headline(){
@@ -525,7 +487,6 @@ function openSources(){ const p = $("#p-sources"); p.hidden = false; renderSourc
 
 /* ---------- events ---------- */
 document.querySelectorAll(".seg").forEach(s => s.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; F[s.dataset.key] = b.dataset.v; SHOWN = 40; render(); }));
-$("#minscore").addEventListener("input", e => { F.min = +e.target.value; SHOWN = 40; render(); });
 let qT; $("#q").addEventListener("input", e => { clearTimeout(qT); qT = setTimeout(() => { F.q = e.target.value.trim(); SHOWN = 40; render(); }, 180); });
 $("#loc").addEventListener("change", e => { F.loc = e.target.value; SHOWN = 40; render(); });
 $("#f-closed").addEventListener("change", e => { F.closed = e.target.checked; render(); });
