@@ -18,6 +18,9 @@ def provider():
     return "duckduckgo"
 
 
+_SERPER = {}
+
+
 def query(q, freshness_days=7):
     p = provider()
     if p == "brave":
@@ -28,9 +31,18 @@ def query(q, freshness_days=7):
                 for r in (d.get("web") or {}).get("results", [])]
     if p == "serper":
         tbs = "qdr:d" if freshness_days <= 1 else ("qdr:w" if freshness_days <= 7 else "qdr:m")
-        d = http.get_json("https://google.serper.dev/search", method="POST", data={"q": q, "num": 20, "tbs": tbs},
-                          headers={"X-API-KEY": http.secret("SERPER_API_KEY")}, retries=1)
-        return [{"title": r.get("title", ""), "url": r.get("link", ""), "snippet": r.get("snippet", "")} for r in d.get("organic", [])]
+        bodies = [{"q": q, "num": 20, "tbs": tbs}, {"q": q, "tbs": tbs}, {"q": q}]
+        start = _SERPER.get("variant", 0)
+        for i in range(start, len(bodies)):   # if Serper rejects an option (400), try again with fewer options
+            try:
+                d = http.get_json("https://google.serper.dev/search", method="POST", data=bodies[i],
+                                  headers={"X-API-KEY": http.secret("SERPER_API_KEY")}, retries=1)
+            except http.FetchError as e:
+                if e.status == 400 and i + 1 < len(bodies) and "credit" not in (e.body or "").lower():
+                    continue
+                raise
+            _SERPER["variant"] = i
+            return [{"title": r.get("title", ""), "url": r.get("link", ""), "snippet": r.get("snippet", "")} for r in d.get("organic", [])]
     # DuckDuckGo HTML endpoint: best effort, low volume
     time.sleep(2.5)
     df = "d" if freshness_days <= 1 else ("w" if freshness_days <= 7 else "m")

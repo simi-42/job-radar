@@ -213,9 +213,11 @@ class Run:
                 results = search.query(q, cfg.get("freshness_days", 7))
             except Exception as e:
                 self.search_stats["errors"] += 1
-                log(f"  search failed: {type(e).__name__} {str(e)[:120]}")
-                if prov == "duckduckgo":
-                    break
+                why = (getattr(e, "body", "") or "").strip()
+                self.search_stats["last_error"] = f"{getattr(e, 'status', '') or type(e).__name__} {why[:160]}".strip()
+                log(f"  search failed: {type(e).__name__} {str(e)[:120]} {why[:200]}")
+                if prov == "duckduckgo" or self.search_stats["errors"] >= 3 and not self.search_stats["queries"]:
+                    break   # the same failure on every query (no credits, bad key): stop and report it
                 continue
             self.search_stats["queries"] += 1
             self.search_stats["results"] += len(results)

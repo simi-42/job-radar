@@ -26,7 +26,7 @@ FIXTURES = None  # dict {substring: path} or None
 class FetchError(Exception):
     def __init__(self, url, status=None, msg=""):
         super().__init__(f"{status or ''} {msg} {url}".strip())
-        self.url, self.status, self.msg = url, status, msg
+        self.url, self.status, self.msg, self.body = url, status, msg, ""
 
 
 def _sem(host):
@@ -99,6 +99,10 @@ def fetch(url, method="GET", data=None, headers=None, timeout=25, retries=2, acc
                     return r.status, text, r.geturl()
             except urllib.error.HTTPError as e:
                 last = FetchError(url, e.code, e.reason if isinstance(e.reason, str) else "")
+                try:
+                    last.body = _decode(e.read(400), e.headers.get("Content-Encoding"))[:300]   # API errors say why here
+                except Exception:
+                    last.body = ""
                 if e.code in (429, 500, 502, 503, 504) and attempt < retries:
                     time.sleep(1.5 * (attempt + 1) + random.random())
                     continue
