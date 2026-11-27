@@ -1062,6 +1062,16 @@
    "enabled": true,
    "search": true,
    "added": "2026-11-27"
+  },
+  {
+   "id": "idomsoft",
+   "name": "Idomsoft",
+   "url": "https://career.idomsoft.hu/jobs/budapest/",
+   "adapter": "auto",
+   "origin": "added by you",
+   "enabled": true,
+   "search": true,
+   "added": "2026-11-27"
   }
  ]
 }
