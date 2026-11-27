@@ -6,7 +6,8 @@ It runs twice a day (05:17 and 17:17 Budapest time) on GitHub Actions, which is 
 
 ## Where jobs come from
 
-1. **Company job boards**, polled directly every day: 448 companies from your Follow the Money tracker, Hungarian product companies, top European startups and design-forward companies (`config/companies.json`). The run finds each company's board (Greenhouse, Lever, Ashby, Workable, Recruitee, Personio, SmartRecruiters, BambooHR, Teamtailor, Breezy, Pinpoint, Workday) by reading its website. These jobs count as verified because they come from the company's own board.
+0. **Stapply's open job dataset** ([ats-scrapers](https://github.com/kalil0321/ats-scrapers), data CC0 1.0): read once per daily snapshot with DuckDB, design titles only, Europe plus remote. Company boards and job boards it covers (Remote OK, We Work Remotely, Welcome to the Jungle, YC) are not read separately; only what Stapply doesn't cover is read directly below.
+1. **Company job boards**, polled directly twice a day (those Stapply doesn't cover): 448 companies from your Follow the Money tracker, Hungarian product companies, top European startups and design-forward companies (`config/companies.json`). The run finds each company's board (Greenhouse, Lever, Ashby, Workable, Recruitee, Personio, SmartRecruiters, BambooHR, Teamtailor, Breezy, Pinpoint, Workday) by reading its website. These jobs count as verified because they come from the company's own board.
 2. **Job boards and aggregators** (`config/sources.json`): your bookmarked boards, the Grassroots & Grace impact list, the boards from the Follow the Money tracker, remote-job APIs, VC portfolio job boards and Hidden Jobs.
 3. **Boards found automatically.** When a listing on any board links to a company's own job board, that board is added to daily tracking.
 4. **Search engines**: daily queries for product/UX/design-systems roles on company job boards and LinkedIn. A weekly pass looks up every board marked `search: true`. Needs `BRAVE_API_KEY` or `SERPER_API_KEY`; without either, a few DuckDuckGo queries run instead.
@@ -38,7 +39,7 @@ You get an alert for each new job with a match of 70 or more that you can do fro
 ## Files
 
 - `config/`: what you edit (profile, sources, companies, search queries).
-- `radar/`: the pipeline (Python standard library only).
+- `radar/`: the pipeline (Python standard library, plus DuckDB to read Stapply's open job dataset).
 - `data/`: run state (first-seen dates, alerts sent, boards found).
 - `docs/`: the site and its data.
 

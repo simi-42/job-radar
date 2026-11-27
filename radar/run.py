@@ -17,7 +17,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from . import alert, classify, detect, geo, http, score, verify
-from .adapters import ats, boards, search
+from .adapters import ats, boards, search, stapply
 from .model import TODAY, company_domain, job_key, norm_company
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -89,6 +89,8 @@ class Run:
         self.src_health = {}
         self.board_health = {}
         self.ok_boards = set()
+        self.stapply_ok = self.stapply_fresh = False
+        self.stapply_boards, self.stapply_sources, self.stapply_skipped = set(), set(), 0
         self.search_stats = {"provider": search.provider(), "queries": 0, "results": 0, "boards_found": 0, "jobs": 0, "errors": 0}
         self.excluded = {norm_company(c) for c in self.profile.get("exclude_companies", [])}
         self.site_url = os.environ.get("SITE_URL", "")
@@ -96,6 +98,44 @@ class Run:
 
     def time_left(self):
         return self.budget - (time.time() - self.t0)
+
+    # ---------- 0. Stapply's open dataset ----------
+    def read_stapply(self):
+        """Read Stapply's daily snapshot once; boards and job boards it covers are then not read by the radar itself."""
+        st = self.state.setdefault("stapply", {})
+        try:
+            man = http.get_json(stapply.MANIFEST, timeout=60)
+        except Exception as e:
+            log(f"stapply: manifest failed ({type(e).__name__}: {str(e)[:120]}); reading all boards directly")
+            return
+        gen = man.get("generated_at")
+        if st.get("generated_at") == gen and st.get("ok") and not self.full:
+            log(f"stapply: snapshot {gen} already read; its jobs carry over")
+            self.stapply_ok = True
+            self.stapply_sources = set(st.get("sources", []))
+        else:
+            try:
+                jobs, stats = stapply.read(man, log=log)
+            except Exception as e:
+                log(f"stapply: read failed ({type(e).__name__}: {str(e)[:200]}); reading all boards directly")
+                st["ok"] = False
+                return
+            tagmap = {norm_company(c["name"]): c.get("tags", []) for c in self.companies}
+            for j in jobs:
+                self.raw.append((j, list(tagmap.get(norm_company(j["company"]), []))))
+            self.ok_boards.add("stapply")
+            self.stapply_ok = self.stapply_fresh = True
+            self.stapply_sources = {stapply.BOARD_SOURCES[k] for k, n in stats["by_source"].items() if k in stapply.BOARD_SOURCES and n}
+            st.update(generated_at=gen, ok=True, read=TODAY, jobs=stats["jobs"], rows=stats["rows"], seconds=stats["seconds"],
+                      sources=sorted(self.stapply_sources), by_source=dict(sorted(stats["by_source"].items(), key=lambda x: -x[1])[:25]))
+        try:
+            self.stapply_boards = stapply.covered_boards()
+        except Exception as e:
+            log(f"stapply: couldn't read its company lists ({type(e).__name__}); reading those boards directly")
+        log(f"stapply: covers {len(self.stapply_boards)} company boards and job boards {sorted(self.stapply_sources)}")
+
+    def stapply_covers(self, key):
+        return self.stapply_ok and stapply.norm_key(key) in self.stapply_boards
 
     # ---------- 1. find each company's job board ----------
     def detect_companies(self, limit=500):
@@ -149,6 +189,9 @@ class Run:
                 return src, adapter, [], None
             if adapter == "none":
                 return src, adapter, [], None
+            if src["id"] in self.stapply_sources:
+                boards.DIAG[src["id"]] = {"reason": "covered", "via": "Stapply"}
+                return src, "stapply", [], None
             fn = boards.NAMED.get(adapter)
             if not fn:
                 return src, adapter, [], f"unknown adapter {adapter}"
@@ -273,7 +316,11 @@ class Run:
             if key not in owners and (d.get("fails", 0) < 6 or self.full):
                 owners[key] = (d["company"], tags)  # boards failing 6 runs in a row are retried weekly
                 sites[key] = d.get("site")
-        log(f"reading {len(owners)} company job boards")
+        covered = [k for k in owners if self.stapply_covers(k)]
+        for k in covered:
+            owners.pop(k)
+        self.stapply_skipped = len(covered)
+        log(f"reading {len(owners)} company job boards ({len(covered)} more come from Stapply)")
 
         def one(item):
             key, (company, tags) = item
@@ -468,7 +515,8 @@ class Run:
                 continue
             if old.get("kind") == "ats":
                 keys = [s.get("b") for s in old.get("sources", []) if s.get("b")]
-                if keys and any(k in self.ok_boards for k in keys):
+                gone_from_stapply = self.stapply_fresh and any(k == "stapply" or self.stapply_covers(k) for k in keys)
+                if keys and (any(k in self.ok_boards for k in keys) or gone_from_stapply):
                     old.update(live="closed", closed=TODAY)
                     m["closed"] = TODAY
                     closed += 1
@@ -617,6 +665,8 @@ class Run:
                        "hu_yes": sum(1 for j in open_jobs if j.get("hu") == "yes"), "alerts": getattr(self, "alert_count", 0),
                        "closed_recent": len(jobs) - len(open_jobs)},
             "sources": src_rows,
+            "stapply": dict(self.state.get("stapply", {}), covered_boards=len(self.stapply_boards), skipped_boards=self.stapply_skipped,
+                            on=self.stapply_ok),
             "boards": {"tracked": len(self.board_health), "ok": len(self.ok_boards),
                        "failed": [{"key": k, "company": h["company"], "error": h["error"]} for k, h in self.board_health.items() if not h["ok"]][:80],
                        "discovered": len(self.bstate["discovered"])},
@@ -643,7 +693,7 @@ def main(argv=None):
     ap.add_argument("--no-boards", action="store_true")
     args = ap.parse_args(argv)
     r = Run(full=args.full)
-    steps = [("detect", r.detect_companies), ("sources", r.run_sources)]
+    steps = [("detect", r.detect_companies), ("stapply", r.read_stapply), ("sources", r.run_sources)]
     if not args.no_search:
         steps.append(("search", r.run_search))
     steps.append(("harvest", r.harvest))

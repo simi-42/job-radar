@@ -256,20 +256,40 @@ class SearchFinds(unittest.TestCase):
             self.assertIsNone(search.to_job({"url": url, "title": title, "snippet": ""})[1], title)
 
 
-class DesignFeed(unittest.TestCase):
+class Stapply(unittest.TestCase):
     def tearDown(self):
         http.FIXTURES = None
 
-    def test_feed_rows(self):
-        idx = {"files": [{"path": "europe/HU.json", "region": "EUROPE"}, {"path": "na/US.json", "region": "NA"}]}
-        rows = {"jobs": [{"title": "UX Designer", "company": "DEPT", "place": "Budapest, Hungary", "url": "https://job-boards.greenhouse.io/dept/jobs/1",
-                          "workMode": "hybrid", "publishedAt": "2026-11-24", "level": "middle", "yearsMin": 3},
-                         {"title": "Office Manager", "company": "X", "url": "https://x.example/1"}]}
-        fixtures({"jobs-feed/latest.json": {"date": "2026-11-27", "index": "2026-11-27/index.json"},
-                  "2026-11-27/index.json": idx, "2026-11-27/europe/HU.json": rows})
-        jobs = boards.designfeed({"id": "df"})
-        self.assertEqual([(j["title"], j["company"], j["seniority_hint"]) for j in jobs], [("UX Designer", "DEPT", "mid")])
-        self.assertIn("3+ years", jobs[0]["description"])
+    def test_snapshot_rows(self):
+        try:
+            import duckdb
+        except ImportError:
+            self.skipTest("duckdb not installed")
+        import os, tempfile
+        from radar.adapters import stapply
+        path = os.path.join(tempfile.mkdtemp(), "all.parquet")
+        con = duckdb.connect()
+        con.execute("""CREATE TABLE j AS SELECT * FROM (VALUES
+            ('Senior Product Designer', 'Acme', 'https://job-boards.greenhouse.io/acme/jobs/1', 'Budapest, Hungary', 'HU', false, 'hybrid', '2026-11-25', 'greenhouse', '<p>Figma, design systems</p>'),
+            ('Product Designer', 'Bolt', 'https://jobs.lever.co/bolt/2', 'Austin, TX', 'US', false, 'onsite', '2026-11-25', 'lever', 'x'),
+            ('UX Designer', 'Remote Co', 'https://remoteok.com/remote-jobs/3', 'Remote', NULL, true, 'remote', '2026-11-26', 'remoteok', 'y'),
+            ('Account Executive', 'Acme', 'https://job-boards.greenhouse.io/acme/jobs/4', 'Berlin', 'DE', false, 'onsite', '2026-11-25', 'greenhouse', 'z'))
+            AS t(title, company, url, location, country_iso, is_remote, workplace_type, posted_at, ats_type, description)""")
+        con.execute(f"COPY j TO '{path}' (FORMAT parquet)")
+        jobs, stats = stapply.read({"generated_at": "2026-11-27T05:00:00Z"}, parquet=path, log=lambda *a: None)
+        self.assertEqual(sorted(j["title"] for j in jobs), ["Senior Product Designer", "UX Designer"])
+        self.assertEqual(stats["by_source"], {"greenhouse": 1, "remoteok": 1})
+        hu = next(j for j in jobs if j["company"] == "Acme")
+        self.assertEqual((hu["kind"], hu["board_key"], hu["workplace_hint"]), ("ats", "stapply", "hybrid"))
+        self.assertIn("design systems", hu["description"])
+
+    def test_covered_boards(self):
+        from radar.adapters import stapply
+        fixtures({"ats-companies/greenhouse.csv": "name,slug,url\nAcme,acme,https://job-boards.greenhouse.io/acme\n",
+                  "ats-companies/personio.csv": "name,slug,url\nX,xco,https://xco.jobs.personio.de\n"})
+        keys = stapply.covered_boards()
+        self.assertIn(stapply.norm_key("greenhouse-eu:Acme"), keys)
+        self.assertIn(stapply.norm_key("personio:xco|com"), keys)
 
 
 if __name__ == "__main__":

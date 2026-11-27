@@ -1100,17 +1100,6 @@
    "enabled": true,
    "search": true,
    "added": "2026-11-27"
-  },
-  {
-   "id": "designfeed",
-   "name": "Design jobs feed (job-finder skill)",
-   "url": "https://raw.githubusercontent.com/egor-krasnoperov/design-growth-skills/jobs-feed/latest.json",
-   "adapter": "designfeed",
-   "origin": "added by you",
-   "enabled": true,
-   "search": false,
-   "added": "2026-11-27",
-   "note": "Daily list of European and worldwide-remote design vacancies from Egor Krasnoperov's job-finder skill (Stapply open ATS data, CC0)"
   }
  ]
 }
