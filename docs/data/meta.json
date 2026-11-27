@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-27T21:17:29+00:00",
- "duration_s": 96,
+ "updated": "2026-11-27T21:19:31+00:00",
+ "duration_s": 90,
  "full": false,
  "counts": {
-  "open": 1753,
-  "new_today": 383,
+  "open": 1754,
+  "new_today": 384,
   "hu_yes": 74,
   "alerts": 0,
   "closed_recent": 157
@@ -1583,7 +1583,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 20,
+   "count": 19,
    "error": null,
    "note": null,
    "impact": false,
@@ -1780,14 +1780,9 @@
   }
  ],
  "boards": {
-  "tracked": 904,
-  "ok": 890,
+  "tracked": 903,
+  "ok": 891,
   "failed": [
-   {
-    "key": "generic:https://www.linkedin.com/jobs/search?trk=organization_guest_guest_nav_menu_jobs",
-    "company": "Good On You",
-    "error": "FetchError: 429 Too Many Requests https://www.linkedin.com/jobs/search?trk=organization_guest_guest_nav_menu_jobs"
-   },
    {
     "key": "greenhouse-eu:orbisk",
     "company": "Orbisk",
@@ -1847,11 +1842,6 @@
     "key": "personio:typo3|com",
     "company": "TYPO3",
     "error": "FetchError: 404 Not Found https://typo3.jobs.personio.com/xml?language=en"
-   },
-   {
-    "key": "ashby:molecule",
-    "company": "Molecule",
-    "error": "FetchError: 404 Not Found https://api.ashbyhq.com/posting-api/job-board/molecule?includeCompensation=true"
    }
   ],
   "discovered": 541
