@@ -1,11 +1,11 @@
 {
- "updated": "2026-11-27T21:00:47+00:00",
- "duration_s": 166,
+ "updated": "2026-11-27T21:05:38+00:00",
+ "duration_s": 97,
  "full": false,
  "counts": {
-  "open": 1722,
-  "new_today": 352,
-  "hu_yes": 79,
+  "open": 1738,
+  "new_today": 368,
+  "hu_yes": 74,
   "alerts": 0,
   "closed_recent": 156
  },
@@ -1157,14 +1157,14 @@
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": false,
+   "ok": true,
    "count": 0,
-   "error": "FetchError: URLError https://www.humanrightscareers.com/jobs/",
+   "error": null,
    "note": null,
    "impact": true,
    "direct": "https://www.humanrightscareers.com/jobs/",
-   "why": "error",
-   "via": null
+   "why": "no_match",
+   "via": "feed"
   },
   {
    "id": "globaljobs",
@@ -1600,7 +1600,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 32,
+   "count": 34,
    "error": null,
    "note": null,
    "impact": false,
@@ -1882,7 +1882,7 @@
  },
  "search": {
   "provider": "duckduckgo",
-  "queries": 6,
+  "queries": 0,
   "results": 0,
   "boards_found": 0,
   "jobs": 0,
