@@ -148,5 +148,15 @@ class MergedEligibility(unittest.TestCase):
         self.assertEqual(self.run._merged_eligibility([j], j, "Hybrid role")["hu"], "yes")
 
 
+class YearsOfExperience(unittest.TestCase):
+    def test_level_from_the_ad(self):
+        from radar import classify
+        self.assertEqual(classify.years_required("Bring 2 to 4 years of experience in product design"), (2, "2 to 4 years"))
+        self.assertEqual(classify.level_from_years(2), "mid")
+        self.assertEqual(classify.years_required("You have 5+ years of experience designing SaaS")[0], 5)
+        self.assertEqual(classify.level_from_years(5), "senior")
+        self.assertIsNone(classify.years_required("We have been around for 10 years and now serve 2M users"))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -72,6 +72,40 @@ def seniority(title, hint=None):
     return "unspecified"
 
 
+# ---------- seniority from the experience the ad asks for ----------
+_NUMW = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10,
+         "eleven": 11, "twelve": 12, "fifteen": 15}
+_N = r"(\d{1,2}|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|fifteen)"
+_YRS = re.compile(rf"\b{_N}\s*(\+|plus)?\s*(?:(?:-|–|—|to)\s*{_N}\s*\+?\s*)?(?:years?|yrs?)\b", re.I)
+_AFTER = re.compile(r"^[’'s]*\s*(?:of\s+)?(?:\w+[\s,/&-]+){0,4}?(?:experience|exp\b|track record|working (?:as|in|on)|designing|in (?:a |an )?(?:product|ux|ui|design|similar|senior|digital|saas|b2b|tech))", re.I)
+_BEFORE = re.compile(r"(?:experience|exp\.?)\s*(?:[:\-–]|of|with)?\s*(?:at least|minimum(?: of)?|over|more than)?\s*$", re.I)
+_NOT_EXP = re.compile(r"^\s*(?:old|ago|in business|of (?:history|heritage|growth|operations)|now|running)", re.I)
+
+
+def _num(x):
+    return int(x) if x.isdigit() else _NUMW[x.lower()]
+
+
+def years_required(text):
+    """First 'X years of experience' style requirement in an ad -> (min years, wording), else None."""
+    t = text or ""
+    for m in _YRS.finditer(t):
+        after, before = t[m.end():m.end() + 70], t[max(0, m.start() - 40):m.start()]
+        if _NOT_EXP.match(after):
+            continue
+        if _AFTER.match(after) or _BEFORE.search(before):
+            lo = _num(m.group(1))
+            if lo > 25:
+                continue
+            return lo, re.sub(r"\s+", " ", m.group(0)).strip()
+    return None
+
+
+def level_from_years(lo):
+    """Minimum years asked -> level. 2-3 years is mid, not senior."""
+    return "junior" if lo <= 1 else "mid" if lo <= 3 else "senior"
+
+
 # ---------- workplace ----------
 
 def workplace(job, text_low):

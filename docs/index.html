@@ -36,25 +36,45 @@ button,select,input{font:inherit;color:inherit}
 .btn:disabled{opacity:.55;cursor:default}
 :focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 .stat{margin:2px 0 18px;font-size:15px}
+[hidden]{display:none !important}
 /* filters */
-.filters{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.fbar{display:flex;gap:8px;flex-wrap:wrap}
+.fbar select{flex:0 1 220px}
+.pills{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 12px;border:1px solid var(--line);border-radius:999px;background:var(--card);font-size:14px;cursor:pointer;white-space:nowrap}
+.pill:hover{border-color:var(--ink)}
+.pill > span{color:var(--mute)}
+.pill select{appearance:none;-webkit-appearance:none;border:0;background:transparent;min-height:34px;padding:0 16px 0 0;font-size:14px;font-weight:500;cursor:pointer;
+  background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
+  background-position:calc(100% - 7px) 55%,calc(100% - 3px) 55%;background-size:4px 4px;background-repeat:no-repeat}
+.pill select:focus-visible{outline:none}.pill:focus-within{outline:2px solid var(--acc);outline-offset:2px}
+.pill.on{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.pill.drop{font-weight:500}
+.pill.drop::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);margin-left:2px}
+.pill.drop[aria-expanded=true]::after{transform:translateY(1px) rotate(-135deg)}
+.pill .cnt:not(:empty){background:var(--ink);color:var(--bg);border-radius:999px;padding:0 7px;font-size:12px;line-height:18px}
+.morepanel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px 2px}
+.newbtn{font-weight:500}.newbtn[aria-pressed=true]{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
+.count-acts{display:inline-flex;gap:6px;flex-wrap:wrap}
+/* dialogs */
+dialog.sheet{border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--ink);padding:0;width:min(940px,94vw);max-height:88dvh;overflow:auto}
+dialog.sheet::backdrop{background:rgb(0 0 0 / .5)}
+.sheet-head{position:sticky;top:0;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 12px 10px 18px;background:var(--card);border-bottom:1px solid var(--line)}
+.sheet-head h2{margin:0}
+.sheet-body{padding:16px 18px 20px}
+.btn.close{min-width:44px;padding:0;font-size:16px}
+body:has(dialog[open]){overflow:hidden}
+.filters{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
-.seg button{min-height:40px;padding:0 12px;border:0;background:none;cursor:pointer;font-size:14px;border-right:1px solid var(--line)}
-.seg button:last-child{border-right:0}
-.seg button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
 .lbl{font-size:13px;color:var(--mute);margin-right:2px}
 input[type=search],select,input[type=url],input[type=text],input[type=password]{min-height:44px;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:0 12px;font-size:16px}
 input[type=search]{flex:1 1 220px}
-details.more{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 14px}
-details.more summary{min-height:44px;display:flex;align-items:center;cursor:pointer;font-weight:500;font-size:15px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px 18px;padding:4px 0 14px}
 fieldset{border:0;margin:0;padding:0}legend{font-size:13px;color:var(--mute);margin-bottom:4px}
 .chk{display:flex;gap:8px;align-items:center;min-height:32px;font-size:15px;cursor:pointer}
 .chk input{width:18px;height:18px;accent-color:var(--acc)}
 .active{display:flex;gap:6px;flex-wrap:wrap}
 /* list */
-.newbtn{min-height:36px;font-size:14px}.newbtn[aria-pressed=true]{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
 .count{display:flex;justify-content:space-between;align-items:center;margin:4px 0 10px;font-size:14px;gap:8px;flex-wrap:wrap}
 .list{display:flex;flex-direction:column;gap:10px}
 .job{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;grid-template-columns:56px 1fr;gap:4px 14px}
@@ -90,9 +110,6 @@ fieldset{border:0;margin:0;padding:0}legend{font-size:13px;color:var(--mute);mar
 .empty{padding:40px 14px;text-align:center;color:var(--mute);background:var(--card);border-radius:14px;border:1px dashed var(--line)}
 .more-btn{margin:14px auto 0;display:block}
 /* boards to check by hand */
-details.hand{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 14px;margin-bottom:14px}
-details.hand summary{min-height:44px;display:flex;align-items:center;gap:8px;cursor:pointer;font-weight:500;font-size:15px}
-details.hand[hidden]{display:none}
 .hand-intro{margin:0 0 8px;font-size:14px}
 .hand-list{list-style:none;margin:0;padding:0 0 10px}
 .hand-list li{display:grid;grid-template-columns:22px 1fr auto;gap:2px 10px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}
@@ -102,8 +119,6 @@ details.hand[hidden]{display:none}
 .hand-list .btn{grid-row:1/span 2;grid-column:3;min-height:40px;font-size:14px;text-decoration:none;display:inline-flex;align-items:center}
 .hand-list li.seen .nm::after{content:" ✓";color:var(--ok)}
 /* panels */
-.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:22px}
-.panel[hidden]{display:none}
 table{border-collapse:collapse;width:100%;font-size:14px}
 th,td{text-align:left;padding:8px 8px;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-weight:500;color:var(--mute);font-size:13px}
@@ -115,12 +130,14 @@ form.add{display:grid;gap:10px;grid-template-columns:1fr 1fr auto;align-items:en
 form.add label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--mute)}
 .msg{font-size:14px;margin-top:8px;min-height:1.5em}
 .toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:12px 16px;border-radius:12px;font-size:14px;max-width:min(92vw,520px);z-index:9}
-.toast[hidden]{display:none}
 @media(max-width:600px){
+  dialog.sheet{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;border-radius:0;border:0;margin:0}
+  .pills{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:calc(-1 * max(4vw,14px));padding-inline:max(4vw,14px);padding-block:2px}
+  .pills::-webkit-scrollbar{display:none}
+  .pill{flex:none}
   .wrap{padding-top:12px}.job{grid-template-columns:48px 1fr}.logo{width:48px;height:48px}
   form.add{grid-template-columns:1fr}.bars{grid-template-columns:80px 1fr 40px}
-  .seg button{padding:0 10px}
-  table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}
+    table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}
   .stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:7em;text-align:start}
   .stack td::before{content:attr(data-l);float:inline-start;width:6.5em;margin-inline-start:-7em;color:var(--mute);font-size:12px}
   .stack td:empty{display:none}
@@ -141,38 +158,19 @@ form.add label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:v
   <p class="stat mute" id="sub"></p>
 
   <section class="filters" aria-label="Filters">
-    <div class="row">
-      <span class="lbl">From Hungary</span>
-      <div class="seg" data-key="hu">
-        <button type="button" data-v="yes">Yes</button><button type="button" data-v="yesmaybe">Yes + maybe</button><button type="button" data-v="any">Any</button>
-      </div>
-    </div>
-    <div class="row">
-      <span class="lbl">Work</span>
-      <div class="seg" data-key="imp"><button type="button" data-v="all">All jobs</button><button type="button" data-v="impact">Impact only</button></div>
-    </div>
-    <div class="row">
-      <span class="lbl">Posted</span>
-      <div class="seg" data-key="age">
-        <button type="button" data-v="1">24h</button><button type="button" data-v="3">3d</button><button type="button" data-v="7">7d</button><button type="button" data-v="14">14d</button><button type="button" data-v="30">30d</button><button type="button" data-v="0">Any</button>
-      </div>
-    </div>
-    <div class="row">
-      <span class="lbl">Match</span>
-      <div class="seg" data-key="min">
-        <button type="button" data-v="0">Any</button><button type="button" data-v="50">50+</button><button type="button" data-v="60">60+</button><button type="button" data-v="70">70+</button><button type="button" data-v="80">80+</button>
-      </div>
-    </div>
-    <div class="row">
-      <span class="lbl">Sort by</span>
-      <div class="seg" data-key="sort"><button type="button" data-v="match">Best match</button><button type="button" data-v="recent">Newest</button></div>
-    </div>
-    <div class="row">
+    <div class="fbar">
       <input type="search" id="q" placeholder="Search title, company, skill" aria-label="Search">
       <select id="loc" aria-label="Location"></select>
     </div>
-    <details class="more" id="more">
-      <summary>More filters <span class="mute small" id="more-n" style="margin-left:8px"></span></summary>
+    <div class="pills">
+      <label class="pill"><span>From Hungary</span><select data-key="hu"><option value="yes">Yes</option><option value="yesmaybe">Yes + maybe</option><option value="any">Any</option></select></label>
+      <label class="pill"><span>Work</span><select data-key="imp"><option value="all">All jobs</option><option value="impact">Impact only</option></select></label>
+      <label class="pill"><span>Posted</span><select data-key="age"><option value="1">Last 24h</option><option value="3">Last 3 days</option><option value="7">Last 7 days</option><option value="14">Last 14 days</option><option value="30">Last 30 days</option><option value="0">Any time</option></select></label>
+      <label class="pill"><span>Match</span><select data-key="min"><option value="0">Any</option><option value="50">50+</option><option value="60">60+</option><option value="70">70+</option><option value="80">80+</option></select></label>
+      <label class="pill"><span>Sort</span><select data-key="sort"><option value="match">Best match</option><option value="recent">Newest</option></select></label>
+      <button class="pill drop" type="button" id="b-more-f" aria-expanded="false" aria-controls="more">More filters<span class="cnt" id="more-n"></span></button>
+    </div>
+    <div class="morepanel" id="more" hidden>
       <div class="grid">
         <fieldset><legend>Workplace</legend><div data-multi="wp"></div></fieldset>
         <fieldset><legend>Employment type</legend><div data-multi="emp"></div></fieldset>
@@ -187,21 +185,23 @@ form.add label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:v
           <button class="btn" type="button" id="f-reset" style="margin-top:8px">Reset filters</button>
         </fieldset>
       </div>
-    </details>
+    </div>
   </section>
 
-  <details class="hand" id="hand" hidden>
-    <summary><span id="hand-sum"></span></summary>
-    <p class="hand-intro mute">The radar can't read these boards, so check them yourself. Each link opens the board with the search filled in where the board allows it. Opening one marks it as checked for today.</p>
-    <ul class="hand-list" id="hand-list"></ul>
-  </details>
-
-  <div class="count"><span id="count"></span><button class="btn newbtn" type="button" id="b-new" hidden></button><span class="mute small" id="active"></span></div>
+  <div class="count">
+    <span id="count"></span>
+    <span class="count-acts">
+      <button class="pill newbtn" type="button" id="b-new" hidden></button>
+      <button class="pill drop" type="button" id="b-hand" hidden aria-haspopup="dialog"></button>
+    </span>
+    <span class="mute small" id="active"></span>
+  </div>
   <div class="list" id="list"></div>
   <button class="btn more-btn" id="b-more" type="button" hidden>Show more</button>
 
-  <section class="panel" id="p-sources" hidden aria-labelledby="h-src">
-    <h2 id="h-src">Sources</h2>
+  <dialog class="sheet" id="p-sources" aria-labelledby="h-src">
+    <div class="sheet-head"><h2 id="h-src">Sources</h2><button class="btn close" type="button" data-close aria-label="Close">✕</button></div>
+    <div class="sheet-body">
     <p class="mute small" id="src-sum"></p>
     <h2 style="font-size:16px;margin-top:16px">Add a job board</h2>
     <p class="small mute">Paste any job board, search results page, RSS feed or company careers page. Company boards (Greenhouse, Lever, Ashby, Workable, Personio…) are tracked directly; other sites are read as pages and also looked up through search.</p>
@@ -221,7 +221,16 @@ form.add label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:v
       <button class="btn" type="submit">Save</button>
     </form>
     <div class="msg" id="t-msg" role="status"></div>
-  </section>
+    </div>
+  </dialog>
+
+  <dialog class="sheet" id="d-hand" aria-labelledby="h-hand">
+    <div class="sheet-head"><h2 id="h-hand">Boards to check yourself</h2><button class="btn close" type="button" data-close aria-label="Close">✕</button></div>
+    <div class="sheet-body">
+      <p class="hand-intro mute">The radar can't read these boards, so check them yourself. Each link opens the board with the search filled in where the board allows it. Opening one marks it as checked for today.</p>
+      <ul class="hand-list" id="hand-list"></ul>
+    </div>
+  </dialog>
 </div>
 <div class="toast" id="toast" role="status" hidden></div>
 
@@ -323,6 +332,7 @@ function card(j){
       ${j.llm ? `<p><b>AI read:</b> ${esc(j.llm.why)}${j.llm.gaps && j.llm.gaps.length ? `<br><span class="mute">Gaps: ${esc(j.llm.gaps.join("; "))}</span>` : ""}</p>` : ""}
       <div class="bars small">${bar("Title", p.title || 0, 30)}${bar("Seniority", p.seniority || 0, 15)}${bar("Skills", p.skills || 0, 35)}${bar("Domain", p.domain || 0, 10)}${p.penalty ? `<span>Penalty</span><span class="bar neg"><i style="width:${Math.min(100, -p.penalty * 4)}%"></i></span><span class="num r">${p.penalty}</span>` : ""}</div>
       ${j.llm ? `<p class="small mute">Rules score ${j.rules}; AI score ${j.llm.s} is shown.</p>` : ""}
+      ${j.senw ? `<p class="small"><b>Level:</b> ${esc(LABELS.sen[j.sen] || j.sen)} (${esc(j.senw.charAt(0).toLowerCase() + j.senw.slice(1))})</p>` : ""}
       ${j.skills && j.skills.length ? `<p class="small"><b>Your skills it mentions:</b> ${esc([...new Set(j.skills.map(nice))].join(", "))}</p>` : ""}
       ${j.imp ? `<p class="small"><b>Impact:</b> ${esc(j.imp)}</p>` : ""}
       ${j.domains && j.domains.length ? `<p class="small"><b>Domain:</b> ${esc([...new Set(j.domains.map(nice))].join(", "))}</p>` : ""}
@@ -357,8 +367,9 @@ function render(){
   nb.setAttribute("aria-pressed", String(!!F.newonly));
   nb.textContent = F.newonly ? `Showing ${nNew} new · show all` : `${nNew} new since your last visit`;
   const nMore = ["wp","emp","fam","tag","kind"].reduce((a, k) => a + F[k].length, 0) + (F.closed ? 1 : 0) + (F.noflags ? 1 : 0);
-  $("#more-n").textContent = nMore ? `${nMore} on` : "";
-  document.querySelectorAll(".seg").forEach(s => s.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(String(F[s.dataset.key]) === b.dataset.v))));
+  $("#more-n").textContent = nMore ? String(nMore) : "";
+  document.querySelectorAll(".pills select[data-key]").forEach(sel => { sel.value = String(F[sel.dataset.key]); sel.closest(".pill").classList.toggle("on", String(F[sel.dataset.key]) !== String(DEFAULTS[sel.dataset.key])); });
+  $("#b-more-f").classList.toggle("on", !!nMore);
   renderHand();
 }
 
@@ -413,10 +424,10 @@ function renderHand(){
   const all = (META.sources || []).filter(needsHand);
   const rows = all.filter(x => F.imp !== "impact" || x.impact)
     .sort((a, b) => (b.impact - a.impact) || (CHECKED[a.id] || "").localeCompare(CHECKED[b.id] || "") || a.name.localeCompare(b.name));
-  $("#hand").hidden = !rows.length;
+  $("#b-hand").hidden = !rows.length;
   if (!rows.length) return;
   const today = rows.filter(x => CHECKED[x.id] === TODAY).length;
-  $("#hand-sum").innerHTML = `${rows.length} ${F.imp === "impact" ? "impact " : ""}boards to check yourself <span class="mute small">${today ? `${today} checked today` : ""}</span>`;
+  $("#b-hand").innerHTML = `${rows.length} ${F.imp === "impact" ? "impact " : ""}boards to check yourself${today ? ` <span class="mute">· ${today} checked</span>` : ""}`;
   $("#hand-list").innerHTML = rows.map(x => {
     const host = (() => { try { return new URL(x.direct || x.url).hostname } catch(e){ return "" } })();
     const seen = CHECKED[x.id], n = seen ? Math.round((Date.parse(TODAY) - Date.parse(seen)) / 864e5) : null;
@@ -504,10 +515,16 @@ async function addSource(e){
     $("#f-add").reset(); $("#a-search").checked = true;
   } catch(err){ msg.textContent = "Couldn't add it: " + err.message; }
 }
-function openSources(){ const p = $("#p-sources"); p.hidden = false; renderSources(); p.scrollIntoView({behavior:"smooth"}); }
+function openSources(){ renderSources(); const d = $("#p-sources"); if (!d.open) d.showModal(); }
 
 /* ---------- events ---------- */
-document.querySelectorAll(".seg").forEach(s => s.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; F[s.dataset.key] = b.dataset.v; SHOWN = 40; render(); }));
+document.querySelectorAll(".pills select[data-key]").forEach(sel => sel.addEventListener("change", () => { F[sel.dataset.key] = sel.value; SHOWN = 40; render(); }));
+$("#b-more-f").addEventListener("click", e => { const open = $("#more").hidden; $("#more").hidden = !open; e.currentTarget.setAttribute("aria-expanded", String(open)); });
+// dialogs: close button, Esc (built in) and a click on the backdrop
+document.querySelectorAll("dialog.sheet").forEach(d => {
+  d.addEventListener("click", e => { if (e.target === d || e.target.closest("[data-close]")) d.close(); });
+});
+$("#b-hand").addEventListener("click", () => { renderHand(); $("#d-hand").showModal(); });
 let qT; $("#q").addEventListener("input", e => { clearTimeout(qT); qT = setTimeout(() => { F.q = e.target.value.trim(); SHOWN = 40; render(); }, 180); });
 $("#loc").addEventListener("change", e => { F.loc = e.target.value; SHOWN = 40; render(); });
 $("#f-closed").addEventListener("change", e => { F.closed = e.target.checked; render(); });
@@ -516,7 +533,7 @@ $("#f-reset").addEventListener("click", () => { F = JSON.parse(JSON.stringify(DE
 $("#b-more").addEventListener("click", () => { SHOWN += 40; render(); });
 $("#b-new").addEventListener("click", () => { F.newonly = !F.newonly; SHOWN = 40; render(); });
 $("#b-refresh").addEventListener("click", refresh);
-$("#b-sources").addEventListener("click", () => { const p = $("#p-sources"); if (p.hidden) openSources(); else p.hidden = true; });
+$("#b-sources").addEventListener("click", openSources);
 $("#f-add").addEventListener("submit", addSource);
 $("#f-token").addEventListener("submit", e => { e.preventDefault(); store.set("radar-repo", $("#t-repo").value.trim()); if ($("#t-tok").value.trim()) store.set("radar-token", $("#t-tok").value.trim()); $("#t-tok").value = ""; $("#t-msg").textContent = "Saved in this browser."; });
 $("#hand-list").addEventListener("click", e => {
@@ -540,7 +557,7 @@ async function load(bust){
     setBase(jd.updated);
   } catch(e){ $("#headline").textContent = "No data yet"; $("#sub").textContent = "The first run hasn't finished. Start it with Refresh now, or from GitHub Actions."; return; }
   buildFilters(); headline(); render();
-  if (!$("#p-sources").hidden) renderSources();
+  if ($("#p-sources").open) renderSources();
 }
 $("#t-repo").value = gh().repo;
 load();

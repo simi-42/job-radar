@@ -181,12 +181,16 @@ class Run:
             queries = queries[:6]
         queries = queries[: cfg.get("max_daily", 30)]
         # The radar runs twice a day; searching once a day is enough and halves the use of paid search credits.
-        if self.state.setdefault("search", {}).get("last_daily") == TODAY and not self.full:
+        # A newly added search key (e.g. Serper after DuckDuckGo found nothing) gets a fresh start straight away.
+        st = self.state.setdefault("search", {})
+        new_provider = st.get("provider") != prov
+        if st.get("last_daily") == TODAY and not self.full and not new_provider:
             queries = []
         else:
-            self.state["search"]["last_daily"] = TODAY
-        last_weekly = self.state.setdefault("search", {}).get("last_weekly")
-        if self.full or days_between(last_weekly, TODAY) >= 7:
+            st["last_daily"] = TODAY
+        st["provider"] = prov
+        last_weekly = st.get("last_weekly")
+        if self.full or new_provider or days_between(last_weekly, TODAY) >= 7:
             hosts = []
             for s in self.sources:
                 if s.get("search"):
@@ -369,7 +373,14 @@ class Run:
             if imp and "impact" not in tags:
                 tags.append("impact")
             merged = dict(p, description=desc)
-            sc, parts, matched, dom, flags, gaps = score.rules(merged, self.profile, p["fam"], p["sen"], lf, tags)
+            sen, senw = p["sen"], None
+            if sen == "unspecified":   # no level in the title: use the experience the ad asks for
+                yr = classify.years_required(desc)
+                if yr:
+                    sen, senw = classify.level_from_years(yr[0]), f"Ad asks for {yr[1]} of experience"
+                    if sen in drop:
+                        continue
+            sc, parts, matched, dom, flags, gaps = score.rules(merged, self.profile, p["fam"], sen, lf, tags)
             jid = hashlib.sha1(key.encode()).hexdigest()[:12]
             dom = next((x["company_domain"] for x in items if x.get("company_domain")), None) or self.known_domains.get(norm_company(p["company"]))
             if not dom:
@@ -385,7 +396,7 @@ class Run:
                 "id": jid, "title": clean_title(p["title"]), "company": p["company"] if p["company"] != "Unknown" else "",
                 "url": p["url"], "apply": p.get("apply_url"), "sources": srcs, "kind": p["kind"],
                 "loc": loc_label(locs, cc), "cc": cc, "region": best["region"], "wp": best["wp"], "hu": best["hu"], "huw": best["hu_why"],
-                "emp": emp, "sen": p["sen"], "fam": p["fam"], "score": sc, "rules": sc, "parts": parts, "skills": matched, "domains": dom,
+                "emp": emp, "sen": sen, "senw": senw, "fam": p["fam"], "score": sc, "rules": sc, "parts": parts, "skills": matched, "domains": dom,
                 "flags": flags, "gaps": gaps, "posted": posted, "tags": tags, "salary": next((x["salary"] for x in items if x.get("salary")), None),
                 "snip": desc[:700], "live": "verified" if p["kind"] == "ats" else "listed", "checked": TODAY, "imp": imp, "dom": dom,
                 "_desc": desc, "_locs": locs, "_board": p.get("board"),
