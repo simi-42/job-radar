@@ -1022,6 +1022,16 @@
    "enabled": true,
    "search": true,
    "added": "2026-11-27"
+  },
+  {
+   "id": "digic-pictures-is1j",
+   "name": "Digic Pictures",
+   "url": "https://career.digicpictures.com/jobs",
+   "adapter": "auto",
+   "origin": "added by you",
+   "enabled": true,
+   "search": true,
+   "added": "2026-11-27"
   }
  ]
 }
