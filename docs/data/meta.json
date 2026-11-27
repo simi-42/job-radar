@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-27T21:26:05+00:00",
- "duration_s": 141,
+ "updated": "2026-11-27T21:33:17+00:00",
+ "duration_s": 94,
  "full": false,
  "counts": {
-  "open": 1756,
-  "new_today": 386,
+  "open": 1757,
+  "new_today": 388,
   "hu_yes": 74,
   "alerts": 0,
-  "closed_recent": 157
+  "closed_recent": 158
  },
  "sources": [
   {
@@ -790,7 +790,7 @@
    "impact": true,
    "direct": "https://www.idealist.org/en/jobs?q=product%20designer&locationType=REMOTE",
    "why": "ok",
-   "via": "sitemap: 2255 pages, 4 design, 4 opened"
+   "via": "sitemap: 2256 pages, 4 design, 4 opened"
   },
   {
    "id": "impactroles",
@@ -936,14 +936,14 @@
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": false,
+   "ok": true,
    "count": 0,
-   "error": "FetchError: 403 Forbidden https://climate.jobs/",
+   "error": null,
    "note": null,
    "impact": true,
    "direct": "https://climate.jobs/",
-   "why": "blocked",
-   "via": null
+   "why": "no_match",
+   "via": "page"
   },
   {
    "id": "conservationcareers",
@@ -1004,14 +1004,14 @@
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": false,
-   "count": 0,
-   "error": "FetchError: 403 Forbidden https://nextbillion.net/jobs/",
+   "ok": true,
+   "count": 1,
+   "error": null,
    "note": null,
    "impact": true,
    "direct": "https://nextbillion.net/jobs/",
-   "why": "blocked",
-   "via": null
+   "why": "ok",
+   "via": "page links"
   },
   {
    "id": "impactinvestingcareers",
@@ -1157,14 +1157,14 @@
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": false,
+   "ok": true,
    "count": 0,
-   "error": "FetchError: URLError https://www.humanrightscareers.com/jobs/",
+   "error": null,
    "note": null,
    "impact": true,
    "direct": "https://www.humanrightscareers.com/jobs/",
-   "why": "error",
-   "via": null
+   "why": "no_match",
+   "via": "feed"
   },
   {
    "id": "globaljobs",
@@ -1412,14 +1412,14 @@
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": false,
+   "ok": true,
    "count": 0,
-   "error": "FetchError: 403 Forbidden https://greenjobs.net/",
+   "error": null,
    "note": null,
    "impact": true,
    "direct": "https://greenjobs.net/",
-   "why": "blocked",
-   "via": null
+   "why": "no_match",
+   "via": "page"
   },
   {
    "id": "impactopportunity",
@@ -1583,7 +1583,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 20,
+   "count": 19,
    "error": null,
    "note": null,
    "impact": false,
@@ -1781,32 +1781,12 @@
  ],
  "boards": {
   "tracked": 903,
-  "ok": 887,
+  "ok": 891,
   "failed": [
-   {
-    "key": "generic:https://zerowasteeurope.eu/join-us/donate/",
-    "company": "Zero Waste Europe",
-    "error": "FetchError: 403 Forbidden https://zerowasteeurope.eu/join-us/donate/"
-   },
-   {
-    "key": "generic:https://niok.hu/karrier/",
-    "company": "NIOK",
-    "error": "FetchError: 403 Forbidden https://niok.hu/karrier/"
-   },
    {
     "key": "greenhouse-eu:orbisk",
     "company": "Orbisk",
     "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/orbisk/jobs"
-   },
-   {
-    "key": "generic:https://wwf.hu/karrier/",
-    "company": "WWF Hungary",
-    "error": "FetchError: 403 Forbidden https://wwf.hu/karrier/"
-   },
-   {
-    "key": "generic:https://ultinous.com/careers/",
-    "company": "Ultinous",
-    "error": "FetchError: 403 Forbidden https://ultinous.com/careers/"
    },
    {
     "key": "greenhouse-eu:mentimeter",
@@ -1876,7 +1856,7 @@
   "results": 0,
   "boards_found": 0,
   "jobs": 0,
-  "errors": 0
+  "errors": 29
  },
  "llm": {
   "on": false,
