@@ -54,6 +54,7 @@ fieldset{border:0;margin:0;padding:0}legend{font-size:13px;color:var(--mute);mar
 .chk input{width:18px;height:18px;accent-color:var(--acc)}
 .active{display:flex;gap:6px;flex-wrap:wrap}
 /* list */
+.newbtn{min-height:36px;font-size:14px}.newbtn[aria-pressed=true]{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
 .count{display:flex;justify-content:space-between;align-items:center;margin:4px 0 10px;font-size:14px;gap:8px;flex-wrap:wrap}
 .list{display:flex;flex-direction:column;gap:10px}
 .job{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;grid-template-columns:56px 1fr;gap:4px 14px}
@@ -195,7 +196,7 @@ form.add label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:v
     <ul class="hand-list" id="hand-list"></ul>
   </details>
 
-  <div class="count"><span id="count"></span><span class="mute small" id="active"></span></div>
+  <div class="count"><span id="count"></span><button class="btn newbtn" type="button" id="b-new" hidden></button><span class="mute small" id="active"></span></div>
   <div class="list" id="list"></div>
   <button class="btn more-btn" id="b-more" type="button" hidden>Show more</button>
 
@@ -243,7 +244,7 @@ const LABELS = {
 };
 const STEM = {prototyp:"prototyping", facilitat:"facilitation", sustainab:"sustainability", traceab:"traceability", transparen:"transparency", mentor:"mentoring", "a/b test":"A/B testing", "ab test":"A/B testing", "usability test":"usability testing", "user interview":"user interviews", "design system":"design systems"};
 const nice = k => STEM[k] || k;
-const DEFAULTS = {imp:"all", hu:"yes", age:"0", sort:"match", min:"0", q:"", loc:"", closed:false, noflags:false,
+const DEFAULTS = {imp:"all", hu:"yes", age:"0", sort:"match", min:"0", newonly:false, q:"", loc:"", closed:false, noflags:false,
   wp:[], emp:[], sen:["senior","lead","staff","principal","head","unspecified"], fam:[], tag:[], kind:[], st:["none","saved","applied"]};
 let F = Object.assign({}, DEFAULTS, store.get("radar-filters", {}));
 F.min = String([0, 50, 60, 70, 80].filter(v => v <= +F.min).pop() || 0);   // older saves could hold any number from the slider
@@ -263,12 +264,13 @@ function locMatch(j){
   if (F.loc.startsWith("cc:")) return (j.cc || []).includes(F.loc.slice(3));
   return regionOf(j) === F.loc;
 }
-function pass(j, ignoreScore){
+function pass(j, ignoreScore, countingNew){
   if (!F.closed && j.live === "closed") return false;
   if (F.imp === "impact" && !(j.tags || []).includes("impact")) return false;
   if (F.hu === "yes" && j.hu !== "yes") return false;
   if (F.hu === "yesmaybe" && j.hu === "no") return false;
-  if (+F.age && ageDays(j) > +F.age) return false;
+  if (F.newonly && !countingNew && !isNew(j)) return false;
+  if (+F.age && !F.newonly && !countingNew && ageDays(j) > +F.age) return false;   // a newly found job can be an older posting
   if (!ignoreScore && j.score < +F.min) return false;
   if (!locMatch(j)) return false;
   if (F.wp.length && !F.wp.includes(j.wp || "unknown")) return false;
@@ -304,9 +306,9 @@ function when(j){
 }
 function card(j){
   const sc = Math.round(j.score), cls = sc >= 70 ? "hi" : "";
-  const st = status(j), n = ageDays(j), isNew = j.first === TODAY || (j.first && ageDays({first:j.first}) <= 1 && !j.posted);
+  const st = status(j), n = ageDays(j);
   const chips = [];
-  if (isNew && j.live !== "closed") chips.push(`<span class="chip new">New</span>`);
+  if (isNew(j) && j.live !== "closed") chips.push(`<span class="chip new" title="Found since your last visit">New</span>`);
   if ((j.tags || []).includes("impact")) chips.push(`<span class="chip imp" title="${esc(j.imp || "Impact")}">Impact</span>`);
   chips.push(`<span class="chip ${j.hu}" title="Can you do it from Hungary?">${esc(j.huw || j.hu)}</span>`);
   if (j.loc) chips.push(`<span class="chip">${esc(j.loc)}</span>`);
@@ -350,6 +352,10 @@ function render(){
   $("#list").innerHTML = rows.length ? rows.slice(0, SHOWN).map(card).join("") :
     `<div class="empty">No jobs match these filters. Try “Yes + maybe”, a longer time range or a lower minimum score.</div>`;
   $("#b-more").hidden = rows.length <= SHOWN;
+  const nNew = JOBS.filter(j => j.live !== "closed" && isNew(j) && pass(j, false, true)).length;
+  const nb = $("#b-new"); nb.hidden = !nNew && !F.newonly;
+  nb.setAttribute("aria-pressed", String(!!F.newonly));
+  nb.textContent = F.newonly ? `Showing ${nNew} new · show all` : `${nNew} new since your last visit`;
   const nMore = ["wp","emp","fam","tag","kind"].reduce((a, k) => a + F[k].length, 0) + (F.closed ? 1 : 0) + (F.noflags ? 1 : 0);
   $("#more-n").textContent = nMore ? `${nMore} on` : "";
   document.querySelectorAll(".seg").forEach(s => s.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(String(F[s.dataset.key]) === b.dataset.v))));
@@ -373,9 +379,24 @@ function buildFilters(){
   $("#f-closed").checked = F.closed; $("#f-noflags").checked = F.noflags; $("#q").value = F.q;
 }
 
+/* "New" = found by the radar since your last visit (in this browser), however old the posting is.
+   The cut-off stays put for the whole visit, so reloading doesn't clear the badges; the next visit moves it on. */
+let BASE = 0;
+function setBase(updated){
+  let b = null;
+  try { b = sessionStorage.getItem("radar-base") } catch(e){}
+  if (!b){
+    b = store.get("radar-seen-upto", "") || new Date(Date.parse(updated || new Date()) - 864e5).toISOString();
+    try { sessionStorage.setItem("radar-base", b) } catch(e){}
+  }
+  BASE = Date.parse(b) || 0;
+  if (updated) store.set("radar-seen-upto", updated);
+}
+const isNew = j => Date.parse(j.seen || (j.first ? j.first + "T00:00:00Z" : "")) > BASE;
+
 function headline(){
   const open = JOBS.filter(j => j.live !== "closed");
-  const fresh = open.filter(j => j.hu === "yes" && ageDays({first:j.first}) <= 1 && j.score >= 60).length;
+  const fresh = open.filter(j => j.hu === "yes" && isNew(j) && j.score >= 60).length;
   const doable = open.filter(j => j.hu === "yes").length;
   $("#headline").textContent = fresh ? `${fresh} new ${fresh === 1 ? "match" : "matches"} you can do from Hungary` : `${doable} open jobs you can do from Hungary`;
   const up = META.updated ? new Date(META.updated) : null;
@@ -493,6 +514,7 @@ $("#f-closed").addEventListener("change", e => { F.closed = e.target.checked; re
 $("#f-noflags").addEventListener("change", e => { F.noflags = e.target.checked; render(); });
 $("#f-reset").addEventListener("click", () => { F = JSON.parse(JSON.stringify(DEFAULTS)); buildFilters(); render(); });
 $("#b-more").addEventListener("click", () => { SHOWN += 40; render(); });
+$("#b-new").addEventListener("click", () => { F.newonly = !F.newonly; SHOWN = 40; render(); });
 $("#b-refresh").addEventListener("click", refresh);
 $("#b-sources").addEventListener("click", () => { const p = $("#p-sources"); if (p.hidden) openSources(); else p.hidden = true; });
 $("#f-add").addEventListener("submit", addSource);
@@ -515,6 +537,7 @@ async function load(bust){
     const [jr, mr] = await Promise.all([fetch("data/jobs.json" + q), fetch("data/meta.json" + q)]);
     const jd = await jr.json(); META = mr.ok ? await mr.json() : {};
     JOBS = jd.jobs || [];
+    setBase(jd.updated);
   } catch(e){ $("#headline").textContent = "No data yet"; $("#sub").textContent = "The first run hasn't finished. Start it with Refresh now, or from GitHub Actions."; return; }
   buildFilters(); headline(); render();
   if (!$("#p-sources").hidden) renderSources();

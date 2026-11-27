@@ -426,11 +426,13 @@ class Run:
                 seen_by[s.get("n")] = min(seen_by.get(s.get("n"), TODAY), f)
         for n, f in seen_by.items():
             src_first.setdefault(n, f)
+        now = datetime.now(timezone.utc).isoformat(timespec="seconds")
         for jid, r in self.cur.items():
-            m = meta.setdefault(jid, {"first": TODAY})
+            m = meta.setdefault(jid, {"first": TODAY, "first_at": now})
             m.pop("closed", None)
             m["last"] = TODAY
             r["first"], r["last"] = m["first"], TODAY
+            r["seen"] = m.get("first_at") or m["first"] + "T00:00:00+00:00"   # when the radar first found it; the site's "New" badge
             if not r.get("posted"):
                 start = min((src_first.get(s.get("n"), TODAY) for s in r.get("sources", [])), default=TODAY)
                 if r["first"] <= start:
