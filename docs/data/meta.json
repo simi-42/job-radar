@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-27T21:05:38+00:00",
- "duration_s": 97,
+ "updated": "2026-11-27T21:17:29+00:00",
+ "duration_s": 96,
  "full": false,
  "counts": {
-  "open": 1738,
-  "new_today": 368,
+  "open": 1753,
+  "new_today": 383,
   "hu_yes": 74,
   "alerts": 0,
-  "closed_recent": 156
+  "closed_recent": 157
  },
  "sources": [
   {
@@ -936,14 +936,14 @@
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": false,
+   "ok": true,
    "count": 0,
-   "error": "FetchError: 403 Forbidden https://climate.jobs/",
+   "error": null,
    "note": null,
    "impact": true,
    "direct": "https://climate.jobs/",
-   "why": "blocked",
-   "via": null
+   "why": "no_match",
+   "via": "page"
   },
   {
    "id": "conservationcareers",
@@ -1004,14 +1004,14 @@
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": false,
-   "count": 0,
-   "error": "FetchError: 403 Forbidden https://nextbillion.net/jobs/",
+   "ok": true,
+   "count": 1,
+   "error": null,
    "note": null,
    "impact": true,
    "direct": "https://nextbillion.net/jobs/",
-   "why": "blocked",
-   "via": null
+   "why": "ok",
+   "via": "page links"
   },
   {
    "id": "impactinvestingcareers",
@@ -1412,14 +1412,14 @@
    "enabled": true,
    "search": true,
    "adapter": "generic",
-   "ok": false,
+   "ok": true,
    "count": 0,
-   "error": "FetchError: 403 Forbidden https://greenjobs.net/",
+   "error": null,
    "note": null,
    "impact": true,
    "direct": "https://greenjobs.net/",
-   "why": "blocked",
-   "via": null
+   "why": "no_match",
+   "via": "page"
   },
   {
    "id": "impactopportunity",
@@ -1583,7 +1583,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 19,
+   "count": 20,
    "error": null,
    "note": null,
    "impact": false,
@@ -1600,7 +1600,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 34,
+   "count": 33,
    "error": null,
    "note": null,
    "impact": false,
@@ -1780,33 +1780,18 @@
   }
  ],
  "boards": {
-  "tracked": 905,
-  "ok": 887,
+  "tracked": 904,
+  "ok": 890,
   "failed": [
    {
-    "key": "generic:https://zerowasteeurope.eu/join-us/donate/",
-    "company": "Zero Waste Europe",
-    "error": "FetchError: 403 Forbidden https://zerowasteeurope.eu/join-us/donate/"
-   },
-   {
-    "key": "generic:https://niok.hu/karrier/",
-    "company": "NIOK",
-    "error": "FetchError: 403 Forbidden https://niok.hu/karrier/"
+    "key": "generic:https://www.linkedin.com/jobs/search?trk=organization_guest_guest_nav_menu_jobs",
+    "company": "Good On You",
+    "error": "FetchError: 429 Too Many Requests https://www.linkedin.com/jobs/search?trk=organization_guest_guest_nav_menu_jobs"
    },
    {
     "key": "greenhouse-eu:orbisk",
     "company": "Orbisk",
     "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/orbisk/jobs"
-   },
-   {
-    "key": "generic:https://wwf.hu/karrier/",
-    "company": "WWF Hungary",
-    "error": "FetchError: 403 Forbidden https://wwf.hu/karrier/"
-   },
-   {
-    "key": "generic:https://ultinous.com/careers/",
-    "company": "Ultinous",
-    "error": "FetchError: 403 Forbidden https://ultinous.com/careers/"
    },
    {
     "key": "greenhouse-eu:mentimeter",
@@ -1867,11 +1852,6 @@
     "key": "ashby:molecule",
     "company": "Molecule",
     "error": "FetchError: 404 Not Found https://api.ashbyhq.com/posting-api/job-board/molecule?includeCompensation=true"
-   },
-   {
-    "key": "ashby:alpaca",
-    "company": "alpaca research",
-    "error": "FetchError: 404 Not Found https://api.ashbyhq.com/posting-api/job-board/alpaca?includeCompensation=true"
    }
   ],
   "discovered": 541
@@ -1881,7 +1861,7 @@
   "with_board": 385
  },
  "search": {
-  "provider": "duckduckgo",
+  "provider": "serper",
   "queries": 0,
   "results": 0,
   "boards_found": 0,
