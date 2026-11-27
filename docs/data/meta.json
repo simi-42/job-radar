@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-26T06:10:06+00:00",
- "duration_s": 96,
+ "updated": "2026-11-27T06:15:21+00:00",
+ "duration_s": 114,
  "full": false,
  "counts": {
-  "open": 1480,
-  "new_today": 98,
+  "open": 1634,
+  "new_today": 195,
   "hu_yes": 83,
   "alerts": 0,
-  "closed_recent": 68
+  "closed_recent": 112
  },
  "sources": [
   {
@@ -19,7 +19,7 @@
    "search": false,
    "adapter": "hiddenjobs",
    "ok": true,
-   "count": 583,
+   "count": 664,
    "error": null,
    "note": null,
    "impact": false,
@@ -240,12 +240,12 @@
    "search": false,
    "adapter": "remoteok",
    "ok": true,
-   "count": 2,
+   "count": 0,
    "error": null,
    "note": null,
    "impact": false,
    "direct": "https://remoteok.com/api",
-   "why": "ok",
+   "why": "no_match",
    "via": null
   },
   {
@@ -274,7 +274,7 @@
    "search": false,
    "adapter": "arbeitnow",
    "ok": true,
-   "count": 16,
+   "count": 20,
    "error": null,
    "note": null,
    "impact": false,
@@ -291,7 +291,7 @@
    "search": false,
    "adapter": "jobicy",
    "ok": true,
-   "count": 19,
+   "count": 26,
    "error": null,
    "note": null,
    "impact": false,
@@ -325,7 +325,7 @@
    "search": false,
    "adapter": "rss",
    "ok": true,
-   "count": 7,
+   "count": 8,
    "error": null,
    "note": null,
    "impact": false,
@@ -580,7 +580,7 @@
    "search": false,
    "adapter": "getro",
    "ok": true,
-   "count": 28,
+   "count": 30,
    "error": null,
    "note": null,
    "impact": false,
@@ -665,7 +665,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 175,
+   "count": 173,
    "error": null,
    "note": null,
    "impact": true,
@@ -687,8 +687,8 @@
    "note": null,
    "impact": true,
    "direct": "https://veganjobs.com/remote-vegan-jobs/",
-   "why": "blocked",
-   "via": "page"
+   "why": "no_match",
+   "via": "feed"
   },
   {
    "id": "4dayweek",
@@ -699,13 +699,13 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 30,
+   "count": 1,
    "error": null,
    "note": null,
    "impact": false,
    "direct": "https://4dayweek.io/remote-jobs/design",
    "why": "ok",
-   "via": "page links"
+   "via": "feed"
   },
   {
    "id": "remoteclimate",
@@ -1583,7 +1583,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 20,
+   "count": 24,
    "error": null,
    "note": null,
    "impact": false,
@@ -1600,7 +1600,7 @@
    "search": true,
    "adapter": "generic",
    "ok": true,
-   "count": 31,
+   "count": 32,
    "error": null,
    "note": null,
    "impact": false,
@@ -1678,8 +1678,8 @@
   }
  ],
  "boards": {
-  "tracked": 834,
-  "ok": 808,
+  "tracked": 906,
+  "ok": 879,
   "failed": [
    {
     "key": "greenhouse-eu:orbisk",
@@ -1802,6 +1802,11 @@
     "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/decathlontechnology/jobs"
    },
    {
+    "key": "ashby:molecule",
+    "company": "Molecule",
+    "error": "FetchError: 404 Not Found https://api.ashbyhq.com/posting-api/job-board/molecule?includeCompensation=true"
+   },
+   {
     "key": "greenhouse-eu:terraquantum",
     "company": "Terra Quantum",
     "error": "FetchError: URLError https://boards-api.eu.greenhouse.io/v1/boards/terraquantum/jobs"
@@ -1812,7 +1817,7 @@
     "error": "FetchError: 404 Not Found https://api.ashbyhq.com/posting-api/job-board/alpaca?includeCompensation=true"
    }
   ],
-  "discovered": 457
+  "discovered": 529
  },
  "companies": {
   "total": 480,
