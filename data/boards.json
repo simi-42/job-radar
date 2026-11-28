@@ -2407,7 +2407,7 @@
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-27",
+   "last_ok": "2026-11-28",
    "site_checked": "2026-11-23"
   },
   "ashby:vesoma": {
@@ -2415,7 +2415,7 @@
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-27",
+   "last_ok": "2026-11-28",
    "site_checked": "2026-11-23",
    "site": "vesoma.com"
   },
@@ -2424,7 +2424,7 @@
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-27",
+   "last_ok": "2026-11-28",
    "site_checked": "2026-11-23",
    "site": "letly.ai"
   },
@@ -2433,7 +2433,7 @@
    "origin": "via Hidden Jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-27",
+   "last_ok": "2026-11-28",
    "site_checked": "2026-11-23",
    "site": "jackandjill.ai"
   },
@@ -2442,7 +2442,7 @@
    "origin": "via Earlybird portfolio jobs",
    "added": "2026-11-23",
    "fails": 0,
-   "last_ok": "2026-11-27",
+   "last_ok": "2026-11-28",
    "site_checked": "2026-11-23",
    "site": "qd-st.com"
   },
@@ -2454,7 +2454,7 @@
    "tags": [],
    "site_checked": "2026-11-24",
    "site": "pensionbee.com",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "personio:headsquare-gmbh|com": {
    "company": "Headsquare",
@@ -2464,7 +2464,7 @@
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "headsquare.group",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "workable:trybe-2": {
    "company": "Trybe",
@@ -2473,7 +2473,7 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-25",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "recruitee:easypost": {
    "company": "EasyPost",
@@ -2482,7 +2482,7 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-25",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "recruitee:wellis1": {
    "company": "Wellis",
@@ -2491,7 +2491,7 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-25",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "workable:epignosis": {
    "company": "Epignosis",
@@ -2500,7 +2500,7 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-25",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "workday:heinz|wd1|KraftHeinz_Careers_UR": {
    "company": "Kraft Heinz UR",
@@ -2509,7 +2509,7 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-25",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "workable:valis": {
    "company": "Valis",
@@ -2518,7 +2518,7 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-25",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "teamtailor:hyphen": {
    "company": "Hyphen",
@@ -2528,7 +2528,7 @@
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "hyphenteam.com",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "personio:yatta|com": {
    "company": "Yatta",
@@ -2538,7 +2538,7 @@
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "yatta.de",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "workday:onepoint|wd3|WepointCA": {
    "company": "Onepoint",
@@ -2547,7 +2547,7 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-25",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "ashby:bsteuern": {
    "company": "b'steuern",
@@ -2557,7 +2557,7 @@
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "bsteuern.com",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "workable:critical-manufacturing": {
    "company": "Critical Manufacturing",
@@ -2567,7 +2567,7 @@
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "criticalmanufacturing.com",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "workday:zrg|wd3|jobs": {
    "company": "ZRG Partners",
@@ -2576,7 +2576,7 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-25",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "workable:raydar": {
    "company": "Raydar",
@@ -2585,7 +2585,7 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-25",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "recruitee:picqer": {
    "company": "Picqer",
@@ -2594,7 +2594,7 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-25",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "ashby:3ive": {
    "company": "3ive",
@@ -2604,7 +2604,7 @@
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "3ive.ai",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "teamtailor:homeexchange": {
    "company": "HomeExchange",
@@ -2614,7 +2614,7 @@
    "tags": [],
    "site_checked": "2026-11-25",
    "site": "homeexchange.com",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "oracle:fa-ewdg-saasfaprod1.fa.ocs.oraclecloud.com|CX": {
    "company": "Cyncly",
@@ -2623,7 +2623,7 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-25",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "oracle:fa-exxd-saasfaprod1.fa.ocs.oraclecloud.com|CX_1001": {
    "company": "Atruvia",
@@ -2632,7 +2632,7 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-25",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "oracle:fa-exhj-saasfaprod1.fa.ocs.oraclecloud.com|CX": {
    "company": "Virtuos",
@@ -2641,7 +2641,7 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-25",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "oracle:ebet.fa.em3.oraclecloud.com|CX": {
    "company": "Compare the Market",
@@ -2650,7 +2650,7 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-25",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "ashby:Zable": {
    "company": "Lendable",
@@ -2660,7 +2660,7 @@
    "tags": [],
    "site_checked": "2026-11-26",
    "site": "zable.co.uk",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "ashby:alpaca": {
    "company": "alpaca research",
@@ -2678,7 +2678,7 @@
    "tags": [],
    "site_checked": "2026-11-26",
    "site": "zable.co.uk",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "workday:quickbase|wd504|External": {
    "company": "Quickbase",
@@ -2687,7 +2687,7 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-27",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "teamtailor:unleash-amby": {
    "company": "Unleash",
@@ -2697,7 +2697,7 @@
    "tags": [],
    "site_checked": "2026-11-27",
    "site": "getunleash.io",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "recruitee:invisix": {
    "company": "Invisix",
@@ -2706,7 +2706,7 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-27",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "workable:multiplicaa": {
    "company": "Multiplicaa",
@@ -2715,7 +2715,7 @@
    "fails": 0,
    "tags": [],
    "site_checked": "2026-11-27",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   },
   "ashby:quo": {
    "company": "Quo",
@@ -2725,7 +2725,7 @@
    "tags": [],
    "site_checked": "2026-11-27",
    "site": "quo.com",
-   "last_ok": "2026-11-27"
+   "last_ok": "2026-11-28"
   }
  }
 }
